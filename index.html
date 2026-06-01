@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sky Graphics Leaderboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#08101f;
+    display:flex;
+    justify-content:center;
+    padding:30px 0;
+    font-family:'Inter',sans-serif;
+    color:white;
+}
+
+.board{
+    width:480px;
+    background:#0D1830;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:
+        0 0 40px rgba(37,99,235,0.15),
+        0 0 80px rgba(245,158,11,0.08);
+}
+
+/* HEADER */
+
+.header{
+    padding:28px 24px 24px;
+    background:
+        radial-gradient(circle at top right, rgba(245,158,11,0.20), transparent 35%),
+        radial-gradient(circle at top left, rgba(37,99,235,0.20), transparent 40%),
+        #0D1830;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.edition{
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    color:#F59E0B;
+    margin-bottom:12px;
+}
+
+.main-title{
+    font-size:32px;
+    line-height:1;
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+.date{
+    font-size:14px;
+    color:#9DB2D4;
+    font-weight:600;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:24px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.section-title{
+    font-size:18px;
+    font-weight:800;
+    margin-bottom:18px;
+    color:#ffffff;
+    letter-spacing:0.5px;
+}
+
+/* TABLE */
+
+.table{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:40px 1fr 70px;
+    align-items:center;
+    gap:10px;
+    padding:14px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.rank{
+    font-weight:900;
+    font-size:18px;
+    text-align:center;
+}
+
+.name{
+    font-size:14px;
+    font-weight:700;
+    line-height:1.4;
+}
+
+.points{
+    text-align:right;
+    font-size:14px;
+    font-weight:800;
+    color:#F59E0B;
+}
+
+.tier{
+    display:block;
+    margin-top:4px;
+    font-size:11px;
+    font-weight:700;
+    color:#B9C6E3;
+}
+
+.ambassador{
+    color:#F59E0B;
+    font-weight:900;
+}
+
+.gold{
+    background:linear-gradient(
+        90deg,
+        rgba(245,158,11,0.28),
+        rgba(245,158,11,0.10)
+    );
+    border:1px solid rgba(245,158,11,0.4);
+    box-shadow:0 0 20px rgba(245,158,11,0.18);
+}
+
+.silver{
+    background:linear-gradient(
+        90deg,
+        rgba(180,180,180,0.24),
+        rgba(180,180,180,0.08)
+    );
+    border:1px solid rgba(200,200,200,0.2);
+}
+
+.bronze{
+    background:linear-gradient(
+        90deg,
+        rgba(205,127,50,0.25),
+        rgba(205,127,50,0.08)
+    );
+    border:1px solid rgba(205,127,50,0.25);
+}
+
+/* AMBASSADOR */
+
+.subgroup{
+    margin-bottom:22px;
+}
+
+.subgroup-title{
+    font-size:13px;
+    letter-spacing:1px;
+    font-weight:800;
+    color:#F59E0B;
+    margin-bottom:14px;
+}
+
+.simple-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.simple-item{
+    background:rgba(255,255,255,0.03);
+    padding:12px 14px;
+    border-radius:14px;
+    font-weight:700;
+    font-size:14px;
+    border:1px solid rgba(255,255,255,0.04);
+}
+
+.simple-item span{
+    color:#F59E0B;
+    font-weight:800;
+}
+
+.not-submit{
+    color:#707C95;
+    background:rgba(255,255,255,0.02);
+}
+
+/* HONOURS */
+
+.honours{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.honour{
+    padding:16px;
+    border-radius:16px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(245,158,11,0.14),
+            rgba(37,99,235,0.10)
+        );
+    border:1px solid rgba(245,158,11,0.15);
+    font-size:14px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+/* FOOTER */
+
+.footer{
+    padding:24px;
+    text-align:center;
+    background:#0A1327;
+}
+
+.footer p{
+    font-size:13px;
+    line-height:1.8;
+    color:#C7D2E9;
+    font-weight:600;
+}
+
+.highlight{
+    color:#F59E0B;
+    font-weight:800;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="board">
+
+```
+<!-- HEADER -->
+<div class="header">
+    <div class="edition">🎨 SKY GRAPHICS EDITION 1</div>
+    <div class="main-title">DAY 1 LEADERBOARD</div>
+    <div class="date">02 JUNE 2026</div>
+</div>
+
+<!-- PARTICIPANTS -->
+<div class="section">
+    <div class="section-title">🏆 PARTICIPANTS</div>
+
+    <div class="table">
+
+        <div class="row gold">
+            <div class="rank">1</div>
+            <div class="name">
+                Malialia Celine Bride
+                <div class="tier">🥉 BRONZE <span class="ambassador">⭐ AMBASSADOR</span></div>
+            </div>
+            <div class="points">80pts</div>
+        </div>
+
+        <div class="row silver">
+            <div class="rank">2</div>
+            <div class="name">
+                Oluwasegun Daniel
+                <div class="tier">🥉 BRONZE <span class="ambassador">⭐ AMBASSADOR</span></div>
+            </div>
+            <div class="points">55pts</div>
+        </div>
+
+        <div class="row bronze">
+            <div class="rank">3</div>
+            <div class="name">
+                Faith Emmanuella Busari
+                <div class="tier">🥉 BRONZE</div>
+            </div>
+            <div class="points">50pts</div>
+        </div>
+
+        <div class="row">
+            <div class="rank">4</div>
+            <div class="name">
+                Christine Choundong
+                <div class="tier">⬜ UNRANKED <span class="ambassador">⭐ AMBASSADOR</span></div>
+            </div>
+            <div class="points">35pts</div>
+        </div>
+
+        <div class="row">
+            <div class="rank">5</div>
+            <div class="name">
+                Emmanuel Karol Tchouani
+                <div class="tier">⬜ UNRANKED</div>
+            </div>
+            <div class="points">25pts</div>
+        </div>
+
+        <div class="row">
+            <div class="rank">5</div>
+            <div class="name">
+                Mbishitehnyi Ryan
+                <div class="tier">⬜ UNRANKED</div>
+            </div>
+            <div class="points">25pts</div>
+        </div>
+
+        <div class="row">
+            <div class="rank">5</div>
+            <div class="name">
+                Chrioni Opal
+                <div class="tier">⬜ UNRANKED</div>
+            </div>
+            <div class="points">25pts</div>
+        </div>
+
+        <div class="row">
+            <div class="rank">8</div>
+            <div class="name">
+                Patience Dzekem
+                <div class="tier">⬜ UNRANKED <span class="ambassador">⭐ AMBASSADOR</span></div>
+            </div>
+            <div class="points">15pts</div>
+        </div>
+
+        <div class="row">
+            <div class="rank">9</div>
+            <div class="name">
+                Ranjoy-Bryan
+                <div class="tier">⬜ UNRANKED</div>
+            </div>
+            <div class="points">10pts</div>
+        </div>
+
+        <div class="row">
+            <div class="rank">9</div>
+            <div class="name">
+                Asonganyi Adel Quin
+                <div class="tier">⬜ UNRANKED</div>
+            </div>
+            <div class="points">10pts</div>
+        </div>
+
+        <div class="row">
+            <div class="rank">11</div>
+            <div class="name">
+                Muguo Malighta Fienmbu
+                <div class="tier">⬜ UNRANKED</div>
+            </div>
+            <div class="points">0pts</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- AMBASSADOR BOARD -->
+<div class="section">
+    <div class="section-title">⭐ AMBASSADOR STANDINGS</div>
+
+    <div class="subgroup">
+        <div class="subgroup-title">SHOWED UP</div>
+
+        <div class="simple-list">
+            <div class="simple-item">1. Malialia Celine Bride — <span>80pts</span></div>
+            <div class="simple-item">2. Oluwasegun Daniel — <span>55pts</span></div>
+            <div class="simple-item">3. Christine Choundong — <span>35pts</span></div>
+            <div class="simple-item">4. Patience Dzekem — <span>15pts</span></div>
+        </div>
+    </div>
+
+    <div class="subgroup">
+        <div class="subgroup-title">DID NOT SUBMIT TODAY</div>
+
+        <div class="simple-list">
+            <div class="simple-item not-submit">❌ Frank Emmanuel</div>
+            <div class="simple-item not-submit">❌ Percy Visiy</div>
+            <div class="simple-item not-submit">❌ Feli</div>
+            <div class="simple-item not-submit">❌ Juliet</div>
+        </div>
+    </div>
+</div>
+
+<!-- HONOURS -->
+<div class="section">
+    <div class="section-title">🌟 DAY 1 HONOURS</div>
+
+    <div class="honours">
+        <div class="honour">
+            🥇 First check-in — <strong>Oluwasegun Daniel</strong>
+        </div>
+
+        <div class="honour">
+            🥇 First introduction — <strong>Muguo Malighta Fienmbu</strong>
+        </div>
+
+        <div class="honour">
+            🥇 First ambassador milestone — <strong>Malialia Celine Bride</strong>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>
+        <span class="highlight">54 members.</span>
+        11 showed up Day 1.
+    </p>
+
+    <p>
+        Ambassadors — the group is watching. 👀
+    </p>
+
+    <p>
+        <span class="highlight">Day 2 task drops 8AM tomorrow 🔥</span>
+    </p>
+
+    <p>
+        Next leaderboard: 9:30PM tomorrow
+    </p>
+</div>
+```
+
+</div>
+
+</body>
+</html>
