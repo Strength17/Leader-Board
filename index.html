@@ -1,461 +1,604 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sky Graphics Leaderboard</title>
-
-<!-- Primary SEO -->
-<meta name="description" content="Sky Graphics Edition 1 — Official Figma Bootcamp Leaderboard. Track daily points, tiers, and rankings for all 49 participants." />
-<meta name="author" content="Sky Graphics" />
-<meta name="theme-color" content="#0D1830" />
-
-<!-- Open Graph (WhatsApp, Facebook) -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://leader-board-lake.vercel.app/" />
-<meta property="og:title" content="Sky Graphics Edition 1 — Leaderboard" />
-<meta property="og:description" content="Day 1 results are live. Check your points, your tier, and where you stand." />
-<meta property="og:image" content="https://leader-board-lake.vercel.app/image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:site_name" content="Sky Graphics" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://leader-board-lake.vercel.app/" />
-<meta name="twitter:title" content="Sky Graphics Edition 1 — Leaderboard" />
-<meta name="twitter:description" content="Day 1 results are live. Check your points, your tier, and where you stand." />
-<meta name="twitter:image" content="https://leader-board-lake.vercel.app/image.png" />
-<link rel="icon" type="image/png" href="/logo.png" />
-
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sky Graphics Edition 1 — Leaderboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+  :root {
+    --navy:    #0D1830;
+    --indigo:  #1B2F6E;
+    --violet:  #4F46E5;
+    --amber:   #F59E0B;
+    --gold:    #D97706;
+    --mint:    #10B981;
+    --coral:   #EF4444;
+    --sky:     #38BDF8;
+    --white:   #FFFFFF;
+    --off:     #F1F5F9;
+    --muted:   #94A3B8;
+    --card:    #131F3A;
+    --line:    rgba(255,255,255,0.07);
+  }
 
-body{
-    background:#08101f;
-    display:flex;
-    justify-content:center;
-    padding:30px 0;
-    font-family:'Inter',sans-serif;
-    color:white;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.board{
-    width:480px;
-    background:#0D1830;
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:24px;
-    overflow:hidden;
-    box-shadow:
-        0 0 40px rgba(37,99,235,0.15),
-        0 0 80px rgba(245,158,11,0.08);
-}
+  body {
+    background: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-/* HEADER */
-
-.header{
-    padding:28px 24px 24px;
+  /* ── BACKGROUND TEXTURE ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
     background:
-        radial-gradient(circle at top right, rgba(245,158,11,0.20), transparent 35%),
-        radial-gradient(circle at top left, rgba(37,99,235,0.20), transparent 40%),
-        #0D1830;
-    border-bottom:1px solid rgba(255,255,255,0.08);
-}
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(79,70,229,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(16,185,129,0.10) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(245,158,11,0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
 
-.edition{
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    color:#F59E0B;
-    margin-bottom:12px;
-}
+  .wrap { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
 
-.main-title{
-    font-size:32px;
-    line-height:1;
-    font-weight:900;
-    margin-bottom:10px;
-}
+  /* ── HEADER ── */
+  .header { text-align: center; margin-bottom: 48px; }
+  .edition-tag {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--amber);
+    border: 1px solid rgba(245,158,11,0.4);
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 10vw, 86px);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #fff 0%, #38BDF8 50%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+  .day-badge {
+    display: inline-block;
+    margin-top: 16px;
+    background: linear-gradient(135deg, var(--violet), #818CF8);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
 
-.date{
-    font-size:14px;
-    color:#9DB2D4;
-    font-weight:600;
-}
+  /* ── TABS ── */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 6px;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    color: var(--muted);
+    border: none;
+    background: transparent;
+  }
+  .tab.active {
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  .tab.active.participants { color: var(--sky); border: 1px solid rgba(56,189,248,0.3); }
+  .tab.active.ambassadors  { color: var(--amber); border: 1px solid rgba(245,158,11,0.3); }
 
-/* SECTIONS */
+  /* ── BOARD ── */
+  .board { display: none; }
+  .board.active { display: block; }
 
-.section{
-    padding:24px;
-    border-bottom:1px solid rgba(255,255,255,0.06);
-}
+  /* ── SECTION LABEL ── */
+  .board-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .board-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  .board-label.p { color: var(--sky); }
+  .board-label.a { color: var(--amber); }
 
-.section-title{
-    font-size:18px;
-    font-weight:800;
-    margin-bottom:18px;
-    color:#ffffff;
-    letter-spacing:0.5px;
-}
+  /* ── ROWS ── */
+  .row {
+    display: grid;
+    grid-template-columns: 44px 1fr 90px 70px 60px;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: slideIn 0.4s ease both;
+  }
+  .row:hover { transform: translateX(4px); box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
 
-/* TABLE */
+  .row.rank-1 { border-color: rgba(245,158,11,0.5); background: linear-gradient(135deg, rgba(245,158,11,0.12), var(--card)); }
+  .row.rank-2 { border-color: rgba(148,163,184,0.4); background: linear-gradient(135deg, rgba(148,163,184,0.08), var(--card)); }
+  .row.rank-3 { border-color: rgba(205,127,50,0.35); background: linear-gradient(135deg, rgba(205,127,50,0.08), var(--card)); }
+  .row.dns   { opacity: 0.45; }
 
-.table{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 
-.row{
-    display:grid;
-    grid-template-columns:40px 1fr 70px;
-    align-items:center;
-    gap:10px;
-    padding:14px;
-    border-radius:16px;
-    background:rgba(255,255,255,0.03);
-    border:1px solid rgba(255,255,255,0.05);
-}
+  /* ── RANK NUMBER ── */
+  .rank-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: var(--muted);
+    line-height: 1;
+  }
+  .rank-1 .rank-num { color: var(--amber); }
+  .rank-2 .rank-num { color: #CBD5E1; }
+  .rank-3 .rank-num { color: #CD7F32; }
 
-.rank{
-    font-weight:900;
-    font-size:18px;
-    text-align:center;
-}
+  /* ── NAME ── */
+  .name-col { min-width: 0; }
+  .name {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .name-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
 
-.name{
-    font-size:14px;
-    font-weight:700;
-    line-height:1.4;
-}
+  /* ── POINTS ── */
+  .pts {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    text-align: right;
+    line-height: 1;
+  }
+  .pts-label { font-size: 10px; color: var(--muted); text-align: right; margin-top: 1px; }
 
-.points{
-    text-align:right;
-    font-size:14px;
-    font-weight:800;
-    color:#F59E0B;
-}
+  /* ── TIER BADGE ── */
+  .tier {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .tier.BRONZE   { background: rgba(205,127,50,0.2);  color: #CD7F32; border: 1px solid rgba(205,127,50,0.4); }
+  .tier.SILVER   { background: rgba(192,192,192,0.15); color: #C0C0C0; border: 1px solid rgba(192,192,192,0.4); }
+  .tier.GOLD     { background: rgba(255,215,0,0.15);   color: #FFD700; border: 1px solid rgba(255,215,0,0.4); }
+  .tier.PLATINUM { background: rgba(79,70,229,0.2);    color: #A5B4FC; border: 1px solid rgba(79,70,229,0.4); }
+  .tier.UNRANKED { background: rgba(148,163,184,0.1);  color: var(--muted); border: 1px solid rgba(148,163,184,0.2); }
+  .tier.DNS      { background: rgba(239,68,68,0.1);    color: var(--coral);  border: 1px solid rgba(239,68,68,0.3); }
 
-.tier{
-    display:block;
-    margin-top:4px;
-    font-size:11px;
-    font-weight:700;
-    color:#B9C6E3;
-}
+  /* ── STREAK ── */
+  .streak {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--mint);
+  }
+  .streak-label { font-size: 10px; color: var(--muted); text-align: center; }
 
-.ambassador{
-    color:#F59E0B;
-    font-weight:900;
-}
+  /* ── DNS SECTION LABEL ── */
+  .dns-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin: 24px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .dns-label::after { content: ''; flex: 1; height: 1px; background: rgba(239,68,68,0.2); }
 
-.gold{
-    background:linear-gradient(
-        90deg,
-        rgba(245,158,11,0.28),
-        rgba(245,158,11,0.10)
-    );
-    border:1px solid rgba(245,158,11,0.4);
-    box-shadow:0 0 20px rgba(245,158,11,0.18);
-}
+  /* ── TIER LEGEND ── */
+  .legend {
+    margin-top: 40px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 24px;
+  }
+  .legend-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .legend-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+  }
 
-.silver{
-    background:linear-gradient(
-        90deg,
-        rgba(180,180,180,0.24),
-        rgba(180,180,180,0.08)
-    );
-    border:1px solid rgba(200,200,200,0.2);
-}
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    margin-top: 48px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .footer strong { color: var(--white); }
 
-.bronze{
-    background:linear-gradient(
-        90deg,
-        rgba(205,127,50,0.25),
-        rgba(205,127,50,0.08)
-    );
-    border:1px solid rgba(205,127,50,0.25);
-}
+  /* ── AMBASSADOR NOTE ── */
+  .amb-note {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: rgba(245,158,11,0.9);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
 
-/* AMBASSADOR */
-
-.subgroup{
-    margin-bottom:22px;
-}
-
-.subgroup-title{
-    font-size:13px;
-    letter-spacing:1px;
-    font-weight:800;
-    color:#F59E0B;
-    margin-bottom:14px;
-}
-
-.simple-list{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.simple-item{
-    background:rgba(255,255,255,0.03);
-    padding:12px 14px;
-    border-radius:14px;
-    font-weight:700;
-    font-size:14px;
-    border:1px solid rgba(255,255,255,0.04);
-}
-
-.simple-item span{
-    color:#F59E0B;
-    font-weight:800;
-}
-
-.not-submit{
-    color:#707C95;
-    background:rgba(255,255,255,0.02);
-}
-
-/* HONOURS */
-
-.honours{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-}
-
-.honour{
-    padding:16px;
-    border-radius:16px;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(245,158,11,0.14),
-            rgba(37,99,235,0.10)
-        );
-    border:1px solid rgba(245,158,11,0.15);
-    font-size:14px;
-    font-weight:700;
-    line-height:1.5;
-}
-
-/* FOOTER */
-
-.footer{
-    padding:24px;
-    text-align:center;
-    background:#0A1327;
-}
-
-.footer p{
-    font-size:13px;
-    line-height:1.8;
-    color:#C7D2E9;
-    font-weight:600;
-}
-
-.highlight{
-    color:#F59E0B;
-    font-weight:800;
-}
+  @media (max-width: 560px) {
+    .row { grid-template-columns: 36px 1fr 70px 55px; }
+    .streak, .streak-label { display: none; }
+    .pts { font-size: 20px; }
+  }
 </style>
-
 </head>
-
 <body>
+<div class="wrap">
 
-<div class="board">
+  <!-- HEADER -->
+  <div class="header">
+    <div class="edition-tag">Sky Graphics · Edition 1</div>
+    <div class="title">LEADERBOARD</div>
+    <div class="subtitle">Design Challenge · 6 Weeks · Daily Check-In</div>
+    <div class="day-badge">📅 Day 2 — June 2, 2026</div>
+  </div>
 
-<!-- HEADER -->
-<div class="header">
-    <div class="edition">🎨 SKY GRAPHICS EDITION 1</div>
-    <div class="main-title">DAY 1 LEADERBOARD</div>
-    <div class="date">02 JUNE 2026</div>
-</div>
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active participants" onclick="switchTab('participants')">🎓 Participants</button>
+    <button class="tab ambassadors" onclick="switchTab('ambassadors')">⭐ Ambassadors</button>
+  </div>
 
-<!-- PARTICIPANTS -->
-<div class="section">
-    <div class="section-title">🏆 PARTICIPANTS</div>
+  <!-- PARTICIPANTS BOARD -->
+  <div class="board active" id="board-participants">
+    <div class="board-label p">Participant Rankings</div>
 
-    <div class="table">
-
-        <div class="row gold">
-            <div class="rank">1</div>
-            <div class="name">
-                Malialia Celine Bride
-                <div class="tier">🥉 BRONZE <span class="ambassador">⭐ AMBASSADOR</span></div>
-            </div>
-            <div class="points">80pts</div>
-        </div>
-
-        <div class="row silver">
-            <div class="rank">2</div>
-            <div class="name">
-                Oluwasegun Daniel
-                <div class="tier">🥉 BRONZE <span class="ambassador">⭐ AMBASSADOR</span></div>
-            </div>
-            <div class="points">55pts</div>
-        </div>
-
-        <div class="row bronze">
-            <div class="rank">3</div>
-            <div class="name">
-                Faith Emmanuella Busari
-                <div class="tier">🥉 BRONZE</div>
-            </div>
-            <div class="points">50pts</div>
-        </div>
-
-        <div class="row">
-            <div class="rank">4</div>
-            <div class="name">
-                Christine Choundong
-                <div class="tier">⬜ UNRANKED <span class="ambassador">⭐ AMBASSADOR</span></div>
-            </div>
-            <div class="points">35pts</div>
-        </div>
-
-        <div class="row">
-            <div class="rank">5</div>
-            <div class="name">
-                Emmanuel Karol Tchouani
-                <div class="tier">⬜ UNRANKED</div>
-            </div>
-            <div class="points">25pts</div>
-        </div>
-
-        <div class="row">
-            <div class="rank">5</div>
-            <div class="name">
-                Mbishitehnyi Ryan
-                <div class="tier">⬜ UNRANKED</div>
-            </div>
-            <div class="points">25pts</div>
-        </div>
-
-        <div class="row">
-            <div class="rank">5</div>
-            <div class="name">
-                Chrioni Opal
-                <div class="tier">⬜ UNRANKED</div>
-            </div>
-            <div class="points">25pts</div>
-        </div>
-
-        <div class="row">
-            <div class="rank">8</div>
-            <div class="name">
-                Patience Dzekem
-                <div class="tier">⬜ UNRANKED <span class="ambassador">⭐ AMBASSADOR</span></div>
-            </div>
-            <div class="points">15pts</div>
-        </div>
-
-        <div class="row">
-            <div class="rank">9</div>
-            <div class="name">
-                Ranjoy-Bryan
-                <div class="tier">⬜ UNRANKED</div>
-            </div>
-            <div class="points">10pts</div>
-        </div>
-
-        <div class="row">
-            <div class="rank">9</div>
-            <div class="name">
-                Asonganyi Adel Quin
-                <div class="tier">⬜ UNRANKED</div>
-            </div>
-            <div class="points">10pts</div>
-        </div>
-
-        <div class="row">
-            <div class="rank">11</div>
-            <div class="name">
-                Muguo Malighta Fienmbu
-                <div class="tier">⬜ UNRANKED</div>
-            </div>
-            <div class="points">0pts</div>
-        </div>
-
-    </div>
-</div>
-
-<!-- AMBASSADOR BOARD -->
-<div class="section">
-    <div class="section-title">⭐ AMBASSADOR STANDINGS</div>
-
-    <div class="subgroup">
-        <div class="subgroup-title">SHOWED UP</div>
-
-        <div class="simple-list">
-            <div class="simple-item">1. Malialia Celine Bride — <span>80pts</span></div>
-            <div class="simple-item">2. Oluwasegun Daniel — <span>55pts</span></div>
-            <div class="simple-item">3. Christine Choundong — <span>35pts</span></div>
-            <div class="simple-item">4. Patience Dzekem — <span>15pts</span></div>
-        </div>
+    <!-- Rank 1 -->
+    <div class="row rank-1" style="animation-delay:0.05s">
+      <div class="rank-num">1</div>
+      <div class="name-col">
+        <div class="name">Faith Emmanuella Busari</div>
+        <div class="name-sub">🔥 2-day streak · Day 2 submitted</div>
+      </div>
+      <div>
+        <div class="pts" style="color:var(--amber)">85</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier BRONZE">🥉 BRONZE</div>
+      <div>
+        <div class="streak">2</div>
+        <div class="streak-label">streak</div>
+      </div>
     </div>
 
-    <div class="subgroup">
-        <div class="subgroup-title">DID NOT SUBMIT TODAY</div>
-
-        <div class="simple-list">
-            <div class="simple-item not-submit">❌ Frank Emmanuel</div>
-            <div class="simple-item not-submit">❌ Percy Visiy</div>
-            <div class="simple-item not-submit">❌ Feli</div>
-            <div class="simple-item not-submit">❌ Juliet</div>
-        </div>
+    <!-- Rank 2 -->
+    <div class="row rank-2" style="animation-delay:0.10s">
+      <div class="rank-num">2</div>
+      <div class="name-col">
+        <div class="name">Emmanuel Karol Tchouani</div>
+        <div class="name-sub">Day 2 submitted</div>
+      </div>
+      <div>
+        <div class="pts" style="color:#CBD5E1">45</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div>
+        <div class="streak">1</div>
+        <div class="streak-label">streak</div>
+      </div>
     </div>
-</div>
 
-<!-- HONOURS -->
-<div class="section">
-    <div class="section-title">🌟 DAY 1 HONOURS</div>
-
-    <div class="honours">
-        <div class="honour">
-            🥇 First check-in — <strong>Oluwasegun Daniel</strong>
-        </div>
-
-        <div class="honour">
-            🥇 First introduction — <strong>Muguo Malighta Fienmbu</strong>
-        </div>
-
-        <div class="honour">
-            🥇 First ambassador milestone — <strong>Malialia Celine Bride</strong>
-        </div>
+    <!-- Rank 3 -->
+    <div class="row rank-3" style="animation-delay:0.15s">
+      <div class="rank-num">3</div>
+      <div class="name-col">
+        <div class="name">Mbishitehnyi Ryan</div>
+        <div class="name-sub">Day 1 submitted</div>
+      </div>
+      <div>
+        <div class="pts" style="color:#CD7F32">25</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div>
+        <div class="streak">1</div>
+        <div class="streak-label">streak</div>
+      </div>
     </div>
+
+    <!-- Rank 4 -->
+    <div class="row" style="animation-delay:0.20s">
+      <div class="rank-num">4</div>
+      <div class="name-col">
+        <div class="name">Chrioni Opal</div>
+        <div class="name-sub">Day 1 submitted</div>
+      </div>
+      <div>
+        <div class="pts">25</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div>
+        <div class="streak">1</div>
+        <div class="streak-label">streak</div>
+      </div>
+    </div>
+
+    <!-- Rank 5 -->
+    <div class="row" style="animation-delay:0.25s">
+      <div class="rank-num">5</div>
+      <div class="name-col">
+        <div class="name">Ranjoy-Bryan</div>
+        <div class="name-sub">Day 1 submitted</div>
+      </div>
+      <div>
+        <div class="pts">10</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div>
+        <div class="streak">1</div>
+        <div class="streak-label">streak</div>
+      </div>
+    </div>
+
+    <!-- Rank 6 -->
+    <div class="row" style="animation-delay:0.30s">
+      <div class="rank-num">6</div>
+      <div class="name-col">
+        <div class="name">Asonganyi Adel Quin</div>
+        <div class="name-sub">Day 1 submitted</div>
+      </div>
+      <div>
+        <div class="pts">10</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div>
+        <div class="streak">1</div>
+        <div class="streak-label">streak</div>
+      </div>
+    </div>
+
+    <!-- Rank 7 -->
+    <div class="row" style="animation-delay:0.35s">
+      <div class="rank-num">7</div>
+      <div class="name-col">
+        <div class="name">Irinyemi Adedayo Juliet</div>
+        <div class="name-sub">Day 2 submitted</div>
+      </div>
+      <div>
+        <div class="pts">10</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div>
+        <div class="streak">1</div>
+        <div class="streak-label">streak</div>
+      </div>
+    </div>
+
+    <!-- TIER LEGEND -->
+    <div class="legend">
+      <div class="legend-title">Tier Thresholds</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
+        <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
+        <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
+        <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AMBASSADORS BOARD -->
+  <div class="board" id="board-ambassadors">
+    <div class="amb-note">
+      ⭐ Ambassadors compete on their own board. Rankings here are separate from participants.
+      Ambassadors earn recognition for referrals, engagement, and community support.
+    </div>
+    <div class="board-label a">Ambassador Rankings</div>
+
+    <!-- Rank 1 -->
+    <div class="row rank-1" style="animation-delay:0.05s">
+      <div class="rank-num">1</div>
+      <div class="name-col">
+        <div class="name">Malialia Celine Bride</div>
+        <div class="name-sub">Day 1 submitted · 🔥 Active</div>
+      </div>
+      <div>
+        <div class="pts" style="color:var(--amber)">80</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier BRONZE">🥉 BRONZE</div>
+      <div>
+        <div class="streak">1</div>
+        <div class="streak-label">streak</div>
+      </div>
+    </div>
+
+    <!-- Rank 2 -->
+    <div class="row rank-2" style="animation-delay:0.10s">
+      <div class="rank-num">2</div>
+      <div class="name-col">
+        <div class="name">Oluwasegun Daniel</div>
+        <div class="name-sub">Day 2 submitted · 🔥 Active</div>
+      </div>
+      <div>
+        <div class="pts" style="color:#CBD5E1">70</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier BRONZE">🥉 BRONZE</div>
+      <div>
+        <div class="streak">1</div>
+        <div class="streak-label">streak</div>
+      </div>
+    </div>
+
+    <!-- Rank 3 -->
+    <div class="row rank-3" style="animation-delay:0.15s">
+      <div class="rank-num">3</div>
+      <div class="name-col">
+        <div class="name">Christine Choundong</div>
+        <div class="name-sub">🔥 2-day streak · Extraordinary work ⭐</div>
+      </div>
+      <div>
+        <div class="pts" style="color:#CD7F32">35</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div>
+        <div class="streak">2</div>
+        <div class="streak-label">streak</div>
+      </div>
+    </div>
+
+    <!-- Rank 4 -->
+    <div class="row" style="animation-delay:0.20s">
+      <div class="rank-num">4</div>
+      <div class="name-col">
+        <div class="name">Patience Dzekem</div>
+        <div class="name-sub">🔥 2-day streak · Active</div>
+      </div>
+      <div>
+        <div class="pts">25</div>
+        <div class="pts-label">points</div>
+      </div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div>
+        <div class="streak">2</div>
+        <div class="streak-label">streak</div>
+      </div>
+    </div>
+
+    <!-- DID NOT SUBMIT -->
+    <div class="dns-label">Did Not Submit Today</div>
+
+    <div class="row dns" style="animation-delay:0.30s">
+      <div class="rank-num" style="color:var(--coral)">—</div>
+      <div class="name-col"><div class="name">Frank Emmanuel</div><div class="name-sub">No submission</div></div>
+      <div><div class="pts" style="color:var(--muted)">—</div><div class="pts-label">points</div></div>
+      <div class="tier DNS">✗ DNS</div>
+      <div><div class="streak" style="color:var(--coral)">0</div><div class="streak-label">streak</div></div>
+    </div>
+
+    <div class="row dns" style="animation-delay:0.35s">
+      <div class="rank-num" style="color:var(--coral)">—</div>
+      <div class="name-col"><div class="name">Percy Visiy</div><div class="name-sub">No submission</div></div>
+      <div><div class="pts" style="color:var(--muted)">—</div><div class="pts-label">points</div></div>
+      <div class="tier DNS">✗ DNS</div>
+      <div><div class="streak" style="color:var(--coral)">0</div><div class="streak-label">streak</div></div>
+    </div>
+
+
+    <!-- TIER LEGEND -->
+    <div class="legend">
+      <div class="legend-title">Tier Thresholds</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
+        <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
+        <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
+        <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <strong>Sky Graphics Edition 1</strong> · Updated Daily at 10PM<br>
+    Check-in window: <strong>8PM daily</strong> · Form: <strong>forms.gle/as9Nus325XqgsQpH6</strong><br><br>
+    <span style="color:rgba(148,163,184,0.5); font-size:11px">Points are calculated automatically. Bonus points awarded by admin for outstanding contributions.</span>
+  </div>
+
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-    <p>
-        <span class="highlight">54 members.</span>
-        11 showed up Day 1.
-    </p>
-
-    <p>
-        Ambassadors — the group is watching. 👀
-    </p>
-
-    <p>
-        <span class="highlight">Day 2 task drops 8AM tomorrow 🔥</span>
-    </p>
-
-    <p>
-        Next leaderboard: 9:30PM tomorrow
-    </p>
-</div>
-
-</div>
-
+<script>
+  function switchTab(tab) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.board').forEach(b => b.classList.remove('active'));
+    document.querySelector('.tab.' + tab).classList.add('active');
+    document.getElementById('board-' + tab).classList.add('active');
+    // re-trigger animations
+    document.querySelectorAll('#board-' + tab + ' .row').forEach((r, i) => {
+      r.style.animation = 'none';
+      r.offsetHeight;
+      r.style.animation = `slideIn 0.4s ease ${i * 0.06}s both`;
+    });
+  }
+</script>
 </body>
 </html>
