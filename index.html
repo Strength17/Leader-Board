@@ -7,171 +7,199 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --navy:    #0D1830;
-    --indigo:  #1B2F6E;
-    --violet:  #4F46E5;
-    --amber:   #F59E0B;
-    --gold:    #D97706;
-    --mint:    #10B981;
-    --coral:   #EF4444;
-    --sky:     #38BDF8;
-    --white:   #FFFFFF;
-    --off:     #F1F5F9;
-    --muted:   #94A3B8;
-    --card:    #131F3A;
-    --line:    rgba(255,255,255,0.07);
+    --navy:#0D1830;--violet:#4F46E5;--amber:#F59E0B;--gold:#D97706;
+    --mint:#10B981;--coral:#EF4444;--sky:#38BDF8;--white:#FFFFFF;
+    --muted:#94A3B8;--card:#131F3A;--line:rgba(255,255,255,0.07);
   }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--navy);font-family:'DM Sans',sans-serif;color:var(--white);min-height:100vh;overflow-x:hidden;}
+  body::before{content:'';position:fixed;inset:0;background:
+    radial-gradient(ellipse 80% 60% at 20% 10%,rgba(79,70,229,0.18) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%,rgba(16,185,129,0.10) 0%,transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 50%,rgba(245,158,11,0.06) 0%,transparent 60%);
+    pointer-events:none;z-index:0;}
+  .wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:40px 20px 80px;}
+  .header{text-align:center;margin-bottom:48px;}
+  .edition-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--amber);border:1px solid rgba(245,158,11,0.4);padding:5px 16px;border-radius:20px;margin-bottom:16px;}
+  .title{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,10vw,86px);line-height:0.95;letter-spacing:2px;background:linear-gradient(135deg,#fff 0%,#38BDF8 50%,#10B981 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;}
+  .subtitle{font-size:14px;color:var(--muted);letter-spacing:1px;}
+  .day-badge{display:inline-block;margin-top:16px;background:linear-gradient(135deg,var(--violet),#818CF8);padding:6px 20px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px;}
+  .tabs{display:flex;gap:8px;margin-bottom:32px;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:14px;padding:6px;}
+  .tab{flex:1;text-align:center;padding:12px 20px;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;letter-spacing:0.5px;transition:all 0.25s ease;color:var(--muted);border:none;background:transparent;}
+  .tab.active{background:var(--navy);color:var(--white);box-shadow:0 2px 12px rgba(0,0,0,0.4);}
+  .tab.active.participants{color:var(--sky);border:1px solid rgba(56,189,248,0.3);}
+  .tab.active.ambassadors{color:var(--amber);border:1px solid rgba(245,158,11,0.3);}
+  .board{display:none;}.board.active{display:block;}
+  .board-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+  .board-label::after{content:'';flex:1;height:1px;background:var(--line);}
+  .board-label.p{color:var(--sky);}.board-label.a{color:var(--amber);}
+  .row{display:grid;grid-template-columns:44px 1fr 90px 80px 60px;align-items:center;gap:12px;padding:14px 18px;border-radius:12px;margin-bottom:8px;background:var(--card);border:1px solid var(--line);transition:transform 0.2s ease,box-shadow 0.2s ease;animation:slideIn 0.4s ease both;}
+  .row:hover{transform:translateX(4px);box-shadow:0 4px 24px rgba(0,0,0,0.3);}
+  .row.rank-1{border-color:rgba(245,158,11,0.5);background:linear-gradient(135deg,rgba(245,158,11,0.12),var(--card));}
+  .row.rank-2{border-color:rgba(148,163,184,0.4);background:linear-gradient(135deg,rgba(148,163,184,0.08),var(--card));}
+  .row.rank-3{border-color:rgba(205,127,50,0.35);background:linear-gradient(135deg,rgba(205,127,50,0.08),var(--card));}
+  .row.dns{opacity:0.45;}
+  @keyframes slideIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  .rank-num{font-family:'Bebas Neue',sans-serif;font-size:22px;text-align:center;color:var(--muted);line-height:1;}
+  .rank-1 .rank-num{color:var(--amber);}.rank-2 .rank-num{color:#CBD5E1;}.rank-3 .rank-num{color:#CD7F32;}
+  .name-col{min-width:0;}
+  .name{font-size:14px;font-weight:600;white-space:normal;word-break:break-word;line-height:1.3;}
+  .name-sub{font-size:11px;color:var(--muted);margin-top:2px;}
+  .pts{font-family:'Bebas Neue',sans-serif;font-size:26px;text-align:right;line-height:1;}
+  .pts-label{font-size:10px;color:var(--muted);text-align:right;margin-top:1px;}
+  .tier{font-size:10px;font-weight:700;letter-spacing:0.5px;padding:4px 8px;border-radius:6px;text-align:center;white-space:nowrap;}
+  .tier.BRONZE{background:rgba(205,127,50,0.2);color:#CD7F32;border:1px solid rgba(205,127,50,0.4);}
+  .tier.SILVER{background:rgba(192,192,192,0.15);color:#C0C0C0;border:1px solid rgba(192,192,192,0.4);}
+  .tier.GOLD{background:rgba(255,215,0,0.15);color:#FFD700;border:1px solid rgba(255,215,0,0.4);}
+  .tier.PLATINUM{background:rgba(79,70,229,0.2);color:#A5B4FC;border:1px solid rgba(79,70,229,0.4);}
+  .tier.UNRANKED{background:rgba(148,163,184,0.1);color:var(--muted);border:1px solid rgba(148,163,184,0.2);}
+  .tier.DNS{background:rgba(239,68,68,0.1);color:var(--coral);border:1px solid rgba(239,68,68,0.3);}
+  .streak{text-align:center;font-size:13px;font-weight:600;color:var(--mint);}
+  .streak-label{font-size:10px;color:var(--muted);text-align:center;}
+  .dns-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--coral);margin:24px 0 12px;display:flex;align-items:center;gap:10px;}
+  .dns-label::after{content:'';flex:1;height:1px;background:rgba(239,68,68,0.2);}
+  .legend{margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;}
+  .legend-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+  .legend-grid{display:flex;flex-wrap:wrap;gap:10px;}
+  .legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);}
+  .footer{text-align:center;margin-top:48px;font-size:12px;color:var(--muted);line-height:1.8;}
+  .footer strong{color:var(--white);}
+  .amb-note{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:10px;padding:12px 16px;font-size:12px;color:rgba(245,158,11,0.9);margin-bottom:20px;line-height:1.6;}
+  @media(max-width:640px){
+    .wrap{padding:24px 14px 60px;}
+    .row{grid-template-columns:32px 1fr 58px 62px;gap:8px;padding:12px 10px;}
+    .streak,.streak-label{display:none;}
+    .pts{font-size:20px;}
+    .name{font-size:13px;line-height:1.3;}
+    .name-sub{font-size:10px;}
+    .tier{font-size:9px;padding:3px 5px;letter-spacing:0;}
+    .rank-num{font-size:18px;}
+    .tabs{gap:4px;padding:4px;}
+    .tab{font-size:12px;padding:10px 6px;}
+    .legend-grid{flex-direction:column;gap:8px;}
+    .footer{font-size:11px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="edition-tag">Sky Graphics · Edition 1</div>
+    <div class="title">LEADERBOARD</div>
+    <div class="subtitle">Design Challenge · 6 Weeks · Daily Check-In</div>
+    <div class="day-badge">📅 Day 3 — June 3, 2026</div>
+  </div>
+  <div class="tabs">
+    <button class="tab active participants" onclick="switchTab('participants')">🎓 Participants</button>
+    <button class="tab ambassadors" onclick="switchTab('ambassadors')">⭐ Ambassadors</button>
+  </div>
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  <!-- PARTICIPANTS -->
+  <div class="board active" id="board-participants">
+    <div class="board-label p">Participant Rankings</div>
 
-  body {
-    background: var(--navy);
-    font-family: 'DM Sans', sans-serif;
-    color: var(--white);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+    <div class="row rank-1" style="animation-delay:0.05s">
+      <div class="rank-num">1</div>
+      <div class="name-col">
+        <div class="name">Faith Emmanuella Busari</div>
+        <div class="name-sub">🔥 2-day streak · Day 2 submitted</div>
+      </div>
+      <div><div class="pts" style="color:var(--amber)">90</div><div class="pts-label">points</div></div>
+      <div class="tier BRONZE">🥉 BRONZE</div>
+      <div><div class="streak">2</div><div class="streak-label">streak</div></div>
+    </div>
 
-  /* ── BACKGROUND TEXTURE ── */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(79,70,229,0.18) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(16,185,129,0.10) 0%, transparent 55%),
-      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(245,158,11,0.06) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-  }
+    <div class="row rank-2" style="animation-delay:0.10s">
+      <div class="rank-num">2</div>
+      <div class="name-col">
+        <div class="name">Emmanuel Karol Tchouani</div>
+        <div class="name-sub">🔥 3-day streak · Day 3 submitted</div>
+      </div>
+      <div><div class="pts" style="color:#CBD5E1">65</div><div class="pts-label">points</div></div>
+      <div class="tier BRONZE">🥉 BRONZE</div>
+      <div><div class="streak">3</div><div class="streak-label">streak</div></div>
+    </div>
 
-  .wrap { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
+    <div class="row rank-3" style="animation-delay:0.15s">
+      <div class="rank-num">3</div>
+      <div class="name-col">
+        <div class="name">Mbishitehnyi Ryan</div>
+        <div class="name-sub">Day 1 submitted</div>
+      </div>
+      <div><div class="pts" style="color:#CD7F32">25</div><div class="pts-label">points</div></div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div><div class="streak">1</div><div class="streak-label">streak</div></div>
+    </div>
 
-  /* ── HEADER ── */
-  .header { text-align: center; margin-bottom: 48px; }
-  .edition-tag {
-    display: inline-block;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--amber);
-    border: 1px solid rgba(245,158,11,0.4);
-    padding: 5px 16px;
-    border-radius: 20px;
-    margin-bottom: 16px;
-  }
-  .title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(48px, 10vw, 86px);
-    line-height: 0.95;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, #fff 0%, #38BDF8 50%, #10B981 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 10px;
-  }
-  .subtitle {
-    font-size: 14px;
-    color: var(--muted);
-    letter-spacing: 1px;
-    font-weight: 400;
-  }
-  .day-badge {
-    display: inline-block;
-    margin-top: 16px;
-    background: linear-gradient(135deg, var(--violet), #818CF8);
-    padding: 6px 20px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
+    <div class="row" style="animation-delay:0.20s">
+      <div class="rank-num">4</div>
+      <div class="name-col">
+        <div class="name">Chrioni Opal</div>
+        <div class="name-sub">Day 1 submitted</div>
+      </div>
+      <div><div class="pts">25</div><div class="pts-label">points</div></div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div><div class="streak">1</div><div class="streak-label">streak</div></div>
+    </div>
 
-  /* ── TABS ── */
-  .tabs {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 32px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 6px;
-  }
-  .tab {
-    flex: 1;
-    text-align: center;
-    padding: 12px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.25s ease;
-    color: var(--muted);
-    border: none;
-    background: transparent;
-  }
-  .tab.active {
-    background: var(--navy);
-    color: var(--white);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
-  }
-  .tab.active.participants { color: var(--sky); border: 1px solid rgba(56,189,248,0.3); }
-  .tab.active.ambassadors  { color: var(--amber); border: 1px solid rgba(245,158,11,0.3); }
+    <div class="row" style="animation-delay:0.25s">
+      <div class="rank-num">5</div>
+      <div class="name-col">
+        <div class="name">Ranjoy-Bryan</div>
+        <div class="name-sub">Day 1 submitted</div>
+      </div>
+      <div><div class="pts">10</div><div class="pts-label">points</div></div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div><div class="streak">1</div><div class="streak-label">streak</div></div>
+    </div>
 
-  /* ── BOARD ── */
-  .board { display: none; }
-  .board.active { display: block; }
+    <div class="row" style="animation-delay:0.30s">
+      <div class="rank-num">6</div>
+      <div class="name-col">
+        <div class="name">Asonganyi Adel Quin</div>
+        <div class="name-sub">Day 1 submitted</div>
+      </div>
+      <div><div class="pts">10</div><div class="pts-label">points</div></div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div><div class="streak">1</div><div class="streak-label">streak</div></div>
+    </div>
 
-  /* ── SECTION LABEL ── */
-  .board-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .board-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--line);
-  }
-  .board-label.p { color: var(--sky); }
-  .board-label.a { color: var(--amber); }
+    <div class="row" style="animation-delay:0.35s">
+      <div class="rank-num">7</div>
+      <div class="name-col">
+        <div class="name">Moh Blessing Kebul</div>
+        <div class="name-sub">✅ Pledge posted · Welcome!</div>
+      </div>
+      <div><div class="pts">5</div><div class="pts-label">points</div></div>
+      <div class="tier UNRANKED">⬜ UNRANKED</div>
+      <div><div class="streak">—</div><div class="streak-label">streak</div></div>
+    </div>
 
-  /* ── ROWS ── */
-  .row {
-    display: grid;
-    grid-template-columns: 44px 1fr 90px 70px 60px;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 18px;
-    border-radius: 12px;
-    margin-bottom: 8px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    animation: slideIn 0.4s ease both;
-  }
-  .row:hover { transform: translateX(4px); box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+    <div class="legend">
+      <div class="legend-title">Tier Thresholds</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
+        <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
+        <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
+        <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
+      </div>
+    </div>
+  </div>
 
-  .row.rank-1 { border-color: rgba(245,158,11,0.5); background: linear-gradient(135deg, rgba(245,158,11,0.12), var(--card)); }
-  .row.rank-2 { border-color: rgba(148,163,184,0.4); background: linear-gradient(135deg, rgba(148,163,184,0.08), var(--card)); }
-  .row.rank-3 { border-color: rgba(205,127,50,0.35); background: linear-gradient(135deg, rgba(205,127,50,0.08), var(--card)); }
-  .row.dns   { opacity: 0.45; }
+  <!-- AMBASSADORS -->
+  <div class="board" id="board-ambassadors">
+    <div class="amb-note">⭐ Ambassadors compete on their own board. Rankings are separate from participants.</div>
+    <div class="board-label a">Ambassador Rankings</div>
 
-  @keyframes slideIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
+    <div class="row rank-1" style="animation-delay:0.05s">
+      <div class="rank-num">1</div>
+      <div class="name-col">
+        <div class="name">Oluwasegun Daniel Osawore</div>
+        <div class="name-sub">🔥 2-day streak · Day 3 submitted · Went beyond the video ⭐</div>
+      </div>
+      <div><div class="pts" style="color:var(--amber)">95</div><div class="pts-label">points</div></div>
+      <div class="tier BRONZE">🥉 BRONZE</div>
+      <div>
   /* ── RANK NUMBER ── */
   .rank-num {
     font-family: 'Bebas Neue', sans-serif;
