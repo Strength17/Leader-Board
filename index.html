@@ -422,73 +422,6 @@ body.essence-golden::before{
 .roast-box p{margin-bottom:14px;}.roast-box p:last-child{margin-bottom:0;}
 .roast-fire{font-size:30px;text-align:center;margin-bottom:14px;}
 
-/* ═══════════════════════════════════════════════════════════
-   LOADING SCREEN — Epic GPU-accelerated entrance
-═══════════════════════════════════════════════════════════ */
-.countdown-overlay{
-  position:fixed;inset:0;z-index:200;
-  background:var(--navy);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;
-  transition:opacity .8s cubic-bezier(.4,0,.2,1),visibility .8s ease;
-}
-.countdown-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none;}
-
-/* Orbital ring loader */
-.loader-rings{
-  position:relative;width:120px;height:120px;
-  display:flex;align-items:center;justify-content:center;
-}
-.ring{
-  position:absolute;border-radius:50%;border:2px solid transparent;
-  will-change:transform;
-}
-.ring-1{
-  width:120px;height:120px;
-  border-top-color:var(--amber);border-right-color:rgba(245,158,11,0.3);
-  animation:orbit1 1.4s linear infinite;
-}
-.ring-2{
-  width:90px;height:90px;
-  border-top-color:var(--violet-light);border-left-color:rgba(129,140,248,0.3);
-  animation:orbit2 1.1s linear infinite reverse;
-}
-.ring-3{
-  width:60px;height:60px;
-  border-top-color:var(--mint);border-bottom-color:rgba(16,185,129,0.3);
-  animation:orbit3 .8s linear infinite;
-}
-.ring-center{
-  width:16px;height:16px;border-radius:50%;
-  background:radial-gradient(circle,var(--amber),var(--gold));
-  box-shadow:0 0 20px rgba(245,158,11,0.6);
-  animation:corePulse 1.4s ease-in-out infinite;
-  will-change:transform,opacity;
-}
-@keyframes orbit1{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-@keyframes orbit2{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-@keyframes orbit3{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-@keyframes corePulse{0%,100%{transform:scale(1);opacity:.8;}50%{transform:scale(1.4);opacity:1;}}
-
-#countdown-num{
-  font-family:'Bebas Neue',sans-serif;font-size:88px;
-  background:linear-gradient(135deg,var(--white),var(--amber));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  filter:drop-shadow(0 0 30px rgba(245,158,11,0.35));
-  animation:numBeat 1s cubic-bezier(.4,0,.2,1) infinite;
-  will-change:transform,opacity;
-}
-@keyframes numBeat{
-  0%{transform:scale(0.6);opacity:0;}
-  40%{opacity:1;}
-  70%{transform:scale(1.05);}
-  100%{transform:scale(0);opacity:0;}
-}
-.loader-text{
-  font-size:11px;font-weight:700;letter-spacing:4px;
-  text-transform:uppercase;color:var(--muted);
-  animation:loaderTextFade 1.5s ease-in-out infinite alternate;
-}
-@keyframes loaderTextFade{from{opacity:.4;}to{opacity:.9;};}
 
 /* ═══════════════════════════════════════════════════════════
    CELEBRATION — Premium particle burst
@@ -587,8 +520,8 @@ body.essence-golden::before{
 <div class="day-selector" id="day-selector"></div>
 
 <div class="tabs">
-  <button class="tab active participants" onclick="window.switchTab('participants')">🎓 Participants</button>
-  <button class="tab ambassadors" onclick="window.switchTab('ambassadors')">⭐ Ambassadors</button>
+  <button class="tab active participants" data-tab="participants" onclick="window.switchTab('participants')">🎓 Participants</button>
+  <button class="tab ambassadors" data-tab="ambassadors" onclick="window.switchTab('ambassadors')">⭐ Ambassadors</button>
 </div>
 
 <div class="board active" id="board-participants">
@@ -641,8 +574,8 @@ body.essence-golden::before{
       </div>
     </div>
     <div class="ptabs">
-      <button class="ptab active" onclick="window.switchPTab('breakdown')">📊 Points Breakdown</button>
-      <button class="ptab" onclick="window.switchPTab('roast')">🔥 Roast</button>
+      <button class="ptab active" data-ptab="breakdown" onclick="window.switchPTab('breakdown')">📊 Points Breakdown</button>
+      <button class="ptab" data-ptab="roast" onclick="window.switchPTab('roast')">🔥 Roast</button>
     </div>
     <div class="pcontent">
       <div class="pboard active" id="pboard-breakdown"></div>
@@ -651,21 +584,11 @@ body.essence-golden::before{
   </div>
 </div>
 
-<!-- LOADING SCREEN -->
-<div id="countdown-wrap" class="countdown-overlay">
-  <div class="loader-rings">
-    <div class="ring ring-1"></div>
-    <div class="ring ring-2"></div>
-    <div class="ring ring-3"></div>
-    <div class="ring-center"></div>
-  </div>
-  <div id="countdown-num">5</div>
-  <div class="loader-text">Loading Leaderboard</div>
-</div>
+
 
 <!-- CELEBRATION -->
 <div id="celebration-container" class="celebration-container"></div>
-<button class="celebrate-btn" onclick="window.triggerCelebration(6000)" title="Celebrate!">🎉</button>
+<button class="celebrate-btn" onclick="window.triggerCelebration(5000)" title="Celebrate!">🎉</button>
 
 <script type="module">
 import { PEOPLE, SNAPSHOTS, DAY_LABELS, TIER_EMOJI, PLEDGE_ONLY } from './data.js';
@@ -700,42 +623,60 @@ function ptsColor(rank){return rank===1?'var(--amber)':rank===2?'#CBD5E1':rank==
 function rowClass(rank){return rank===1?'rank-1':rank===2?'rank-2':rank===3?'rank-3':'';}
 
 window.setWeek=function(week){
-  if(week>1)return;
+  if(week>1)return; // only week 1 unlocked
   currentWeek=week;
-  document.querySelectorAll('.week-pill').forEach((p,i)=>p.classList.toggle('active',i+1===week));
+  document.querySelectorAll('.week-pill').forEach((p,i)=>{
+    p.classList.toggle('active',i+1===week);
+  });
   renderDaySelector();
-  setDay('D'+Math.min(5,week*5));
+  // default to D5 (milestone day) for the active week
+  window.setDay('D'+Math.min(currentWeek*5,5));
 };
 
 function renderDaySelector(){
   const container=document.getElementById('day-selector');
   let html='';
   const start=(currentWeek-1)*5+1;
+  const maxUnlocked=currentWeek*5; // all 5 days of week 1 are unlocked
   for(let i=start;i<=currentWeek*5;i++){
-    const dKey='D'+i, isLocked=i>5, isActive=currentDay===dKey, isGolden=dKey==='D5';
-    html+=`<button class="day-pill ${isActive?'active':''} ${isLocked?'locked':''} ${isGolden?'golden':''}"
-            onclick="${isLocked?'':'window.setDay(\''+dKey+'\')'}">
-            ${isLocked?'🔒 ':''}Day ${i}
-           </button>`;
+    const dKey='D'+i;
+    const isLocked=i>maxUnlocked;
+    const isActive=currentDay===dKey;
+    const isD5ofWeek=(i%5===0); // Day 5 of any week = golden milestone
+    html+=`<button
+      class="day-pill${isActive?' active':''}${isLocked?' locked':''}${isD5ofWeek?' golden':''}"
+      data-day="${dKey}"
+      ${isLocked?'disabled':''}
+      onclick="${isLocked?'':'window.setDay(\''+dKey+'\')'}"
+    >${isLocked?'🔒 ':''}Day ${i}</button>`;
   }
   container.innerHTML=html;
 }
 
 window.setDay=function(day){
   currentDay=day;
-  document.querySelectorAll('.day-pill').forEach(p=>p.classList.toggle('active',p.getAttribute('onclick')?.includes(day)));
-  document.body.classList.toggle('essence-golden',day==='D5');
-  const label=DAY_LABELS[day]||`Day ${day.slice(1)}`;
+  // update active class on day pills reliably via data attribute
+  document.querySelectorAll('.day-pill').forEach(p=>{
+    p.classList.toggle('active', p.dataset.day===day);
+  });
+  // golden essence for Day 5 of any week
+  const dayNum=parseInt(day.slice(1),10);
+  const isGoldenDay=(dayNum%5===0);
+  document.body.classList.toggle('essence-golden',isGoldenDay);
+  const label=DAY_LABELS[day]||`Day ${dayNum}`;
   document.getElementById('current-day-badge').textContent='📅 '+label;
   renderBoard();
 };
 
 window.switchTab=function(tab){
   currentTab=tab;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.querySelector('.tab.'+tab).classList.add('active');
+  // use data-tab attribute for reliable selection
+  document.querySelectorAll('.tab').forEach(t=>{
+    t.classList.toggle('active', t.dataset.tab===tab);
+  });
   document.querySelectorAll('.board').forEach(b=>b.classList.remove('active'));
-  document.getElementById('board-'+tab).classList.add('active');
+  const boardEl=document.getElementById('board-'+tab);
+  if(boardEl) boardEl.classList.add('active');
   renderBoard();
 };
 
@@ -832,20 +773,30 @@ window.handleOverlayClick=function(e){
 
 window.switchPTab=function(tab){
   currentPTab=tab;
-  document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.ptab').forEach(t=>t.classList.toggle('active', t.dataset.ptab===tab));
   document.querySelectorAll('.pboard').forEach(b=>b.classList.remove('active'));
-  document.querySelector(`.ptab[onclick*="${tab}"]`).classList.add('active');
-  document.getElementById('pboard-'+tab).classList.add('active');
+  const pb=document.getElementById('pboard-'+tab);
+  if(pb) pb.classList.add('active');
 };
 
 /* ── CELEBRATION — Premium confetti burst ── */
+let _celebTimer=null;
 window.triggerCelebration=function(duration){
+  /* Prevent overlapping celebrations */
+  if(_celebTimer){clearTimeout(_celebTimer);}
   const container=document.getElementById('celebration-container');
   const colors=['#4F46E5','#F59E0B','#10B981','#EF4444','#38BDF8','#A78BFA','#34D399','#FCD34D'];
   const messages=['Week 1 Complete! 🏆','Sky Graphics! 🎨','Amazing Work! 🔥','Figma Masters! ✨','Keep Climbing! 🚀'];
-  const end=Date.now()+duration;
+  const ms=duration||5000;
+  const end=Date.now()+ms;
+
   const interval=setInterval(()=>{
-    if(Date.now()>end){clearInterval(interval);return;}
+    if(Date.now()>end){
+      clearInterval(interval);
+      /* Fade out any remaining particles */
+      setTimeout(()=>{container.innerHTML='';},2000);
+      return;
+    }
     /* Confetti particle */
     const c=document.createElement('div');
     c.className='confetti';
@@ -863,48 +814,18 @@ window.triggerCelebration=function(duration){
       setTimeout(()=>m.remove(),1800);
     }
   },120);
-};
 
-/* ── LOADING COUNTDOWN ── */
-window.startCountdown=function(){
-  const wrap=document.getElementById('countdown-wrap');
-  const num=document.getElementById('countdown-num');
-  if(!wrap || !num) {
-    console.error('Countdown elements missing');
-    return;
-  }
-  
-  let count=5;
-  const timer=setInterval(()=>{
-    count--;
-    if(count<=0){
-      clearInterval(timer);
-      wrap.classList.add('hidden');
-      if(window.triggerCelebration) window.triggerCelebration(7000);
-      return;
-    }
-    num.textContent=count;
-  },1000);
-
-  /* Fallback: Force hide after 8s in case something hangs */
-  setTimeout(()=>{
-    if(!wrap.classList.contains('hidden')){
-      wrap.classList.add('hidden');
-      console.warn('Countdown forced to hide');
-    }
-  },8000);
+  /* Auto-stop guarantee at duration+buffer */
+  _celebTimer=setTimeout(()=>{clearInterval(interval);container.innerHTML='';},ms+2500);
 };
 
 /* ── INIT ── */
 window.initApp=function(){
   try {
     window.setWeek(1);
-    window.startCountdown();
+    window.triggerCelebration(5000);
   } catch(e) {
     console.error('App init failed:', e);
-    /* Ensure loader disappears even on error */
-    const wrap=document.getElementById('countdown-wrap');
-    if(wrap) wrap.classList.add('hidden');
   }
 };
 

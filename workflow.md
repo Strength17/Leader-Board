@@ -53,3 +53,5 @@
 - [x] Investigate `startCountdown` logic hang. - **Completed**
 - [x] Fix the countdown interval and CSS visibility toggle. - **Completed**
 - [x] Verify celebration trigger post-countdown. - **Completed**
+- [x] Finalize `reply.md` with Claude handoff instructions (Modular & Epic). - **Completed**
+- [x] Repository cleanup (Deleted `index_fixed.html`). - **Completed**
