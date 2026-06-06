@@ -683,12 +683,12 @@ body.essence-golden::before{
 
 <!-- CELEBRATION -->
 <div id="celebration-container" class="celebration-container"></div>
-<button class="celebrate-btn" onclick="window.triggerCelebration(8000)" title="Celebrate!">🎉</button>
+<button class="celebrate-btn" onclick="window.triggerCelebration(5000)" title="Celebrate!">🎉</button>
 
 <script type="module">
 import { PEOPLE, SNAPSHOTS, DAY_LABELS, TIER_EMOJI, PLEDGE_ONLY } from './data.js';
 
-/* ── Hydrate PLEDGE_ONLY into PEOPLE (unchanged logic) ── */
+/* ── Hydrate PLEDGE_ONLY into PEOPLE ── */
 PLEDGE_ONLY.forEach(n => {
   if (!PEOPLE.find(x => x.name === n)) {
     PEOPLE.push({
@@ -719,111 +719,144 @@ PLEDGE_ONLY.forEach(n => {
 });
 
 /* ── STATE ── */
-let currentWeek=1, currentDay='D5', currentTab='participants', currentPTab='breakdown';
+let currentWeek = 1;
+let currentDay  = 'D5';
+let currentTab  = 'participants';
+let currentPTab = 'breakdown';
 
-function tierClass(t){return t||'UNRANKED';}
-function ptsColor(r){return r===1?'var(--amber)':r===2?'#CBD5E1':r===3?'#CD7F32':'var(--white)';}
-function rowClass(r){return r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':'';}
+/* ── HELPERS ── */
+function tierClass(t){ return t || 'UNRANKED'; }
+function ptsColor(r){ return r===1?'var(--amber)':r===2?'#CBD5E1':r===3?'#CD7F32':'var(--white)'; }
+function rowClass(r){ return r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':''; }
+function safeName(n){ return n.replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
 
 /* ── WEEK SELECTOR ── */
-window.setWeek=function(week){
-  if(week>1)return;
-  currentWeek=week;
-  document.querySelectorAll('.week-pill').forEach((p,i)=>{
-    p.classList.toggle('active',i+1===week);
+window.setWeek = function(week) {
+  if (week > 1) return; /* future weeks locked */
+  currentWeek = week;
+  document.querySelectorAll('.week-pill').forEach((p, i) => {
+    p.classList.toggle('active', i + 1 === week);
   });
   renderDaySelector();
-  window.setDay('D'+Math.min(currentWeek*5,5));
+  window.setDay('D' + (currentWeek * 5)); /* default to Day 5 of selected week */
 };
 
-/* ── DAY TRAY — re-renders with slide animation ── */
-function renderDaySelector(){
-  const tray=document.getElementById('day-selector');
-  /* Re-trigger the slide animation by replacing the element's class */
+/* ── DAY TRAY ── */
+function renderDaySelector() {
+  const tray = document.getElementById('day-selector');
+  /* re-trigger the tray slide animation */
   tray.classList.remove('day-tray');
-  void tray.offsetWidth; /* reflow */
+  void tray.offsetWidth;
   tray.classList.add('day-tray');
 
-  const start=(currentWeek-1)*5+1;
-  const end=currentWeek*5;
-  let html='';
-  for(let i=start;i<=end;i++){
-    const dKey='D'+i;
-    const isLocked=false; /* all days in active week unlocked */
-    const isActive=currentDay===dKey;
-    const isMilestone=(i%5===0); /* Day 5 of any week */
-    const dayLabel='Day '+i;
-    html+=`<button
-      class="day-pill${isActive?' active':''}${isMilestone?' milestone':''}"
+  const start = (currentWeek - 1) * 5 + 1;
+  const end   = currentWeek * 5;
+  let html = '';
+  for (let i = start; i <= end; i++) {
+    const dKey        = 'D' + i;
+    const isActive    = currentDay === dKey;
+    const isMilestone = i % 5 === 0;
+    html += `<button
+      class="day-pill${isActive ? ' active' : ''}${isMilestone ? ' milestone' : ''}"
       data-day="${dKey}"
       onclick="window.setDay('${dKey}')"
-    >${dayLabel}</button>`;
+    >Day ${i}</button>`;
   }
-  tray.innerHTML=html;
+  tray.innerHTML = html;
 }
 
 /* ── DAY SELECTION ── */
-window.setDay=function(day){
-  currentDay=day;
-  document.querySelectorAll('.day-pill').forEach(p=>{
-    p.classList.toggle('active',p.dataset.day===day);
+window.setDay = function(day) {
+  currentDay = day;
+  document.querySelectorAll('.day-pill').forEach(p => {
+    p.classList.toggle('active', p.dataset.day === day);
   });
-  const dayNum=parseInt(day.slice(1),10);
-  const isGolden=(dayNum%5===0);
-  document.body.classList.toggle('essence-golden',isGolden);
-  const label=DAY_LABELS[day]||`Day ${dayNum}`;
-  document.getElementById('current-day-badge').textContent='📅 '+label;
+  const dayNum  = parseInt(day.slice(1), 10);
+  const isGolden = dayNum % 5 === 0;
+  document.body.classList.toggle('essence-golden', isGolden);
+  const label = DAY_LABELS[day] || ('Day ' + dayNum);
+  document.getElementById('current-day-badge').textContent = '📅 ' + label;
   renderBoard();
 };
 
 /* ── TAB SWITCHING ── */
-window.switchTab=function(tab){
-  currentTab=tab;
-  document.querySelectorAll('.tab').forEach(t=>{
-    t.classList.toggle('active',t.dataset.tab===tab);
+window.switchTab = function(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === tab);
   });
-  document.querySelectorAll('.board').forEach(b=>b.classList.remove('active'));
-  const boardEl=document.getElementById('board-'+tab);
-  if(boardEl)boardEl.classList.add('active');
+  document.querySelectorAll('.board').forEach(b => b.classList.remove('active'));
+  const boardEl = document.getElementById('board-' + tab);
+  if (boardEl) boardEl.classList.add('active');
   renderBoard();
 };
 
-/* ── BOARD RENDER ── */
-function renderBoard(){
-  const snap=SNAPSHOTS[currentDay];
-  if(!snap){
-    ['participants','ambassadors'].forEach(k=>{
-      document.getElementById('rows-'+k).innerHTML='<div class="dns-label">Data for this day is locked.</div>';
+/* ── BOARD RENDER — day-specific interaction filtering ── */
+function renderBoard() {
+  const snap = SNAPSHOTS[currentDay];
+  if (!snap) {
+    ['participants', 'ambassadors'].forEach(k => {
+      const el = document.getElementById('rows-' + k);
+      if (el) el.innerHTML = '<div class="dns-label">Data for this day is locked.</div>';
     });
     return;
   }
-  ['participants','ambassadors'].forEach(tabKey=>{
-    const role=tabKey==='ambassadors'?'Ambassador':'Participant';
-    const data=(snap[role]||[]).slice().sort((a,b)=>b.pts-a.pts);
-    const container=document.getElementById('rows-'+tabKey);
-    
-    // Interaction-based filtering: Active if points for THIS DAY > 0
-    const active = data.filter(p => p.pts > 0);
-    const inactive = data.filter(p => p.pts === 0);
+
+  ['participants', 'ambassadors'].forEach(tabKey => {
+    const role      = tabKey === 'ambassadors' ? 'Ambassador' : 'Participant';
+    const container = document.getElementById('rows-' + tabKey);
+    if (!container) return;
+
+    const snapData  = snap[role] || [];
+
+    /* ── Day-specific partition ──────────────────────────────────────────
+       Compute points earned ON THIS DAY ONLY (delta from previous day).
+       A person is "active today" if their day-delta pts > 0.
+       Pledge-only members who never submitted have pts=5 on every snapshot
+       (their all-time total never changes) → delta = 0 → inactive. Correct.
+    ──────────────────────────────────────────────────────────────────── */
+    const prevDayKey  = currentDay === 'D1' ? null : 'D' + (parseInt(currentDay.slice(1)) - 1);
+    const prevSnap    = prevDayKey ? (SNAPSHOTS[prevDayKey] || {})[role] || [] : [];
+
+    function getPrevPts(name) {
+      const r = prevSnap.find(x => x.name === name);
+      return r ? r.pts : 0;
+    }
+
+    /* Enrich each entry with delta and PEOPLE data */
+    const enriched = snapData.map(p => {
+      const personData = PEOPLE.find(x => x.name === p.name);
+      const dayData    = personData?.days?.[currentDay] || {};
+      const delta      = p.pts - getPrevPts(p.name); /* points earned TODAY */
+      return { ...p, delta, personData, dayData };
+    });
+
+    /* Sort active by cumulative pts descending, inactive alphabetically */
+    const active   = enriched.filter(p => p.delta > 0).sort((a, b) => b.pts - a.pts);
+    const inactive = enriched.filter(p => p.delta <= 0).sort((a, b) => a.name.localeCompare(b.name));
 
     let html = '', rank = 1;
 
     active.forEach((p, i) => {
-      const rc = rowClass(rank);
-      const personData = PEOPLE.find(x => x.name === p.name);
-      const dayData = personData?.days[currentDay];
-      const formStreak = dayData?.streakDays || 0;
-      const workStreak = dayData?.workStreakDays || 0;
-      const workDone = dayData?.workDone || false;
-      const subNote = p.submitted
+      const rc         = rowClass(rank);
+      const formStreak = p.dayData.streakDays     || 0;
+      const workStreak = p.dayData.workStreakDays  || 0;
+      const workDone   = p.dayData.workDone        || false;
+      const subNote    = p.submitted
         ? `📋 ${formStreak}-day form · ✏️ ${workStreak}-day work`
         : workDone
           ? `✏️ Work done · form not submitted`
-          : `Activity recorded · no form`;
-      html += `<div class="row ${rc}" style="animation-delay:${i * 0.05}s" onclick="window.openPanel('${p.name.replace(/'/g, "\\'")}')">
+          : `Activity recorded today`;
+      html += `<div class="row ${rc}" style="animation-delay:${i * 0.05}s" onclick="window.openPanel('${safeName(p.name)}')">
         <div class="rank-num" style="color:${ptsColor(rank)}">${rank}</div>
-        <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">${subNote}</div></div>
-        <div><div class="pts" style="color:${ptsColor(rank)}">${p.pts}</div><div class="pts-label">points</div></div>
+        <div class="name-col">
+          <div class="name">${p.name}</div>
+          <div class="name-sub">${subNote}</div>
+        </div>
+        <div>
+          <div class="pts" style="color:${ptsColor(rank)}">${p.pts}</div>
+          <div class="pts-label">points</div>
+        </div>
         <div class="tier ${tierClass(p.tier)}">${TIER_EMOJI[p.tier] || ''} ${p.tier}</div>
         <div><div class="streak">${formStreak}</div><div class="streak-label">📋 form</div></div>
         <div><div class="work-streak" data-done="${workDone}">${workStreak}</div><div class="work-streak-label">✏️ work</div></div>
@@ -834,128 +867,170 @@ function renderBoard(){
     if (inactive.length > 0) {
       html += `<div class="dns-label">No Activity Recorded Today</div>`;
       inactive.forEach((p, i) => {
-        html += `<div class="row dns" style="animation-delay:${(active.length + i) * 0.05}s" onclick="window.openPanel('${p.name.replace(/'/g, "\\'")}')">
+        const formStreak = p.dayData.streakDays    || 0;
+        const workStreak = p.dayData.workStreakDays || 0;
+        html += `<div class="row dns" style="animation-delay:${(active.length + i) * 0.04}s" onclick="window.openPanel('${safeName(p.name)}')">
           <div class="rank-num" style="color:var(--muted)">—</div>
-          <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">No points earned</div></div>
-          <div><div class="pts" style="color:var(--muted)">0</div><div class="pts-label">points</div></div>
-          <div class="tier DNS">✗ N/A</div>
-          <div><div class="streak" style="color:var(--muted)">0</div><div class="streak-label">📋 form</div></div>
-          <div><div class="work-streak" data-done="false">0</div><div class="work-streak-label">✏️ work</div></div>
+          <div class="name-col">
+            <div class="name">${p.name}</div>
+            <div class="name-sub">Total: ${p.pts} pts · no activity today</div>
+          </div>
+          <div><div class="pts" style="color:var(--muted)">${p.pts}</div><div class="pts-label">total</div></div>
+          <div class="tier ${tierClass(p.tier)}">${TIER_EMOJI[p.tier] || ''} ${p.tier}</div>
+          <div><div class="streak" style="color:var(--muted)">${formStreak}</div><div class="streak-label">📋 form</div></div>
+          <div><div class="work-streak" data-done="false">${workStreak}</div><div class="work-streak-label">✏️ work</div></div>
         </div>`;
       });
     }
-    container.innerHTML=html;
+    container.innerHTML = html;
   });
 }
 
 /* ── PROFILE PANEL ── */
-window.openPanel=function(name){
-  const p=PEOPLE.find(x=>x.name===name);
-  if(!p)return;
-  document.getElementById('panel-name').textContent=p.name;
-  const rb=document.getElementById('panel-role');
-  rb.textContent=p.role;rb.className='role-badge '+p.role;
-  document.getElementById('panel-pts').textContent=p.allTimeTotal+' pts';
-  const tb=document.getElementById('panel-tier');
-  tb.textContent=(TIER_EMOJI[p.tier]||'')+' '+p.tier;
-  tb.className='tier '+tierClass(p.tier);
-  let bdHtml='';
-  p.breakdown.forEach(sec=>{
-    bdHtml+=`<div class="section-title">${sec.section}</div>`;
-    sec.items.forEach(item=>{
-      const cls=item.earned?'earned':'missed';
-      const icon=item.earned?'<span style="color:var(--mint)">✓</span>':'<span style="color:var(--coral)">✗</span>';
-      let dotsHtml='';
-      if(item.days){
-        dotsHtml='<div class="day-dots">';
-        item.days.forEach(d=>{
-          const hit=item.dayHits&&item.dayHits.includes(d);
-          dotsHtml+=`<span class="dot ${hit?'hit':'miss'}">${d}</span>`;
+window.openPanel = function(name) {
+  const p = PEOPLE.find(x => x.name === name);
+  if (!p) return;
+
+  document.getElementById('panel-name').textContent = p.name;
+  const rb = document.getElementById('panel-role');
+  rb.textContent = p.role;
+  rb.className   = 'role-badge ' + p.role;
+  document.getElementById('panel-pts').textContent = p.allTimeTotal + ' pts';
+  const tb = document.getElementById('panel-tier');
+  tb.textContent = (TIER_EMOJI[p.tier] || '') + ' ' + p.tier;
+  tb.className   = 'tier ' + tierClass(p.tier);
+
+  /* Build breakdown */
+  let bdHtml = '';
+  (p.breakdown || []).forEach(sec => {
+    bdHtml += `<div class="section-title">${sec.section}</div>`;
+    (sec.items || []).forEach(item => {
+      const cls  = item.earned ? 'earned' : 'missed';
+      const icon = item.earned
+        ? '<span style="color:var(--mint)">✓</span>'
+        : '<span style="color:var(--coral)">✗</span>';
+      let dotsHtml = '';
+      if (item.days && item.days.length) {
+        dotsHtml = '<div class="day-dots">';
+        item.days.forEach(d => {
+          const hit = item.dayHits && item.dayHits.includes(d);
+          dotsHtml += `<span class="dot ${hit ? 'hit' : 'miss'}">${d}</span>`;
         });
-        dotsHtml+='</div>';
+        dotsHtml += '</div>';
       }
-      bdHtml+=`<div class="bk-row ${cls}">
+      bdHtml += `<div class="bk-row ${cls}">
         <div class="bk-icon">${icon}</div>
-        <div class="bk-body"><div class="bk-label">${item.label}</div>${dotsHtml}<div class="bk-desc">${item.desc}</div></div>
-        <div class="bk-pts">${item.pts!==null?'+'+item.pts:''}</div>
+        <div class="bk-body">
+          <div class="bk-label">${item.label}</div>
+          ${dotsHtml}
+          <div class="bk-desc">${item.desc}</div>
+        </div>
+        <div class="bk-pts">${item.pts !== null ? '+' + item.pts : ''}</div>
       </div>`;
     });
   });
-  bdHtml+=`<div class="total-bar"><div class="total-label">All-Time Total</div><div class="total-num">${p.allTimeTotal}</div></div>`;
-  document.getElementById('pboard-breakdown').innerHTML=bdHtml;
-  document.getElementById('pboard-roast').innerHTML=`<div class="roast-fire">🔥</div><div class="roast-box">${p.roast}</div>`;
+  bdHtml += `<div class="total-bar"><div class="total-label">All-Time Total</div><div class="total-num">${p.allTimeTotal}</div></div>`;
+
+  document.getElementById('pboard-breakdown').innerHTML = bdHtml;
+  document.getElementById('pboard-roast').innerHTML =
+    `<div class="roast-fire">🔥</div><div class="roast-box">${p.roast || '<p>No roast yet — check back soon.</p>'}</div>`;
+
   window.switchPTab('breakdown');
   document.getElementById('overlay').classList.add('open');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow = 'hidden';
 };
 
-window.closePanel=function(){
+window.closePanel = function() {
   document.getElementById('overlay').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 };
 
-window.handleOverlayClick=function(e){
-  if(e.target===document.getElementById('overlay')||e.target.classList.contains('overlay-bg'))
+window.handleOverlayClick = function(e) {
+  if (e.target === document.getElementById('overlay') ||
+      e.target.classList.contains('overlay-bg')) {
     window.closePanel();
-};
-
-window.switchPTab=function(tab){
-  currentPTab=tab;
-  document.querySelectorAll('.ptab').forEach(t=>t.classList.toggle('active',t.dataset.ptab===tab));
-  document.querySelectorAll('.pboard').forEach(b=>b.classList.remove('active'));
-  const pb=document.getElementById('pboard-'+tab);
-  if(pb)pb.classList.add('active');
-};
-
-/* ── CELEBRATION ── */
-let _celebTimer=null;
-window.triggerCelebration=function(duration){
-  if(_celebTimer){clearTimeout(_celebTimer);}
-  const container=document.getElementById('celebration-container');
-  const colors=['#4F46E5','#F59E0B','#10B981','#EF4444','#38BDF8','#A78BFA','#34D399','#FCD34D'];
-  const messages=['Week 1 Complete! 🏆','Sky Graphics! 🎨','Amazing Work! 🔥','Figma Masters! ✨','Keep Climbing! 🚀'];
-  const ms=duration||8000;
-  const end=Date.now()+ms;
-
-  const interval=setInterval(()=>{
-    if(Date.now()>end){
-      clearInterval(interval);
-      setTimeout(()=>{container.innerHTML='';},2000);
-      return;
-    }
-    const c=document.createElement('div');
-    c.className='confetti';
-    const size=Math.random()*8+4;
-    c.style.cssText=`left:${Math.random()*100}vw;width:${size}px;height:${size}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:${Math.random()>0.5?'50%':'2px'};animation-duration:${Math.random()*2+2}s;animation-delay:0s;`;
-    container.appendChild(c);
-    setTimeout(()=>c.remove(),4000);
-    if(Math.random()>0.82){
-      const m=document.createElement('div');
-      m.className='pop-msg';
-      m.textContent=messages[Math.floor(Math.random()*messages.length)];
-      m.style.cssText=`left:${Math.random()*70+5}vw;top:${Math.random()*50+20}vh;`;
-      container.appendChild(m);
-      setTimeout(()=>m.remove(),8000);
-    }
-  },120);
-
-  _celebTimer=setTimeout(()=>{clearInterval(interval);container.innerHTML='';},ms+2500);
-};
-
-/* ── INIT ── */
-window.initApp=function(){
-  try{
-    window.setWeek(1);
-    window.triggerCelebration(15000); /* 15 seconds on page load */
-  }catch(e){
-    console.error('App init failed:',e);
   }
 };
 
-if(document.readyState==='loading'){
-  document.addEventListener('DOMContentLoaded',window.initApp);
-}else{
-  window.initApp();
+/* ── PANEL TAB SWITCHING ── */
+window.switchPTab = function(tab) {
+  currentPTab = tab;
+  document.querySelectorAll('.ptab').forEach(t =>
+    t.classList.toggle('active', t.dataset.ptab === tab)
+  );
+  document.querySelectorAll('.pboard').forEach(b => b.classList.remove('active'));
+  const pb = document.getElementById('pboard-' + tab);
+  if (pb) pb.classList.add('active');
+};
+
+/* ── CELEBRATION ENGINE ── */
+let _celebInterval = null;
+let _celebTimer    = null;
+
+window.triggerCelebration = function(duration) {
+  /* Stop any running celebration cleanly */
+  if (_celebInterval) { clearInterval(_celebInterval); _celebInterval = null; }
+  if (_celebTimer)    { clearTimeout(_celebTimer);     _celebTimer    = null; }
+
+  const container = document.getElementById('celebration-container');
+  container.innerHTML = '';
+
+  const colors   = ['#4F46E5','#F59E0B','#10B981','#EF4444','#38BDF8','#A78BFA','#34D399','#FCD34D'];
+  const messages = ['Week 1 Complete! 🏆','Sky Graphics! 🎨','Amazing Work! 🔥','Figma Masters! ✨','Keep Climbing! 🚀'];
+  const ms  = duration || 5000;
+  const end = Date.now() + ms;
+
+  _celebInterval = setInterval(() => {
+    if (Date.now() > end) {
+      clearInterval(_celebInterval);
+      _celebInterval = null;
+      setTimeout(() => { container.innerHTML = ''; }, 2000);
+      return;
+    }
+    /* Confetti particle */
+    const c    = document.createElement('div');
+    c.className = 'confetti';
+    const size  = Math.random() * 8 + 4;
+    c.style.cssText = [
+      `left:${Math.random() * 100}vw`,
+      `width:${size}px`,
+      `height:${size}px`,
+      `background:${colors[Math.floor(Math.random() * colors.length)]}`,
+      `border-radius:${Math.random() > 0.5 ? '50%' : '2px'}`,
+      `animation-duration:${Math.random() * 2 + 2}s`,
+      'animation-delay:0s'
+    ].join(';');
+    container.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+
+    /* Pop message — occasional */
+    if (Math.random() > 0.82) {
+      const m     = document.createElement('div');
+      m.className  = 'pop-msg';
+      m.textContent = messages[Math.floor(Math.random() * messages.length)];
+      m.style.cssText = `left:${Math.random() * 70 + 5}vw;top:${Math.random() * 50 + 20}vh;`;
+      container.appendChild(m);
+      setTimeout(() => m.remove(), 2500);
+    }
+  }, 120);
+
+  /* Hard stop guarantee */
+  _celebTimer = setTimeout(() => {
+    if (_celebInterval) { clearInterval(_celebInterval); _celebInterval = null; }
+    container.innerHTML = '';
+  }, ms + 2500);
+};
+
+/* ── INIT ── */
+function initApp() {
+  window.setWeek(1);         /* renders day tray + defaults to D5 */
+  window.triggerCelebration(5000); /* 5-second celebration on load */
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
 }
 </script>
 </body>

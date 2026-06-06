@@ -26,7 +26,16 @@ Your task is to build and enhance the **logic and visuals** in `index.html` to p
 
 ---
 
-## ✨ 3. Visual & Functional Requirements
+## 🏗️ 3. Daily Interaction-Based Filtering Directive
+**You must strictly separate participants based on their daily activity, NOT their all-time score.**
+*   **The Logic:** When rendering the leaderboard (`renderBoard`), you must partition participants into two distinct groups based **exclusively** on the points they earned for the *currently selected day* (`currentDay`).
+*   **Active (Green Section):** If a participant has `pts > 0` for the *currently selected day*, they are active. They must be displayed in the primary, ranked list.
+*   **Inactive (Red Section):** If a participant has `pts === 0` for the *currently selected day*, they are inactive. They **MUST** be grouped under the "No Activity Recorded Today" section. 
+*   **Requirement:** This filtering is day-specific. As a user navigates from Day 1 to Day 5, the "No Activity" list must update dynamically to reflect who interacted on that *specific* day. Never rely on lifetime totals for this filter.
+
+---
+
+## ✨ 4. Visual & Functional Requirements
 *   **Day 5 "Golden Essence":** When Day 5 is selected (by default or manually), the logic must apply the `essence-golden` class to the `<body>`. This triggers high-end golden gradients, radial glows, and ambient milestone effects across the entire page.
 *   **Celebration Engine:** 
     *   **NO Start Animation:** There must be **NO** loading screen, countdown, or automatic animation when the page first loads. The leaderboard must be visible immediately.
@@ -35,7 +44,7 @@ Your task is to build and enhance the **logic and visuals** in `index.html` to p
 
 ---
 
-## 🤖 4. Strategic Instructions for Claude
+## 🤖 5. Strategic Instructions for Claude
 **To Claude:**
 1.  **Direct Entrance:** Ensure the leaderboard is fully rendered and interactive the instant the DOM is ready. Remove all splash screens and initial countdowns.
 2.  **Epic Transitions:** While there is no start animation, manual transitions (switching days or opening profiles) should feel premium. Use hardware-accelerated transforms (translate3d/scale) for 60fps smoothness.
