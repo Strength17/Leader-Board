@@ -18,7 +18,7 @@
  *   Work CAN be done WITHOUT submitting the form (e.g. posted in WhatsApp).
  *   workDone: true  → student received a creativity score that day
  *   workDone: false → no scored work on that day
- *   workStreakDays  → increments when workDone=true, resets to 0 when workDone=false
+ *   workStreakDays  → increments when workDone=true, FREEZES (does not reset) when workDone=false
  *
  * RULE 3 — FORM IMPLIES WORK:
  *   Every form submission implies work was done.
@@ -111,8 +111,8 @@ export const PEOPLE = [
       D1: { pts: 85, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
       D2: { pts: 115, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
       D3: { pts: 140, submitted: true, streakDays: 3, workDone: true, workStreakDays: 3 },
-      D4: { pts: 140, submitted: false, streakDays: 3, workDone: false, workStreakDays: 0 },
-      D5: { pts: 175, submitted: true, streakDays: 4, workDone: true, workStreakDays: 1 }
+      D4: { pts: 140, submitted: false, streakDays: 3, workDone: false, workStreakDays: 3 },
+      D5: { pts: 175, submitted: true, streakDays: 4, workDone: true, workStreakDays: 4 }
     },
     breakdown: [
       {
@@ -220,9 +220,9 @@ export const PEOPLE = [
     days: {
       D1: { pts: 35, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
       D2: { pts: 65, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
-      D3: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 },
-      D4: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 },
-      D5: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 }
+      D3: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 2 },
+      D4: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 2 },
+      D5: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 2 }
     },
     breakdown: [
       {
@@ -274,9 +274,9 @@ export const PEOPLE = [
     days: {
       D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
       D2: { pts: 25, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
-      D3: { pts: 25, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
-      D4: { pts: 50, submitted: true, streakDays: 2, workDone: true, workStreakDays: 1 },
-      D5: { pts: 50, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 }
+      D3: { pts: 25, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 },
+      D4: { pts: 50, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
+      D5: { pts: 50, submitted: false, streakDays: 2, workDone: false, workStreakDays: 2 }
     },
     breakdown: [
       {
@@ -382,9 +382,9 @@ export const PEOPLE = [
     days: {
       D1: { pts: 95, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
       D2: { pts: 95, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
-      D3: { pts: 95, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 },
-      D4: { pts: 95, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 },
-      D5: { pts: 110, submitted: true, streakDays: 3, workDone: true, workStreakDays: 1 }
+      D3: { pts: 95, submitted: false, streakDays: 2, workDone: false, workStreakDays: 2 },
+      D4: { pts: 95, submitted: false, streakDays: 2, workDone: false, workStreakDays: 2 },
+      D5: { pts: 110, submitted: true, streakDays: 3, workDone: true, workStreakDays: 3 }
     },
     breakdown: [
       {
@@ -550,10 +550,10 @@ export const PEOPLE = [
     name: "Ranjoy-Bryan", role: "Participant", allTimeTotal: 30, tier: "UNRANKED",
     days: {
       D1: { pts: 30, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
-      D2: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
-      D3: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
-      D4: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
-      D5: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 }
+      D2: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 },
+      D3: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 },
+      D4: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 },
+      D5: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 }
     },
     breakdown: [
       {
@@ -590,10 +590,10 @@ export const PEOPLE = [
     name: "Asonganyi Adel Quin", role: "Participant", allTimeTotal: 15, tier: "UNRANKED",
     days: {
       D1: { pts: 15, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
-      D2: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
-      D3: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
-      D4: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
-      D5: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 }
+      D2: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 },
+      D3: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 },
+      D4: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 },
+      D5: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 1 }
     },
     breakdown: [
       {

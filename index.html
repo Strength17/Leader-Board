@@ -931,6 +931,15 @@ window.openPanel = function(name) {
   });
   bdHtml += `<div class="total-bar"><div class="total-label">All-Time Total</div><div class="total-num">${p.allTimeTotal}</div></div>`;
 
+  /* ── STREAK EXPLANATION BLOCK ── */
+  let streakExplain = `<div style="background:rgba(79,70,229,0.08);border:1px solid rgba(79,70,229,0.25);border-radius:14px;padding:18px 20px;margin-bottom:20px;line-height:1.8;">
+    <div style="font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">HOW YOUR STREAKS WORK</div>
+    <p style="font-size:13px;color:var(--off);margin-bottom:10px;"><strong style="color:var(--amber)">📋 Form Streak</strong> — counts every day you submitted the check-in form. It never goes backwards. Miss a day and it pauses. Submit again and it keeps climbing from where it stopped.</p>
+    <p style="font-size:13px;color:var(--off);margin-bottom:10px;"><strong style="color:var(--mint)">✏️ Work Streak</strong> — counts every day you received a creativity score for your Figma work, whether or not you submitted the form. It also never resets. If you built something real that day, it counts.</p>
+    <p style="font-size:12px;color:var(--muted);margin:0;">The goal is to keep both numbers growing every week.</p>
+  </div>`;
+  bdHtml = streakExplain + bdHtml;
+
   document.getElementById('pboard-breakdown').innerHTML = bdHtml;
   document.getElementById('pboard-roast').innerHTML =
     `<div class="roast-fire">🔥</div><div class="roast-box">${p.roast || '<p>No roast yet — check back soon.</p>'}</div>`;

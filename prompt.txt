@@ -1,0 +1,70 @@
+This was my discussion with claude and these are the files. Read everything and tell me what you understand in detail.
+
+Let me analyse the current data fully before advising.All 65 entries pass. The data is correct. Now here is my full honest advice:
+
+---
+
+**The real problem you spotted is not a bug — it is a design problem.**
+
+Faith shows `📋 3 · ✏️ 1` and it looks wrong. But it is technically accurate under the current rules. She submitted 3 forms total (freezes, does not reset), and her current work run is 1 (resets on a miss). The display is confusing because the two streaks use fundamentally different mechanics sitting side by side.
+
+---
+
+**My advice on the rules**
+
+The form streak (freeze-not-reset) is the right call and you should keep it. Freezing rewards the total effort put in over time. Students who submitted 3 out of 5 days should see 3, not feel punished by seeing it drop back to 0. This is what drives people to protect their number — they do not want it to stop growing.
+
+The work streak (reset-on-miss) is the problem. It is too harsh and visually misleading next to the form streak. A student like Faith who worked Days 1, 2, and 5 has clearly been building — showing `✏️ 1` makes her look like a Day 1 beginner. Nobody is motivated by a number that wipes itself out.
+
+**My recommendation: make both streaks use the same freeze-not-reset rule.** Here is why it drives more participation:
+
+Students protect a number they can see growing. A frozen streak at 2 still shows 2 next week — it reminds them they were active and gives them something to build on. A reset streak shows 0 and psychologically feels like starting over, which is the exact feeling that causes people to give up entirely. Duolingo tested both approaches and found reset streaks increased anxiety and dropout. Freeze streaks increased return visits.
+
+---
+
+**The exact rules to enforce going forward**
+
+**Form streak (📋):** Increments by 1 each day the form is submitted. Freezes — does not decrement or reset — on days with no submission. Resumes from the frozen number the next time they submit. Lifetime total of form submissions.
+
+**Work streak (✏️):** Increments by 1 each day a creativity score was awarded (Standard, Good, Impressive, or Extraordinary), whether or not the form was submitted. Freezes — does not reset — on days with no scored work. Resumes from frozen number next scored day. Lifetime total of days with real Figma output.
+
+---
+
+**What to show on the profile panel tab**
+
+For each student's breakdown tab, add this explanation block above the sections:
+
+> **📋 Form Streak** — counts every day you submitted the check-in form. It never goes backwards. Miss a day and it pauses. Submit again and it keeps climbing from where it stopped.
+>
+> **✏️ Work Streak** — counts every day you received a creativity score for your Figma work, whether or not you submitted the form. It also never resets. If you built something real that day, it counts.
+>
+> The goal is to keep both numbers growing every week.
+
+---
+
+**What needs to be updated and in which file**
+
+**`data.js` — update `workStreakDays` values for every person who missed a day.** Under the new freeze rule, `workStreakDays` should never go lower than its previous value when `workDone: false`. The entries that need fixing are:
+
+- Oluwasegun D4: `workStreakDays: 0` → should be `3` (frozen from D3)
+- Oluwasegun D5: `workStreakDays: 1` → should be `4` (resumed from frozen 3)
+- Mbiydzenyuy D3, D4, D5: `workStreakDays: 0` → should be `2` (frozen from D2)
+- Irinyemi D3: `workStreakDays: 0` → should be `1` (frozen from D2)
+- Irinyemi D5: `workStreakDays: 0` → should be `1` (still frozen)
+- Faith D3, D4: `workStreakDays: 0` → should be `2` (frozen from D2)
+- Faith D5: `workStreakDays: 1` → should be `3` (resumed from frozen 2)
+- Ranjoy D2–D5: `workStreakDays: 0` → should be `1` (frozen from D1)
+- Asonganyi D2–D5: `workStreakDays: 0` → should be `1` (frozen from D1)
+
+**`index.html` — update the streak rule comment in the `renderBoard` subNote** to reflect that both streaks now freeze rather than reset, and add the explanation block to the `openPanel` breakdown HTML before the first section renders. No logic changes needed in the JS — the display already reads directly from the data values.
+
+**`data.js` comment block at the top** — update Rule 2 to say freeze-not-reset instead of reset.
+
+Do you want me to apply all of these changes to both files now?
+
+
+
+
+Correct — every form submission implies work was done (Rule 3 already states this), so every day that increments the form streak also increments the work streak. But work can happen without a form, so work streak can be ahead of or equal to form streak, never behind it.
+
+Let me apply everything now.The regex patch had collision issues on repeated values. I'll do surgical string replacements per person:
