@@ -51,8 +51,6 @@ body::before{
   66%{transform:translate(8px,-6px) scale(0.98);}
   100%{transform:translate(-4px,12px) scale(1.01);}
 }
-
-/* ── ANIMATED GRID OVERLAY ── */
 body::after{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:
@@ -106,55 +104,150 @@ body::after{
   box-shadow:0 4px 20px rgba(79,70,229,0.35);
 }
 
-/* ── WEEK SELECTOR ── */
-.week-selector{
-  display:flex;gap:10px;margin-bottom:16px;
-  overflow-x:auto;padding-bottom:10px;scrollbar-width:none;
-}
-.week-selector::-webkit-scrollbar{display:none;}
-.week-pill{
-  padding:12px 26px;border-radius:14px;
-  background:var(--glass-bg);
+/* ══════════════════════════════════════════════════════
+   WEEK + DAY NAVIGATOR — Connected card unit
+   Week pills sit on top; day pills slide from beneath
+   like a tray extending out from the card.
+══════════════════════════════════════════════════════ */
+.nav-card{
+  background:rgba(13,24,48,0.80);
   border:1px solid var(--glass-border);
-  cursor:pointer;font-weight:700;font-size:14px;white-space:nowrap;
-  transition:all .3s cubic-bezier(.4,0,.2,1);
-  position:relative;backdrop-filter:blur(8px);
-}
-.week-pill:hover:not(.locked){
-  background:rgba(79,70,229,0.12);
-  border-color:rgba(79,70,229,0.4);
-}
-.week-pill.active{
-  background:linear-gradient(135deg,var(--violet),rgba(79,70,229,0.8));
-  border-color:var(--violet);color:white;
-  box-shadow:0 4px 24px var(--glow-violet);
-}
-.week-pill.locked{opacity:.35;cursor:not-allowed;}
-.week-badge{
-  position:absolute;top:-9px;right:-9px;
-  background:linear-gradient(135deg,var(--mint),#059669);
-  color:var(--navy);font-size:9px;font-weight:800;
-  padding:3px 9px;border-radius:10px;
-  letter-spacing:0.5px;box-shadow:0 2px 10px var(--glow-mint);
+  border-radius:18px;
+  overflow:hidden;
+  margin-bottom:28px;
+  backdrop-filter:blur(16px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
 }
 
-/* ── DAY SELECTOR ── */
-.day-selector{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap;}
-.day-pill{
-  padding:9px 20px;border-radius:22px;cursor:pointer;
-  font-size:12px;font-weight:700;letter-spacing:1px;
-  border:1px solid var(--line);
-  background:var(--glass-bg);color:var(--muted);
-  transition:all .25s cubic-bezier(.4,0,.2,1);
-  backdrop-filter:blur(6px);
+/* Week row — top section of the card */
+.week-row{
+  display:flex;gap:0;
+  border-bottom:1px solid var(--line);
+  overflow-x:auto;
+  scrollbar-width:none;
+  padding:10px 10px 0;
+  gap:6px;
 }
-.day-pill:hover:not(.locked){background:rgba(255,255,255,0.08);color:var(--white);}
-.day-pill.active{background:var(--amber);color:var(--navy);border-color:var(--amber);box-shadow:0 4px 16px rgba(245,158,11,0.35);}
-.day-pill.locked{background:rgba(255,255,255,0.01);color:rgba(255,255,255,0.1);cursor:not-allowed;border-style:dashed;}
-.day-pill.golden{
-  background:linear-gradient(135deg,#F59E0B,#D97706);
-  color:var(--navy);border-color:#FFD700;
-  box-shadow:0 0 20px rgba(217,119,6,0.45),inset 0 1px 0 rgba(255,255,255,0.3);
+.week-row::-webkit-scrollbar{display:none;}
+
+.week-pill{
+  padding:11px 22px;border-radius:12px 12px 0 0;
+  background:transparent;
+  border:1px solid transparent;
+  border-bottom:none;
+  cursor:pointer;font-weight:700;font-size:13px;white-space:nowrap;
+  color:var(--muted);
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+  position:relative;
+  /* tab-like: bottom flush with the border-bottom of .week-row */
+  margin-bottom:-1px;
+}
+.week-pill:hover:not(.locked){
+  background:rgba(79,70,229,0.10);
+  color:var(--white);
+  border-color:rgba(79,70,229,0.25);
+  border-bottom-color:transparent;
+}
+.week-pill.active{
+  background:rgba(79,70,229,0.18);
+  border-color:var(--violet);
+  border-bottom-color:rgba(13,24,48,0.80); /* matches card bg — creates connected feel */
+  color:var(--white);
+  box-shadow:inset 0 2px 8px rgba(79,70,229,0.2);
+}
+.week-pill.locked{opacity:.32;cursor:not-allowed;font-size:12px;}
+.week-badge{
+  position:absolute;top:-8px;right:-8px;
+  background:linear-gradient(135deg,var(--mint),#059669);
+  color:var(--navy);font-size:8px;font-weight:800;
+  padding:2px 7px;border-radius:8px;letter-spacing:0.5px;
+  box-shadow:0 2px 8px var(--glow-mint);
+  white-space:nowrap;
+}
+
+/* Day tray — bottom section of the card, slides in */
+.day-tray{
+  padding:12px 14px 14px;
+  display:flex;gap:7px;flex-wrap:wrap;
+  animation:trayReveal .28s cubic-bezier(.4,0,.2,1) both;
+  background:rgba(255,255,255,0.015);
+}
+@keyframes trayReveal{
+  from{opacity:0;transform:translateY(-6px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.day-pill{
+  position:relative;
+  padding:9px 18px;border-radius:10px;cursor:pointer;
+  font-size:12px;font-weight:700;letter-spacing:.8px;
+  border:1px solid rgba(255,255,255,0.08);
+  background:rgba(255,255,255,0.04);color:var(--muted);
+  transition:all .22s cubic-bezier(.4,0,.2,1);
+  overflow:visible; /* allow the pin badge to overflow */
+}
+.day-pill:hover:not(.locked):not(.active){
+  background:rgba(255,255,255,0.09);
+  color:var(--white);
+  border-color:rgba(255,255,255,0.18);
+}
+.day-pill.active{
+  background:rgba(245,158,11,0.18);
+  color:var(--amber);
+  border-color:rgba(245,158,11,0.5);
+  box-shadow:0 2px 12px rgba(245,158,11,0.2);
+}
+.day-pill.locked{
+  background:rgba(255,255,255,0.01);
+  color:rgba(255,255,255,0.12);
+  cursor:not-allowed;
+  border-style:dashed;
+  border-color:rgba(255,255,255,0.05);
+}
+
+/* ── DAY 5 PIN BADGE ──────────────────────────────────
+   A thin ribbon-pin at the top-right corner edge of the
+   Day 5 button. Distinct colour, smooth rounded ends,
+   about 3× the border width — visible but not dominant.
+   Does NOT look selected; it's purely a milestone marker.
+───────────────────────────────────────────────────── */
+.day-pill.milestone::after{
+  content:'';
+  position:absolute;
+  /* sit right at the top-right corner edge */
+  top:-4px;
+  right:-4px;
+  /* thin tall pin: ~3px wide, ~22px tall */
+  width:5px;
+  height:22px;
+  background:linear-gradient(180deg, #F59E0B 0%, #D97706 60%, #92400E 100%);
+  border-radius:3px;
+  box-shadow:0 0 6px rgba(245,158,11,0.55), 0 0 2px rgba(245,158,11,0.8);
+  z-index:2;
+  pointer-events:none;
+}
+/* small circle cap at the top of the pin */
+.day-pill.milestone::before{
+  content:'';
+  position:absolute;
+  top:-7px;
+  right:-5.5px;
+  width:8px;
+  height:8px;
+  background:radial-gradient(circle, #FFD700 0%, #F59E0B 60%, #D97706 100%);
+  border-radius:50%;
+  box-shadow:0 0 5px rgba(245,158,11,0.7);
+  z-index:3;
+  pointer-events:none;
+}
+/* when active, the pin colour shifts to complement the active amber state */
+.day-pill.milestone.active::after{
+  background:linear-gradient(180deg,#10B981 0%,#059669 60%,#065F46 100%);
+  box-shadow:0 0 6px rgba(16,185,129,0.55);
+}
+.day-pill.milestone.active::before{
+  background:radial-gradient(circle,#34D399 0%,#10B981 60%,#059669 100%);
+  box-shadow:0 0 5px rgba(16,185,129,0.7);
 }
 
 /* ── GOLDEN ESSENCE (Day 5) ── */
@@ -206,7 +299,7 @@ body.essence-golden::before{
 .board-label::after{content:'';flex:1;height:1px;background:var(--line);}
 .board-label.p{color:var(--sky);}.board-label.a{color:var(--amber);}
 
-/* ── ROWS — Glassmorphism v2 ── */
+/* ── ROWS ── */
 .row{
   display:grid;
   grid-template-columns:44px 1fr 90px 80px 58px 58px;
@@ -241,21 +334,13 @@ body.essence-golden::before{
   content:'';position:absolute;top:0;left:0;right:0;height:1px;
   background:linear-gradient(90deg,transparent,rgba(245,158,11,0.6),transparent);
 }
-.row.rank-2{
-  border-color:rgba(148,163,184,.45);
-  background:linear-gradient(135deg,rgba(148,163,184,.09),var(--card));
-}
-.row.rank-3{
-  border-color:rgba(205,127,50,.4);
-  background:linear-gradient(135deg,rgba(205,127,50,.09),var(--card));
-}
+.row.rank-2{border-color:rgba(148,163,184,.45);background:linear-gradient(135deg,rgba(148,163,184,.09),var(--card));}
+.row.rank-3{border-color:rgba(205,127,50,.4);background:linear-gradient(135deg,rgba(205,127,50,.09),var(--card));}
 .row.dns{opacity:.4;}
-
 @keyframes rowReveal{
   from{opacity:0;transform:translateY(16px);filter:blur(4px);}
   to{opacity:1;transform:translateY(0);filter:blur(0);}
 }
-
 .rank-num{font-family:'Bebas Neue',sans-serif;font-size:24px;text-align:center;color:var(--muted);line-height:1;}
 .rank-1 .rank-num{color:var(--amber);text-shadow:0 0 16px rgba(245,158,11,0.5);}
 .rank-2 .rank-num{color:#CBD5E1;}
@@ -281,11 +366,10 @@ body.essence-golden::before{
 .tier.DNS{background:rgba(239,68,68,.1);color:var(--coral);border:1px solid rgba(239,68,68,.3);}
 .streak{text-align:center;font-size:13px;font-weight:700;color:var(--mint);}
 .streak-label{font-size:10px;color:var(--muted);text-align:center;letter-spacing:.5px;}
-.work-streak{text-align:center;font-size:13px;font-weight:700;color:var(--violet-light);}
+.work-streak{text-align:center;font-size:13px;font-weight:700;}
 .work-streak-label{font-size:10px;color:var(--muted);text-align:center;letter-spacing:.5px;}
-.work-streak-col{position:relative;}
-.work-streak-col .work-streak[data-done="true"]{color:var(--violet-light);}
-.work-streak-col .work-streak[data-done="false"]{color:rgba(148,163,184,0.35);}
+.work-streak[data-done="true"]{color:var(--violet-light);}
+.work-streak[data-done="false"]{color:rgba(148,163,184,0.35);}
 .dns-label{
   font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
   color:var(--coral);margin:24px 0 12px;
@@ -299,10 +383,9 @@ body.essence-golden::before{
   backdrop-filter:blur(6px);
 }
 
-/* ── LEGEND (Bento-style) ── */
+/* ── LEGEND ── */
 .legend{
-  margin-top:36px;
-  background:var(--glass-bg);
+  margin-top:36px;background:var(--glass-bg);
   border:1px solid var(--glass-border);
   border-radius:16px;padding:20px 24px;
   backdrop-filter:blur(12px);
@@ -316,15 +399,14 @@ body.essence-golden::before{
 .footer strong{color:var(--white);}
 
 /* ═══════════════════════════════════════════════════════════
-   PROFILE PANEL — Glassmorphism v2 slide-up sheet
+   PROFILE PANEL
 ═══════════════════════════════════════════════════════════ */
 .overlay{position:fixed;inset:0;z-index:100;display:none;align-items:flex-end;justify-content:center;}
 .overlay.open{display:flex;}
 .overlay-bg{
   position:absolute;inset:0;
   background:rgba(0,0,0,.72);
-  backdrop-filter:blur(6px);
-  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
 }
 .panel{
   position:relative;z-index:1;
@@ -335,8 +417,7 @@ body.essence-golden::before{
   padding:0 0 44px;
   transform:translateY(100%);
   transition:transform .4s cubic-bezier(.4,0,.2,1);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
 }
 .overlay.open .panel{transform:translateY(0);}
 @media(min-width:640px){
@@ -349,12 +430,9 @@ body.essence-golden::before{
   .overlay.open .panel{transform:scale(1) translateY(0);opacity:1;}
 }
 .panel-header{
-  background:rgba(19,31,58,0.9);
-  border-radius:24px 24px 0 0;
-  padding:22px 26px 20px;
-  border-bottom:1px solid var(--line);
-  position:sticky;top:0;z-index:2;
-  backdrop-filter:blur(16px);
+  background:rgba(19,31,58,0.9);border-radius:24px 24px 0 0;
+  padding:22px 26px 20px;border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:2;backdrop-filter:blur(16px);
 }
 .panel-back{
   background:none;border:none;color:var(--muted);
@@ -368,8 +446,6 @@ body.essence-golden::before{
 .role-badge.Ambassador{background:rgba(245,158,11,.14);color:var(--amber);border:1px solid rgba(245,158,11,.3);}
 .role-badge.Participant{background:rgba(56,189,248,.1);color:var(--sky);border:1px solid rgba(56,189,248,.25);}
 .panel-pts{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--amber);}
-
-/* Panel tabs */
 .ptabs{display:flex;gap:6px;padding:16px 26px 0;border-bottom:1px solid var(--line);}
 .ptab{
   padding:10px 22px;font-size:13px;font-weight:700;cursor:pointer;
@@ -380,8 +456,6 @@ body.essence-golden::before{
 .ptab.active{color:var(--white);border-bottom-color:var(--violet);}
 .pcontent{padding:22px 26px;}
 .pboard{display:none;}.pboard.active{display:block;}
-
-/* Breakdown */
 .section-title{
   font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;
   color:var(--muted);margin:22px 0 10px;padding-bottom:7px;
@@ -401,14 +475,10 @@ body.essence-golden::before{
 .bk-pts{font-family:'Bebas Neue',sans-serif;font-size:20px;white-space:nowrap;}
 .bk-row.earned .bk-pts{color:var(--mint);}
 .bk-row.missed .bk-pts{color:var(--muted);}
-
-/* Day dots */
 .day-dots{display:flex;gap:5px;margin-top:5px;}
 .dot{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;}
 .dot.hit{background:rgba(16,185,129,.2);color:var(--mint);}
 .dot.miss{background:rgba(239,68,68,.12);color:var(--coral);}
-
-/* Total bar */
 .total-bar{
   margin-top:26px;
   background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.25);
@@ -418,8 +488,6 @@ body.essence-golden::before{
 }
 .total-label{font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);}
 .total-num{font-family:'Bebas Neue',sans-serif;font-size:46px;color:var(--amber);line-height:1;text-shadow:0 0 20px rgba(245,158,11,0.3);}
-
-/* Roast */
 .roast-box{
   background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.18);
   border-radius:16px;padding:22px;line-height:1.85;font-size:14px;color:var(--off);
@@ -427,13 +495,10 @@ body.essence-golden::before{
 .roast-box p{margin-bottom:14px;}.roast-box p:last-child{margin-bottom:0;}
 .roast-fire{font-size:30px;text-align:center;margin-bottom:14px;}
 
-
 /* ═══════════════════════════════════════════════════════════
-   CELEBRATION — Premium particle burst
+   CELEBRATION
 ═══════════════════════════════════════════════════════════ */
 .celebration-container{position:fixed;inset:0;z-index:150;pointer-events:none;overflow:hidden;}
-
-/* Confetti particles */
 .confetti{
   position:absolute;width:8px;height:8px;top:-20px;
   border-radius:2px;
@@ -445,8 +510,6 @@ body.essence-golden::before{
   80%{opacity:1;}
   100%{transform:translateY(110vh) rotate(720deg);opacity:0;}
 }
-
-/* Pop messages */
 .pop-msg{
   position:absolute;color:white;font-family:'Bebas Neue',sans-serif;
   font-weight:800;font-size:28px;text-transform:uppercase;letter-spacing:3px;
@@ -461,8 +524,6 @@ body.essence-golden::before{
   70%{opacity:.9;transform:scale(1.05) rotate(-1deg);}
   100%{opacity:0;transform:scale(1.3) translateY(-80px) rotate(5deg);}
 }
-
-/* Celebrate FAB */
 .celebrate-btn{
   position:fixed;bottom:32px;right:32px;width:68px;height:68px;
   border-radius:50%;
@@ -490,15 +551,14 @@ body.essence-golden::before{
   .tier{font-size:9px;padding:3px 6px;}
   .rank-num{font-size:19px;}
   .tabs{gap:4px;padding:4px;}.tab{font-size:12px;padding:10px 6px;}
-  .day-pill{font-size:11px;padding:7px 15px;}
+  .day-pill{font-size:11px;padding:7px 13px;}
+  .week-pill{font-size:12px;padding:9px 16px;}
   .panel-name{font-size:28px;}
   .panel{border-radius:22px 22px 0 0;}
   .ptab{padding:9px 14px;font-size:12px;}
   .pcontent{padding:16px;}
   .total-num{font-size:38px;}
 }
-
-/* ── ACCESSIBILITY ── */
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
 }
@@ -513,16 +573,18 @@ body.essence-golden::before{
   <div class="day-badge" id="current-day-badge">📅 Day 5 — June 5, 2026</div>
 </div>
 
-<div class="week-selector" id="week-selector">
-  <div class="week-pill active" onclick="window.setWeek(1)">Week 1 <span class="week-badge">Completed</span></div>
-  <div class="week-pill locked" title="Locked">Week 2 🔒</div>
-  <div class="week-pill locked" title="Locked">Week 3 🔒</div>
-  <div class="week-pill locked" title="Locked">Week 4 🔒</div>
-  <div class="week-pill locked" title="Locked">Week 5 🔒</div>
-  <div class="week-pill locked" title="Locked">Week 6 🔒</div>
+<!-- WEEK + DAY as one connected nav card -->
+<div class="nav-card">
+  <div class="week-row" id="week-row">
+    <div class="week-pill active" data-week="1" onclick="window.setWeek(1)">Week 1 <span class="week-badge">Done</span></div>
+    <div class="week-pill locked" title="Locked">Week 2 🔒</div>
+    <div class="week-pill locked" title="Locked">Week 3 🔒</div>
+    <div class="week-pill locked" title="Locked">Week 4 🔒</div>
+    <div class="week-pill locked" title="Locked">Week 5 🔒</div>
+    <div class="week-pill locked" title="Locked">Week 6 🔒</div>
+  </div>
+  <div class="day-tray" id="day-selector"></div>
 </div>
-
-<div class="day-selector" id="day-selector"></div>
 
 <div class="tabs">
   <button class="tab active participants" data-tab="participants" onclick="window.switchTab('participants')">🎓 Participants</button>
@@ -599,23 +661,29 @@ body.essence-golden::before{
   </div>
 </div>
 
-
-
 <!-- CELEBRATION -->
 <div id="celebration-container" class="celebration-container"></div>
-<button class="celebrate-btn" onclick="window.triggerCelebration(5000)" title="Celebrate!">🎉</button>
+<button class="celebrate-btn" onclick="window.triggerCelebration(8000)" title="Celebrate!">🎉</button>
 
 <script type="module">
 import { PEOPLE, SNAPSHOTS, DAY_LABELS, TIER_EMOJI, PLEDGE_ONLY } from './data.js';
 
-/* ── Process PLEDGE_ONLY (unchanged logic) ── */
+/* ── Hydrate PLEDGE_ONLY into PEOPLE (unchanged logic) ── */
 PLEDGE_ONLY.forEach(n => {
   if (!PEOPLE.find(x => x.name === n)) {
     PEOPLE.push({
       name: n, role: "Participant", allTimeTotal: 5, tier: "UNRANKED",
-      days: { D1:{pts:5,submitted:false,streakDays:0},D2:{pts:5,submitted:false,streakDays:0},D3:{pts:5,submitted:false,streakDays:0},D4:{pts:5,submitted:false,streakDays:0},D5:{pts:5,submitted:false,streakDays:0} },
+      days: {
+        D1:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0},
+        D2:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0},
+        D3:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0},
+        D4:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0},
+        D5:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0}
+      },
       breakdown:[
-        {section:"PRE-PROGRAMME",items:[{label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme. +5 for your pledge."}]},
+        {section:"PRE-PROGRAMME",items:[
+          {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme. +5 for your pledge."}
+        ]},
         {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
           {label:"Check-in form submission",pts:10,earned:false,days:["D1","D2","D3","D4","D5"],dayHits:[],desc:"No submissions yet. Fill the form daily for +10 automatic."},
           {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4","D5"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
@@ -634,71 +702,79 @@ PLEDGE_ONLY.forEach(n => {
 let currentWeek=1, currentDay='D5', currentTab='participants', currentPTab='breakdown';
 
 function tierClass(t){return t||'UNRANKED';}
-function ptsColor(rank){return rank===1?'var(--amber)':rank===2?'#CBD5E1':rank===3?'#CD7F32':'var(--white)';}
-function rowClass(rank){return rank===1?'rank-1':rank===2?'rank-2':rank===3?'rank-3':'';}
+function ptsColor(r){return r===1?'var(--amber)':r===2?'#CBD5E1':r===3?'#CD7F32':'var(--white)';}
+function rowClass(r){return r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':'';}
 
+/* ── WEEK SELECTOR ── */
 window.setWeek=function(week){
-  if(week>1)return; // only week 1 unlocked
+  if(week>1)return;
   currentWeek=week;
   document.querySelectorAll('.week-pill').forEach((p,i)=>{
     p.classList.toggle('active',i+1===week);
   });
   renderDaySelector();
-  // default to D5 (milestone day) for the active week
   window.setDay('D'+Math.min(currentWeek*5,5));
 };
 
+/* ── DAY TRAY — re-renders with slide animation ── */
 function renderDaySelector(){
-  const container=document.getElementById('day-selector');
-  let html='';
+  const tray=document.getElementById('day-selector');
+  /* Re-trigger the slide animation by replacing the element's class */
+  tray.classList.remove('day-tray');
+  void tray.offsetWidth; /* reflow */
+  tray.classList.add('day-tray');
+
   const start=(currentWeek-1)*5+1;
-  const maxUnlocked=currentWeek*5; // all 5 days of week 1 are unlocked
-  for(let i=start;i<=currentWeek*5;i++){
+  const end=currentWeek*5;
+  let html='';
+  for(let i=start;i<=end;i++){
     const dKey='D'+i;
-    const isLocked=i>maxUnlocked;
+    const isLocked=false; /* all days in active week unlocked */
     const isActive=currentDay===dKey;
-    const isD5ofWeek=(i%5===0); // Day 5 of any week = golden milestone
+    const isMilestone=(i%5===0); /* Day 5 of any week */
+    const dayLabel='Day '+i;
     html+=`<button
-      class="day-pill${isActive?' active':''}${isLocked?' locked':''}${isD5ofWeek?' golden':''}"
+      class="day-pill${isActive?' active':''}${isMilestone?' milestone':''}"
       data-day="${dKey}"
-      ${isLocked?'disabled':''}
-      onclick="${isLocked?'':'window.setDay(\''+dKey+'\')'}"
-    >${isLocked?'🔒 ':''}Day ${i}</button>`;
+      onclick="window.setDay('${dKey}')"
+    >${dayLabel}</button>`;
   }
-  container.innerHTML=html;
+  tray.innerHTML=html;
 }
 
+/* ── DAY SELECTION ── */
 window.setDay=function(day){
   currentDay=day;
-  // update active class on day pills reliably via data attribute
   document.querySelectorAll('.day-pill').forEach(p=>{
-    p.classList.toggle('active', p.dataset.day===day);
+    p.classList.toggle('active',p.dataset.day===day);
   });
-  // golden essence for Day 5 of any week
   const dayNum=parseInt(day.slice(1),10);
-  const isGoldenDay=(dayNum%5===0);
-  document.body.classList.toggle('essence-golden',isGoldenDay);
+  const isGolden=(dayNum%5===0);
+  document.body.classList.toggle('essence-golden',isGolden);
   const label=DAY_LABELS[day]||`Day ${dayNum}`;
   document.getElementById('current-day-badge').textContent='📅 '+label;
   renderBoard();
 };
 
+/* ── TAB SWITCHING ── */
 window.switchTab=function(tab){
   currentTab=tab;
-  // use data-tab attribute for reliable selection
   document.querySelectorAll('.tab').forEach(t=>{
-    t.classList.toggle('active', t.dataset.tab===tab);
+    t.classList.toggle('active',t.dataset.tab===tab);
   });
   document.querySelectorAll('.board').forEach(b=>b.classList.remove('active'));
   const boardEl=document.getElementById('board-'+tab);
-  if(boardEl) boardEl.classList.add('active');
+  if(boardEl)boardEl.classList.add('active');
   renderBoard();
 };
 
+/* ── BOARD RENDER ── */
 function renderBoard(){
   const snap=SNAPSHOTS[currentDay];
   if(!snap){
-    ['participants','ambassadors'].forEach(k=>document.getElementById('rows-'+k).innerHTML='<div class="dns-label">Data for this day is locked.</div>');
+    ['participants','ambassadors'].forEach(k=>{
+      document.getElementById('rows-'+k).innerHTML='<div class="dns-label">Data for this day is locked.</div>';
+    });
     return;
   }
   ['participants','ambassadors'].forEach(tabKey=>{
@@ -708,6 +784,7 @@ function renderBoard(){
     const active=data.filter(p=>p.submitted||p.pts>5);
     const dns=data.filter(p=>!p.submitted&&p.pts<=5);
     let html='',rank=1;
+
     active.forEach((p,i)=>{
       const rc=rowClass(rank);
       const personData=PEOPLE.find(x=>x.name===p.name);
@@ -716,20 +793,21 @@ function renderBoard(){
       const workStreak=dayData?.workStreakDays||0;
       const workDone=dayData?.workDone||false;
       const subNote=p.submitted
-        ? `📋 ${formStreak}-day form streak · ✏️ ${workStreak}-day work streak`
-        : workDone
-          ? `✏️ Work done · form not submitted`
-          : `${currentDay} not submitted`;
+        ?`📋 ${formStreak}-day form · ✏️ ${workStreak}-day work`
+        :workDone
+          ?`✏️ Work done · form not submitted`
+          :`Not submitted`;
       html+=`<div class="row ${rc}" style="animation-delay:${i*0.05}s" onclick="window.openPanel('${p.name.replace(/'/g,"\\'")}')">
         <div class="rank-num" style="color:${p.submitted?ptsColor(rank):'var(--muted)'}">${rank}</div>
         <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">${subNote}</div></div>
         <div><div class="pts" style="color:${ptsColor(rank)}">${p.pts}</div><div class="pts-label">points</div></div>
         <div class="tier ${tierClass(p.tier)}">${TIER_EMOJI[p.tier]||''} ${p.tier}</div>
         <div><div class="streak">${formStreak}</div><div class="streak-label">📋 form</div></div>
-        <div class="work-streak-col"><div class="work-streak" data-done="${workDone}">${workStreak}</div><div class="work-streak-label">✏️ work</div></div>
+        <div><div class="work-streak" data-done="${workDone}">${workStreak}</div><div class="work-streak-label">✏️ work</div></div>
       </div>`;
       rank++;
     });
+
     if(dns.length>0){
       html+=`<div class="dns-label">Did Not Submit Yet</div>`;
       dns.forEach((p,i)=>{
@@ -739,11 +817,11 @@ function renderBoard(){
         const workStreak=dayData?.workStreakDays||0;
         html+=`<div class="row dns" style="animation-delay:${(active.length+i)*0.05}s" onclick="window.openPanel('${p.name.replace(/'/g,"\\'")}')">
           <div class="rank-num" style="color:var(--coral)">—</div>
-          <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">${workDone?'✏️ Work done · no form submission':'No submission'}</div></div>
+          <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">${workDone?'✏️ Work done · no form':'No submission'}</div></div>
           <div><div class="pts" style="color:var(--muted)">—</div><div class="pts-label">points</div></div>
           <div class="tier DNS">✗ DNS</div>
           <div><div class="streak" style="color:var(--coral)">0</div><div class="streak-label">📋 form</div></div>
-          <div class="work-streak-col"><div class="work-streak" data-done="${workDone}">${workStreak}</div><div class="work-streak-label">✏️ work</div></div>
+          <div><div class="work-streak" data-done="${workDone}">${workStreak}</div><div class="work-streak-label">✏️ work</div></div>
         </div>`;
       });
     }
@@ -751,6 +829,7 @@ function renderBoard(){
   });
 }
 
+/* ── PROFILE PANEL ── */
 window.openPanel=function(name){
   const p=PEOPLE.find(x=>x.name===name);
   if(!p)return;
@@ -797,43 +876,40 @@ window.closePanel=function(){
 };
 
 window.handleOverlayClick=function(e){
-  if(e.target===document.getElementById('overlay')||e.target.classList.contains('overlay-bg'))closePanel();
+  if(e.target===document.getElementById('overlay')||e.target.classList.contains('overlay-bg'))
+    window.closePanel();
 };
 
 window.switchPTab=function(tab){
   currentPTab=tab;
-  document.querySelectorAll('.ptab').forEach(t=>t.classList.toggle('active', t.dataset.ptab===tab));
+  document.querySelectorAll('.ptab').forEach(t=>t.classList.toggle('active',t.dataset.ptab===tab));
   document.querySelectorAll('.pboard').forEach(b=>b.classList.remove('active'));
   const pb=document.getElementById('pboard-'+tab);
-  if(pb) pb.classList.add('active');
+  if(pb)pb.classList.add('active');
 };
 
-/* ── CELEBRATION — Premium confetti burst ── */
+/* ── CELEBRATION ── */
 let _celebTimer=null;
 window.triggerCelebration=function(duration){
-  /* Prevent overlapping celebrations */
   if(_celebTimer){clearTimeout(_celebTimer);}
   const container=document.getElementById('celebration-container');
   const colors=['#4F46E5','#F59E0B','#10B981','#EF4444','#38BDF8','#A78BFA','#34D399','#FCD34D'];
   const messages=['Week 1 Complete! 🏆','Sky Graphics! 🎨','Amazing Work! 🔥','Figma Masters! ✨','Keep Climbing! 🚀'];
-  const ms=duration||5000;
+  const ms=duration||8000;
   const end=Date.now()+ms;
 
   const interval=setInterval(()=>{
     if(Date.now()>end){
       clearInterval(interval);
-      /* Fade out any remaining particles */
       setTimeout(()=>{container.innerHTML='';},2000);
       return;
     }
-    /* Confetti particle */
     const c=document.createElement('div');
     c.className='confetti';
     const size=Math.random()*8+4;
     c.style.cssText=`left:${Math.random()*100}vw;width:${size}px;height:${size}px;background:${colors[Math.floor(Math.random()*colors.length)]};border-radius:${Math.random()>0.5?'50%':'2px'};animation-duration:${Math.random()*2+2}s;animation-delay:0s;`;
     container.appendChild(c);
     setTimeout(()=>c.remove(),4000);
-    /* Pop message */
     if(Math.random()>0.82){
       const m=document.createElement('div');
       m.className='pop-msg';
@@ -844,23 +920,22 @@ window.triggerCelebration=function(duration){
     }
   },120);
 
-  /* Auto-stop guarantee at duration+buffer */
   _celebTimer=setTimeout(()=>{clearInterval(interval);container.innerHTML='';},ms+2500);
 };
 
 /* ── INIT ── */
 window.initApp=function(){
-  try {
+  try{
     window.setWeek(1);
-    window.triggerCelebration(10000);
-  } catch(e) {
-    console.error('App init failed:', e);
+    window.triggerCelebration(15000); /* 15 seconds on page load */
+  }catch(e){
+    console.error('App init failed:',e);
   }
 };
 
-if(document.readyState==='loading') {
-  document.addEventListener('DOMContentLoaded', window.initApp);
-} else {
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',window.initApp);
+}else{
   window.initApp();
 }
 </script>
