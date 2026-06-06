@@ -559,7 +559,7 @@ export const PEOPLE = [
   {
     name: "Asonganyi Adel Quin", role: "Participant", allTimeTotal: 15, tier: "UNRANKED",
     days: {
-      D1: { pts: 15, submitted: true, streakDays: 1, workDone: false, workStreakDays: 1 },
+      D1: { pts: 15, submitted: true, streakDays: 1, workDone: false, workStreakDays: 0 },
       D2: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
       D3: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
       D4: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
@@ -754,8 +754,5 @@ export const SNAPSHOTS = {
       { name: "Fonyuy Berinyuy Tarkighan", pts: 5, tier: "UNRANKED", submitted: false },
       { name: "Akuchu Tohla Tchosi-Ambom", pts: 5, tier: "UNRANKED", submitted: false },
     ]
-  }
-};
-
   }
 };
