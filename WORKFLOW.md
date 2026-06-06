@@ -29,3 +29,4 @@
 2026-06-06: Task 6 completed - Wrote all workDone/workStreakDays fields to data.js
 2026-06-06: Task 7 completed - Verified existing fields and structure are untouched
 2026-06-06: Task 8 completed - Marked WORKFLOW.md COMPLETE
+2026-06-06: Applied logic update: "Every form streak is a work streak". Corrected Chrioni's D1 work (+5).
