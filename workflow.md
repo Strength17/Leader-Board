@@ -45,6 +45,11 @@
 - [x] Create `GEMINI.md` with model instructions. - **Completed**
 - [x] Extract all data (`PEOPLE`, `SNAPSHOTS`, etc.) to `data.js`. - **Completed**
 - [x] Refactor `index.html` to use ES modules. - **Completed**
-- [x] Fix "Incomplete" state in `index.html` (Missing Day 5 data and logic). - **Completed**
+- [x] Fix "Incomplete" state in `index.html` (Missing Day 1-5 data and logic). - **Completed**
 - [x] Final Cleanup (Delete `message.txt`, `reply.md`, `day-0-map.md`). - **Completed**
 - [x] Commit and Push changes. - **Completed**
+
+## Phase 8: Countdown Bug Fix
+- [x] Investigate `startCountdown` logic hang. - **Completed**
+- [x] Fix the countdown interval and CSS visibility toggle. - **Completed**
+- [x] Verify celebration trigger post-countdown. - **Completed**
