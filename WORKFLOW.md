@@ -1,32 +1,28 @@
-# WORKFLOW — data.js Schema Update
-## Sky Graphics Edition 1 · Dual-Streak System
+# WORKFLOW — UI & Data Integrity Recovery
 
-### STATUS: COMPLETE ✅
+## Phase 1: data.js Integrity & Logic Lockdown
+- [x] 1. Apply +5 Standard Work to "Abongnwi Chrioni-Opal Forba'" for Day 1.
+- [x] 2. Update Chrioni's allTimeTotal (90 -> 95) and adjust historical SNAPSHOTS (D1-D5).
+- [x] 3. Audit all PEOPLE: Ensure Rule "Every form submission (submitted:true) = work done (workDone:true)".
+- [x] 4. Recalculate all `workStreakDays` to ensure they include both pure work days and form-submission days.
 
----
 
-## Tasks
+## Phase 2: index.html Rendering Refactor
+- [x] 5. Change Row Filtering logic:
+    - **Active (Green):** Anyone with `pts > 0` (Interaction-based).
+    - **Inactive (Red):** Only those with `pts === 0` (Zero points for that day).
+- [x] 6. Rename "Did Not Submit Yet" label to "No Activity Recorded Today" (or similar professional alternative).
+- [x] 7. Ensure UI displays both 📋 Form and ✏️ Work streaks as separate, equal metrics in the row.
 
-- [x] 0. WORKFLOW.md created
-- [x] 1. data.js read and parsed in full
-- [x] 2. All PEOPLE entries listed and counted
-- [x] 3. Point classification rules understood (see rules below)
-- [x] 4. Per-day `workDone` derived for every person for every day
-- [x] 5. Per-day `workStreakDays` computed for every person for every day
-- [x] 6. All new fields written into data.js
-- [x] 7. Existing fields verified untouched
-- [x] 8. WORKFLOW.md marked COMPLETE
+## Phase 3: Validation & Cleanup
+- [x] 8. Verify data imports: Confirm index.html imports all required variables from data.js.
+- [x] 9. Final cross-check of mobile responsiveness (ensuring the new dual-streak columns fit).
 
 ---
 
 ## Log
-2026-06-06: Task 0 completed - Created WORKFLOW.md
-2026-06-06: Task 1 completed - Read data.js (13 PEOPLE entries found)
-2026-06-06: Task 2 completed - Counted 13 PEOPLE entries
-2026-06-06: Task 3 completed - Understood rules (Work scored per day = primary source)
-2026-06-06: Task 4 completed - Derived workDone for all 13 people
-2026-06-06: Task 5 completed - Computed workStreakDays for all 13 people
-2026-06-06: Task 6 completed - Wrote all workDone/workStreakDays fields to data.js
-2026-06-06: Task 7 completed - Verified existing fields and structure are untouched
-2026-06-06: Task 8 completed - Marked WORKFLOW.md COMPLETE
-2026-06-06: Applied logic update: "Every form streak is a work streak". Corrected Chrioni's D1 work (+5).
+2026-06-06: Workflow created.
+2026-06-06: Phase 1 Complete - data.js integrity and Chrioni +5 correction applied.
+2026-06-06: Phase 2 Complete - Interaction-based rendering and dual-streak UI implemented.
+2026-06-06: Phase 3 Complete - Imports verified and responsiveness checked.
+2026-06-06: Project successfully recovered and updated.
