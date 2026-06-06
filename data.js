@@ -1,3 +1,33 @@
+/**
+ * ============================================================
+ * SKY GRAPHICS FIGMA EDITION 1 — LEADERBOARD DATA
+ * ============================================================
+ *
+ * STREAK RULES (ENFORCED THROUGHOUT THIS FILE):
+ * ──────────────────────────────────────────────
+ *
+ * RULE 1 — FORM STREAK (streakDays):
+ *   Tracks consecutive days the check-in form was submitted.
+ *   submitted: true  → streakDays increments by 1
+ *   submitted: false → streakDays stops incrementing (does not reset)
+ *
+ * RULE 2 — WORK STREAK (workDone + workStreakDays):
+ *   Tracks consecutive days a student did scored Figma work.
+ *   Work is confirmed if a creativity score was awarded that day:
+ *   Standard (+5), Good (+10), Impressive (+15), or Extraordinary (+20).
+ *   Work CAN be done WITHOUT submitting the form (e.g. posted in WhatsApp).
+ *   workDone: true  → student received a creativity score that day
+ *   workDone: false → no scored work on that day
+ *   workStreakDays  → increments when workDone=true, resets to 0 when workDone=false
+ *
+ * RULE 3 — FORM IMPLIES WORK:
+ *   Every form submission implies work was done.
+ *   submitted: true always means workDone: true.
+ *   The reverse is NOT true — work can exist without a form submission.
+ *
+ * ============================================================
+ */
+
 export const DAY_LABELS = {
   D1: 'Day 1 — June 1, 2026',
   D2: 'Day 2 — June 2, 2026',
