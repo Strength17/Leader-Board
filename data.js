@@ -23,11 +23,11 @@ export const PEOPLE = [
   {
     name: "Christine Choundong", role: "Ambassador", allTimeTotal: 220, tier: "SILVER",
     days: {
-      D1: { pts: 80, submitted: true, streakDays: 1 },
-      D2: { pts: 120, submitted: true, streakDays: 2 },
-      D3: { pts: 145, submitted: true, streakDays: 3 },
-      D4: { pts: 170, submitted: true, streakDays: 4 },
-      D5: { pts: 220, submitted: true, streakDays: 5 }
+      D1: { pts: 80, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
+      D2: { pts: 120, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
+      D3: { pts: 145, submitted: true, streakDays: 3, workDone: true, workStreakDays: 3 },
+      D4: { pts: 170, submitted: true, streakDays: 4, workDone: true, workStreakDays: 4 },
+      D5: { pts: 220, submitted: true, streakDays: 5, workDone: true, workStreakDays: 5 }
     },
     breakdown: [
       {
@@ -78,11 +78,11 @@ export const PEOPLE = [
   {
     name: "Oluwasegun Daniel Osawore", role: "Ambassador", allTimeTotal: 175, tier: "SILVER",
     days: {
-      D1: { pts: 85, submitted: true, streakDays: 1 },
-      D2: { pts: 115, submitted: true, streakDays: 2 },
-      D3: { pts: 140, submitted: true, streakDays: 3 },
-      D4: { pts: 140, submitted: false, streakDays: 3 },
-      D5: { pts: 175, submitted: true, streakDays: 4 }
+      D1: { pts: 85, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
+      D2: { pts: 115, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
+      D3: { pts: 140, submitted: true, streakDays: 3, workDone: true, workStreakDays: 3 },
+      D4: { pts: 140, submitted: false, streakDays: 3, workDone: false, workStreakDays: 0 },
+      D5: { pts: 175, submitted: true, streakDays: 4, workDone: true, workStreakDays: 1 }
     },
     breakdown: [
       {
@@ -133,11 +133,11 @@ export const PEOPLE = [
   {
     name: "Malialia Celine Bride", role: "Ambassador", allTimeTotal: 85, tier: "BRONZE",
     days: {
-      D1: { pts: 85, submitted: false, streakDays: 0 },
-      D2: { pts: 85, submitted: false, streakDays: 0 },
-      D3: { pts: 85, submitted: false, streakDays: 0 },
-      D4: { pts: 85, submitted: false, streakDays: 0 },
-      D5: { pts: 85, submitted: false, streakDays: 0 }
+      D1: { pts: 85, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 85, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 85, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 85, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 85, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 }
     },
     breakdown: [
       {
@@ -188,11 +188,11 @@ export const PEOPLE = [
   {
     name: "Mbiydzenyuy Patience Dzekem", role: "Ambassador", allTimeTotal: 65, tier: "BRONZE",
     days: {
-      D1: { pts: 35, submitted: true, streakDays: 1 },
-      D2: { pts: 65, submitted: true, streakDays: 2 },
-      D3: { pts: 65, submitted: false, streakDays: 2 },
-      D4: { pts: 65, submitted: false, streakDays: 2 },
-      D5: { pts: 65, submitted: false, streakDays: 2 }
+      D1: { pts: 35, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
+      D2: { pts: 65, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
+      D3: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 },
+      D4: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 },
+      D5: { pts: 65, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 }
     },
     breakdown: [
       {
@@ -242,11 +242,11 @@ export const PEOPLE = [
   {
     name: "Irinyemi Adedayo Juliet", role: "Ambassador", allTimeTotal: 50, tier: "BRONZE",
     days: {
-      D1: { pts: 5, submitted: false, streakDays: 0 },
-      D2: { pts: 25, submitted: true, streakDays: 1 },
-      D3: { pts: 25, submitted: false, streakDays: 1 },
-      D4: { pts: 50, submitted: true, streakDays: 2 },
-      D5: { pts: 50, submitted: false, streakDays: 2 }
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 25, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
+      D3: { pts: 25, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D4: { pts: 50, submitted: true, streakDays: 2, workDone: true, workStreakDays: 1 },
+      D5: { pts: 50, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 }
     },
     breakdown: [
       {
@@ -295,11 +295,11 @@ export const PEOPLE = [
   {
     name: "Frank Emmanuel", role: "Ambassador", allTimeTotal: 5, tier: "UNRANKED",
     days: {
-      D1: { pts: 5, submitted: false, streakDays: 0 },
-      D2: { pts: 5, submitted: false, streakDays: 0 },
-      D3: { pts: 5, submitted: false, streakDays: 0 },
-      D4: { pts: 5, submitted: false, streakDays: 0 },
-      D5: { pts: 5, submitted: false, streakDays: 0 }
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 }
     },
     breakdown: [
       {
@@ -326,11 +326,11 @@ export const PEOPLE = [
   {
     name: "Percy Visiy", role: "Ambassador", allTimeTotal: 5, tier: "UNRANKED",
     days: {
-      D1: { pts: 5, submitted: false, streakDays: 0 },
-      D2: { pts: 5, submitted: false, streakDays: 0 },
-      D3: { pts: 5, submitted: false, streakDays: 0 },
-      D4: { pts: 5, submitted: false, streakDays: 0 },
-      D5: { pts: 5, submitted: false, streakDays: 0 }
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 }
     },
     breakdown: [
       {
@@ -350,11 +350,11 @@ export const PEOPLE = [
   {
     name: "Faith Emmanuella Busari", role: "Participant", allTimeTotal: 110, tier: "BRONZE",
     days: {
-      D1: { pts: 95, submitted: true, streakDays: 1 },
-      D2: { pts: 95, submitted: true, streakDays: 2 },
-      D3: { pts: 95, submitted: false, streakDays: 2 },
-      D4: { pts: 95, submitted: false, streakDays: 2 },
-      D5: { pts: 110, submitted: true, streakDays: 3 }
+      D1: { pts: 95, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
+      D2: { pts: 95, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
+      D3: { pts: 95, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 },
+      D4: { pts: 95, submitted: false, streakDays: 2, workDone: false, workStreakDays: 0 },
+      D5: { pts: 110, submitted: true, streakDays: 3, workDone: true, workStreakDays: 1 }
     },
     breakdown: [
       {
@@ -403,11 +403,11 @@ export const PEOPLE = [
   {
     name: "Emmanuel Karol Tchouani", role: "Participant", allTimeTotal: 165, tier: "SILVER",
     days: {
-      D1: { pts: 55, submitted: true, streakDays: 1 },
-      D2: { pts: 80, submitted: true, streakDays: 2 },
-      D3: { pts: 100, submitted: true, streakDays: 3 },
-      D4: { pts: 115, submitted: true, streakDays: 4 },
-      D5: { pts: 165, submitted: true, streakDays: 5 }
+      D1: { pts: 55, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
+      D2: { pts: 80, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
+      D3: { pts: 100, submitted: true, streakDays: 3, workDone: true, workStreakDays: 3 },
+      D4: { pts: 115, submitted: true, streakDays: 4, workDone: true, workStreakDays: 4 },
+      D5: { pts: 165, submitted: true, streakDays: 5, workDone: true, workStreakDays: 5 }
     },
     breakdown: [
       {
@@ -446,11 +446,11 @@ export const PEOPLE = [
   {
     name: "Abongnwi Chrioni-Opal Forba'", role: "Participant", allTimeTotal: 90, tier: "BRONZE",
     days: {
-      D1: { pts: 30, submitted: false, streakDays: 0 },
-      D2: { pts: 35, submitted: false, streakDays: 0 },
-      D3: { pts: 45, submitted: false, streakDays: 0 },
-      D4: { pts: 55, submitted: false, streakDays: 0 },
-      D5: { pts: 90, submitted: true, streakDays: 1 }
+      D1: { pts: 30, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 35, submitted: false, streakDays: 0, workDone: true, workStreakDays: 1 },
+      D3: { pts: 45, submitted: false, streakDays: 0, workDone: true, workStreakDays: 2 },
+      D4: { pts: 55, submitted: false, streakDays: 0, workDone: true, workStreakDays: 3 },
+      D5: { pts: 90, submitted: true, streakDays: 1, workDone: true, workStreakDays: 4 }
     },
     breakdown: [
       {
@@ -489,11 +489,11 @@ export const PEOPLE = [
   {
     name: "Mbishitehnyi Ryan", role: "Participant", allTimeTotal: 25, tier: "UNRANKED",
     days: {
-      D1: { pts: 25, submitted: false, streakDays: 0 },
-      D2: { pts: 25, submitted: false, streakDays: 0 },
-      D3: { pts: 25, submitted: false, streakDays: 0 },
-      D4: { pts: 25, submitted: false, streakDays: 0 },
-      D5: { pts: 25, submitted: false, streakDays: 0 }
+      D1: { pts: 25, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 25, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 25, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 25, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 25, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 }
     },
     breakdown: [
       {
@@ -519,11 +519,11 @@ export const PEOPLE = [
   {
     name: "Ranjoy-Bryan", role: "Participant", allTimeTotal: 30, tier: "UNRANKED",
     days: {
-      D1: { pts: 30, submitted: true, streakDays: 1 },
-      D2: { pts: 30, submitted: false, streakDays: 1 },
-      D3: { pts: 30, submitted: false, streakDays: 1 },
-      D4: { pts: 30, submitted: false, streakDays: 1 },
-      D5: { pts: 30, submitted: false, streakDays: 1 }
+      D1: { pts: 30, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
+      D2: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D3: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D4: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D5: { pts: 30, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 }
     },
     breakdown: [
       {
@@ -559,11 +559,11 @@ export const PEOPLE = [
   {
     name: "Asonganyi Adel Quin", role: "Participant", allTimeTotal: 15, tier: "UNRANKED",
     days: {
-      D1: { pts: 15, submitted: true, streakDays: 1 },
-      D2: { pts: 15, submitted: false, streakDays: 1 },
-      D3: { pts: 15, submitted: false, streakDays: 1 },
-      D4: { pts: 15, submitted: false, streakDays: 1 },
-      D5: { pts: 15, submitted: false, streakDays: 1 }
+      D1: { pts: 15, submitted: true, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D2: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D3: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D4: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D5: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 }
     },
     breakdown: [
       {
