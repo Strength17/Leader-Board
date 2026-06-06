@@ -16,10 +16,29 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .title{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,10vw,86px);line-height:.95;letter-spacing:2px;background:linear-gradient(135deg,#fff 0%,#38BDF8 50%,#10B981 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;}
 .subtitle{font-size:14px;color:var(--muted);letter-spacing:1px;font-weight:400;}
 .day-badge{display:inline-block;margin-top:14px;background:linear-gradient(135deg,var(--violet),#818CF8);padding:6px 20px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px;}
+
+/* WEEK SELECTOR */
+.week-selector{display:flex;gap:10px;margin-bottom:16px;overflow-x:auto;padding-bottom:10px;scrollbar-width:none;}
+.week-selector::-webkit-scrollbar{display:none;}
+.week-pill{padding:12px 24px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);cursor:pointer;font-weight:700;font-size:14px;white-space:nowrap;transition:all .3s ease;position:relative;}
+.week-pill.active{background:var(--violet);border-color:var(--violet);color:white;box-shadow:0 4px 20px rgba(79,70,229,.3);}
+.week-pill.locked{opacity:.4;cursor:not-allowed;background:rgba(255,255,255,.02);}
+.week-badge{position:absolute;top:-8px;right:-8px;background:var(--mint);color:var(--navy);font-size:9px;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:0.5px;box-shadow:0 2px 8px rgba(16,185,129,.4);}
+
 /* DAY SELECTOR */
-.day-selector{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
-.day-pill{padding:8px 18px;border-radius:20px;cursor:pointer;font-size:12px;font-weight:700;letter-spacing:1px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);transition:all .2s ease;}
+.day-selector{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;animation:fadeIn .4s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
+.day-pill{padding:8px 18px;border-radius:20px;cursor:pointer;font-size:12px;font-weight:700;letter-spacing:1px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);transition:all .2s ease;display:flex;align-items:center;gap:6px;}
 .day-pill.active{background:var(--amber);color:var(--navy);border-color:var(--amber);}
+.day-pill.locked{background:rgba(255,255,255,0.02);color:rgba(255,255,255,0.1);cursor:not-allowed;border-style:dashed;}
+.day-pill.golden{background:linear-gradient(135deg, #F59E0B, #D97706);color:var(--navy);border-color: #FFD700;box-shadow:0 0 15px rgba(217,119,6,0.4);}
+
+/* GOLDEN ESSENCE for Day 5 */
+body.essence-golden{background:#0a0e1a;position:relative;}
+body.essence-golden::after{content:'';position:fixed;inset:0;background:radial-gradient(circle at 50% 50%, rgba(217,119,6,0.08) 0%, transparent 70%);pointer-events:none;z-index:0;}
+.essence-golden .row.rank-1{box-shadow: 0 0 25px rgba(245,158,11,0.25);border-color: rgba(245,158,11,0.8);}
+.essence-golden .title{background: linear-gradient(135deg, #fff 0%, #FFD700 50%, #D97706 100%);-webkit-background-clip:text;background-clip:text;}
+
 /* TABS */
 .tabs{display:flex;gap:8px;margin-bottom:28px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:6px;}
 .tab{flex:1;text-align:center;padding:12px 20px;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;letter-spacing:.5px;transition:all .25s ease;color:var(--muted);border:none;background:transparent;}
@@ -119,6 +138,24 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .roast-box p{margin-bottom:12px;}.roast-box p:last-child{margin-bottom:0;}
 .roast-fire{font-size:28px;text-align:center;margin-bottom:12px;}
 
+/* CELEBRATION EFFECTS */
+.countdown-overlay{position:fixed;inset:0;z-index:200;background:var(--navy);display:flex;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease;}
+.countdown-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+#countdown-num{font-family:'Bebas Neue',sans-serif;font-size:180px;color:var(--amber);text-shadow:0 0 40px rgba(245,158,11,.4);animation:countZoom 1s ease infinite;}
+@keyframes countZoom{from{transform:scale(.5);opacity:0;}50%{opacity:1;}to{transform:scale(1.5);opacity:0;}}
+
+.celebration-container{position:fixed;inset:0;z-index:150;pointer-events:none;overflow:hidden;}
+.balloon{position:absolute;bottom:-100px;width:50px;height:70px;border-radius:50% 50% 50% 50% / 40% 40% 60% 60%;animation:flyUp 4s ease-in forwards;}
+.balloon::after{content:'';position:absolute;bottom:-10px;left:50%;width:2px;height:30px;background:rgba(255,255,255,.2);transform:translateX(-50%);}
+@keyframes flyUp{from{transform:translateY(0) rotate(0deg);}to{transform:translateY(-120vh) rotate(20deg);}}
+
+.pop-msg{position:absolute;color:white;font-weight:800;font-size:24px;text-transform:uppercase;letter-spacing:2px;text-shadow:0 4px 12px rgba(0,0,0,.5);animation:popOut 1.5s cubic-bezier(.17, .67, .83, .67) forwards;white-space:nowrap;z-index:160;}
+@keyframes popOut{0%{transform:scale(0);opacity:0;}50%{opacity:1;transform:scale(1.2);}100%{opacity:0;transform:scale(1.5) translateY(-50px);}}
+
+.celebrate-btn{position:fixed;bottom:30px;right:30px;width:64px;height:64px;border-radius:50%;background:var(--violet);border:4px solid rgba(255,255,255,.1);color:white;font-size:28px;cursor:pointer;z-index:90;box-shadow:0 10px 25px rgba(79,70,229,.4);display:flex;align-items:center;justify-content:center;transition:all .3s cubic-bezier(.175, .885, .32, 1.275);}
+.celebrate-btn:hover{transform:scale(1.1) rotate(15deg);box-shadow:0 15px 35px rgba(79,70,229,.6);}
+.celebrate-btn:active{transform:scale(0.9);}
+
 @media(max-width:640px){
   .wrap{padding:20px 12px 60px;}
   .row{grid-template-columns:32px 1fr 58px 62px;gap:8px;padding:12px 10px;}
@@ -141,19 +178,25 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
   <div class="edition-tag">Sky Graphics · Edition 1</div>
   <div class="title">LEADERBOARD</div>
   <div class="subtitle">Design Challenge · 6 Weeks · Daily Check-In</div>
-  <div class="day-badge" id="current-day-badge">📅 Day 4 — June 5, 2026</div>
+  <div class="day-badge" id="current-day-badge">📅 Day 5 — June 5, 2026</div>
+</div>
+
+<div class="week-selector" id="week-selector">
+  <div class="week-pill active" onclick="window.setWeek(1)">Week 1 <span class="week-badge">Completed</span></div>
+  <div class="week-pill locked" title="Locked">Week 2 🔒</div>
+  <div class="week-pill locked" title="Locked">Week 3 🔒</div>
+  <div class="week-pill locked" title="Locked">Week 4 🔒</div>
+  <div class="week-pill locked" title="Locked">Week 5 🔒</div>
+  <div class="week-pill locked" title="Locked">Week 6 🔒</div>
 </div>
 
 <div class="day-selector" id="day-selector">
-  <button class="day-pill" onclick="setDay('D1')">Day 1</button>
-  <button class="day-pill" onclick="setDay('D2')">Day 2</button>
-  <button class="day-pill" onclick="setDay('D3')">Day 3</button>
-  <button class="day-pill active" onclick="setDay('D4')">Day 4</button>
+  <!-- Days for active week will be injected here by JS -->
 </div>
 
 <div class="tabs">
-  <button class="tab active participants" onclick="switchTab('participants')">🎓 Participants</button>
-  <button class="tab ambassadors" onclick="switchTab('ambassadors')">⭐ Ambassadors</button>
+  <button class="tab active participants" onclick="window.switchTab('participants')">🎓 Participants</button>
+  <button class="tab ambassadors" onclick="window.switchTab('ambassadors')">⭐ Ambassadors</button>
 </div>
 
 <div class="board active" id="board-participants">
@@ -193,11 +236,11 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 </div>
 
 <!-- PROFILE OVERLAY -->
-<div class="overlay" id="overlay" onclick="handleOverlayClick(event)">
+<div class="overlay" id="overlay" onclick="window.handleOverlayClick(event)">
   <div class="overlay-bg"></div>
   <div class="panel" id="panel">
     <div class="panel-header">
-      <button class="panel-back" onclick="closePanel()">← Back</button>
+      <button class="panel-back" onclick="window.closePanel()">← Back</button>
       <div class="panel-name" id="panel-name"></div>
       <div class="panel-meta">
         <span class="role-badge" id="panel-role"></span>
@@ -206,8 +249,8 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       </div>
     </div>
     <div class="ptabs">
-      <button class="ptab active" onclick="switchPTab('breakdown')">📊 Points Breakdown</button>
-      <button class="ptab" onclick="switchPTab('roast')">🔥 Roast</button>
+      <button class="ptab active" onclick="window.switchPTab('breakdown')">📊 Points Breakdown</button>
+      <button class="ptab" onclick="window.switchPTab('roast')">🔥 Roast</button>
     </div>
     <div class="pcontent">
       <div class="pboard active" id="pboard-breakdown"></div>
@@ -216,780 +259,126 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
   </div>
 </div>
 
-<script>
-// ═══════════════════════════════════════════════════════════════
-// DATA
-// ═══════════════════════════════════════════════════════════════
-const PEOPLE = [
-  {
-    name:"Christine Choundong",role:"Ambassador",allTimeTotal:170,tier:"SILVER",
-    days:{
-      D1:{pts:80,submitted:true,streakDays:1},
-      D2:{pts:120,submitted:true,streakDays:2},
-      D3:{pts:145,submitted:true,streakDays:3},
-      D4:{pts:170,submitted:true,streakDays:4}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially. +5 for your pledge."},
-        {label:"Referral × 2",pts:50,earned:true,days:null,desc:"You referred 2 members who joined the programme. +25 per referral = +50."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3","D4"],desc:"You submitted the daily check-in form. +10 automatic per day."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for the +5 early bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:true,days:["D1","D2","D3","D4"],dayHits:["D2","D3","D4"],desc:"You were the first member to post your check-in update in the WhatsApp group."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"Ask one real question per day about the course or Figma. +3 pts."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"Give a real helpful answer to someone else's question. +5 pts."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"Greet a new member who just joined before the admin does. +3 pts."},
-        {label:"Shared a useful tip or resource",pts:3,earned:false,days:null,desc:"Share something helpful — a shortcut, trick or link without being asked. +3 pts."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"Post genuine encouragement that gets reactions from others. +2 pts."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3","D4"],desc:"D1: Good +10 · D2: Extraordinary +20 (StudyBuddy app, 3 connected screens — publicly announced) · D3: Standard +5 · D4: Standard +5"}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3","D4"],desc:"You uploaded your Figma screenshot each day. +5 automatic per image."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"Screenshot proving all 3 Facebook actions on a post earns +10 extra on top of the +5 base."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"Screenshot of a Facebook group share earns +5 extra on top of the +5 base."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Referral bonus",pts:50,earned:true,days:null,desc:"You referred 2 members. +25 each = +50."},
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Confirmed by admin on phase completion. +20 pts."},
-        {label:"Perfect week (5-day streak)",pts:15,earned:false,days:null,desc:"Submit every day Mon–Fri. Awarded on Friday. +15 pts."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Special bonuses announced by instructor. Varies."}
-      ]}
-    ],
-    roast:`<p>Let's be real for a second, Christine.</p><p>You are sitting at 170 points. You have a 4-day streak. You built a full interactive prototype on Day 2 that nobody else in this programme has come close to. You got publicly announced. That is genuinely impressive.</p><p>But here is what is also true: you have zero Facebook interaction points. None. Not one screenshot of a Heart, a comment, a share. Not one group share proof. Every single day, there are posts sitting on the Sky Graphics Facebook page waiting to be Hearted, commented on, and shared — and each one of those actions is worth +15 points per post plus +5 per group you share it to. That is points stacking on top of everything you are already doing.</p><p>You are 30 points away from GOLD. You could close that gap in one afternoon on Facebook. One post. Three actions. One screenshot. Upload it in your check-in form.</p><p>The certificate will print your total exactly as it is. You built an extraordinary prototype. Make sure the number next to your name is equally extraordinary.</p>`
-  },
-  {
-    name:"Oluwasegun Daniel Osawore",role:"Ambassador",allTimeTotal:140,tier:"BRONZE",
-    days:{
-      D1:{pts:85,submitted:true,streakDays:1},
-      D2:{pts:115,submitted:true,streakDays:2},
-      D3:{pts:140,submitted:true,streakDays:3},
-      D4:{pts:140,submitted:false,streakDays:3}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially. +5 for your pledge."},
-        {label:"Referral × 2",pts:50,earned:true,days:null,desc:"You referred 2 members who joined. +25 per referral = +50."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3"],desc:"Submitted Days 1–3. Missed Day 4. +10 per submitted day."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 early bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:true,days:["D1"],dayHits:["D1"],desc:"You were the first member to post your check-in update on Day 1."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"Ask one real question per day. +3 pts."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"Give a real helpful answer. +5 pts."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"Greet a new member first. +3 pts."},
-        {label:"Shared a useful tip or resource",pts:3,earned:false,days:null,desc:"Share something helpful unprompted. +3 pts."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"Post genuine encouragement that gets reactions. +2 pts."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3"],desc:"D1: Good +10 · D2: Impressive +15 (original, combined ideas) · D3: Good +10 · D4: Not submitted"}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3"],desc:"Uploaded screenshots D1–D3. +5 each."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"Screenshot of all 3 Facebook actions = +10 extra on top of +5 base."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"Facebook group share screenshot = +5 extra on top of +5 base."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Referral bonus",pts:50,earned:true,days:null,desc:"Referred 2 members. +50."},
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on phase completion by admin."},
-        {label:"Perfect week (5-day streak)",pts:15,earned:false,days:null,desc:"Submit every day Mon–Fri. Awarded Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies by instructor announcement."}
-      ]}
-    ],
-    roast:`<p>Oluwasegun. 140 points and a consistent 3-day streak. Impressive work scoring across three days. You have been one of the most reliable submitters in this programme.</p><p>Then Day 4 happened and you disappeared.</p><p>You are 10 points from SILVER. Ten. That is literally one check-in form away. You skipped it on Day 4. That is the streak broken, the points missed, and the tier gap still open.</p><p>Now the bigger conversation: Facebook. You have uploaded screenshots for photo credits, which is good. But you have never uploaded a screenshot showing you Hearted, commented, and shared a post — which is +10 extra on top of what you already get. Every day you submit without that Facebook screenshot is +10 points you are handing back.</p><p>Get back on tomorrow. Submit early. Heart a post, comment on it, share it, screenshot it, upload it. SILVER is right there. Your certificate is watching.</p>`
-  },
-  {
-    name:"Malialia Celine Bride",role:"Ambassador",allTimeTotal:95,tier:"BRONZE",
-    days:{
-      D1:{pts:95,submitted:true,streakDays:1},
-      D2:{pts:95,submitted:false,streakDays:1},
-      D3:{pts:95,submitted:false,streakDays:1},
-      D4:{pts:95,submitted:false,streakDays:1}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."},
-        {label:"Referral × 3",pts:75,earned:true,days:null,desc:"You referred 3 members who joined. +25 each = +75. Best referral score in the programme."},
-        {label:"First to hit referral milestone",pts:5,earned:true,days:null,desc:"You were the first Ambassador to hit the referral mark. Special bonus +5."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1"],desc:"Submitted Day 1 only. +10. Missed Days 2, 3, 4."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first to post your check-in update in the group."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per genuine question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping someone with a real answer."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting a new member first."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing a helpful resource unprompted."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for genuine encouragement that gets reactions."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1"],desc:"D1: Submitted (work score not recorded) · D2–D4: No submission."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:false,days:null,desc:"Upload any image in the check-in form. +5 automatic."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"Screenshot of all 3 Facebook actions = +15 total per image."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"Facebook group share screenshot = +10 total per image."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Referral bonus",pts:75,earned:true,days:null,desc:"3 referrals × +25 = +75. Top referrer in the programme."},
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on phase completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak. Awarded Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Malialia. You referred 3 people. Three. You are the top referrer in this entire programme. You got the milestone bonus. Before the programme even started, you were already earning points.</p><p>And then Day 1 ended, and you vanished.</p><p>You have not submitted since Day 1. Days 2, 3, and 4 — nothing. Meanwhile the people you referred are earning points, climbing the leaderboard, and you are sitting at 95 watching them pass you.</p><p>Here is the uncomfortable truth: the referrals mean nothing if you are not here. You did the hard work of getting people in. Now do the easier work of actually showing up yourself.</p><p>You are missing everything: the daily check-in points, WhatsApp interaction points, photo upload credits, Facebook screenshot bonuses. Every single day you miss is a day your own recruits outperform you.</p><p>Come back. Submit tomorrow. The form takes 3 minutes. Your certificate will reflect exactly how seriously you took this programme — and right now it says you came, referred 3 people, and left.</p>`
-  },
-  {
-    name:"Mbiydzenyuy Patience Dzekem",role:"Ambassador",allTimeTotal:65,tier:"BRONZE",
-    days:{
-      D1:{pts:35,submitted:true,streakDays:1},
-      D2:{pts:65,submitted:true,streakDays:2},
-      D3:{pts:65,submitted:false,streakDays:2},
-      D4:{pts:65,submitted:false,streakDays:2}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2"],desc:"Submitted Days 1 & 2. Missed Days 3 & 4."},
-        {label:"First to submit check-in form",pts:5,earned:true,days:["D1"],dayHits:["D1"],desc:"You were the first person to submit the check-in form on Day 1. +5 special bonus."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first to post in the group."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per genuine question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping with a real answer."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting a new member first."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing a helpful resource."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement that gets reactions."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2"],desc:"D1: Good +10 · D2: Impressive +15 · D3–D4: Not submitted."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2"],desc:"Uploaded screenshots D1 & D2. +5 each."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"Screenshot of all 3 Facebook actions = +15 total."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"Group share screenshot = +10 total."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on phase completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, awarded Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Patience. You were the first person to submit the check-in form on Day 1. First. Out of everyone in this programme. And you scored Impressive on Day 2. That is not beginner energy — that is someone who actually has it.</p><p>Then Days 3 and 4 arrived. Nothing.</p><p>You are at 65 points. SILVER is at 150. The gap is 85 points. That is absolutely closeable if you show up consistently. But you have been off the board for two days and your streak is stalled at 2 while others are at 4.</p><p>Also — and this is important — you have no Facebook interaction points. None. Every post that goes up is free points. Heart it. Comment on it. Share it. Screenshot it. Upload it in your form. That is +15 minimum per post, on top of everything else you already earn. You are leaving stacks of points on the table every single day.</p><p>You started strong. Too strong to go quiet now. Get back on tomorrow.</p>`
-  },
-  {
-    name:"Irinyemi Adedayo Juliet",role:"Ambassador",allTimeTotal:50,tier:"BRONZE",
-    days:{
-      D1:{pts:5,submitted:false,streakDays:0},
-      D2:{pts:25,submitted:true,streakDays:1},
-      D3:{pts:25,submitted:false,streakDays:1},
-      D4:{pts:50,submitted:true,streakDays:2}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D2","D4"],desc:"Submitted Days 2 & 4. Missed Days 1 & 3."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first in the group."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per genuine question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping with a real answer."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting a new member."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing a helpful resource."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement with reactions."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D2","D4"],desc:"D2: Standard +5 (5 identical images uploaded, only 1 photo credit given) · D4: Good +10. Tip: upload different screenshots each day."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:true,days:["D1","D2","D3","D4"],dayHits:["D2","D4"],desc:"Uploaded screenshots D2 & D4. +5 each."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"Screenshot of all 3 Facebook actions = +15 total."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"Group share screenshot = +10 total."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on phase completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, awarded Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Juliet. You uploaded FIVE screenshots on Day 2. Five. And then the system gave you credit for one because they were all the same image. That tells me you want to earn points — you just need to understand how the system works.</p><p>Here is the truth: you have been skipping alternate days. D2 yes, D3 no, D4 yes. That pattern breaks your streak every time you miss. A 2-day streak after 4 days in the programme means you have missed half the available days.</p><p>You are exactly at the BRONZE threshold — 50 points. SILVER needs 150. You have 100 points to close. That is very doable — but only if you show up every single day, upload different screenshots, and start collecting Facebook interaction points. Heart a post, comment, share it, screenshot it, upload it. That is +15 right there. Per post.</p><p>Your certificate is being written in real time. Make sure it shows consistency, not gaps.</p>`
-  },
-  {
-    name:"Frank Emmanuel",role:"Ambassador",allTimeTotal:5,tier:"UNRANKED",
-    days:{
-      D1:{pts:5,submitted:false,streakDays:0},
-      D2:{pts:5,submitted:false,streakDays:0},
-      D3:{pts:5,submitted:false,streakDays:0},
-      D4:{pts:5,submitted:false,streakDays:0}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"No submissions yet. Each submission = +10 automatic."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per genuine question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"No work submitted yet. Build something and upload it."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:false,days:null,desc:"Upload any image = +5. No uploads yet."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"+15 total per screenshot showing all 3 Facebook actions."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"+10 total per group share screenshot."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on phase completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Frank. 5 points. Four days in. 5 points.</p><p>You pledged. You said you were in. And then for four consecutive days, you have not submitted once. Not one check-in form. Not one screenshot. Not one message in the group. Nothing.</p><p>The people around you are at 65, 95, 140 points. You are at 5. That gap is getting wider every single day you do not show up.</p><p>Here is what makes this worse: you are an Ambassador. People joined this programme because of or alongside you. And right now you are at the very bottom of the board you are supposed to be leading.</p><p>You still have time. Every remaining day is points on the table. The form takes 3 minutes. Watch the video, build something small, submit it. That is +10 plus photo credit plus work score in one go. Add a Heart, comment, and share on a Facebook post and screenshot it — that is another +15.</p><p>But none of that happens unless you actually show up. Today. Not tomorrow. Today.</p>`
-  },
-  {
-    name:"Percy Visiy",role:"Ambassador",allTimeTotal:5,tier:"UNRANKED",
-    days:{
-      D1:{pts:5,submitted:false,streakDays:0},
-      D2:{pts:5,submitted:false,streakDays:0},
-      D3:{pts:5,submitted:false,streakDays:0},
-      D4:{pts:5,submitted:false,streakDays:0}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"No submissions yet. +10 per day automatic."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"No work submitted yet."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:false,days:null,desc:"Upload any image = +5."},
-        {label:"Heart + Comment + Share screenshot",pts:10,earned:false,days:null,desc:"+15 total per screenshot showing all 3 actions."},
-        {label:"Group share screenshot",pts:5,earned:false,days:null,desc:"+10 total per group share screenshot."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Percy. 5 points. Four days. A pledge and nothing else.</p><p>I do not know what is keeping you away. Maybe life is busy. Maybe you thought this would be easier. Maybe you have been watching and waiting for the right moment. But here is the thing — the right moment was Day 1. The second best moment is right now.</p><p>You are an Ambassador. That title means something. It means people look to you as a representative of this programme. Right now your leaderboard position is sending a message you probably do not want to send.</p><p>The good news: you have not missed anything that cannot be recovered. The points system rewards every day you show up from here on. Submit tomorrow. Fill in the form. Upload a screenshot of anything you built in Figma. Heart the Facebook post, comment, share it, screenshot that too. In one day you could go from 5 points to 35 points.</p><p>Your certificate prints exactly what is there. Right now it has a pledge and a four-day absence. Change that story starting today.</p>`
-  },
-  // PARTICIPANTS
-  {
-    name:"Faith Emmanuella Busari",role:"Participant",allTimeTotal:100,tier:"BRONZE",
-    days:{
-      D1:{pts:100,submitted:true,streakDays:1},
-      D2:{pts:100,submitted:true,streakDays:2},
-      D3:{pts:100,submitted:false,streakDays:2},
-      D4:{pts:100,submitted:false,streakDays:2}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."},
-        {label:"Referral × 1",pts:25,earned:true,days:null,desc:"You referred 1 member who joined. +25."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2"],desc:"D1: +15 (submitted before 3PM — early bonus included) · D2: +10 · D3–D4: Not submitted."},
-        {label:"Early submission (before 3PM)",pts:5,earned:true,days:["D1"],dayHits:["D1"],desc:"You submitted before 3PM on Day 1. +5 early bonus. Do this every day."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first to post in the group."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per genuine question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2"],desc:"D1: Good +10 (uploaded 2 different screenshots — good thinking) · D2: Extraordinary +20 (publicly announced) · D3–D4: Not submitted."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2"],desc:"D1: +10 (2 images uploaded) · D2: +5. Good usage of upload slots."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"Screenshot of all 3 Facebook actions = +15 total per post."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"Group share screenshot = +10 total."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Referral bonus",pts:25,earned:true,days:null,desc:"Referred 1 member. +25."},
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on phase completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Faith. An Extraordinary score on Day 2. Publicly announced in the group. Early submission on Day 1. You set the standard for this programme on your best days.</p><p>Then Days 3 and 4 happened. Gone.</p><p>You are the top participant by all-time total and you have not submitted in two days. The people behind you are still showing up every day and the gap is closing. SILVER is at 150 — you are 50 points away. You could close that in two days of consistent submissions plus Facebook screenshot bonuses.</p><p>Speaking of which: zero Facebook interaction points. Not one screenshot of a Heart, comment, or share. You uploaded screenshots for photo credit — that is good. But upgrading those to Facebook interaction screenshots is +10 extra each time. You have submitted 3 images so far. If even one of those had shown a Heart + Comment + Share on a post, that is +10 more. Per day.</p><p>Come back tomorrow. Submit before 3PM for the early bonus. Upload a Facebook screenshot. You already know how to build extraordinary things in Figma. Now build an extraordinary score to match.</p>`
-  },
-  {
-    name:"Emmanuel Karol Tchouani",role:"Participant",allTimeTotal:115,tier:"BRONZE",
-    days:{
-      D1:{pts:55,submitted:true,streakDays:1},
-      D2:{pts:80,submitted:true,streakDays:2},
-      D3:{pts:100,submitted:true,streakDays:3},
-      D4:{pts:115,submitted:true,streakDays:4}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."},
-        {label:"Referral × 1",pts:25,earned:true,days:null,desc:"You referred 1 member who joined. +25."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3","D4"],desc:"Submitted all 4 days. Perfect attendance so far. +10 per day."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus. You have missed this every day — it adds up."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per genuine question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3","D4"],desc:"D1: Good +10 · D2: Good +10 (consistent extra effort) · D3: Standard +5 · D4: Score pending."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3","D4"],desc:"Uploaded screenshots all 4 days. +5 each. Consistent."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"Screenshot of all 3 Facebook actions = +15 total per post."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"Group share screenshot = +10 total."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Referral bonus",pts:25,earned:true,days:null,desc:"Referred 1 member. +25."},
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on phase completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Emmanuel. 4 days in. 4 submissions. Perfect attendance. You are the only participant with a 4-day streak. That consistency is real and it matters.</p><p>Now here is where I need you to pay attention: SILVER is 150 points. You are at 115. That is 35 points away. You could hit SILVER in two days if you start doing two things you are currently skipping every single day.</p><p>First: submit before 3PM. Every single day you have submitted after 3PM and missed the +5 early bonus. Four days × +5 = +20 points gone. That is almost the gap to SILVER right there. Set an alarm. Submit early.</p><p>Second: Facebook. You are uploading screenshots every day for photo credit — good. But none of those screenshots show a Heart, comment, and share on a post. That is +10 extra points per image if it does. One screenshot upgrade per day is the difference between +5 and +15.</p><p>You are close. Closer than you think. Keep the streak. Submit early. Add one Facebook screenshot. SILVER this week is absolutely possible.</p>`
-  },
-  {
-    name:"Abongnwi Chrioni-Opal Forba'",role:"Participant",allTimeTotal:75,tier:"BRONZE",
-    days:{
-      D1:{pts:40,submitted:true,streakDays:1},
-      D2:{pts:45,submitted:false,streakDays:1},
-      D3:{pts:55,submitted:false,streakDays:1},
-      D4:{pts:75,submitted:true,streakDays:2}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."},
-        {label:"Referral × 1",pts:25,earned:true,days:null,desc:"You referred 1 member who joined. +25."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D4"],desc:"Submitted D1 & D4. Missed D2 & D3 (built work but did not submit form)."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D2","D3","D4"],desc:"D1: Check-in +10 (form submitted) · D2: Standard +5 (built login screen — form not submitted, work score only) · D3: Good +10 (profile card with intentional alignment — form not submitted, work score only) · D4: Standard +5 (form submitted)."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1","D4"],desc:"Uploaded D1 & D4. +5 each."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"+15 total per screenshot showing all 3 Facebook actions."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"+10 total per group share screenshot."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Referral bonus",pts:25,earned:true,days:null,desc:"Referred 1 member. +25."},
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on phase completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Chrioni-Opal. Something interesting is happening with your data. You built a login screen on Day 2. You built a profile card on Day 3 with actual intentional alignment. The admin noted that you understood WHY you used alignment — not just that you used it. That earned you the Good score on a day you did not even submit the form.</p><p>Which raises the obvious question: why are you building things and not submitting the form?</p><p>Days 2 and 3 — you did the work. The form was right there. It takes 3 minutes. You left +10 in auto points and +5 in photo credits on the table both days just by not clicking submit.</p><p>SILVER is at 150. You are at 75. That gap is 75 points. Doable. But only if you submit the form every day, not just the days you feel like it.</p><p>Also — no Facebook interaction points. Not one. Heart a post, comment on it, share it, screenshot it, upload it. That is +15 extra on top of your base photo credit. You are doing the hard work in Figma. The Facebook actions take 3 minutes and they print on your certificate just like everything else.</p>`
-  },
-  {
-    name:"Mbishitehnyi Ryan",role:"Participant",allTimeTotal:35,tier:"UNRANKED",
-    days:{
-      D1:{pts:35,submitted:true,streakDays:1},
-      D2:{pts:35,submitted:false,streakDays:1},
-      D3:{pts:35,submitted:false,streakDays:1},
-      D4:{pts:35,submitted:false,streakDays:1}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Referral × 1",pts:25,earned:true,days:null,desc:"You referred 1 member who joined. +25."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1"],desc:"Submitted Day 1 only. Missed Days 2, 3, 4."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"No work score recorded. Submit your Figma screenshot with each check-in."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:false,days:null,desc:"Upload any image = +5. No uploads recorded."},
-        {label:"Heart + Comment + Share screenshot",pts:10,earned:false,days:null,desc:"+15 total per screenshot."},
-        {label:"Group share screenshot",pts:5,earned:false,days:null,desc:"+10 total per screenshot."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Referral bonus",pts:25,earned:true,days:null,desc:"Referred 1 member. +25."},
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Ryan. You referred someone to this programme. You showed up on Day 1. And then for three consecutive days — nothing.</p><p>BRONZE is at 50 points. You are at 35. You are 15 points away from your first tier. That is one check-in form and one uploaded screenshot. One day. You could have been BRONZE by Day 2 and you have been sitting 15 points short for three days.</p><p>Here is what one full day of effort looks like: submit the form (+10), upload a Figma screenshot (+5), upload a screenshot showing you Hearted, commented and shared a Facebook post (+15). That is +30 points in one submission. You would be at 65 and inside BRONZE before tomorrow night.</p><p>The question is not whether you can do this. You clearly can. You referred someone — you believed in this enough to bring someone else in. Now believe in it enough to show up yourself.</p>`
-  },
-  {
-    name:"Ranjoy-Bryan",role:"Participant",allTimeTotal:30,tier:"UNRANKED",
-    days:{
-      D1:{pts:30,submitted:true,streakDays:1},
-      D2:{pts:30,submitted:false,streakDays:1},
-      D3:{pts:30,submitted:false,streakDays:1},
-      D4:{pts:30,submitted:false,streakDays:1}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1"],desc:"Submitted Day 1 only. Missed Days 2, 3, 4."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1"],desc:"D1: Good +10. You went beyond the video — showed extra exploration."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:true,days:["D1"],dayHits:["D1"],desc:"Uploaded Day 1 screenshot. +5."},
-        {label:"Heart + Comment + Share screenshot (+10 extra)",pts:10,earned:false,days:null,desc:"+15 total per screenshot showing all 3 Facebook actions."},
-        {label:"Group share screenshot (+5 extra)",pts:5,earned:false,days:null,desc:"+10 total per group share screenshot."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Ranjoy. You scored Good on Day 1. That means on your first day you went beyond what the video showed. That is a strong start.</p><p>Then Days 2, 3, and 4 — nothing. Not a single submission.</p><p>You are at 30 points. BRONZE is at 50. You are 20 points away. One good submission — form plus photo upload plus a Facebook screenshot — and you are inside BRONZE.</p><p>Here is what I want you to understand: you already proved you can go beyond the basic level. You proved it on Day 1. The only question now is whether Day 1 was a one-off or the beginning of a habit.</p><p>Come back tomorrow. Submit the form. Show us what you built. Upload a screenshot of you Hearting, commenting, and sharing a Facebook post. That is +15 extra on top of everything else. You are closer than you think. But only if you show up.</p>`
-  },
-  {
-    name:"Asonganyi Adel Quin",role:"Participant",allTimeTotal:15,tier:"UNRANKED",
-    days:{
-      D1:{pts:15,submitted:true,streakDays:1},
-      D2:{pts:15,submitted:false,streakDays:1},
-      D3:{pts:15,submitted:false,streakDays:1},
-      D4:{pts:15,submitted:false,streakDays:1}
-    },
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[
-        {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially."}
-      ]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:true,days:["D1","D2","D3","D4"],dayHits:["D1"],desc:"Submitted Day 1 only. Missed Days 2, 3, 4."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"No work score recorded for Day 1. Submit your Figma screenshot."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:false,days:null,desc:"No uploads recorded. Upload any image = +5."},
-        {label:"Heart + Comment + Share screenshot",pts:10,earned:false,days:null,desc:"+15 total per screenshot."},
-        {label:"Group share screenshot",pts:5,earned:false,days:null,desc:"+10 total per screenshot."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>Adel. 15 points. Four days in and only one submission — and that one did not include a work screenshot or photo upload.</p><p>Here is the gap: BRONZE is 50 points. You are 35 points away. That is achievable in a single day if you do it right. Submit the form. Upload your Figma work. Upload a Facebook screenshot showing a Heart, comment, and share on a post. That is +10 +5 +15 = +30 in one submission. Add the pledge you already have and you are at 45, almost BRONZE.</p><p>The programme is still running. You still have time. But every day you do not submit, the leaderboard gap grows and the Friday streak bonus moves further out of reach.</p><p>One submission. Tomorrow. Do not overthink it.</p>`
-  }
-];
+<!-- CELEBRATION -->
+<div id="countdown-wrap" class="countdown-overlay">
+  <div id="countdown-num">5</div>
+</div>
+<div id="celebration-container" class="celebration-container"></div>
+<button class="celebrate-btn" onclick="window.triggerCelebration(5000)">🎉</button>
 
-// Pledge-only participants (simplified)
-const PLEDGE_ONLY = [
-  "Moh Blessing Kebul","Chi Yoland Sah","Nkongmi Loise Asonyuy","Assaah Nzota",
-  "Binda Joel","Open Bryan","Kemni Samuel Bemsimbom","Andin Blanch",
-  "Kelly Brenda Keafon","Nkwain Harzel","Tsopmo Precious","Touossoc Ange",
-  "Suilabayu Olga Simolen","Fonyuy Berinyuy Tarkighan","Akuchu Tohla Tchosi-Ambom"
-];
-PLEDGE_ONLY.forEach(n=>{
-  PEOPLE.push({
-    name:n,role:"Participant",allTimeTotal:5,tier:"UNRANKED",
-    days:{D1:{pts:5,submitted:false,streakDays:0},D2:{pts:5,submitted:false,streakDays:0},D3:{pts:5,submitted:false,streakDays:0},D4:{pts:5,submitted:false,streakDays:0}},
-    breakdown:[
-      {section:"PRE-PROGRAMME",items:[{label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme and joined officially. +5 for your pledge."}]},
-      {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-        {label:"Check-in form submission",pts:10,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"No submissions yet. Fill the form daily for +10 automatic."},
-        {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-      ]},
-      {section:"SECTION 2 — WHATSAPP GROUP",items:[
-        {label:"First to post check-in in group",pts:5,earned:false,days:null,desc:"+5 for being first."},
-        {label:"Asked a genuine question",pts:3,earned:false,days:null,desc:"+3 per question."},
-        {label:"Helped another member",pts:5,earned:false,days:null,desc:"+5 for helping."},
-        {label:"Welcomed a new member",pts:3,earned:false,days:null,desc:"+3 for greeting."},
-        {label:"Shared a useful tip",pts:3,earned:false,days:null,desc:"+3 for sharing."},
-        {label:"Posted encouragement with reactions",pts:2,earned:false,days:null,desc:"+2 for encouragement."}
-      ]},
-      {section:"SECTION 3 — FIGMA WORK CREATIVITY",items:[
-        {label:"Work scored per day",pts:null,earned:false,days:["D1","D2","D3","D4"],dayHits:[],desc:"No work submitted yet. Build and upload every day."}
-      ]},
-      {section:"SECTION 4 — FACEBOOK INTERACTIONS",items:[
-        {label:"Image uploaded (base +5 each)",pts:5,earned:false,days:null,desc:"Upload any image = +5 per image."},
-        {label:"Heart + Comment + Share screenshot",pts:10,earned:false,days:null,desc:"+15 total per screenshot showing all 3 actions."},
-        {label:"Group share screenshot",pts:5,earned:false,days:null,desc:"+10 total per group share screenshot."}
-      ]},
-      {section:"SECTION 5 — BONUS POINTS",items:[
-        {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on completion."},
-        {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, Friday."},
-        {label:"Special bonus",pts:0,earned:false,days:null,desc:"Varies."}
-      ]}
-    ],
-    roast:`<p>You pledged. That was the right first step.</p><p>But a pledge and four days of silence means your certificate currently shows 5 points next to your name. Five.</p><p>Here is what you are missing every single day you do not submit: +10 for the check-in form, +5 for uploading a Figma screenshot, and up to +15 extra for uploading a screenshot showing you Hearted, commented, and shared a post on Facebook. That is +30 in one submission. In one day. Every day.</p><p>You do not need to build something perfect. You need to build something. Anything. A frame with your name on it. A button. A shape. Upload it. Submit the form. Done.</p><p>The certificate prints exactly what is there. Right now it says you meant to participate. Change that starting today.</p>`
-  });
+<script type="module">
+import { PEOPLE, SNAPSHOTS, DAY_LABELS, TIER_EMOJI, PLEDGE_ONLY } from './data.js';
+
+// Process PLEDGE_ONLY
+PLEDGE_ONLY.forEach(n => {
+  if (!PEOPLE.find(x => x.name === n)) {
+    PEOPLE.push({
+      name: n, role: "Participant", allTimeTotal: 5, tier: "UNRANKED",
+      days: { D1: { pts: 5, submitted: false, streakDays: 0 }, D2: { pts: 5, submitted: false, streakDays: 0 }, D3: { pts: 5, submitted: false, streakDays: 0 }, D4: { pts: 5, submitted: false, streakDays: 0 }, D5: { pts: 5, submitted: false, streakDays: 0 } },
+      breakdown: [
+        { section: "PRE-PROGRAMME", items: [{ label: "Pledge", pts: 5, earned: true, days: null, desc: "You committed to the programme and joined officially. +5 for your pledge." }] },
+        {
+          section: "SECTION 1 — DAILY CHECK-IN (Automatic)", items: [
+            { label: "Check-in form submission", pts: 10, earned: false, days: ["D1", "D2", "D3", "D4", "D5"], dayHits: [], desc: "No submissions yet. Fill the form daily for +10 automatic." },
+            { label: "Early submission (before 3PM)", pts: 5, earned: false, days: ["D1", "D2", "D3", "D4", "D5"], dayHits: [], desc: "Submit before 3PM for +5 bonus." }
+          ]
+        },
+        { section: "SECTION 5 — BONUS POINTS", items: [{ label: "Phase completion", pts: 20, earned: false, days: null, desc: "Awarded on completion." }, { label: "Perfect week", pts: 15, earned: false, days: null, desc: "5-day streak, Friday." }] }
+      ],
+      roast: `<p>You pledged. That was the right first step. But Week 1 is over and you haven't moved. Week 2 starts Monday. Let's change that "5" into something bigger.</p>`
+    });
+  }
 });
 
-// ── SNAPSHOTS ─────────────────────────────────────────────────────────────────
-const SNAPSHOTS = {
-  D1:{
-    Ambassador:[
-      {name:"Christine Choundong",pts:80,tier:"BRONZE",submitted:true},
-      {name:"Oluwasegun Daniel Osawore",pts:85,tier:"BRONZE",submitted:true},
-      {name:"Malialia Celine Bride",pts:95,tier:"BRONZE",submitted:true},
-      {name:"Mbiydzenyuy Patience Dzekem",pts:35,tier:"UNRANKED",submitted:true},
-      {name:"Irinyemi Adedayo Juliet",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Frank Emmanuel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Percy Visiy",pts:5,tier:"UNRANKED",submitted:false}
-    ],
-    Participant:[
-      {name:"Faith Emmanuella Busari",pts:100,tier:"BRONZE",submitted:true},
-      {name:"Emmanuel Karol Tchouani",pts:55,tier:"BRONZE",submitted:true},
-      {name:"Abongnwi Chrioni-Opal Forba'",pts:40,tier:"UNRANKED",submitted:true},
-      {name:"Mbishitehnyi Ryan",pts:35,tier:"UNRANKED",submitted:true},
-      {name:"Ranjoy-Bryan",pts:30,tier:"UNRANKED",submitted:true},
-      {name:"Asonganyi Adel Quin",pts:15,tier:"UNRANKED",submitted:true},
-      {name:"Chi Yoland Sah",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Nkongmi Loise Asonyuy",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Assaah Nzota",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Binda Joel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Open Bryan",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Kemni Samuel Bemsimbom",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Andin Blanch",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Kelly Brenda Keafon",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Nkwain Harzel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Tsopmo Precious",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Touossoc Ange",pts:5,tier:"UNRANKED",submitted:false},
-    ]
-  },
-  D2:{
-    Ambassador:[
-      {name:"Christine Choundong",pts:120,tier:"BRONZE",submitted:true},
-      {name:"Oluwasegun Daniel Osawore",pts:115,tier:"BRONZE",submitted:true},
-      {name:"Malialia Celine Bride",pts:95,tier:"BRONZE",submitted:false},
-      {name:"Mbiydzenyuy Patience Dzekem",pts:65,tier:"BRONZE",submitted:true},
-      {name:"Irinyemi Adedayo Juliet",pts:25,tier:"UNRANKED",submitted:true},
-      {name:"Frank Emmanuel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Percy Visiy",pts:5,tier:"UNRANKED",submitted:false}
-    ],
-    Participant:[
-      {name:"Faith Emmanuella Busari",pts:100,tier:"BRONZE",submitted:true},
-      {name:"Emmanuel Karol Tchouani",pts:80,tier:"BRONZE",submitted:true},
-      {name:"Abongnwi Chrioni-Opal Forba'",pts:45,tier:"UNRANKED",submitted:false},
-      {name:"Mbishitehnyi Ryan",pts:35,tier:"UNRANKED",submitted:false},
-      {name:"Ranjoy-Bryan",pts:30,tier:"UNRANKED",submitted:false},
-      {name:"Suilabayu Olga Simolen",pts:5,tier:"UNRANKED",submitted:true},
-      {name:"Asonganyi Adel Quin",pts:15,tier:"UNRANKED",submitted:false},
-      {name:"Chi Yoland Sah",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Nkongmi Loise Asonyuy",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Assaah Nzota",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Binda Joel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Open Bryan",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Kemni Samuel Bemsimbom",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Andin Blanch",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Kelly Brenda Keafon",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Nkwain Harzel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Tsopmo Precious",pts:5,tier:"UNRANKED",submitted:false},
-    ]
-  },
-  D3:{
-    Ambassador:[
-      {name:"Christine Choundong",pts:145,tier:"BRONZE",submitted:true},
-      {name:"Oluwasegun Daniel Osawore",pts:140,tier:"BRONZE",submitted:true},
-      {name:"Malialia Celine Bride",pts:95,tier:"BRONZE",submitted:false},
-      {name:"Mbiydzenyuy Patience Dzekem",pts:65,tier:"BRONZE",submitted:false},
-      {name:"Irinyemi Adedayo Juliet",pts:25,tier:"UNRANKED",submitted:false},
-      {name:"Frank Emmanuel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Percy Visiy",pts:5,tier:"UNRANKED",submitted:false}
-    ],
-    Participant:[
-      {name:"Faith Emmanuella Busari",pts:100,tier:"BRONZE",submitted:false},
-      {name:"Emmanuel Karol Tchouani",pts:100,tier:"BRONZE",submitted:true},
-      {name:"Abongnwi Chrioni-Opal Forba'",pts:55,tier:"BRONZE",submitted:false},
-      {name:"Mbishitehnyi Ryan",pts:35,tier:"UNRANKED",submitted:false},
-      {name:"Ranjoy-Bryan",pts:30,tier:"UNRANKED",submitted:false},
-      {name:"Asonganyi Adel Quin",pts:15,tier:"UNRANKED",submitted:false},
-      {name:"Moh Blessing Kebul",pts:5,tier:"UNRANKED",submitted:true},
-      {name:"Fonyuy Berinyuy Tarkighan",pts:5,tier:"UNRANKED",submitted:true},
-      {name:"Akuchu Tohla Tchosi-Ambom",pts:5,tier:"UNRANKED",submitted:true},
-      {name:"Chi Yoland Sah",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Nkongmi Loise Asonyuy",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Assaah Nzota",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Binda Joel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Open Bryan",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Kemni Samuel Bemsimbom",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Andin Blanch",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Kelly Brenda Keafon",pts:5,tier:"UNRANKED",submitted:false},
-    ]
-  },
-  D4:{
-    Ambassador:[
-      {name:"Christine Choundong",pts:170,tier:"SILVER",submitted:true},
-      {name:"Oluwasegun Daniel Osawore",pts:140,tier:"BRONZE",submitted:false},
-      {name:"Malialia Celine Bride",pts:95,tier:"BRONZE",submitted:false},
-      {name:"Mbiydzenyuy Patience Dzekem",pts:65,tier:"BRONZE",submitted:false},
-      {name:"Irinyemi Adedayo Juliet",pts:50,tier:"BRONZE",submitted:true},
-      {name:"Frank Emmanuel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Percy Visiy",pts:5,tier:"UNRANKED",submitted:false}
-    ],
-    Participant:[
-      {name:"Emmanuel Karol Tchouani",pts:115,tier:"BRONZE",submitted:true},
-      {name:"Faith Emmanuella Busari",pts:100,tier:"BRONZE",submitted:false},
-      {name:"Abongnwi Chrioni-Opal Forba'",pts:75,tier:"BRONZE",submitted:true},
-      {name:"Mbishitehnyi Ryan",pts:35,tier:"UNRANKED",submitted:false},
-      {name:"Ranjoy-Bryan",pts:30,tier:"UNRANKED",submitted:false},
-      {name:"Asonganyi Adel Quin",pts:15,tier:"UNRANKED",submitted:false},
-      {name:"Moh Blessing Kebul",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Chi Yoland Sah",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Nkongmi Loise Asonyuy",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Assaah Nzota",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Binda Joel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Open Bryan",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Kemni Samuel Bemsimbom",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Andin Blanch",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Kelly Brenda Keafon",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Nkwain Harzel",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Tsopmo Precious",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Touossoc Ange",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Suilabayu Olga Simolen",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Fonyuy Berinyuy Tarkighan",pts:5,tier:"UNRANKED",submitted:false},
-      {name:"Akuchu Tohla Tchosi-Ambom",pts:5,tier:"UNRANKED",submitted:false},
-    ]
-  }
-};
-
 // ── STATE ─────────────────────────────────────────────────────────────────────
-let currentDay = 'D4';
+let currentWeek = 1;
+let currentDay = 'D5';
 let currentTab = 'participants';
 let currentPTab = 'breakdown';
 
-const DAY_LABELS = {D1:'Day 1 — June 1, 2026',D2:'Day 2 — June 2, 2026',D3:'Day 3 — June 3, 2026',D4:'Day 4 — June 4, 2026'};
-const TIER_EMOJI = {PLATINUM:'🏆',GOLD:'🥇',SILVER:'🥈',BRONZE:'🥉',UNRANKED:'⬜'};
+function tierClass(t) { return t || 'UNRANKED'; }
+function ptsColor(rank) { return rank === 1 ? 'var(--amber)' : rank === 2 ? '#CBD5E1' : rank === 3 ? '#CD7F32' : 'var(--white)'; }
+function rowClass(rank) { return rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : ''; }
 
-function tierClass(t){return t||'UNRANKED';}
-function ptsColor(rank){return rank===1?'var(--amber)':rank===2?'#CBD5E1':rank===3?'#CD7F32':'var(--white)';}
-function rowClass(rank){return rank===1?'rank-1':rank===2?'rank-2':rank===3?'rank-3':'';}
+window.setWeek = function(week) {
+  if (week > 1) return;
+  currentWeek = week;
+  document.querySelectorAll('.week-pill').forEach((p, i) => {
+    p.classList.toggle('active', i + 1 === week);
+  });
+  renderDaySelector();
+  const lastActive = Math.min(5, week * 5);
+  setDay('D' + lastActive);
+};
 
-function setDay(day){
-  currentDay=day;
-  document.querySelectorAll('.day-pill').forEach(p=>p.classList.remove('active'));
-  document.querySelector(`.day-pill[onclick="setDay('${day}')"]`).classList.add('active');
-  document.getElementById('current-day-badge').textContent='📅 '+DAY_LABELS[day];
-  renderBoard();
+function renderDaySelector() {
+  const container = document.getElementById('day-selector');
+  let html = '';
+  const start = (currentWeek - 1) * 5 + 1;
+  for (let i = start; i <= currentWeek * 5; i++) {
+    const dKey = 'D' + i;
+    const isLocked = i > 5;
+    const isActive = currentDay === dKey;
+    const isGolden = dKey === 'D5';
+    html += `<button class="day-pill ${isActive ? 'active' : ''} ${isLocked ? 'locked' : ''} ${isGolden ? 'golden' : ''}" 
+              onclick="${isLocked ? '' : 'setDay(\'' + dKey + '\')'}">
+              ${isLocked ? '🔒 ' : ''}Day ${i}
+             </button>`;
+  }
+  container.innerHTML = html;
 }
 
-function switchTab(tab){
-  currentTab=tab;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.querySelector('.tab.'+tab).classList.add('active');
-  document.querySelectorAll('.board').forEach(b=>b.classList.remove('active'));
-  document.getElementById('board-'+tab).classList.add('active');
+window.setDay = function(day) {
+  currentDay = day;
+  document.querySelectorAll('.day-pill').forEach(p => {
+    p.classList.toggle('active', p.getAttribute('onclick')?.includes(day));
+  });
+  document.body.classList.toggle('essence-golden', day === 'D5');
+  const label = DAY_LABELS[day] || `Day ${day.slice(1)}`;
+  document.getElementById('current-day-badge').textContent = '📅 ' + label;
   renderBoard();
-}
+};
 
-function renderBoard(){
+window.switchTab = function(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelector('.tab.' + tab).classList.add('active');
+  document.querySelectorAll('.board').forEach(b => b.classList.remove('active'));
+  document.getElementById('board-' + tab).classList.add('active');
+  renderBoard();
+};
+
+function renderBoard() {
   const snap = SNAPSHOTS[currentDay];
-  ['participants','ambassadors'].forEach(tabKey=>{
-    const role = tabKey==='ambassadors'?'Ambassador':'Participant';
-    const data = (snap[role]||[]).slice().sort((a,b)=>b.pts-a.pts);
-    const container = document.getElementById('rows-'+tabKey);
-
-    // Split submitted vs dns (only show dns for people with pts > 5 who didn't submit)
-    const active = data.filter(p=>p.submitted||p.pts>5);
-    const dns = data.filter(p=>!p.submitted&&p.pts<=5);
-
-    let html='';
-    let rank=1;
-    active.forEach((p,i)=>{
-      const rc=rowClass(rank);
-      const streak = PEOPLE.find(x=>x.name===p.name)?.days[currentDay]?.streakDays||0;
-      const subNote = p.submitted?`🔥 ${streak}-day streak · ${currentDay} submitted`:`${currentDay} not submitted`;
-      html+=`<div class="row ${rc}" style="animation-delay:${i*0.05}s" onclick="openPanel('${p.name.replace(/'/g,"\\'")}')">
-        <div class="rank-num" style="color:${p.submitted?ptsColor(rank):'var(--muted)'}">${rank}</div>
+  if (!snap) {
+    ['participants', 'ambassadors'].forEach(k => document.getElementById('rows-' + k).innerHTML = '<div class="dns-label">Data for this day is locked.</div>');
+    return;
+  }
+  ['participants', 'ambassadors'].forEach(tabKey => {
+    const role = tabKey === 'ambassadors' ? 'Ambassador' : 'Participant';
+    const data = (snap[role] || []).slice().sort((a, b) => b.pts - a.pts);
+    const container = document.getElementById('rows-' + tabKey);
+    const active = data.filter(p => p.submitted || p.pts > 5);
+    const dns = data.filter(p => !p.submitted && p.pts <= 5);
+    let html = '';
+    let rank = 1;
+    active.forEach((p, i) => {
+      const rc = rowClass(rank);
+      const streak = PEOPLE.find(x => x.name === p.name)?.days[currentDay]?.streakDays || 0;
+      const subNote = p.submitted ? `🔥 ${streak}-day streak · ${currentDay} submitted` : `${currentDay} not submitted`;
+      html += `<div class="row ${rc}" style="animation-delay:${i * 0.05}s" onclick="window.openPanel('${p.name.replace(/'/g, "\\'")}')">
+        <div class="rank-num" style="color:${p.submitted ? ptsColor(rank) : 'var(--muted)'}">${rank}</div>
         <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">${subNote}</div></div>
         <div><div class="pts" style="color:${ptsColor(rank)}">${p.pts}</div><div class="pts-label">points</div></div>
-        <div class="tier ${tierClass(p.tier)}">${TIER_EMOJI[p.tier]||''} ${p.tier}</div>
+        <div class="tier ${tierClass(p.tier)}">${TIER_EMOJI[p.tier] || ''} ${p.tier}</div>
         <div><div class="streak">${streak}</div><div class="streak-label">streak</div></div>
       </div>`;
       rank++;
     });
-
-    if(dns.length>0){
-      html+=`<div class="dns-label">Did Not Submit Yet</div>`;
-      dns.forEach((p,i)=>{
-        html+=`<div class="row dns" style="animation-delay:${(active.length+i)*0.05}s" onclick="openPanel('${p.name.replace(/'/g,"\\'")}')">
+    if (dns.length > 0) {
+      html += `<div class="dns-label">Did Not Submit Yet</div>`;
+      dns.forEach((p, i) => {
+        html += `<div class="row dns" style="animation-delay:${(active.length + i) * 0.05}s" onclick="window.openPanel('${p.name.replace(/'/g, "\\'")}')">
           <div class="rank-num" style="color:var(--coral)">—</div>
           <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">No submission</div></div>
           <div><div class="pts" style="color:var(--muted)">—</div><div class="pts-label">points</div></div>
@@ -998,83 +387,119 @@ function renderBoard(){
         </div>`;
       });
     }
-    container.innerHTML=html;
+    container.innerHTML = html;
   });
 }
 
-// ── PANEL ─────────────────────────────────────────────────────────────────────
-function openPanel(name){
-  const p = PEOPLE.find(x=>x.name===name);
-  if(!p)return;
-
-  document.getElementById('panel-name').textContent=p.name;
-  const rb=document.getElementById('panel-role');
-  rb.textContent=p.role; rb.className='role-badge '+p.role;
-  document.getElementById('panel-pts').textContent=p.allTimeTotal+' pts';
-  const tb=document.getElementById('panel-tier');
-  tb.textContent=(TIER_EMOJI[p.tier]||'')+' '+p.tier;
-  tb.className='tier '+tierClass(p.tier);
-
-  // BREAKDOWN
-  let bdHtml='';
-  const days=['D1','D2','D3','D4'];
-  p.breakdown.forEach(sec=>{
-    bdHtml+=`<div class="section-title">${sec.section}</div>`;
-    sec.items.forEach(item=>{
-      const cls=item.earned?'earned':'missed';
-      const icon=item.earned?'<span style="color:var(--mint)">✓</span>':'<span style="color:var(--coral)">✗</span>';
-      let dotsHtml='';
-      if(item.days){
-        dotsHtml='<div class="day-dots">';
-        item.days.forEach(d=>{
-          const hit=item.dayHits&&item.dayHits.includes(d);
-          dotsHtml+=`<span class="dot ${hit?'hit':'miss'}">${d}</span>`;
+window.openPanel = function(name) {
+  const p = PEOPLE.find(x => x.name === name);
+  if (!p) return;
+  document.getElementById('panel-name').textContent = p.name;
+  const rb = document.getElementById('panel-role');
+  rb.textContent = p.role; rb.className = 'role-badge ' + p.role;
+  document.getElementById('panel-pts').textContent = p.allTimeTotal + ' pts';
+  const tb = document.getElementById('panel-tier');
+  tb.textContent = (TIER_EMOJI[p.tier] || '') + ' ' + p.tier;
+  tb.className = 'tier ' + tierClass(p.tier);
+  let bdHtml = '';
+  p.breakdown.forEach(sec => {
+    bdHtml += `<div class="section-title">${sec.section}</div>`;
+    sec.items.forEach(item => {
+      const cls = item.earned ? 'earned' : 'missed';
+      const icon = item.earned ? '<span style="color:var(--mint)">✓</span>' : '<span style="color:var(--coral)">✗</span>';
+      let dotsHtml = '';
+      if (item.days) {
+        dotsHtml = '<div class="day-dots">';
+        item.days.forEach(d => {
+          const hit = item.dayHits && item.dayHits.includes(d);
+          dotsHtml += `<span class="dot ${hit ? 'hit' : 'miss'}">${d}</span>`;
         });
-        dotsHtml+='</div>';
+        dotsHtml += '</div>';
       }
-      const ptsDisplay=item.pts!==null?(item.earned?'+'+item.pts:'+'+(item.pts||'?')):'varies';
-      bdHtml+=`<div class="bk-row ${cls}">
+      bdHtml += `<div class="bk-row ${cls}">
         <div class="bk-icon">${icon}</div>
         <div class="bk-body">
           <div class="bk-label">${item.label}</div>
           ${dotsHtml}
           <div class="bk-desc">${item.desc}</div>
         </div>
-        <div class="bk-pts">${item.pts!==null?'+'+item.pts:''}</div>
+        <div class="bk-pts">${item.pts !== null ? '+' + item.pts : ''}</div>
       </div>`;
     });
   });
-  bdHtml+=`<div class="total-bar"><div class="total-label">All-Time Total</div><div class="total-num">${p.allTimeTotal}</div></div>`;
-  document.getElementById('pboard-breakdown').innerHTML=bdHtml;
-
-  // ROAST
-  document.getElementById('pboard-roast').innerHTML=`<div class="roast-fire">🔥</div><div class="roast-box">${p.roast}</div>`;
-
-  // Reset to breakdown tab
-  switchPTab('breakdown');
+  bdHtml += `<div class="total-bar"><div class="total-label">All-Time Total</div><div class="total-num">${p.allTimeTotal}</div></div>`;
+  document.getElementById('pboard-breakdown').innerHTML = bdHtml;
+  document.getElementById('pboard-roast').innerHTML = `<div class="roast-fire">🔥</div><div class="roast-box">${p.roast}</div>`;
+  window.switchPTab('breakdown');
   document.getElementById('overlay').classList.add('open');
-  document.body.style.overflow='hidden';
-}
+  document.body.style.overflow = 'hidden';
+};
 
-function closePanel(){
+window.closePanel = function() {
   document.getElementById('overlay').classList.remove('open');
-  document.body.style.overflow='';
-}
+  document.body.style.overflow = '';
+};
 
-function handleOverlayClick(e){
-  if(e.target===document.getElementById('overlay')||e.target.classList.contains('overlay-bg'))closePanel();
-}
+window.handleOverlayClick = function(e) {
+  if (e.target === document.getElementById('overlay') || e.target.classList.contains('overlay-bg')) closePanel();
+};
 
-function switchPTab(tab){
-  currentPTab=tab;
-  document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.pboard').forEach(b=>b.classList.remove('active'));
-  document.querySelector(`.ptab[onclick="switchPTab('${tab}')"]`).classList.add('active');
-  document.getElementById('pboard-'+tab).classList.add('active');
-}
+window.switchPTab = function(tab) {
+  currentPTab = tab;
+  document.querySelectorAll('.ptab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.pboard').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.ptab[onclick*="${tab}"]`).classList.add('active');
+  document.getElementById('pboard-' + tab).classList.add('active');
+};
+
+window.triggerCelebration = function(duration) {
+  const container = document.getElementById('celebration-container');
+  const colors = ['#4F46E5', '#F59E0B', '#10B981', '#EF4444', '#38BDF8'];
+  const messages = ['Week 1 Complete!', 'Amazing Work!', 'Tier Level Up!', 'Figma Masters!', 'Keep the Streak!'];
+  const end = Date.now() + duration;
+  const interval = setInterval(() => {
+    if (Date.now() > end) {
+      clearInterval(interval);
+      return;
+    }
+    const b = document.createElement('div');
+    b.className = 'balloon';
+    b.style.left = Math.random() * 100 + 'vw';
+    b.style.background = colors[Math.floor(Math.random() * colors.length)];
+    b.style.opacity = '0.7';
+    container.appendChild(b);
+    if (Math.random() > 0.7) {
+      const m = document.createElement('div');
+      m.className = 'pop-msg';
+      m.textContent = messages[Math.floor(Math.random() * messages.length)];
+      m.style.left = Math.random() * 80 + 10 + 'vw';
+      m.style.top = Math.random() * 60 + 20 + 'vh';
+      container.appendChild(m);
+      setTimeout(() => m.remove(), 1500);
+    }
+    setTimeout(() => b.remove(), 4000);
+  }, 200);
+};
+
+window.startCountdown = function() {
+  const wrap = document.getElementById('countdown-wrap');
+  const num = document.getElementById('countdown-num');
+  let count = 5;
+  const timer = setInterval(() => {
+    count--;
+    if (count === 0) {
+      clearInterval(timer);
+      wrap.classList.add('hidden');
+      window.triggerCelebration(6000);
+      return;
+    }
+    num.textContent = count;
+  }, 1000);
+};
 
 // Init
-renderBoard();
+window.setWeek(1);
+window.startCountdown();
 </script>
 </body>
 </html>
