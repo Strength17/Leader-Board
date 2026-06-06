@@ -801,8 +801,11 @@ function renderBoard(){
     const role=tabKey==='ambassadors'?'Ambassador':'Participant';
     const data=(snap[role]||[]).slice().sort((a,b)=>b.pts-a.pts);
     const container=document.getElementById('rows-'+tabKey);
-    const active=data.filter(p=>p.submitted||p.pts>5);
-    const dns=data.filter(p=>!p.submitted&&p.pts<=5);
+    
+    // Interaction-based filtering: Active if pts > 0
+    const active=data.filter(p=>p.pts > 0);
+    const inactive=data.filter(p=>p.pts === 0);
+
     let html='',rank=1;
 
     active.forEach((p,i)=>{
@@ -816,9 +819,9 @@ function renderBoard(){
         ?`📋 ${formStreak}-day form · ✏️ ${workStreak}-day work`
         :workDone
           ?`✏️ Work done · form not submitted`
-          :`Not submitted`;
+          :`Activity recorded · no form`;
       html+=`<div class="row ${rc}" style="animation-delay:${i*0.05}s" onclick="window.openPanel('${p.name.replace(/'/g,"\\'")}')">
-        <div class="rank-num" style="color:${p.submitted?ptsColor(rank):'var(--muted)'}">${rank}</div>
+        <div class="rank-num" style="color:${p.pts > 0 ? ptsColor(rank) : 'var(--muted)'}">${rank}</div>
         <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">${subNote}</div></div>
         <div><div class="pts" style="color:${ptsColor(rank)}">${p.pts}</div><div class="pts-label">points</div></div>
         <div class="tier ${tierClass(p.tier)}">${TIER_EMOJI[p.tier]||''} ${p.tier}</div>
@@ -828,16 +831,16 @@ function renderBoard(){
       rank++;
     });
 
-    if(dns.length>0){
-      html+=`<div class="dns-label">Did Not Submit Yet</div>`;
-      dns.forEach((p,i)=>{
+    if(inactive.length>0){
+      html+=`<div class="dns-label">No Activity Recorded Today</div>`;
+      inactive.forEach((p,i)=>{
         const personData=PEOPLE.find(x=>x.name===p.name);
         const dayData=personData?.days[currentDay];
         const workDone=dayData?.workDone||false;
         const workStreak=dayData?.workStreakDays||0;
         html+=`<div class="row dns" style="animation-delay:${(active.length+i)*0.05}s" onclick="window.openPanel('${p.name.replace(/'/g,"\\'")}')">
           <div class="rank-num" style="color:var(--coral)">—</div>
-          <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">${workDone?'✏️ Work done · no form':'No submission'}</div></div>
+          <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">No submission</div></div>
           <div><div class="pts" style="color:var(--muted)">—</div><div class="pts-label">points</div></div>
           <div class="tier DNS">✗ DNS</div>
           <div><div class="streak" style="color:var(--coral)">0</div><div class="streak-label">📋 form</div></div>

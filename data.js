@@ -589,7 +589,7 @@ export const PEOPLE = [
   {
     name: "Asonganyi Adel Quin", role: "Participant", allTimeTotal: 15, tier: "UNRANKED",
     days: {
-      D1: { pts: 15, submitted: true, streakDays: 1, workDone: false, workStreakDays: 0 },
+      D1: { pts: 15, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
       D2: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
       D3: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
       D4: { pts: 15, submitted: false, streakDays: 1, workDone: false, workStreakDays: 0 },
@@ -764,7 +764,7 @@ export const SNAPSHOTS = {
     Participant: [
       { name: "Emmanuel Karol Tchouani", pts: 165, tier: "SILVER", submitted: true },
       { name: "Faith Emmanuella Busari", pts: 110, tier: "BRONZE", submitted: true },
-      { name: "Abongnwi Chrioni-Opal Forba'", pts: 90, tier: "BRONZE", submitted: true },
+      { name: "Abongnwi Chrioni-Opal Forba'", pts: 95, tier: "BRONZE", submitted: true },
       { name: "Ranjoy-Bryan", pts: 30, tier: "UNRANKED", submitted: false },
       { name: "Mbishitehnyi Ryan", pts: 25, tier: "UNRANKED", submitted: false },
       { name: "Asonganyi Adel Quin", pts: 15, tier: "UNRANKED", submitted: false },
