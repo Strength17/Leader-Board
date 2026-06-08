@@ -4,1043 +4,156 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Sky Graphics Edition 1 — Leaderboard</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
 <style>
-/* ═══════════════════════════════════════════════════════════════
-   SKY GRAPHICS EDITION 1 — ENHANCED LEADERBOARD
-   Design: Aurora UI + Glassmorphism v2 + Bento Grid accents
-   Performance: GPU-accelerated transforms/opacity only (60fps)
-   Modular: logic in index.html, data in data.js (untouched)
-═══════════════════════════════════════════════════════════════ */
-:root{
-  --navy:#0D1830;--indigo:#1B2F6E;--violet:#4F46E5;--violet-light:#818CF8;
-  --amber:#F59E0B;--gold:#D97706;--mint:#10B981;--coral:#EF4444;
-  --sky:#38BDF8;--white:#FFFFFF;--off:#F1F5F9;--muted:#94A3B8;
-  --card:rgba(19,31,58,0.85);--card-solid:#131F3A;--line:rgba(255,255,255,0.07);
-  --glass-bg:rgba(255,255,255,0.04);--glass-border:rgba(255,255,255,0.10);
-  --aurora-1:rgba(79,70,229,0.22);--aurora-2:rgba(16,185,129,0.14);
-  --aurora-3:rgba(245,158,11,0.08);--aurora-4:rgba(56,189,248,0.12);
-  --glow-violet:rgba(79,70,229,0.5);--glow-amber:rgba(245,158,11,0.45);
-  --glow-mint:rgba(16,185,129,0.4);
-}
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-
-/* ── AURORA BACKGROUND ── */
+:root{
+  --navy:#0D1830;--amber:#F59E0B;--violet:#4F46E5;
+  --mint:#10B981;--muted:#94A3B8;--white:#fff;
+}
 body{
   background:var(--navy);
   font-family:'DM Sans',sans-serif;
   color:var(--white);
   min-height:100vh;
-  overflow-x:hidden;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
 }
 body::before{
   content:'';position:fixed;inset:0;
   background:
-    radial-gradient(ellipse 90% 70% at 15% 5%, var(--aurora-1) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 60% at 85% 85%, var(--aurora-2) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 45% at 50% 50%, var(--aurora-3) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 10%, var(--aurora-4) 0%, transparent 50%);
+    radial-gradient(ellipse 80% 60% at 15% 10%,rgba(79,70,229,0.2) 0%,transparent 55%),
+    radial-gradient(ellipse 60% 50% at 85% 80%,rgba(16,185,129,0.12) 0%,transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 50%,rgba(245,158,11,0.07) 0%,transparent 60%);
+  animation:aurora 14s ease-in-out infinite alternate;
   pointer-events:none;z-index:0;
-  animation:auroraDrift 18s ease-in-out infinite alternate;
   will-change:transform;
 }
-@keyframes auroraDrift{
-  0%{transform:translate(0,0) scale(1);}
-  33%{transform:translate(-12px,8px) scale(1.02);}
-  66%{transform:translate(8px,-6px) scale(0.98);}
-  100%{transform:translate(-4px,12px) scale(1.01);}
+@keyframes aurora{
+  0%{transform:translate(0,0);}
+  50%{transform:translate(-10px,8px);}
+  100%{transform:translate(8px,-6px);}
 }
 body::after{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
-  background-size:48px 48px;
-  animation:gridShift 25s linear infinite;
-  will-change:transform;
+    linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);
+  background-size:44px 44px;
 }
-@keyframes gridShift{from{transform:translate(0,0);}to{transform:translate(48px,48px);}}
-
-/* ── LAYOUT ── */
-.wrap{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:48px 20px 100px;}
-
-/* ── HEADER ── */
-.header{text-align:center;margin-bottom:44px;position:relative;}
-.edition-tag{
+.card{
+  position:relative;z-index:1;
+  text-align:center;
+  padding:clamp(40px,8vw,72px) clamp(24px,6vw,64px);
+  max-width:560px;width:90%;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  backdrop-filter:blur(16px);
+  box-shadow:0 32px 80px rgba(0,0,0,0.4);
+}
+.tag{
   display:inline-flex;align-items:center;gap:6px;
-  font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;
+  font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
   color:var(--amber);
   background:rgba(245,158,11,0.08);
-  border:1px solid rgba(245,158,11,0.3);
-  padding:6px 18px;border-radius:24px;margin-bottom:18px;
-  box-shadow:0 0 20px rgba(245,158,11,0.1);
+  border:1px solid rgba(245,158,11,0.25);
+  padding:6px 18px;border-radius:24px;
+  margin-bottom:24px;
   animation:tagPulse 3s ease-in-out infinite;
 }
 @keyframes tagPulse{
-  0%,100%{box-shadow:0 0 20px rgba(245,158,11,0.1);}
-  50%{box-shadow:0 0 35px rgba(245,158,11,0.22),inset 0 0 12px rgba(245,158,11,0.06);}
+  0%,100%{box-shadow:0 0 0 rgba(245,158,11,0);}
+  50%{box-shadow:0 0 24px rgba(245,158,11,0.18);}
 }
-.title{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(52px,11vw,96px);
-  line-height:.9;letter-spacing:3px;
-  background:linear-gradient(135deg,#fff 0%,#C7D2FE 30%,#38BDF8 60%,#10B981 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  margin-bottom:10px;
-  filter:drop-shadow(0 0 40px rgba(56,189,248,0.25));
-  animation:titleShimmer 6s ease-in-out infinite;
-}
-@keyframes titleShimmer{
-  0%,100%{filter:drop-shadow(0 0 30px rgba(56,189,248,0.2));}
-  50%{filter:drop-shadow(0 0 60px rgba(56,189,248,0.38));}
-}
-.subtitle{font-size:13px;color:var(--muted);letter-spacing:2px;font-weight:400;}
-.day-badge{
-  display:inline-block;margin-top:16px;
-  background:linear-gradient(135deg,var(--violet),var(--violet-light));
-  padding:7px 22px;border-radius:22px;
-  font-size:13px;font-weight:700;letter-spacing:1px;
-  box-shadow:0 4px 20px rgba(79,70,229,0.35);
-}
-
-/* ══════════════════════════════════════════════════════
-   WEEK + DAY NAVIGATOR — Connected card unit
-   Week pills sit on top; day pills slide from beneath
-   like a tray extending out from the card.
-══════════════════════════════════════════════════════ */
-.nav-card{
-  background:rgba(13,24,48,0.80);
-  border:1px solid var(--glass-border);
-  border-radius:18px;
-  overflow:hidden;
-  margin-bottom:28px;
-  backdrop-filter:blur(16px);
-  box-shadow:0 8px 32px rgba(0,0,0,0.3);
-}
-
-/* Week row — top section of the card */
-.week-row{
-  display:flex;gap:0;
-  border-bottom:1px solid var(--line);
-  overflow-x:auto;
-  scrollbar-width:none;
-  padding:10px 10px 0;
-  gap:6px;
-}
-.week-row::-webkit-scrollbar{display:none;}
-
-.week-pill{
-  padding:11px 22px;border-radius:12px 12px 0 0;
-  background:transparent;
-  border:1px solid transparent;
-  border-bottom:none;
-  cursor:pointer;font-weight:700;font-size:13px;white-space:nowrap;
-  color:var(--muted);
-  transition:all .3s cubic-bezier(.4,0,.2,1);
-  position:relative;
-  /* tab-like: bottom flush with the border-bottom of .week-row */
-  margin-bottom:-1px;
-}
-.week-pill:hover:not(.locked){
-  background:rgba(79,70,229,0.10);
-  color:var(--white);
-  border-color:rgba(79,70,229,0.25);
-  border-bottom-color:transparent;
-}
-.week-pill.active{
-  background:rgba(79,70,229,0.18);
-  border-color:var(--violet);
-  border-bottom-color:var(--nav-card-bg,rgba(13,24,48,0.80));
-  color:var(--white);
-  box-shadow:inset 0 2px 8px rgba(79,70,229,0.2),0 3px 0 var(--violet);
-  z-index:1;
-}
-.week-pill.locked{opacity:.32;cursor:not-allowed;font-size:12px;}
-.week-badge{
-  position:absolute;top:-8px;right:-8px;
-  background:linear-gradient(135deg,var(--mint),#059669);
-  color:var(--navy);font-size:8px;font-weight:800;
-  padding:2px 7px;border-radius:8px;letter-spacing:0.5px;
-  box-shadow:0 2px 8px var(--glow-mint);
-  white-space:nowrap;
-}
-
-/* Day tray — bottom section of the card, slides in */
-.day-tray{
-  padding:12px 14px 14px;
-  display:flex;gap:7px;flex-wrap:wrap;
-  animation:trayReveal .32s cubic-bezier(.4,0,.2,1) both;
-  background:rgba(255,255,255,0.015);
-  border-top:1px solid rgba(79,70,229,0.25);
-  position:relative;
-}
-.day-tray::before{
-  content:'';
-  position:absolute;
-  top:0;left:16px;right:16px;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(79,70,229,0.5),rgba(56,189,248,0.3),transparent);
-  pointer-events:none;
-}
-@keyframes trayReveal{
-  from{opacity:0;transform:translateY(10px);max-height:0;}
-  to{opacity:1;transform:translateY(0);max-height:200px;}
-}
-
-.day-pill{
-  position:relative;
-  padding:9px 18px;border-radius:10px;cursor:pointer;
-  font-size:12px;font-weight:700;letter-spacing:.8px;
-  border:1px solid rgba(255,255,255,0.08);
-  background:rgba(255,255,255,0.04);color:var(--muted);
-  transition:all .22s cubic-bezier(.4,0,.2,1);
-  overflow:visible; /* allow the pin badge to overflow */
-}
-.day-pill:hover:not(.locked):not(.active){
-  background:rgba(255,255,255,0.09);
-  color:var(--white);
-  border-color:rgba(255,255,255,0.18);
-}
-.day-pill.active{
-  background:rgba(245,158,11,0.18);
-  color:var(--amber);
-  border-color:rgba(245,158,11,0.5);
-  box-shadow:0 2px 12px rgba(245,158,11,0.2);
-}
-.day-pill.locked{
-  background:rgba(255,255,255,0.01);
-  color:rgba(255,255,255,0.12);
-  cursor:not-allowed;
-  border-style:dashed;
-  border-color:rgba(255,255,255,0.05);
-}
-
-/* ── DAY 5 PIN BADGE ──────────────────────────────────
-   A thin ribbon-pin at the top-right corner edge of the
-   Day 5 button. Distinct colour, smooth rounded ends,
-   about 3× the border width — visible but not dominant.
-   Does NOT look selected; it's purely a milestone marker.
-   The pin is the ONLY differentiator from other day pills.
-   No background, no border, no text changes.
-───────────────────────────────────────────────────── */
-/* Ensure milestone base state looks IDENTICAL to regular pills */
-.day-pill.milestone:not(.active){
-  background:rgba(255,255,255,0.04);
-  color:var(--muted);
-  border-color:rgba(255,255,255,0.08);
-  box-shadow:none;
-}
-.day-pill.milestone::after{
-  content:'';
-  position:absolute;
-  /* sit right at the top-right corner edge */
-  top:-4px;
-  right:-4px;
-  /* thin tall pin: ~3px wide, ~22px tall */
-  width:5px;
-  height:22px;
-  background:linear-gradient(180deg, #F59E0B 0%, #D97706 60%, #92400E 100%);
-  border-radius:3px;
-  box-shadow:0 0 6px rgba(245,158,11,0.55), 0 0 2px rgba(245,158,11,0.8);
-  z-index:2;
-  pointer-events:none;
-}
-/* small circle cap at the top of the pin */
-.day-pill.milestone::before{
-  content:'';
-  position:absolute;
-  top:-7px;
-  right:-5.5px;
-  width:8px;
-  height:8px;
-  background:radial-gradient(circle, #FFD700 0%, #F59E0B 60%, #D97706 100%);
-  border-radius:50%;
-  box-shadow:0 0 5px rgba(245,158,11,0.7);
-  z-index:3;
-  pointer-events:none;
-}
-/* when active, the pin colour shifts to complement the active amber state */
-.day-pill.milestone.active::after{
-  background:linear-gradient(180deg,#10B981 0%,#059669 60%,#065F46 100%);
-  box-shadow:0 0 6px rgba(16,185,129,0.55);
-}
-.day-pill.milestone.active::before{
-  background:radial-gradient(circle,#34D399 0%,#10B981 60%,#059669 100%);
-  box-shadow:0 0 5px rgba(16,185,129,0.7);
-}
-
-/* ── GOLDEN ESSENCE (Day 5) ── */
-body.essence-golden::before{
-  background:
-    radial-gradient(ellipse 90% 70% at 20% 10%,rgba(217,119,6,0.15) 0%,transparent 55%),
-    radial-gradient(ellipse 70% 60% at 80% 80%,rgba(245,158,11,0.10) 0%,transparent 50%),
-    radial-gradient(ellipse 50% 45% at 50% 50%,rgba(79,70,229,0.10) 0%,transparent 60%);
-}
-.essence-golden .title{
-  background:linear-gradient(135deg,#fff 0%,#FFE088 35%,#F59E0B 70%,#D97706 100%);
-  -webkit-background-clip:text;background-clip:text;
-}
-.essence-golden .row.rank-1{
-  box-shadow:0 0 32px rgba(245,158,11,0.3),0 0 60px rgba(245,158,11,0.12);
-  border-color:rgba(245,158,11,0.85);
-}
-
-/* ── TABS ── */
-.tabs{
-  display:flex;gap:8px;margin-bottom:28px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid var(--glass-border);
-  border-radius:16px;padding:6px;
-  backdrop-filter:blur(12px);
-}
-.tab{
-  flex:1;text-align:center;padding:13px 20px;border-radius:12px;
-  cursor:pointer;font-size:13px;font-weight:700;letter-spacing:.5px;
-  transition:all .3s cubic-bezier(.4,0,.2,1);
-  color:var(--muted);border:none;background:transparent;
-}
-.tab:hover:not(.active){background:rgba(255,255,255,0.04);color:var(--white);}
-.tab.active{
-  background:rgba(13,24,48,0.9);color:var(--white);
-  box-shadow:0 2px 16px rgba(0,0,0,.5);
-  border:1px solid var(--glass-border);
-}
-.tab.active.participants{color:var(--sky);border-color:rgba(56,189,248,.3);}
-.tab.active.ambassadors{color:var(--amber);border-color:rgba(245,158,11,.3);}
-
-/* ── BOARD ── */
-.board{display:none;}.board.active{display:block;}
-.board-label{
-  font-size:11px;font-weight:800;letter-spacing:3.5px;
-  text-transform:uppercase;margin-bottom:18px;
-  display:flex;align-items:center;gap:12px;
-}
-.board-label::after{content:'';flex:1;height:1px;background:var(--line);}
-.board-label.p{color:var(--sky);}.board-label.a{color:var(--amber);}
-
-/* ── ROWS ── */
-.row{
-  display:grid;
-  grid-template-columns:44px 1fr 90px 80px 58px 58px;
-  align-items:center;gap:12px;
-  padding:16px 20px;border-radius:14px;margin-bottom:8px;
-  background:var(--card);
-  border:1px solid var(--glass-border);
-  transition:transform .25s cubic-bezier(.4,0,.2,1),
-             box-shadow .25s cubic-bezier(.4,0,.2,1),
-             border-color .25s ease;
-  animation:rowReveal .5s cubic-bezier(.4,0,.2,1) both;
-  cursor:pointer;
-  backdrop-filter:blur(10px);
-  position:relative;overflow:hidden;
+.icon{
+  font-size:clamp(48px,10vw,72px);
+  margin-bottom:20px;
+  display:block;
+  animation:iconFloat 4s ease-in-out infinite;
   will-change:transform;
 }
-.row::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,0.03) 0%,transparent 60%);
-  pointer-events:none;
+@keyframes iconFloat{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
 }
-.row:hover{
-  transform:translateX(6px) translateY(-1px);
-  box-shadow:0 8px 32px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,0.06);
+h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(36px,9vw,64px);
+  letter-spacing:3px;line-height:1;
+  background:linear-gradient(135deg,#fff 0%,#C7D2FE 40%,#38BDF8 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:8px;
 }
-.row.rank-1{
-  border-color:rgba(245,158,11,.55);
-  background:linear-gradient(135deg,rgba(245,158,11,.13),rgba(217,119,6,.06),var(--card-solid));
-  box-shadow:0 0 24px rgba(245,158,11,0.15);
+.edition{
+  font-size:13px;color:var(--amber);
+  font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:28px;
 }
-.row.rank-1::after{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(245,158,11,0.6),transparent);
-}
-.row.rank-2{border-color:rgba(148,163,184,.45);background:linear-gradient(135deg,rgba(148,163,184,.09),var(--card));}
-.row.rank-3{border-color:rgba(205,127,50,.4);background:linear-gradient(135deg,rgba(205,127,50,.09),var(--card));}
-.row.dns{opacity:.4;}
-@keyframes rowReveal{
-  from{opacity:0;transform:translateY(16px);filter:blur(4px);}
-  to{opacity:1;transform:translateY(0);filter:blur(0);}
-}
-.rank-num{font-family:'Bebas Neue',sans-serif;font-size:24px;text-align:center;color:var(--muted);line-height:1;}
-.rank-1 .rank-num{color:var(--amber);text-shadow:0 0 16px rgba(245,158,11,0.5);}
-.rank-2 .rank-num{color:#CBD5E1;}
-.rank-3 .rank-num{color:#CD7F32;}
-.name-col{min-width:0;}
-.name{font-size:14px;font-weight:700;white-space:normal;word-break:break-word;}
-.name-sub{font-size:11px;color:var(--muted);margin-top:3px;}
-.pts{font-family:'Bebas Neue',sans-serif;font-size:28px;text-align:right;line-height:1;}
-.pts-label{font-size:10px;color:var(--muted);text-align:right;margin-top:1px;letter-spacing:.5px;}
-.tier{
-  font-size:10px;font-weight:800;letter-spacing:.5px;
-  padding:5px 9px;border-radius:8px;text-align:center;white-space:nowrap;
-}
-.tier.BRONZE{background:rgba(205,127,50,.18);color:#CD7F32;border:1px solid rgba(205,127,50,.4);}
-.tier.SILVER{background:rgba(192,192,192,.13);color:#C0C0C0;border:1px solid rgba(192,192,192,.35);}
-.tier.GOLD{background:rgba(255,215,0,.13);color:#FFD700;border:1px solid rgba(255,215,0,.35);}
-.tier.PLATINUM{
-  background:linear-gradient(135deg,rgba(79,70,229,.25),rgba(129,140,248,.15));
-  color:#A5B4FC;border:1px solid rgba(79,70,229,.5);
-  box-shadow:0 0 12px rgba(79,70,229,0.2);
-}
-.tier.UNRANKED{background:rgba(148,163,184,.08);color:var(--muted);border:1px solid rgba(148,163,184,.18);}
-.tier.DNS{background:rgba(239,68,68,.1);color:var(--coral);border:1px solid rgba(239,68,68,.3);}
-.streak{text-align:center;font-size:13px;font-weight:700;color:var(--mint);}
-.streak-label{font-size:10px;color:var(--muted);text-align:center;letter-spacing:.5px;}
-.work-streak{text-align:center;font-size:13px;font-weight:700;}
-.work-streak-label{font-size:10px;color:var(--muted);text-align:center;letter-spacing:.5px;}
-.work-streak[data-done="true"]{color:var(--violet-light);}
-.work-streak[data-done="false"]{color:rgba(148,163,184,0.35);}
-.dns-label{
-  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  color:var(--coral);margin:24px 0 12px;
-  display:flex;align-items:center;gap:12px;
-}
-.dns-label::after{content:'';flex:1;height:1px;background:rgba(239,68,68,.18);}
-.amb-note{
-  background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.22);
-  border-radius:12px;padding:13px 18px;
-  font-size:12px;color:rgba(245,158,11,.88);margin-bottom:18px;line-height:1.7;
-  backdrop-filter:blur(6px);
-}
-
-/* ── LEGEND ── */
-.legend{
-  margin-top:36px;background:var(--glass-bg);
-  border:1px solid var(--glass-border);
-  border-radius:16px;padding:20px 24px;
-  backdrop-filter:blur(12px);
-}
-.legend-title{font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
-.legend-grid{display:flex;flex-wrap:wrap;gap:10px;}
-.legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);}
-
-/* ── FOOTER ── */
-.footer{text-align:center;margin-top:44px;font-size:12px;color:var(--muted);line-height:2;}
-.footer strong{color:var(--white);}
-
-/* ═══════════════════════════════════════════════════════════
-   PROFILE PANEL
-═══════════════════════════════════════════════════════════ */
-.overlay{position:fixed;inset:0;z-index:100;display:none;align-items:flex-end;justify-content:center;}
-.overlay.open{display:flex;}
-.overlay-bg{
-  position:absolute;inset:0;
-  background:rgba(0,0,0,.72);
-  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
-}
-.panel{
-  position:relative;z-index:1;
-  background:rgba(13,24,48,0.96);
-  border:1px solid var(--glass-border);
-  border-radius:24px 24px 0 0;
-  width:100%;max-width:920px;max-height:92vh;overflow-y:auto;
-  padding:0 0 44px;
-  transform:translateY(100%);
-  transition:transform .4s cubic-bezier(.4,0,.2,1);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-}
-.overlay.open .panel{transform:translateY(0);}
-@media(min-width:640px){
-  .overlay{align-items:center;}
-  .panel{
-    border-radius:22px;max-height:88vh;
-    transform:scale(.9) translateY(24px);opacity:0;
-    transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .35s ease;
-  }
-  .overlay.open .panel{transform:scale(1) translateY(0);opacity:1;}
-}
-.panel-header{
-  background:rgba(19,31,58,0.9);border-radius:24px 24px 0 0;
-  padding:22px 26px 20px;border-bottom:1px solid var(--line);
-  position:sticky;top:0;z-index:2;backdrop-filter:blur(16px);
-}
-.panel-back{
-  background:none;border:none;color:var(--muted);
-  font-size:20px;cursor:pointer;padding:0;line-height:1;margin-bottom:12px;
-  transition:color .2s;
-}
-.panel-back:hover{color:var(--white);}
-.panel-name{font-family:'Bebas Neue',sans-serif;font-size:34px;line-height:1;margin-bottom:8px;}
-.panel-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-.role-badge{font-size:10px;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:14px;}
-.role-badge.Ambassador{background:rgba(245,158,11,.14);color:var(--amber);border:1px solid rgba(245,158,11,.3);}
-.role-badge.Participant{background:rgba(56,189,248,.1);color:var(--sky);border:1px solid rgba(56,189,248,.25);}
-.panel-pts{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--amber);}
-.ptabs{display:flex;gap:6px;padding:16px 26px 0;border-bottom:1px solid var(--line);}
-.ptab{
-  padding:10px 22px;font-size:13px;font-weight:700;cursor:pointer;
-  border:none;background:none;color:var(--muted);
-  border-bottom:2px solid transparent;transition:all .2s;
-}
-.ptab:hover{color:var(--white);}
-.ptab.active{color:var(--white);border-bottom-color:var(--violet);}
-.pcontent{padding:22px 26px;}
-.pboard{display:none;}.pboard.active{display:block;}
-.section-title{
-  font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;
-  color:var(--muted);margin:22px 0 10px;padding-bottom:7px;
-  border-bottom:1px solid var(--line);
-}
-.bk-row{
-  display:flex;align-items:flex-start;gap:13px;
-  padding:10px 14px;border-radius:10px;margin-bottom:6px;
-  transition:background .2s;
-}
-.bk-row.earned{background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.15);}
-.bk-row.missed{background:rgba(255,255,255,.02);border:1px solid transparent;opacity:.5;}
-.bk-icon{font-size:14px;margin-top:2px;min-width:18px;}
-.bk-body{flex:1;}
-.bk-label{font-size:13px;font-weight:700;}
-.bk-desc{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.6;}
-.bk-pts{font-family:'Bebas Neue',sans-serif;font-size:20px;white-space:nowrap;}
-.bk-row.earned .bk-pts{color:var(--mint);}
-.bk-row.missed .bk-pts{color:var(--muted);}
-.day-dots{display:flex;gap:5px;margin-top:5px;}
-.dot{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;}
-.dot.hit{background:rgba(16,185,129,.2);color:var(--mint);}
-.dot.miss{background:rgba(239,68,68,.12);color:var(--coral);}
-.total-bar{
-  margin-top:26px;
-  background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.25);
-  border-radius:14px;padding:18px 22px;
-  display:flex;align-items:center;justify-content:space-between;
-  backdrop-filter:blur(6px);
-}
-.total-label{font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);}
-.total-num{font-family:'Bebas Neue',sans-serif;font-size:46px;color:var(--amber);line-height:1;text-shadow:0 0 20px rgba(245,158,11,0.3);}
-.roast-box{
-  background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.18);
-  border-radius:16px;padding:22px;line-height:1.85;font-size:14px;color:var(--off);
-}
-.roast-box p{margin-bottom:14px;}.roast-box p:last-child{margin-bottom:0;}
-.roast-fire{font-size:30px;text-align:center;margin-bottom:14px;}
-
-/* ═══════════════════════════════════════════════════════════
-   CELEBRATION
-═══════════════════════════════════════════════════════════ */
-.celebration-container{position:fixed;inset:0;z-index:150;pointer-events:none;overflow:hidden;}
-.confetti{
-  position:absolute;width:8px;height:8px;top:-20px;
+.divider{
+  width:48px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--amber),transparent);
+  margin:0 auto 28px;
   border-radius:2px;
-  animation:confettiFall linear forwards;
-  will-change:transform,opacity;
 }
-@keyframes confettiFall{
-  0%{transform:translateY(0) rotate(0deg);opacity:1;}
-  80%{opacity:1;}
-  100%{transform:translateY(110vh) rotate(720deg);opacity:0;}
+p{
+  font-size:clamp(14px,2.5vw,16px);
+  color:var(--muted);line-height:1.8;
+  margin-bottom:28px;
 }
-.pop-msg{
-  position:absolute;color:white;font-family:'Bebas Neue',sans-serif;
-  font-weight:800;font-size:28px;text-transform:uppercase;letter-spacing:3px;
-  text-shadow:0 4px 16px rgba(0,0,0,.6);
-  animation:popOut 8s cubic-bezier(.17,.67,.83,.67) forwards;
-  white-space:nowrap;z-index:160;pointer-events:none;
-  will-change:transform,opacity;
+p strong{color:var(--white);}
+.pills{
+  display:flex;flex-wrap:wrap;gap:10px;
+  justify-content:center;margin-bottom:32px;
 }
-@keyframes popOut{
-  0%{transform:scale(0) rotate(-10deg);opacity:0;}
-  10%{opacity:1;transform:scale(1.25) rotate(2deg);}
-  70%{opacity:1;transform:scale(1.05) rotate(-1deg);}
-  90%{opacity:.6;transform:scale(1.08) translateY(-20px) rotate(1deg);}
-  100%{opacity:0;transform:scale(1.1) translateY(-60px) rotate(5deg);}
+.pill{
+  font-size:12px;font-weight:700;
+  padding:8px 18px;border-radius:20px;
+  letter-spacing:.5px;
 }
-.celebrate-btn{
-  position:fixed;bottom:32px;right:32px;width:68px;height:68px;
+.pill.green{background:rgba(16,185,129,0.12);color:var(--mint);border:1px solid rgba(16,185,129,0.25);}
+.pill.blue{background:rgba(79,70,229,0.12);color:#818CF8;border:1px solid rgba(79,70,229,0.25);}
+.pill.amber{background:rgba(245,158,11,0.12);color:var(--amber);border:1px solid rgba(245,158,11,0.25);}
+.footer{
+  font-size:11px;color:rgba(148,163,184,0.5);
+  letter-spacing:1px;text-transform:uppercase;
+}
+/* Spinner */
+.spinner{
+  width:36px;height:36px;
+  border:2px solid rgba(245,158,11,0.15);
+  border-top-color:var(--amber);
   border-radius:50%;
-  background:linear-gradient(135deg,var(--violet),#6D28D9);
-  border:none;color:white;font-size:30px;cursor:pointer;z-index:90;
-  box-shadow:0 10px 28px rgba(79,70,229,0.5),0 0 0 0 rgba(79,70,229,0.3);
-  display:flex;align-items:center;justify-content:center;
-  transition:all .35s cubic-bezier(.175,.885,.32,1.275);
-  animation:fabBreath 3s ease-in-out infinite;
-  will-change:transform,box-shadow;
+  margin:0 auto 28px;
+  animation:spin 1.2s linear infinite;
+  will-change:transform;
 }
-@keyframes fabBreath{
-  0%,100%{box-shadow:0 10px 28px rgba(79,70,229,0.5),0 0 0 0 rgba(79,70,229,0.3);}
-  50%{box-shadow:0 14px 36px rgba(79,70,229,0.6),0 0 0 10px rgba(79,70,229,0.0);}
-}
-.celebrate-btn:hover{transform:scale(1.12) rotate(15deg);box-shadow:0 18px 40px rgba(79,70,229,0.65);}
-.celebrate-btn:active{transform:scale(.92);}
-
-/* ── RESPONSIVE ── */
-@media(max-width:640px){
-  .wrap{padding:20px 12px 72px;}
-  .row{grid-template-columns:32px 1fr 58px 62px;gap:8px;padding:13px 12px;}
-  .streak,.streak-label,.work-streak,.work-streak-label{display:none;}
-  .pts{font-size:22px;}.name{font-size:13px;line-height:1.3;}.name-sub{font-size:10px;}
-  .tier{font-size:9px;padding:3px 6px;}
-  .rank-num{font-size:19px;}
-  .tabs{gap:4px;padding:4px;}.tab{font-size:12px;padding:10px 6px;}
-  .day-pill{font-size:11px;padding:7px 13px;}
-  .week-pill{font-size:12px;padding:9px 16px;}
-  .panel-name{font-size:28px;}
-  .panel{border-radius:22px 22px 0 0;}
-  .ptab{padding:9px 14px;font-size:12px;}
-  .pcontent{padding:16px;}
-  .total-num{font-size:38px;}
-}
-@media(prefers-reduced-motion:reduce){
-  *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
-}
+@keyframes spin{to{transform:rotate(360deg);}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<div class="header">
-  <div class="edition-tag">Sky Graphics · Edition 1</div>
-  <div class="title">LEADERBOARD</div>
-  <div class="subtitle">Design Challenge · 6 Weeks · Daily Check-In</div>
-  <div class="day-badge" id="current-day-badge">📅 Day 5 — June 5, 2026</div>
-</div>
-
-<!-- WEEK + DAY as one connected nav card -->
-<div class="nav-card">
-  <div class="week-row" id="week-row">
-    <div class="week-pill active" data-week="1" onclick="window.setWeek(1)">Week 1 <span class="week-badge">Done</span></div>
-    <div class="week-pill locked" title="Locked">Week 2 🔒</div>
-    <div class="week-pill locked" title="Locked">Week 3 🔒</div>
-    <div class="week-pill locked" title="Locked">Week 4 🔒</div>
-    <div class="week-pill locked" title="Locked">Week 5 🔒</div>
-    <div class="week-pill locked" title="Locked">Week 6 🔒</div>
+<div class="card">
+  <div class="tag">⏳ Updating Now</div>
+  <span class="icon">🎨</span>
+  <h1>LEADERBOARD</h1>
+  <div class="edition">Sky Graphics · Edition 1</div>
+  <div class="divider"></div>
+  <p>
+    The leaderboard is <strong>closed for updates.</strong><br>
+    Week 2 data is being compiled and all<br>
+    Week 1 points are being finalised.
+  </p>
+  <div class="pills">
+    <span class="pill green">✅ Week 1 Complete</span>
+    <span class="pill blue">📊 Data Being Updated</span>
+    <span class="pill amber">🚀 Week 2 Starting</span>
   </div>
-  <div class="day-tray" id="day-selector"></div>
+  <div class="spinner"></div>
+  <p style="margin-bottom:20px;">
+    Check back soon.<br>
+    The updated board drops <strong>this week.</strong>
+  </p>
+  <div class="footer">Sky Graphics Edition 1 · 6-Week Figma Bootcamp</div>
 </div>
-
-<div class="tabs">
-  <button class="tab active participants" data-tab="participants" onclick="window.switchTab('participants')">🎓 Participants</button>
-  <button class="tab ambassadors" data-tab="ambassadors" onclick="window.switchTab('ambassadors')">⭐ Ambassadors</button>
-</div>
-
-<div class="board active" id="board-participants">
-  <div class="board-label p">Participant Rankings</div>
-  <div id="rows-participants"></div>
-  <div class="legend">
-    <div class="legend-title">Tier Thresholds</div>
-    <div class="legend-grid">
-      <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
-      <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
-      <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
-      <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
-    </div>
-    <div class="legend-title" style="margin-top:14px;">Streak Columns</div>
-    <div class="legend-grid">
-      <div class="legend-item"><span style="color:var(--mint);font-weight:700;">📋 Form</span> — daily check-in submissions</div>
-      <div class="legend-item"><span style="color:var(--violet-light);font-weight:700;">✏️ Work</span> — consecutive days with task points earned</div>
-    </div>
-  </div>
-</div>
-
-<div class="board" id="board-ambassadors">
-  <div class="amb-note">⭐ Ambassadors compete on their own board. Rankings are separate from participants.</div>
-  <div class="board-label a">Ambassador Rankings</div>
-  <div id="rows-ambassadors"></div>
-  <div class="legend">
-    <div class="legend-title">Tier Thresholds</div>
-    <div class="legend-grid">
-      <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
-      <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
-      <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
-      <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
-    </div>
-    <div class="legend-title" style="margin-top:14px;">Streak Columns</div>
-    <div class="legend-grid">
-      <div class="legend-item"><span style="color:var(--mint);font-weight:700;">📋 Form</span> — daily check-in submissions</div>
-      <div class="legend-item"><span style="color:var(--violet-light);font-weight:700;">✏️ Work</span> — consecutive days with task points earned</div>
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  <strong>Sky Graphics Edition 1</strong> · Updated Daily<br>
-  Check-in form: <strong>forms.gle/as9Nus325XqgsQpH6</strong><br><br>
-  <span style="color:rgba(148,163,184,.45);font-size:11px">Points calculated automatically. Bonus points awarded by admin for outstanding contributions.</span>
-</div>
-</div>
-
-<!-- PROFILE OVERLAY -->
-<div class="overlay" id="overlay" onclick="window.handleOverlayClick(event)">
-  <div class="overlay-bg"></div>
-  <div class="panel" id="panel">
-    <div class="panel-header">
-      <button class="panel-back" onclick="window.closePanel()">← Back</button>
-      <div class="panel-name" id="panel-name"></div>
-      <div class="panel-meta">
-        <span class="role-badge" id="panel-role"></span>
-        <span class="panel-pts" id="panel-pts"></span>
-        <span class="tier" id="panel-tier"></span>
-      </div>
-    </div>
-    <div class="ptabs">
-      <button class="ptab active" data-ptab="breakdown" onclick="window.switchPTab('breakdown')">📊 Points Breakdown</button>
-      <button class="ptab" data-ptab="roast" onclick="window.switchPTab('roast')">🔥 Roast</button>
-    </div>
-    <div class="pcontent">
-      <div class="pboard active" id="pboard-breakdown"></div>
-      <div class="pboard" id="pboard-roast"></div>
-    </div>
-  </div>
-</div>
-
-<!-- CELEBRATION -->
-<div id="celebration-container" class="celebration-container"></div>
-<button class="celebrate-btn" onclick="window.triggerCelebration(5000)" title="Celebrate!">🎉</button>
-
-<script type="module">
-import { PEOPLE, SNAPSHOTS, DAY_LABELS, TIER_EMOJI, PLEDGE_ONLY } from './data.js';
-
-/* ── Hydrate PLEDGE_ONLY into PEOPLE ── */
-PLEDGE_ONLY.forEach(n => {
-  if (!PEOPLE.find(x => x.name === n)) {
-    PEOPLE.push({
-      name: n, role: "Participant", allTimeTotal: 5, tier: "UNRANKED",
-      days: {
-        D1:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0},
-        D2:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0},
-        D3:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0},
-        D4:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0},
-        D5:{pts:5,submitted:false,streakDays:0,workDone:false,workStreakDays:0}
-      },
-      breakdown:[
-        {section:"PRE-PROGRAMME",items:[
-          {label:"Pledge",pts:5,earned:true,days:null,desc:"You committed to the programme. +5 for your pledge."}
-        ]},
-        {section:"SECTION 1 — DAILY CHECK-IN (Automatic)",items:[
-          {label:"Check-in form submission",pts:10,earned:false,days:["D1","D2","D3","D4","D5"],dayHits:[],desc:"No submissions yet. Fill the form daily for +10 automatic."},
-          {label:"Early submission (before 3PM)",pts:5,earned:false,days:["D1","D2","D3","D4","D5"],dayHits:[],desc:"Submit before 3PM for +5 bonus."}
-        ]},
-        {section:"SECTION 5 — BONUS POINTS",items:[
-          {label:"Phase completion",pts:20,earned:false,days:null,desc:"Awarded on completion."},
-          {label:"Perfect week",pts:15,earned:false,days:null,desc:"5-day streak, Friday."}
-        ]}
-      ],
-      roast:`<p>You pledged. That was the right first step. But Week 1 is over and you haven't moved. Week 2 starts Monday. Let's change that "5" into something bigger.</p>`
-    });
-  }
-});
-
-/* ── STATE ── */
-let currentWeek = 1;
-let currentDay  = 'D5';
-let currentTab  = 'participants';
-let currentPTab = 'breakdown';
-
-/* ── HELPERS ── */
-function tierClass(t){ return t || 'UNRANKED'; }
-function ptsColor(r){ return r===1?'var(--amber)':r===2?'#CBD5E1':r===3?'#CD7F32':'var(--white)'; }
-function rowClass(r){ return r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':''; }
-function safeName(n){ return n.replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
-
-/* ── WEEK SELECTOR ── */
-window.setWeek = function(week) {
-  if (week > 1) return; /* future weeks locked */
-  currentWeek = week;
-  document.querySelectorAll('.week-pill').forEach((p, i) => {
-    p.classList.toggle('active', i + 1 === week);
-  });
-  renderDaySelector();
-  window.setDay('D' + (currentWeek * 5)); /* default to Day 5 of selected week */
-};
-
-/* ── DAY TRAY ── */
-function renderDaySelector() {
-  const tray = document.getElementById('day-selector');
-  /* re-trigger the tray slide animation */
-  tray.classList.remove('day-tray');
-  void tray.offsetWidth;
-  tray.classList.add('day-tray');
-
-  const start = (currentWeek - 1) * 5 + 1;
-  const end   = currentWeek * 5;
-  let html = '';
-  for (let i = start; i <= end; i++) {
-    const dKey        = 'D' + i;
-    const isActive    = currentDay === dKey;
-    const isMilestone = i % 5 === 0;
-    html += `<button
-      class="day-pill${isActive ? ' active' : ''}${isMilestone ? ' milestone' : ''}"
-      data-day="${dKey}"
-      onclick="window.setDay('${dKey}')"
-    >Day ${i}</button>`;
-  }
-  tray.innerHTML = html;
-}
-
-/* ── DAY SELECTION ── */
-window.setDay = function(day) {
-  currentDay = day;
-  document.querySelectorAll('.day-pill').forEach(p => {
-    p.classList.toggle('active', p.dataset.day === day);
-  });
-  const dayNum  = parseInt(day.slice(1), 10);
-  const isGolden = dayNum % 5 === 0;
-  document.body.classList.toggle('essence-golden', isGolden);
-  const label = DAY_LABELS[day] || ('Day ' + dayNum);
-  document.getElementById('current-day-badge').textContent = '📅 ' + label;
-  renderBoard();
-};
-
-/* ── TAB SWITCHING ── */
-window.switchTab = function(tab) {
-  currentTab = tab;
-  document.querySelectorAll('.tab').forEach(t => {
-    t.classList.toggle('active', t.dataset.tab === tab);
-  });
-  document.querySelectorAll('.board').forEach(b => b.classList.remove('active'));
-  const boardEl = document.getElementById('board-' + tab);
-  if (boardEl) boardEl.classList.add('active');
-  renderBoard();
-};
-
-/* ── BOARD RENDER — day-specific interaction filtering ── */
-function renderBoard() {
-  const snap = SNAPSHOTS[currentDay];
-  if (!snap) {
-    ['participants', 'ambassadors'].forEach(k => {
-      const el = document.getElementById('rows-' + k);
-      if (el) el.innerHTML = '<div class="dns-label">Data for this day is locked.</div>';
-    });
-    return;
-  }
-
-  ['participants', 'ambassadors'].forEach(tabKey => {
-    const role      = tabKey === 'ambassadors' ? 'Ambassador' : 'Participant';
-    const container = document.getElementById('rows-' + tabKey);
-    if (!container) return;
-
-    const snapData  = snap[role] || [];
-
-    /* ── Day-specific partition ──────────────────────────────────────────
-       Compute points earned ON THIS DAY ONLY (delta from previous day).
-       A person is "active today" if their day-delta pts > 0.
-       Pledge-only members who never submitted have pts=5 on every snapshot
-       (their all-time total never changes) → delta = 0 → inactive. Correct.
-    ──────────────────────────────────────────────────────────────────── */
-    const prevDayKey  = currentDay === 'D1' ? null : 'D' + (parseInt(currentDay.slice(1)) - 1);
-    const prevSnap    = prevDayKey ? (SNAPSHOTS[prevDayKey] || {})[role] || [] : [];
-
-    function getPrevPts(name) {
-      const r = prevSnap.find(x => x.name === name);
-      return r ? r.pts : 0;
-    }
-
-    /* Enrich each entry with delta and PEOPLE data */
-    const enriched = snapData.map(p => {
-      const personData = PEOPLE.find(x => x.name === p.name);
-      const dayData    = personData?.days?.[currentDay] || {};
-      const delta      = p.pts - getPrevPts(p.name); /* points earned TODAY */
-      return { ...p, delta, personData, dayData };
-    });
-
-    /* Sort active by cumulative pts descending, inactive alphabetically */
-    const active   = enriched.filter(p => p.delta > 0).sort((a, b) => b.pts - a.pts);
-    const inactive = enriched.filter(p => p.delta <= 0).sort((a, b) => a.name.localeCompare(b.name));
-
-    let html = '', rank = 1;
-
-    active.forEach((p, i) => {
-      const rc         = rowClass(rank);
-      const formStreak = p.dayData.streakDays     || 0;
-      const workStreak = p.dayData.workStreakDays  || 0;
-      const workDone   = p.dayData.workDone        || false;
-      const subNote    = p.submitted
-        ? `📋 ${formStreak}-day form · ✏️ ${workStreak}-day work`
-        : workDone
-          ? `✏️ Work done · form not submitted`
-          : `Activity recorded today`;
-      html += `<div class="row ${rc}" style="animation-delay:${i * 0.05}s" onclick="window.openPanel('${safeName(p.name)}')">
-        <div class="rank-num" style="color:${ptsColor(rank)}">${rank}</div>
-        <div class="name-col">
-          <div class="name">${p.name}</div>
-          <div class="name-sub">${subNote}</div>
-        </div>
-        <div>
-          <div class="pts" style="color:${ptsColor(rank)}">${p.pts}</div>
-          <div class="pts-label">points</div>
-        </div>
-        <div class="tier ${tierClass(p.tier)}">${TIER_EMOJI[p.tier] || ''} ${p.tier}</div>
-        <div><div class="streak">${formStreak}</div><div class="streak-label">📋 form</div></div>
-        <div><div class="work-streak" data-done="${workDone}">${workStreak}</div><div class="work-streak-label">✏️ work</div></div>
-      </div>`;
-      rank++;
-    });
-
-    if (inactive.length > 0) {
-      html += `<div class="dns-label">No Activity Recorded Today</div>`;
-      inactive.forEach((p, i) => {
-        const formStreak = p.dayData.streakDays    || 0;
-        const workStreak = p.dayData.workStreakDays || 0;
-        html += `<div class="row dns" style="animation-delay:${(active.length + i) * 0.04}s" onclick="window.openPanel('${safeName(p.name)}')">
-          <div class="rank-num" style="color:var(--muted)">—</div>
-          <div class="name-col">
-            <div class="name">${p.name}</div>
-            <div class="name-sub">Total: ${p.pts} pts · no activity today</div>
-          </div>
-          <div><div class="pts" style="color:var(--muted)">${p.pts}</div><div class="pts-label">total</div></div>
-          <div class="tier ${tierClass(p.tier)}">${TIER_EMOJI[p.tier] || ''} ${p.tier}</div>
-          <div><div class="streak" style="color:var(--muted)">${formStreak}</div><div class="streak-label">📋 form</div></div>
-          <div><div class="work-streak" data-done="false">${workStreak}</div><div class="work-streak-label">✏️ work</div></div>
-        </div>`;
-      });
-    }
-    container.innerHTML = html;
-  });
-}
-
-/* ── PROFILE PANEL ── */
-window.openPanel = function(name) {
-  const p = PEOPLE.find(x => x.name === name);
-  if (!p) return;
-
-  document.getElementById('panel-name').textContent = p.name;
-  const rb = document.getElementById('panel-role');
-  rb.textContent = p.role;
-  rb.className   = 'role-badge ' + p.role;
-  document.getElementById('panel-pts').textContent = p.allTimeTotal + ' pts';
-  const tb = document.getElementById('panel-tier');
-  tb.textContent = (TIER_EMOJI[p.tier] || '') + ' ' + p.tier;
-  tb.className   = 'tier ' + tierClass(p.tier);
-
-  /* Build breakdown */
-  let bdHtml = '';
-  (p.breakdown || []).forEach(sec => {
-    bdHtml += `<div class="section-title">${sec.section}</div>`;
-    (sec.items || []).forEach(item => {
-      const cls  = item.earned ? 'earned' : 'missed';
-      const icon = item.earned
-        ? '<span style="color:var(--mint)">✓</span>'
-        : '<span style="color:var(--coral)">✗</span>';
-      let dotsHtml = '';
-      if (item.days && item.days.length) {
-        dotsHtml = '<div class="day-dots">';
-        item.days.forEach(d => {
-          const hit = item.dayHits && item.dayHits.includes(d);
-          dotsHtml += `<span class="dot ${hit ? 'hit' : 'miss'}">${d}</span>`;
-        });
-        dotsHtml += '</div>';
-      }
-      bdHtml += `<div class="bk-row ${cls}">
-        <div class="bk-icon">${icon}</div>
-        <div class="bk-body">
-          <div class="bk-label">${item.label}</div>
-          ${dotsHtml}
-          <div class="bk-desc">${item.desc}</div>
-        </div>
-        <div class="bk-pts">${item.pts !== null ? '+' + item.pts : ''}</div>
-      </div>`;
-    });
-  });
-  bdHtml += `<div class="total-bar"><div class="total-label">All-Time Total</div><div class="total-num">${p.allTimeTotal}</div></div>`;
-
-  /* ── STREAK EXPLANATION BLOCK ── */
-  let streakExplain = `<div style="background:rgba(79,70,229,0.08);border:1px solid rgba(79,70,229,0.25);border-radius:14px;padding:18px 20px;margin-bottom:20px;line-height:1.8;">
-    <div style="font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">HOW YOUR STREAKS WORK</div>
-    <p style="font-size:13px;color:var(--off);margin-bottom:10px;"><strong style="color:var(--amber)">📋 Form Streak</strong> — counts every day you submitted the check-in form. It never goes backwards. Miss a day and it pauses. Submit again and it keeps climbing from where it stopped.</p>
-    <p style="font-size:13px;color:var(--off);margin-bottom:10px;"><strong style="color:var(--mint)">✏️ Work Streak</strong> — counts every day you received a creativity score for your Figma work, whether or not you submitted the form. It also never resets. If you built something real that day, it counts.</p>
-    <p style="font-size:12px;color:var(--muted);margin:0;">The goal is to keep both numbers growing every week.</p>
-  </div>`;
-  bdHtml = streakExplain + bdHtml;
-
-  document.getElementById('pboard-breakdown').innerHTML = bdHtml;
-  document.getElementById('pboard-roast').innerHTML =
-    `<div class="roast-fire">🔥</div><div class="roast-box">${p.roast || '<p>No roast yet — check back soon.</p>'}</div>`;
-
-  window.switchPTab('breakdown');
-  document.getElementById('overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-};
-
-window.closePanel = function() {
-  document.getElementById('overlay').classList.remove('open');
-  document.body.style.overflow = '';
-};
-
-window.handleOverlayClick = function(e) {
-  if (e.target === document.getElementById('overlay') ||
-      e.target.classList.contains('overlay-bg')) {
-    window.closePanel();
-  }
-};
-
-/* ── PANEL TAB SWITCHING ── */
-window.switchPTab = function(tab) {
-  currentPTab = tab;
-  document.querySelectorAll('.ptab').forEach(t =>
-    t.classList.toggle('active', t.dataset.ptab === tab)
-  );
-  document.querySelectorAll('.pboard').forEach(b => b.classList.remove('active'));
-  const pb = document.getElementById('pboard-' + tab);
-  if (pb) pb.classList.add('active');
-};
-
-/* ── CELEBRATION ENGINE ── */
-let _celebInterval = null;
-let _celebTimer    = null;
-
-window.triggerCelebration = function(duration) {
-  /* Stop any running celebration cleanly */
-  if (_celebInterval) { clearInterval(_celebInterval); _celebInterval = null; }
-  if (_celebTimer)    { clearTimeout(_celebTimer);     _celebTimer    = null; }
-
-  const container = document.getElementById('celebration-container');
-  container.innerHTML = '';
-
-  const colors   = ['#4F46E5','#F59E0B','#10B981','#EF4444','#38BDF8','#A78BFA','#34D399','#FCD34D'];
-  const messages = ['Week 1 Complete! 🏆','Sky Graphics! 🎨','Amazing Work! 🔥','Figma Masters! ✨','Keep Climbing! 🚀'];
-  const ms  = duration || 5000;
-  const end = Date.now() + ms;
-
-  _celebInterval = setInterval(() => {
-    if (Date.now() > end) {
-      clearInterval(_celebInterval);
-      _celebInterval = null;
-      setTimeout(() => { container.innerHTML = ''; }, 2000);
-      return;
-    }
-    /* Confetti particle */
-    const c    = document.createElement('div');
-    c.className = 'confetti';
-    const size  = Math.random() * 8 + 4;
-    c.style.cssText = [
-      `left:${Math.random() * 100}vw`,
-      `width:${size}px`,
-      `height:${size}px`,
-      `background:${colors[Math.floor(Math.random() * colors.length)]}`,
-      `border-radius:${Math.random() > 0.5 ? '50%' : '2px'}`,
-      `animation-duration:${Math.random() * 2 + 2}s`,
-      'animation-delay:0s'
-    ].join(';');
-    container.appendChild(c);
-    setTimeout(() => c.remove(), 4000);
-
-    /* Pop message — occasional */
-    if (Math.random() > 0.82) {
-      const m     = document.createElement('div');
-      m.className  = 'pop-msg';
-      m.textContent = messages[Math.floor(Math.random() * messages.length)];
-      m.style.cssText = `left:${Math.random() * 70 + 5}vw;top:${Math.random() * 50 + 20}vh;`;
-      container.appendChild(m);
-      setTimeout(() => m.remove(), 2500);
-    }
-  }, 120);
-
-  /* Hard stop guarantee */
-  _celebTimer = setTimeout(() => {
-    if (_celebInterval) { clearInterval(_celebInterval); _celebInterval = null; }
-    container.innerHTML = '';
-  }, ms + 2500);
-};
-
-/* ── INIT ── */
-function initApp() {
-  window.setWeek(1);         /* renders day tray + defaults to D5 */
-  window.triggerCelebration(15000); /* 15-second celebration on load */
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initApp);
-} else {
-  initApp();
-}
-</script>
 </body>
 </html>
