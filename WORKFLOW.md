@@ -1,28 +1,32 @@
-# WORKFLOW — UI & Data Integrity Recovery
+# Workflow: Leaderboard Data Integrity Loop
 
-## Phase 1: data.js Integrity & Logic Lockdown
-- [x] 1. Apply +5 Standard Work to "Abongnwi Chrioni-Opal Forba'" for Day 1.
-- [x] 2. Update Chrioni's allTimeTotal (90 -> 95) and adjust historical SNAPSHOTS (D1-D5).
-- [x] 3. Audit all PEOPLE: Ensure Rule "Every form submission (submitted:true) = work done (workDone:true)".
-- [x] 4. Recalculate all `workStreakDays` to ensure they include both pure work days and form-submission days.
+## Goal
+Produce a `data2.js` that contains absolute data, reconciling all inputs (WhatsApp, Google Forms, Manual Admin Overrides) to match the ground truth in `MASTER DATA.md`.
 
+## Protocol (The Loop)
+For each iteration (1 to 10):
+1.  **Reset/Clean:** Ensure all previous outputs are cleared (if necessary).
+2.  **Execute Pipeline:**
+    *   Run `wa_parser.py` -> Updates `Data/wa_report.md`.
+    *   Run `form_parser.py` -> Updates `Data/form_report.md`.
+    *   Run `leaderboard_sync.py` -> Reads all reports + `Data/Manual_Reconciliation_Points.md`.
+        *   Produces `Data/master_data.md` (audit trail).
+        *   Produces `data2.js` (UI output).
+3.  **Validate:**
+    *   Compare `Data/master_data.md` (Audit) against `data2.js` (UI Data).
+    *   Compare `Data/master_data.md` against `MASTER DATA.md` (Ground Truth).
+    *   Log any discrepancies in `reply.md`.
+4.  **Log Results:** Append run #, status, and discrepancies found to `reply.md`.
+5.  **Iterate:** If discrepancies exist, fix code/data, then loop back to step 1.
 
-## Phase 2: index.html Rendering Refactor
-- [x] 5. Change Row Filtering logic:
-    - **Active (Green):** Anyone with `pts > 0` (Interaction-based).
-    - **Inactive (Red):** Only those with `pts === 0` (Zero points for that day).
-- [x] 6. Rename "Did Not Submit Yet" label to "No Activity Recorded Today" (or similar professional alternative).
-- [x] 7. Ensure UI displays both 📋 Form and ✏️ Work streaks as separate, equal metrics in the row.
-
-## Phase 3: Validation & Cleanup
-- [x] 8. Verify data imports: Confirm index.html imports all required variables from data.js.
-- [x] 9. Final cross-check of mobile responsiveness (ensuring the new dual-streak columns fit).
-
----
-
-## Log
-2026-06-06: Workflow created.
-2026-06-06: Phase 1 Complete - data.js integrity and Chrioni +5 correction applied.
-2026-06-06: Phase 2 Complete - Interaction-based rendering and dual-streak UI implemented.
-2026-06-06: Phase 3 Complete - Imports verified and responsiveness checked.
-2026-06-06: Project successfully recovered and updated.
+## Progress Tracking
+- [x] Run 1
+- [x] Run 2
+- [x] Run 3
+- [x] Run 4
+- [x] Run 5
+- [x] Run 6
+- [x] Run 7
+- [x] Run 8
+- [x] Run 9
+- [x] Run 10

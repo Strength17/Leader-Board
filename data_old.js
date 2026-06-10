@@ -1,6 +1,6 @@
 /**
  * SKY GRAPHICS FIGMA EDITION 1 — LEADERBOARD DATA
- * Generated: 2026-06-10 20:28:44
+ * Generated: 2026-06-10 20:05:30
  *
  * STREAK RULES (admin override — FREEZE on miss):
  *   Form streak: freezes (does not reset) on missed form days
@@ -1260,6 +1260,383 @@ export const PEOPLE = [
       ]},
     ],
     roast: `<p><strong>Bih.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Akuchu Tohla Tchosi-Ambom",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Akuchu.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Andin Blanch",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Andin.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Assaah Nzota",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Assaah.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Binda Joel",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Binda.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Chi Yoland Sah",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Chi.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Kelly Brenda Keafon",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Kelly.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Kemni Samuel Bemsimbom",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Kemni.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Mbishitehnyi Ryan",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Mbishitehnyi.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Nkongmi Loise Asonyuy",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Nkongmi.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Nkwain Harzel",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Nkwain.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Open Bryan",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Open.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Touossoc Ange",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Touossoc.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
+  },
+  {
+    name: "Tsopmo Precious",
+    role: "Participant",
+    joinedDay: "D1",
+    allTimeTotal: 5,
+    tier: "UNRANKED",
+    warnings: [],
+    days: {
+      D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D3: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D4: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D5: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D6: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+      D7: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
+    },
+    breakdown: [
+      { section: "PRE-PROGRAMME", items: [
+        { label: "Pledge", pts: 5, earned: true, dayHits: null, desc: "You committed to the programme. +5 for your pledge." },
+      ]},
+      { section: "DAILY CHECK-INS", items: [
+        { label: "Form submission", pts: 10, earned: false, dayHits: null, desc: "No valid form submissions yet." },
+      ]},
+      { section: "FIGMA WORK", items: [
+        { label: "Creativity scores", pts: null, earned: false, dayHits: null, desc: "No creativity scores awarded yet." },
+      ]},
+    ],
+    roast: `<p><strong>Tsopmo.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>`,
   },
 ];
 

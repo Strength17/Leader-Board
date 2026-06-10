@@ -1,0 +1,64 @@
+Timestamp	Full Name	Day number	Did you watch today's video?	What did you build or explore today?	Any questions, suggestions, or feedback about the programme? (Optional)	POINTS TODAY	TOTAL POINTS	STREAK	BONUS POINTS MANUAL	RANK	Column 1
+6/1/2026 17:40:20	Emmanuel Karol Tchouani	Day 1	Yes, I watched it fully	https://drive.google.com/open?id=10L_6S53ujb2IYmA2Y15i2mXuQIWUTazN	"For now I have nothing to say. 
+The courses are straight forward and understandable even for a novice like me in design. "	10	45	1		⬜ UNRANKED	
+6/1/2026 16:16:24	MBIYDZENYUY PATIENCE DZEKEM 	Day 1	Yes, I watched it fully	https://drive.google.com/open?id=1qeyunhb4Q_pChMi17HoRTaHxjJjEdWxE	No	10	25	3		⬜ UNRANKED	
+6/1/2026 17:04:27	Ranjoy-Bryan 	Day 1	Yes, I watched it fully	https://drive.google.com/open?id=1Lka6bDfc4cF4bTR_jVVVnWjjm2_QCzrQ	No	10	10	1		⬜ UNRANKED	
+6/1/2026 17:36:05	Faith Emmanuella Busari 	Day 1	Yes, I watched it fully	https://drive.google.com/open?id=1QDvxQ5J5XpVO44wPgKhQ34RFHi9sB3YN, https://drive.google.com/open?id=1eP5F6DS6148oSBTraNnl6qOtBBdxfxuf	No	15	85	3		🥉 BRONZE	
+6/1/2026 17:52:58	Asonganyi Adel Quin 	Day 1	Yes, I watched it fully	https://drive.google.com/open?id=14uw0xGwaVfXbJdfEGI_Ha19INLpT-F-K		10	10	1		⬜ UNRANKED	
+6/1/2026 18:16:54	Christine Choundong 	Day 1	Yes, I watched it fully	https://drive.google.com/open?id=1-KBMzzg6vXtHPpTyLVed2iLYUIQkMm7Z	Thank you for organizing the programme. So far, the instructions have been clear and easy to follow. I look forward to learning more and improving my design skills throughout the six weeks.	10	10	2		⬜ UNRANKED	
+6/2/2026 11:53:44	Irinyemi Adedayo Juliet	Day 2	Yes, I watched it fully	https://drive.google.com/open?id=1TSWfWsk7V2UvpEKLTTSap0OMPrCygV6L, https://drive.google.com/open?id=1rM39F99cTG9C_x-rmasbUptMSn8e_F4y, https://drive.google.com/open?id=1KUzsBfA4VMHuAMX58GtH_DwEvpua0uga, https://drive.google.com/open?id=1dY-HmICJ17SRAlcJA6f1OJj1IpVy96eB, https://drive.google.com/open?id=1sC8VgFxbghPGKuxnPMwTMQy_Wa6brr-7	No	10	10	1		⬜ UNRANKED	
+6/2/2026 15:57:32	MBIYDZENYUY PATIENCE DZEKEM 	Day 2	Yes, I watched it fully	https://drive.google.com/open?id=1nAHIkqliBYl6eRmOLujC2DLTBi97SZS6, https://drive.google.com/open?id=1MDolXAjipuJNx85vZt_Pcurrye0zv3Og	No	10	25	3	5	⬜ UNRANKED	
+6/2/2026 16:14:57	Choundong Christine	Day 2	No, not yet	https://drive.google.com/open?id=10ix8bHDYyxe1zFCTL2MizIRaBXLlOlDa	"Overall, I think the programme is well organized and I can tell a lot of thought and effort has gone into it. Thank you for that.
+
+My main suggestion would be to reduce the number of messages a little or perhaps have a single daily summary containing the key task, video, and submission instructions. Sometimes there is so much information in the chat that important details can get buried. I feel this may be contributing to lower participation because some people might not be completely sure what is expected of them.
+
+I also wonder whether occasional live sessions, even if short, might help keep the momentum high. Learning through YouTube videos is helpful, but hearing directly from the instructor from time to time could make the experience feel more engaging and interactive.
+
+As the saying goes, ""the best way to hide something from an African is by putting it in writing."" 😅 Of course that's an exaggeration, but sometimes when there are many long messages, important instructions can be easy to miss.
+
+Apart from that, I'm enjoying the programme and looking forward to learning more over the coming weeks."	10	35	2	25	⬜ UNRANKED	
+6/2/2026 19:02:58	Faith Emmanuella Busari 	Day 2	Yes, I watched it fully	https://drive.google.com/open?id=1mA9cB1J-5uspkXYwkFUS3ZPPvU-QgwlX	None		85	6	70	🥉 BRONZE	
+6/2/2026 19:44:27	Oluwasegun Daniel Osawore 	Day 2	Yes, I watched it fully	https://drive.google.com/open?id=15rsZvdXky6WMbnWG_e_QbC-Kk294IR0E	No		70	1	70	🥉 BRONZE	
+6/2/2026 19:51:38	Emmanuel Karol Tchouani	Day 2	Yes, I watched it fully	https://drive.google.com/open?id=1h5pTMTsKvNrlCl5QmEkuT9kNHX1XRukp	"For now I still have no remark. 
+The courses are quite explicit and amazing. 
+Hoping to continue as such as we are progressing, thanks!
+"		45	1	35	⬜ UNRANKED	
+6/3/2026 18:57:05	Choundong Christine 	Day 3	No, not yet	https://drive.google.com/open?id=1Bnj_Q4FyWx_Sy_2EaoAd6O8WWUgdgQBI	It's been interactive so far.		0	1		⬜ UNRANKED	
+6/3/2026 19:12:49	Oluwasegun Daniel Osawore 	Day 3	Yes, I watched it fully	https://drive.google.com/open?id=1npXCkxFbl6MJkzAC97C3Hc2Oz1WZTZgw	No		70	1		🥉 BRONZE	
+6/3/2026 19:50:34	Emmanuel Karol Tchouani	Day 3	I watched part of it	https://drive.google.com/open?id=18fBRNITwHwXwUnANxwZdaMS5x-Z5mPK3	"The session was amazing, being able to make use of boolean group, masking, shapes to come out with meaningful icons was quite intresting. 
+"		45			⬜ UNRANKED	
+6/4/2026 16:16:51	Emmanuel Karol Tchouani	Day 4	Yes, I watched it fully	https://drive.google.com/open?id=1PnCbRG8jLGKVGAv0kNeS0e6W-icx0SHF			45			⬜ UNRANKED	
+6/4/2026 18:25:14	Irinyem Adedayo Juliet	Day 4	Yes, I watched it fully	https://drive.google.com/open?id=1-3YPB4c_ToTTsYpkPsZ89fOo87vNxdgV, https://drive.google.com/open?id=1yck-YsnxfR8AWqhyfsMcAz3ikWfhU0qa			0			⬜ UNRANKED	
+6/5/2026 17:53:31	Faith Emmanuella Busari 	Day 5	Yes, I watched it fully	https://drive.google.com/open?id=1LS1lz22KIvRG4fJvCBLMpHOYlX3QD6Rx	I didn't really understand today's task, but I tried my best based on my understanding 		85			🥉 BRONZE	
+6/5/2026 18:42:03	Choundong Christine 	Day 4	Yes, I watched it fully	https://drive.google.com/open?id=1KJUsjhKUGXn1S-ncNmlEpBjiN9svrCn1	No		0			⬜ UNRANKED	
+6/5/2026 18:51:59	Abongnwi Chrioni-Opal Forba'	Day 5	I watched part of it	https://drive.google.com/open?id=1AhkaXy26OvnBb4iyhQPnAS5HjzeRzjPT, https://drive.google.com/open?id=1BfC24PU2l5zEPMaxrPZyS2ZTF9nmrwMa, https://drive.google.com/open?id=1-Y22N2pcIHc9ejB8wS19WEM8mQHgXThZ, https://drive.google.com/open?id=1aGY9h92qtitRo1dk9z9TuFon4AARKiaW, https://drive.google.com/open?id=1kIrrsu3bKRaJoXxwosamd2kunUIp0NmD	I had some difficulties switching the colours and the teacher was fast when explaining so I didn't really understand		0			⬜ UNRANKED	
+6/5/2026 19:00:02	Emmanuel Karol Tchouani	Day 5	Yes, I watched it fully	https://drive.google.com/open?id=1MtcVPDAXastTqcehugLtOEp8oS8q11vz	Well today was an exposure to something I have never try. Thou couldn't achieve much but was happy to contribute into my daily progress		45			⬜ UNRANKED	
+6/8/2026 13:44:18	Amaazee Ivanna Therese Fundoh 	Day 1	Yes, I watched it fully	https://drive.google.com/open?id=1nBynJu9hyKjb5xLNyrHvn8rxNMf_5dB-, https://drive.google.com/open?id=1Pi3CPKmVYiLdK9_xzY9hU2flxbd7tW4r	Actually the program is very good and quite interesting and I suggest that the YouTube videos they send for us to use and recreate our own works should be the clearer ones cause I had difficulties seeing the icons the person talking was using on mine but thanks I found my way out .but apparently from that it is a nice program 		0			⬜ UNRANKED	
+6/8/2026 14:05:36	MBIYDZENYUY PATIENCE DZEKEM	Day 2	Yes, I watched it fully	https://drive.google.com/open?id=1Q2961BvN9Xl2goM4rQwUNQz0VblCg7S6, https://drive.google.com/open?id=1j8tVmTrVgjpwwK8GuHnsb2x_h9FP_2Hu			0			⬜ UNRANKED	
+6/8/2026 15:34:46	Christine Choundong 	Day 6	Yes, I watched it fully	https://drive.google.com/open?id=12IocdhQsS1B291zdeF9NaRwqBxQt29Vb, https://drive.google.com/open?id=14DbO2qzHQwtJeaQBAIDqFhlHVKxYZEAM	Things just got serious🙌🔥		10			⬜ UNRANKED	
+6/8/2026 16:52:04	Dorothy Joyce Priscille	Day1	Yes, I watched it fully	https://drive.google.com/open?id=1fHd0yVi0obZjFm38r9LwMtyAgLq1TR8Z	No 		0			⬜ UNRANKED	
+6/8/2026 17:10:12	Frank Emmanuel 	Day 6	Yes, I watched it fully	https://drive.google.com/open?id=1ugKFM7IRIqDyhOZgNKv8xjWEQvKt5JNx			0			⬜ UNRANKED	
+6/9/2026 11:38:37	Amaazee Ivanna Therese Fundoh 	Day 7	Yes, I watched it fully	https://drive.google.com/open?id=10bfuJDVRUZ_HFSha40yUtriohcbVSpkl	Please do we get certificates at the end of the program?		0			⬜ UNRANKED	
+6/9/2026 15:03:16	Christine Choundong 	Day 7	No, not yet	https://drive.google.com/open?id=1bVX1bVa_H7jmwIYEheQiNy47m3kssVab	RAS 		10			⬜ UNRANKED	
+6/9/2026 17:33:32	Dorothy Joyce Priscille	Day 7	Yes, I watched it fully	https://drive.google.com/open?id=10UvgftN1PJy9QBKb2yzIx6Vrrse69Sl8	no		0			⬜ UNRANKED	
+6/9/2026 18:16:41	Irinyemi Adedayo Juliet 	Day 7	Yes, I watched it fully	https://drive.google.com/open?id=1nsl7pJtp1mdmV5M2C7saNNkpRPlVrFtS			0			⬜ UNRANKED	
+6/9/2026 18:53:34	Abongnwi Chrioni-Opal Forba'	Day 7	Yes, I watched it fully	https://drive.google.com/open?id=1sPbC5oWpKi7MG2mzqSkrmVrZChW9rPDD, https://drive.google.com/open?id=1Z7ySNHHMlEWXL6DUzsN80WGK4RGxDBD9, https://drive.google.com/open?id=1rjITuvs1orJn3zk-da3cuLAfpGIzHdLE, https://drive.google.com/open?id=1DZZCUcVE40PjY4jXBS1MCQW1WAsOWzg7, https://drive.google.com/open?id=1HZe_li1Uvl-9VyBs7y3c-R3mA2Ppd-JA			0			⬜ UNRANKED	
+6/9/2026 18:58:33	Emmanuel Karol Tchouani	Day 7	Yes, I watched it fully	https://drive.google.com/open?id=1BkTJ64Hx3vAWgsVisW_2s2Lm5gE3CcMQ	A suggestion could be to form some sort of exercises that matches with topics we are going on. For a novice like us selecting an exercise online exposes us to some concept not yet grasp. Well it's still an approach to exercise. 		45			⬜ UNRANKED	
+	Malialia Celine Bride	Day 1	Yes, I watched it fully				80	1	80	🥉 BRONZE	
+	Mbishitehnyi Ryan	Day1					25	1	25	⬜ UNRANKED	
+	Chrioni Opal	Day1					25		25	⬜ UNRANKED	
+	Patience Dzekem	Day 2					25		25	⬜ UNRANKED	
+											
+											
+											
+											
+											
+											
+											
+											
+											
+											
+				
+											
+											
+											
