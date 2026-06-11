@@ -268,7 +268,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 245,
+    "allTimeTotal": 260,
     "tier": "SILVER",
     "days": {
       "D1": {
@@ -328,7 +328,7 @@ export const PEOPLE = [
         "workStreakDays": 8
       },
       "D9": {
-        "pts": 245,
+        "pts": 260,
         "submitted": true,
         "streakDays": 4,
         "workDone": true,
@@ -365,9 +365,10 @@ export const PEOPLE = [
             "dayHits": [
               "D5",
               "D7",
-              "D8"
+              "D8",
+              "D9"
             ],
-            "desc": "3 valid forms submitted. +30 total."
+            "desc": "4 valid forms submitted. +40 total."
           }
         ]
       },
@@ -386,9 +387,10 @@ export const PEOPLE = [
               "D5",
               "D6",
               "D7",
-              "D8"
+              "D8",
+              "D9"
             ],
-            "desc": "D1:5 · D2:10 · D3:10 · D4:5 · D5:5 · D6:5 · D7:5 · D8:5. Total: +50."
+            "desc": "D1:5 · D2:10 · D3:10 · D4:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5. Total: +55."
           }
         ]
       },
