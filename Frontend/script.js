@@ -365,7 +365,14 @@ window.openPanel = function(name) {
   if (warns.length) {
     if(warnTab) warnTab.classList.add('has-warn');
     let wHtml = `<div class="warn-box"><div class="warn-title">⚠️ Personal Warnings (${warns.length})</div>`;
-    warns.forEach(w => { wHtml += `<div class="warn-item"><span class="warn-tag">⚠ Flag</span>${w}</div>`; });
+    warns.forEach(w => { 
+      wHtml += `<div class="warn-item">
+        <span class="warn-tag">⚠ Flag</span>${w.title}
+        <span class="warn-icon">?
+          <div class="warn-popover">${w.details}</div>
+        </span>
+      </div>`; 
+    });
     wHtml += `</div>
     <p style="font-size:12px;color:var(--muted);line-height:1.8;margin-top:8px;">
       These warnings are visible only to you. They reflect rulings made by the admin about your points — 

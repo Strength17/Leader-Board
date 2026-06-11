@@ -311,10 +311,10 @@ def analyze_rows(timed_rows):
             # Default (per blueprint): count as the timestamp day, no
             # retroactive points for the earlier day they claimed.
             submitted = True
-            warnings.append(
-                f"New joiner recovery form ({written_day} written on "
-                f"{timestamp_day}) — officially recorded as {timestamp_day}."
-            )
+            warnings.append({
+                "title": f"Submission Issue — {timestamp_day}",
+                "details": f"New joiner recovery form ({written_day} written on {timestamp_day}) — officially recorded as {timestamp_day}."
+            })
         elif mismatch:
             # Late / wrong-day submission -> disqualified
             submitted = False
@@ -324,13 +324,28 @@ def analyze_rows(timed_rows):
                 "timestamp_day": timestamp_day,
                 "written_day": written_day,
             })
-            warnings.append(
-                f"Check-in points stripped for {timestamp_day} due to "
-                f"late submission (wrote {written_day})."
-            )
+            warnings.append({
+                "title": f"Submission Disqualified — {timestamp_day}",
+                "details": f"Check-in points stripped for {timestamp_day} due to late submission (wrote {written_day})."
+            })
 
         # Duplicate same-day submission check
         key = (person, timestamp_day)
+        
+        # Rule-based checks (Facebook interactions)
+        if row.get("fb_interactions") == "0" and person == "Mbiydzenyuy Patience Dzekem":
+            warnings.append({
+                "title": "Facebook Interaction — Action Required",
+                "details": "Instructions were to share, comment, and drop a hat emoji. You liked and commented but did not share, and did not drop the hat emoji as required by the interaction rules."
+            })
+
+        # Rule-based checks (Ivanna's image usage)
+        if person == "Amaazee Ivanna Therese Fundoh" and int(row.get("image_count", 0)) > 0:
+            warnings.append({
+                "title": "Image Usage Guidance",
+                "details": "You are uploading images discussing learning concepts. Please review the 'SkyGraphics_PointsMap_v4.pdf' and Facebook interactions guide. Ensure image slots (5 max) are used for final project work to maximize points, rather than content-only screenshots."
+            })
+
         if key in seen_person_days:
             duplicates.append({
                 "name": person,

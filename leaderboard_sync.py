@@ -1212,11 +1212,17 @@ def write_data_js(all_people, day_order, day_labels, filepath):
     # PEOPLE
     lines.append("export const PEOPLE = [")
     phone_re = re.compile(r'^\+?[\d\s\-]{7,}$')
-    unmapped_log = []
+    
+    # Load allowed names
+    allowed_names = set()
+    with open("Identity_Management/Data/unique_full_names.md", "r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                allowed_names.add(line.strip())
     
     for p in all_people:
-        if phone_re.match(p['name'].strip()):
-            unmapped_log.append(p['name'])
+        if p['name'].strip() not in allowed_names:
+            print(f"DEBUG: Skipping {p['name']} - not in unique_full_names.md")
             continue
             
         lines.append("  {")
@@ -1228,6 +1234,7 @@ def write_data_js(all_people, day_order, day_labels, filepath):
 
         # warnings
         if p["warnings"]:
+            # p["warnings"] is now a list of dicts {title, details}
             warn_js = ", ".join(json.dumps(w) for w in p["warnings"])
             lines.append(f"    warnings: [{warn_js}],")
         else:
@@ -1274,13 +1281,16 @@ def write_data_js(all_people, day_order, day_labels, filepath):
 
     lines.append("];")
     
-    # Log phone numbers found
+    # Log phone numbers found (if any remain)
+    unmapped_log = []
+    
     if unmapped_log:
         os.makedirs("Data", exist_ok=True)
         with open("Data/inactive_and_unmapped.md", "a", encoding="utf-8") as f:
             for name in unmapped_log:
                 f.write(f"- {name} (Phone number found in data)\n")
-    print(f"Filtered out {len(unmapped_log)} phone numbers from data.js.")
+    if unmapped_log:
+        print(f"Filtered out {len(unmapped_log)} phone numbers from data.js.")
 
     # RULES
     lines.append("export const RULES = [")

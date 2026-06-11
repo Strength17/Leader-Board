@@ -1,5 +1,5 @@
 # SKY GRAPHICS — FORM DATA REPORT
-Generated: 2026-06-11 06:02:17
+Generated: 2026-06-11 06:25:52
 
 > ⚠️ DRAFT FOR ADMIN REVIEW. Disqualifications, recovery-form
 > flags, and duplicate submissions below are FLAGGED, not
@@ -121,7 +121,7 @@ _None detected._
 - Images uploaded: 2
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
-- ⚠️ Warning: New joiner recovery form (D1 written on D6) — officially recorded as D6.
+- ⚠️ Warning: {'title': 'Submission Issue — D6', 'details': 'New joiner recovery form (D1 written on D6) — officially recorded as D6.'}
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 11:38)
 - Submitted: ✅ Valid (same day)
@@ -193,7 +193,7 @@ _None detected._
 - Images uploaded: 1
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
-- ⚠️ Warning: Check-in points stripped for D5 due to late submission (wrote D4).
+- ⚠️ Warning: {'title': 'Submission Disqualified — D5', 'details': 'Check-in points stripped for D5 due to late submission (wrote D4).'}
 
 #### D6 (Day 6 — June 8, 2026 — 6/8/2026 15:34)
 - Submitted: ✅ Valid (same day)
@@ -234,7 +234,7 @@ _None detected._
 - Images uploaded: 1
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
-- ⚠️ Warning: New joiner recovery form (D1 written on D6) — officially recorded as D6.
+- ⚠️ Warning: {'title': 'Submission Issue — D6', 'details': 'New joiner recovery form (D1 written on D6) — officially recorded as D6.'}
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 17:33)
 - Submitted: ✅ Valid (same day)
@@ -425,7 +425,7 @@ _None detected._
 - Images uploaded: 2
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
-- ⚠️ Warning: Check-in points stripped for D6 due to late submission (wrote D2).
+- ⚠️ Warning: {'title': 'Submission Disqualified — D6', 'details': 'Check-in points stripped for D6 due to late submission (wrote D2).'}
 
 #### D8 (Day 8 — June 10, 2026 — 6/10/2026 16:05)
 - Submitted: ✅ Valid (same day)
