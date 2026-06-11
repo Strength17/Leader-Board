@@ -18,10 +18,10 @@ export const DAY_LABELS = {
 
 export const TIER_EMOJI = {
   "PLATINUM": "🏆",
-  "GOLD": "🥇🥇",
-  "SILVER": "🥈🥈",
-  "BRONZE": "🥉🥉",
-  "UNRANKED": "⬜⬜"
+  "GOLD": "🥇",
+  "SILVER": "🥈",
+  "BRONZE": "🥉",
+  "UNRANKED": "⬜"
 };
 
 export const PEOPLE = [
