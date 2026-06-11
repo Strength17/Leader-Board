@@ -410,45 +410,64 @@ body.essence-golden::before{
 }
 .roast-box p{margin-bottom:14px;}.roast-box p:last-child{margin-bottom:0;}
 
-/* warning tooltip */
-.warn-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin-left: 8px;
-  background: var(--coral);
-  color: var(--white);
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-}
-
-.warn-popover {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  width: 250px;
-  padding: 12px;
-  background: var(--card-solid);
-  border: 1px solid var(--coral);
+/* Red warning box (Accordion Style) */
+.warn-box {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.4);
   border-radius: 8px;
-  font-size: 12px;
-  color: var(--white);
-  z-index: 10;
-  display: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  line-height: 1.4;
-  text-align: left;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.warn-icon:hover .warn-popover {
-  display: block;
+.warn-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
+
+.warn-summary {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FCA5A5;
+  line-height: 1.4;
+}
+
+.details-btn {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #FCA5A5;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.details-btn:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.warn-details {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(239, 68, 68, 0.2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #E2E8F0;
+  line-height: 1.6;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+
 
 .no-warn{
   text-align:center;padding:40px 20px;

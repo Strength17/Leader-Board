@@ -1,52 +1,29 @@
-### Data Structure Analysis (`data.js`)
+# Sky Graphics Figma Edition 1 — Leaderboard Features
 
-The `PEOPLE` array in `data.js` is structured as follows for each participant:
+This is a non-technical summary of what you see on the leaderboard and how it works.
 
-```javascript
-{
-  name: "Participant Name",
-  joinedDay: "D1", // or "D5", etc.
-  allTimeTotal: 123,
-  days: {
-    "D1": { pts: 10, ... },
-    "D2": { pts: 20, ... },
-    // Only includes days with actual activity or presence.
-  },
-  // ...
-}
-```
+## 1. How Rankings Work
+- **Points System:** Participants earn points for daily check-ins, completing Figma design tasks, interacting in the group, and hitting program milestones. 
+- **Tiered Progress:** Everyone is ranked into tiers (Bronze, Silver, Gold, Platinum) based on their total points. Your position on the board updates automatically every time new data is processed.
+- **Ambassador Board:** Ambassadors have their own separate ranking to ensure they are recognized for their leadership role without complicating the participant board.
+- **Data Integrity:** The board only shows official participants from our master list. This ensures the rankings are accurate, fair, and exclusively for registered members.
 
-### The Rendering Fix (`Frontend/script.js`)
+## 2. Participant Panels (Click for Details)
+- **Individual Profile View:** Click any participant's name to open their profile panel.
+- **Point Breakdown:** See exactly why a participant has the points they have (check-ins, bonuses, creative scores, etc.).
+- **Interactive Roast:** A fun, personalized, and performance-based roast is generated for each participant to motivate them and track their progress.
+- **How Streaks Work:** Each profile includes a clear, simple explanation of the Form and Work streaks, explaining how to keep them growing.
 
-The issue is that the current filtering logic only checks if a participant joined, but the UI loop might still attempt to render them in "Inactive" or "Active" rows for days they don't even have an entry for in their `days` object, even if they joined *before* that day.
+## 3. Transparency & Feedback (Epic New Features!)
+- **Detailed, Clickable Warnings:** If a participant's submission is flagged, it isn't just an obscure error. You will see a warning icon (⚠️) on their profile.
+- **Instant Explanations:** When you see a warning icon, simply click or tap it to open an elegant popover that explains *exactly* what happened and *why* it triggered a warning. No more guessing—clear, helpful guidance on how to follow program rules.
+- **Visually Pleasing Design:** These explanations appear in smooth, interactive popover boxes designed to keep the board clean while providing all the information needed at a glance.
 
-To ensure accuracy, the rendering loop must be strictly gated by the `joinedDay`.
+## 4. Navigation & Milestones
+- **Weekly & Daily View:** You can switch between program weeks and days to see how rankings evolved over time.
+- **Day 8 Unlocking:** The board now dynamically unlocks Day 8 and future days once the data is ready, ensuring a smooth, automatic progression.
+- **Accurate Streak Tracking:** Streaks now track more accurately, ensuring your daily work is consistently recognized and your progress is fair.
+- **Automated Celebration:** To keep things engaging, there is a celebration mode that triggers when the leaderboard is opened or refreshed.
 
-**Required Change in `renderBoard()` in `script.js`:**
-
-```javascript
-// Current Filtering (in renderBoard):
-const pool = PEOPLE.filter(p => {
-  if (p.role !== role) return false;
-  // ...
-  return true;
-});
-
-// REQUIRED Fix: Ensure that for a given currentDay, 
-// we only show the participant IF:
-// 1. They have joined by currentDay AND
-// 2. We explicitly handle their presence on this day.
-
-const pool = PEOPLE.filter(p => {
-  if (p.role !== role) return false;
-
-  // 1. GATE: Was the participant in the programme by currentDay?
-  const joinedNum = parseInt(p.joinedDay.slice(1));
-  const boardNum = parseInt(currentDay.slice(1));
-  if (boardNum < joinedNum) return false; // Absolutely exclude them.
-
-  return true;
-});
-```
-
-With this logic, if `boardNum >= joinedNum` but they have no entry for `currentDay` in their `days` object, the rendering code for "Inactive" will correctly label them as "Not Active This Day" because they *were* expected to be there, but didn't perform, whereas previously they might have been excluded or mis-rendered entirely.
+---
+*Note: This board is generated automatically from daily form submissions, WhatsApp group interactions, and manual admin adjustments.*

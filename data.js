@@ -1,6 +1,6 @@
 /**
  * SKY GRAPHICS FIGMA EDITION 1 — LEADERBOARD DATA
- * Generated: 2026-06-11 06:35:22
+ * Generated: 2026-06-11 06:56:06
  *
  * STREAK RULES (admin override — FREEZE on miss):
  *   Form streak: freezes (does not reset) on missed form days
@@ -33,7 +33,7 @@ export const PEOPLE = [
     joinedDay: "D1",
     allTimeTotal: 287,
     tier: "GOLD",
-    warnings: ["{'title': 'Submission Disqualified \u2014 D5', 'details': 'Check-in points stripped for D5 due to late submission (wrote D4).'}"],
+    warnings: [{"title": "Submission Disqualified \u2014 D5", "details": "On June 5th, 2026 (Day 5), you submitted a form claiming it was for Day 4. The Same-Day Rule requires that forms must be submitted on the exact calendar date of the task — Day 4 was June 4th, 2026. Because this submission arrived one day late, the check-in points (+10) and early bonus (+5) that would have been awarded for Day 4 have been disqualified. In Week 2, please submit your form on the same day the task is assigned to avoid losing points."}],
     days: {
       D1: { pts: 90, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
       D2: { pts: 136, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
@@ -207,7 +207,7 @@ export const PEOPLE = [
     joinedDay: "D1",
     allTimeTotal: 137,
     tier: "BRONZE",
-    warnings: ["{'title': 'Submission Disqualified \u2014 D6', 'details': 'Check-in points stripped for D6 due to late submission (wrote D2).'}"],
+    warnings: [{"title": "Submission Disqualified \u2014 D6", "details": "On June 8th, 2026 (Day 6), you submitted a form claiming it was for Day 2. The Same-Day Rule requires that forms must be submitted on the exact calendar date of the task — Day 2 was June 2nd, 2026. Because this submission arrived on Day 6, the check-in points (+10) and early bonus (+5) for Day 2 have been disqualified. In Week 2, please ensure you submit your form on the exact day the task is assigned to avoid losing points."}, {"title": "Facebook Interaction \u2014 Action Required", "details": "Instructions were to Heart the post, comment, and share it. You tapped Like and commented but did not share, and did not Heart the post as required by the interaction rules. Consequently, points for this specific Facebook interaction task cannot be awarded. In Week 2, please ensure all interaction requirements — Heart the post, comment, and share — are all completed to qualify for points."}],
     days: {
       D1: { pts: 30, submitted: true, streakDays: 1, workDone: true, workStreakDays: 1 },
       D2: { pts: 67, submitted: true, streakDays: 2, workDone: true, workStreakDays: 2 },
@@ -323,7 +323,7 @@ export const PEOPLE = [
     joinedDay: "D6",
     allTimeTotal: 110,
     tier: "BRONZE",
-    warnings: ["{'title': 'Submission Issue \u2014 D6', 'details': 'New joiner recovery form (D1 written on D6) \u2014 officially recorded as D6.'}"],
+    warnings: [{"title": "Submission Issue \u2014 D6", "details": "On June 8th, 2026 (Day 6), you submitted a form claiming it was for Day 1. Because you joined the programme on Day 6 and the Day 1 deadline had long passed, this submission has been recorded as your Day 6 check-in. No retroactive points for Day 1 can be awarded. Going forward, submit your form on the same day as the task to ensure your points are counted correctly."}],
     days: {
       D1: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
       D2: { pts: 5, submitted: false, streakDays: 0, workDone: false, workStreakDays: 0 },
