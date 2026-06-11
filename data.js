@@ -1,8 +1,7 @@
-
 /**
  * SKY GRAPHICS FIGMA EDITION 1 — LEADERBOARD DATA
- * Generated: 2026-06-11
  */
+
 
 
 export const DAY_LABELS = {
@@ -257,7 +256,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Christine.</strong> You are at the top of this board. Every day you show up, you pull further ahead. 100% attendance. That is the standard. Hold it.</p>"
+    "roast": "<p>You are the undisputed pacesetter of this cohort, yet your administrative discipline nearly derailed a Gold-tier performance. While your technical contributions and \"spirit of the group\" leadership on WhatsApp are elite, the D4 late submission and D5 total form blackout were unforced errors that shouldn't happen to an Ambassador. You’ve proven you can do the work and lead the room; now prove you can respect the clock. Your 287 points are impressive, but they could have been untouchable.</p>"
   },
   {
     "name": "Abongnwi Chrioni-Opal Forba'",
@@ -464,7 +463,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Abongnwi.</strong> You are in the upper half. Close to Gold. 3-day streak — keep that going. You are leaving points on the table: 5 day(s) with work but no form.</p>"
+    "roast": "<p>Your energy is infectious, but your workflow is chaotic and unsustainable. Posting work on five separate days while neglecting the forms for four of them (D2, D3, D4, D6) is a baffling waste of effort. You are clearly putting in the hours and helping others on WhatsApp, but you're sabotaging your own standing through pure disorganization. You have the raw talent to be at the top, but you're currently your own biggest obstacle.</p>"
   },
   {
     "name": "Oluwasegun Daniel Osawore",
@@ -654,7 +653,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Oluwasegun.</strong> You are in the upper half. Close to Gold. 3-day streak — keep that going. You are leaving points on the table: 4 day(s) with work but no form.</p>"
+    "roast": "<p>Oluwasegun, you are the classic \"star developer\" who refuses to use the ticketing system. Posting high-quality work in the group proves you have the skill, but failing to submit forms for D1, D4, D5, D6, and D7 is professional negligence. You are essentially doing the work for free while your peers climb the rankings. With 3 referrals and a \"first to post\" reputation, you have the engine of a Gold medalist but the paperwork of a dropout.</p>"
   },
   {
     "name": "Emmanuel Karol Tchouani",
@@ -854,7 +853,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Emmanuel.</strong> You are in the upper half. Close to Gold. 6-day streak — keep that going.</p>"
+    "roast": "<p>Your Week 1 was a masterclass in consistency—a perfect streak that signaled a serious contender. However, the recent disappearance on D6 and D8 suggests a lack of stamina as we hit the home stretch. You’re holding a Silver spot, but you’re coasting on past glory rather than building new momentum. Silence in WhatsApp is fine if the forms are coming in, but when the forms stop, your silence just looks like a quiet exit.</p>"
   },
   {
     "name": "Mbiydzenyuy Patience Dzekem",
@@ -1027,7 +1026,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Mbiydzenyuy.</strong> You have made it onto the board. But barely.</p>"
+    "roast": "<p>As an Ambassador, you should be the standard-bearer for the rules, yet you’ve stumbled on the most basic technical requirements. A DQ on D6 for a late D2 form, combined with missing the Facebook interaction requirements, shows a lack of attention to detail. Your willingness to welcome new members is appreciated, but \"soft skills\" don't compensate for a failure to follow the technical roadmap. You need to tighten up your execution immediately.</p>"
   },
   {
     "name": "Faith Emmanuella Busari",
@@ -1196,7 +1195,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Faith.</strong> You have made it onto the board. But barely.</p>"
+    "roast": "<p>You started this marathon with a sprint but are now dragging your feet across the finish line. Valid forms on D1, D2, and D5 showed promise, but missing five out of eight days is a \"fail\" by any professional metric. Your WhatsApp engagement is the only thing keeping you relevant in this program. If you want to be a designer, you have to show up every day, not just when the inspiration strikes.</p>"
   },
   {
     "name": "Irinyemi Adedayo Juliet",
@@ -1358,7 +1357,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Irinyemi.</strong> You have made it onto the board. But barely.</p>"
+    "roast": "<p>You are the definition of \"intermittently excellent.\" When you show up (D2, D4, D7, D8), you are solid and your presence on WhatsApp is valuable. However, missing half the program (D1, D3, D5, D6) as an Ambassador sends a poor message to the participants you’re supposed to be leading. Reliability is the most important ability in this industry; currently, we can only count on you every other day.</p>"
   },
   {
     "name": "Amaazee Ivanna Therese Fundoh",
@@ -1530,7 +1529,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Amaazee.</strong> You have made it onto the board. But barely. You have only shown up 3 of 8 days. Consistency is the whole game here.</p>"
+    "roast": "<p>Joining on Day 6 is a massive disadvantage, but you’ve handled it with more professional grace than many who started on Day 1. Your momentum is excellent, and your D6-D8 streak is a testament to your focus. While your attempt to retroactively claim D1 points was denied, your current standing of 110 points in just three days is a wake-up call to the \"Day 1 Ghosters\" who have less than half your score.</p>"
   },
   {
     "name": "Frank Emmanuel",
@@ -1712,7 +1711,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Frank.</strong> You have made it onto the board. But barely. You have only shown up 3 of 8 days. Consistency is the whole game here.</p>"
+    "roast": "<p>You hit the ground running on Day 6 with a strong start, but that energy seemed to vanish by Day 7 and 8. As an Ambassador, even a late-joining one, you cannot afford to \"ghost\" after just one day of participation. Your referral count and WhatsApp activity show you have the reach, but your lack of form submissions shows a lack of follow-through. Don't be the guy who opens the door but never walks through it.</p>"
   },
   {
     "name": "Malialia Celine Bride",
@@ -1837,7 +1836,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Malialia.</strong> You have made it onto the board. But barely. You have only shown up 1 of 8 days. Consistency is the whole game here.</p>"
+    "roast": "<p>You are currently an Ambassador in name only. Having 82 points solely from referrals while submitting zero forms in eight days makes you a recruiter, not a participant in a Figma program. You are missing the entire technical core of this journey. If you don't start submitting work soon, your title as an Ambassador will be a hollow one.</p>"
   },
   {
     "name": "Ranjoy-Bryan",
@@ -1959,7 +1958,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Ranjoy-Bryan.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>You showed up for the orientation, said the right things, and then vanished. One valid form and an intro do not make a designer. You’ve ghosted for 70% of this program, and at this point, you’re just a name on a list. It's time to decide if you're in the program or just watching from the sidelines.</p>"
   },
   {
     "name": "Asonganyi Adel Quin",
@@ -2095,7 +2094,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Asonganyi.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>You encouraged others on Day 1, which was great, but then you failed to follow your own advice. You’ve been absent for the vast majority of the 10 days, leaving your initial \"valid form\" to gather dust. Participation isn't a one-day event; it's a daily commitment you've failed to keep.</p>"
   },
   {
     "name": "Moh Blessing Kebul",
@@ -2231,7 +2230,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Moh.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>You are the most helpful \"ghost\" in the group. You’re very active on WhatsApp, sharing tips and helping others, but you haven't submitted a single form since joining on Day 2. You’re like a coach who refuses to play the game. You're getting the social experience, but you're missing the technical growth and the credit you deserve.</p>"
   },
   {
     "name": "Favour Hanatu Bako",
@@ -2367,7 +2366,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Favour.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>Your presence on WhatsApp is noted—asking questions and sharing tips is good—but without forms, your points are stagnant. You’re stuck at 13 points because you're talking about the work instead of documenting it. Turn that curiosity into submissions.</p>"
   },
   {
     "name": "Suilabayu Olga Simolen",
@@ -2494,7 +2493,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Suilabayu.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>Helping members on WhatsApp is a noble trait, but it won't earn you a spot on the leaderboard. With zero forms submitted, your 12 points reflect a \"helpful spectator\" rather than a participant. We need to see your work, not just your comments.</p>"
   },
   {
     "name": "Ngum-nchung Blessing Kah Geh",
@@ -2621,7 +2620,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Ngum-nchung.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>Sharing tips and encouragement is the easy part. The hard part is the daily grind of Figma work and form submission, which you have entirely avoided. You’re currently a cheerleader in a room full of athletes.</p>"
   },
   {
     "name": "Tchouala Ange",
@@ -2748,7 +2747,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Tchouala.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>You’ve been active in the WA group, which is a start, but 10 points and zero forms after eight days is a failing grade. You’re coasting on the bare minimum of social interaction.</p>"
   },
   {
     "name": "Fonyuy Berinyuy Tarkighan",
@@ -2867,7 +2866,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Fonyuy.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>Encouragement on WhatsApp is \"filler\" when it isn't backed up by work. You have zero forms and 9 points. In a 10-day program, you can't afford to spend 8 days just \"encouraging.\"</p>"
   },
   {
     "name": "Chunga Daina",
@@ -2985,7 +2984,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Chunga.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>You shared one tip during the intro and then seemingly retired. One tip in eight days is not participation; it’s a cameo appearance.</p>"
   },
   {
     "name": "Percy Visiy",
@@ -3103,7 +3102,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Percy.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>As an Ambassador, having 8 points and zero forms is frankly embarrassing. You provided one tip during the intro and have contributed nothing since. You are occupying a leadership role while providing zero leadership through action.</p>"
   },
   {
     "name": "Bih Cherish Anne",
@@ -3221,7 +3220,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Bih.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>\"Encouragement only\" is not a strategy for success. You have 7 points and zero work to show for it. This is a design program, not a social club.</p>"
   },
   {
     "name": "Touossoc Ange",
@@ -3348,7 +3347,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Touossoc.</strong> You are on this board because you pledged. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>Like your peers at the bottom of the list, you are a \"social-only\" member. Seven points and zero forms suggest you are not taking the technical requirements of this program seriously.</p>"
   },
   {
     "name": "Dorothy Joyce Priscille",
@@ -3452,7 +3451,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Dorothy.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>Joining on Day 6 was a hurdle, and while you’ve been active, your D6 submission error was a costly technical mistake. Denying retroactive points for D1 was a hard lesson in reading the rules. However, your consistency on D6 and D7 shows you have the right mindset—just ensure your \"admin\" matches your effort.</p>"
   },
   {
     "name": "Nzameyo Mba",
@@ -3556,32 +3555,11 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p><strong>Nzameyo.</strong> You are on this board because you pledged. But pledging was the easy part. You have not submitted a single day yet. Every day you sit this out, someone else is climbing past you.</p>"
+    "roast": "<p>You’ve just arrived, but you’ve already made more of an impact in the WhatsApp intro than some who have been here since Day 1. It’s too late for a top-tier finish, but it’s the perfect time to show us how fast you can learn.</p>"
   }
 ];
 
-export const WARNINGS = [
-  {
-    "person": "Christine Choundong",
-    "title": "Submission Disqualified — D5",
-    "details": "On June 5th, 2026 (Day 5), you submitted a form claiming it was for Day 4. The Same-Day Rule requires that forms must be submitted on the exact calendar date of the task — Day 4 was June 4th, 2026. Because this submission arrived one day late, the check-in points (+10) and early bonus (+5) that would have been awarded for Day 4 have been disqualified. In Week 2, please submit your form on the same day the task is assigned to avoid losing points."
-  },
-  {
-    "person": "Mbiydzenyuy Patience Dzekem",
-    "title": "Submission Disqualified — D6",
-    "details": "On June 8th, 2026 (Day 6), you submitted a form claiming it was for Day 2. The Same-Day Rule requires that forms must be submitted on the exact calendar date of the task — Day 2 was June 2nd, 2026. Because this submission arrived on Day 6, the check-in points (+10) and early bonus (+5) for Day 2 have been disqualified. In Week 2, please ensure you submit your form on the exact day the task is assigned to avoid losing points."
-  },
-  {
-    "person": "Mbiydzenyuy Patience Dzekem",
-    "title": "Facebook Interaction — Action Required",
-    "details": "Instructions were to Heart the post, comment, and share it. You tapped Like and commented but did not share, and did not Heart the post as required by the interaction rules. Consequently, points for this specific Facebook interaction task cannot be awarded. In Week 2, please ensure all interaction requirements — Heart the post, comment, and share — are all completed to qualify for points."
-  },
-  {
-    "person": "Amaazee Ivanna Therese Fundoh",
-    "title": "Submission Issue — D6",
-    "details": "On June 8th, 2026 (Day 6), you submitted a form claiming it was for Day 1. Because you joined the programme on Day 6 and the Day 1 deadline had long passed, this submission has been recorded as your Day 6 check-in. No retroactive points for Day 1 can be awarded. Going forward, submit your form on the same day as the task to ensure your points are counted correctly."
-  }
-];
+export const WARNINGS = [];
 
 export const RULES = [
   {
