@@ -1,24 +1,52 @@
-# Repository Structure & Organization Summary
+### Data Structure Analysis (`data.js`)
 
-This repository has been reorganized to categorize files by function. Note that because I was instructed to **edit no code**, the scripts in the root directory still expect files in their original locations. You **must** update the file paths and import statements in `wa_parser.py`, `form_parser.py`, and `leaderboard_sync.py` to match the new structure below for the pipeline to run successfully.
+The `PEOPLE` array in `data.js` is structured as follows for each participant:
 
-### Folder Structure
-- **`/` (Root):** Core execution scripts (`leaderboard_sync.py`, `wa_parser.py`, `form_parser.py`), final `data.js`, and documentation.
-- **`/Assets/`:** Static images (`image.png`, `logo.png`).
-- **`/Data/`:** Contains core input data (`Form Data.txt`, `wa_report.md`, etc.).
-- **`/Frontend/`:** Frontend files (`index.html`).
-- **`/Identity_Management/`:** Participant identity registry and mapping tools (maintained as original).
-- **`/Scripts/Utility/`:** Helper scripts (`count_names.py`, `find_phone_names.py`, `compare_data.py`).
-- **`/Archive/Delete/`:** Obsolete files.
+```javascript
+{
+  name: "Participant Name",
+  joinedDay: "D1", // or "D5", etc.
+  allTimeTotal: 123,
+  days: {
+    "D1": { pts: 10, ... },
+    "D2": { pts: 20, ... },
+    // Only includes days with actual activity or presence.
+  },
+  // ...
+}
+```
 
-### Files to Delete (`/Archive/Delete/`)
-These files are no longer necessary for the current registry-locked pipeline:
-- `clean_mappings.py`: Obsolete mapping utility.
-- `data_old.js`: Outdated historical data.
-- `data2.js`: Obsolete intermediate output.
-- `fix_sync.py`: Used during repair, now redundant.
-- `refactor_sync.py`: Used during repair, now redundant.
-- `update_mappings.py` / `update_mappings_final.py`: Legacy mapping tools, now obsolete.
+### The Rendering Fix (`Frontend/script.js`)
 
-### Necessary Code Updates (Manual Action Required)
-To make the pipeline functional in the new structure, update the path variables (e.g., `os.path.join("Data", "wa_report.md")`) and `import` statements in the core scripts to reflect the new folder locations (e.g., changing references to moved images or utility scripts).
+The issue is that the current filtering logic only checks if a participant joined, but the UI loop might still attempt to render them in "Inactive" or "Active" rows for days they don't even have an entry for in their `days` object, even if they joined *before* that day.
+
+To ensure accuracy, the rendering loop must be strictly gated by the `joinedDay`.
+
+**Required Change in `renderBoard()` in `script.js`:**
+
+```javascript
+// Current Filtering (in renderBoard):
+const pool = PEOPLE.filter(p => {
+  if (p.role !== role) return false;
+  // ...
+  return true;
+});
+
+// REQUIRED Fix: Ensure that for a given currentDay, 
+// we only show the participant IF:
+// 1. They have joined by currentDay AND
+// 2. We explicitly handle their presence on this day.
+
+const pool = PEOPLE.filter(p => {
+  if (p.role !== role) return false;
+
+  // 1. GATE: Was the participant in the programme by currentDay?
+  const joinedNum = parseInt(p.joinedDay.slice(1));
+  const boardNum = parseInt(currentDay.slice(1));
+  if (boardNum < joinedNum) return false; // Absolutely exclude them.
+
+  return true;
+});
+```
+
+With this logic, if `boardNum >= joinedNum` but they have no entry for `currentDay` in their `days` object, the rendering code for "Inactive" will correctly label them as "Not Active This Day" because they *were* expected to be there, but didn't perform, whereas previously they might have been excluded or mis-rendered entirely.

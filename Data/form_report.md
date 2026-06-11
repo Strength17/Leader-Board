@@ -1,5 +1,5 @@
 # SKY GRAPHICS — FORM DATA REPORT
-Generated: 2026-06-11 03:00:04
+Generated: 2026-06-11 06:02:17
 
 > ⚠️ DRAFT FOR ADMIN REVIEW. Disqualifications, recovery-form
 > flags, and duplicate submissions below are FLAGGED, not
@@ -12,19 +12,19 @@ Generated: 2026-06-11 03:00:04
 
 | Name | Role | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 | D9 | D10 | Check-in Pts | Early Pts | Images |
 |------|------|----|----|----|----|----|----|----|----|----|----|------|------|------|
-| Abongnwi Chrioni-Opal Forba' | Participant | — | — | — | — | ✅ | — | ✅ | — | — | — | +20 | +0 | 10 |
-| Amaazee Ivanna Therese Fundoh | Participant | — | — | — | — | — | ✅ | ✅ | — | — | — | +20 | +10 | 3 |
+| Abongnwi Chrioni-Opal Forba' | Participant | — | — | — | — | ✅ | — | ✅ | ✅ | — | — | +30 | +0 | 13 |
+| Amaazee Ivanna Therese Fundoh | Participant | — | — | — | — | — | ✅ | ✅ | ✅ | — | — | +30 | +10 | 5 |
 | Asonganyi Adel Quin | Participant | ✅ | — | — | — | — | — | — | — | — | — | +10 | +0 | 1 |
-| Christine Choundong | Ambassador | ✅ | ✅ | ✅ | — | ❌ | ✅ | ✅ | — | — | — | +50 | +0 | 6 |
+| Christine Choundong | Ambassador | ✅ | ✅ | ✅ | — | ❌ | ✅ | ✅ | ✅ | — | — | +60 | +0 | 7 |
 | Dorothy Joyce Priscille | Participant | — | — | — | — | — | ✅ | ✅ | — | — | — | +20 | +0 | 2 |
 | Emmanuel Karol Tchouani | Participant | ✅ | ✅ | ✅ | ✅ | ✅ | — | ✅ | — | — | — | +60 | +0 | 6 |
 | Faith Emmanuella Busari | Participant | ✅ | ✅ | — | — | ✅ | — | — | — | — | — | +30 | +0 | 4 |
 | Frank Emmanuel | Ambassador | — | — | — | — | — | ✅ | — | — | — | — | +10 | +0 | 1 |
-| Irinyemi Adedayo Juliet | Ambassador | — | ✅ | — | ✅ | — | — | ✅ | — | — | — | +30 | +5 | 8 |
+| Irinyemi Adedayo Juliet | Ambassador | — | ✅ | — | ✅ | — | — | ✅ | ✅ | — | — | +40 | +5 | 9 |
 | Malialia Celine Bride | Ambassador | — | — | — | — | — | — | — | — | — | — | +0 | +0 | 0 |
 | Mbishitehnyi Ryan | Participant | — | — | — | — | — | — | — | — | — | — | +0 | +0 | 0 |
-| Mbiydzenyuy Patience Dzekem | Ambassador | ✅ | ✅ | — | — | — | ❌ | — | — | — | — | +20 | +0 | 3 |
-| Oluwasegun Daniel Osawore | Ambassador | — | ✅ | ✅ | — | — | — | — | — | — | — | +20 | +0 | 2 |
+| Mbiydzenyuy Patience Dzekem | Ambassador | ✅ | ✅ | — | — | — | ❌ | — | ✅ | — | — | +30 | +0 | 8 |
+| Oluwasegun Daniel Osawore | Ambassador | — | ✅ | ✅ | — | — | — | — | ✅ | — | — | +30 | +0 | 3 |
 | Ranjoy-Bryan | Participant | ✅ | — | — | — | — | — | — | — | — | — | +10 | +0 | 1 |
 
 ---
@@ -100,6 +100,15 @@ _None detected._
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
 
+#### D8 (Day 8 — June 10, 2026 — 6/10/2026 20:59)
+- Submitted: ✅ Valid (same day)
+- Early bonus: ❌ (submitted at or after 3PM)
+- Check-in pts: +10
+- Watched video: Yes, I watched it fully
+- Images uploaded: 3
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
+
 ---
 
 ### Amaazee Ivanna Therese Fundoh — Participant
@@ -112,7 +121,7 @@ _None detected._
 - Images uploaded: 2
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
-- ⚠️ Warning: New joiner recovery form (D1 written on D6) -- counted as D6 pending admin decision.
+- ⚠️ Warning: New joiner recovery form (D1 written on D6) — officially recorded as D6.
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 11:38)
 - Submitted: ✅ Valid (same day)
@@ -120,6 +129,15 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
+
+#### D8 (Day 8 — June 10, 2026 — 6/10/2026 18:46)
+- Submitted: ✅ Valid (same day)
+- Early bonus: ❌ (submitted at or after 3PM)
+- Check-in pts: +10
+- Watched video: Yes, I watched it fully
+- Images uploaded: 2
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
 
@@ -195,6 +213,15 @@ _None detected._
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
 
+#### D8 (Day 8 — June 10, 2026 — 6/10/2026 20:28)
+- Submitted: ✅ Valid (same day)
+- Early bonus: ❌ (submitted at or after 3PM)
+- Check-in pts: +10
+- Watched video: Yes, I watched it fully
+- Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
+
 ---
 
 ### Dorothy Joyce Priscille — Participant
@@ -207,7 +234,7 @@ _None detected._
 - Images uploaded: 1
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
-- ⚠️ Warning: New joiner recovery form (D1 written on D6) -- counted as D6 pending admin decision.
+- ⚠️ Warning: New joiner recovery form (D1 written on D6) — officially recorded as D6.
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 17:33)
 - Submitted: ✅ Valid (same day)
@@ -351,6 +378,15 @@ _None detected._
 - Facebook interactions: 0
 - Bonus points (manual, from form): ⬜ UNRANKED
 
+#### D8 (Day 8 — June 10, 2026 — 6/10/2026 18:50)
+- Submitted: ✅ Valid (same day)
+- Early bonus: ❌ (submitted at or after 3PM)
+- Check-in pts: +10
+- Watched video: Yes, I watched it fully
+- Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
+
 ---
 
 ### Malialia Celine Bride — Ambassador
@@ -391,6 +427,15 @@ _None detected._
 - Bonus points (manual, from form): ⬜ UNRANKED
 - ⚠️ Warning: Check-in points stripped for D6 due to late submission (wrote D2).
 
+#### D8 (Day 8 — June 10, 2026 — 6/10/2026 16:05)
+- Submitted: ✅ Valid (same day)
+- Early bonus: ❌ (submitted at or after 3PM)
+- Check-in pts: +10
+- Watched video: Yes, I watched it fully
+- Images uploaded: 5
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
+
 ---
 
 ### Oluwasegun Daniel Osawore — Ambassador
@@ -405,6 +450,15 @@ _None detected._
 - Bonus points (manual, from form): 🥉 BRONZE
 
 #### D3 (Day 3 — June 3, 2026 — 6/3/2026 19:12)
+- Submitted: ✅ Valid (same day)
+- Early bonus: ❌ (submitted at or after 3PM)
+- Check-in pts: +10
+- Watched video: Yes, I watched it fully
+- Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): 🥉 BRONZE
+
+#### D8 (Day 8 — June 10, 2026 — 6/10/2026 18:54)
 - Submitted: ✅ Valid (same day)
 - Early bonus: ❌ (submitted at or after 3PM)
 - Check-in pts: +10

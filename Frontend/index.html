@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sky Graphics Figma Edition 1 — Leaderboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="edition-tag">Sky Graphics · Edition 1</div>
+    <div class="title">LEADERBOARD</div>
+    <div class="subtitle">Figma Design Challenge · 6 Weeks · Daily Check-In</div>
+    <div class="day-badge" id="current-day-badge">📅 Day 6 — June 8, 2026</div>
+  </div>
+
+  <div class="nav-card">
+    <div class="week-row" id="week-row"></div>
+    <div class="day-tray" id="day-selector"></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active participants" data-tab="participants" onclick="window.switchTab('participants')">🎓 Participants</button>
+    <button class="tab ambassadors" data-tab="ambassadors" onclick="window.switchTab('ambassadors')">⭐ Ambassadors</button>
+  </div>
+
+  <div class="board active" id="board-participants">
+    <div class="board-label p">Participant Rankings</div>
+    <div id="rows-participants"></div>
+    <div class="legend">
+      <div class="legend-title">Tier Thresholds</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
+        <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
+        <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
+        <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
+      </div>
+      <div class="legend-title" style="margin-top:14px;">Streak Columns</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span style="color:var(--mint);font-weight:700;">📋 Form</span> — consecutive check-in form submissions</div>
+        <div class="legend-item"><span style="color:var(--violet-light);font-weight:700;">✏️ Work</span> — consecutive days with Figma work scored</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="board" id="board-ambassadors">
+    <div class="amb-note">⭐ Ambassadors compete on their own board. Rankings are separate from participants.</div>
+    <div class="board-label a">Ambassador Rankings</div>
+    <div id="rows-ambassadors"></div>
+    <div class="legend">
+      <div class="legend-title">Tier Thresholds</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
+        <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
+        <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
+        <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
+      </div>
+      <div class="legend-title" style="margin-top:14px;">Streak Columns</div>
+      <div class="legend-grid">
+        <div class="legend-item"><span style="color:var(--mint);font-weight:700;">📋 Form</span> — consecutive check-in form submissions</div>
+        <div class="legend-item"><span style="color:var(--violet-light);font-weight:700;">✏️ Work</span> — consecutive days with Figma work scored</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <strong>Sky Graphics Figma Edition 1</strong> · Updated Daily<br>
+    Check-in form: <strong>forms.gle/as9Nus325XqgsQpH6</strong><br><br>
+    <span style="color:rgba(148,163,184,.45);font-size:11px">Points calculated automatically. Bonus points awarded by admin for outstanding contributions.</span>
+  </div>
+</div>
+
+<!-- PROFILE OVERLAY -->
+<div class="overlay" id="overlay" onclick="window.handleOverlayClick(event)">
+  <div class="overlay-bg"></div>
+  <div class="panel" id="panel">
+    <div class="panel-header">
+      <button class="panel-back" onclick="window.closePanel()">← Back</button>
+      <div class="panel-name" id="panel-name"></div>
+      <div class="panel-meta">
+        <span class="role-badge" id="panel-role"></span>
+        <span class="panel-pts" id="panel-pts"></span>
+        <span class="tier" id="panel-tier"></span>
+      </div>
+    </div>
+    <div class="ptabs">
+      <button class="ptab active" data-ptab="breakdown" onclick="window.switchPTab('breakdown')">📊 Breakdown</button>
+      <button class="ptab" data-ptab="roast" onclick="window.switchPTab('roast')">🔥 Roast</button>
+      <button class="ptab" data-ptab="warnings" onclick="window.switchPTab('warnings')">⚠️ Warnings</button>
+      <button class="ptab" data-ptab="rules" onclick="window.switchPTab('rules')">⚖️ Rules</button>
+    </div>
+    <div class="pcontent">
+      <div class="pboard active" id="pboard-breakdown"></div>
+      <div class="pboard" id="pboard-roast"></div>
+      <div class="pboard" id="pboard-warnings"></div>
+      <div class="pboard" id="pboard-rules"></div>
+    </div>
+  </div>
+</div>
+
+<div id="celebration-container" class="celebration-container"></div>
+<button class="celebrate-btn" onclick="window.triggerCelebration(8000)" title="Celebrate!">🎉</button>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

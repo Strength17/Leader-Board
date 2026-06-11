@@ -313,8 +313,7 @@ def analyze_rows(timed_rows):
             submitted = True
             warnings.append(
                 f"New joiner recovery form ({written_day} written on "
-                f"{timestamp_day}) -- counted as {timestamp_day} pending "
-                f"admin decision."
+                f"{timestamp_day}) — officially recorded as {timestamp_day}."
             )
         elif mismatch:
             # Late / wrong-day submission -> disqualified

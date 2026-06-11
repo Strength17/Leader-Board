@@ -958,11 +958,27 @@ def generate_roast(name, days_results, tier, warnings):
 # BUILD PERSON
 # ===========================================================================
 
+# Load canonical join dates
+CANONICAL_JOIN_DATES = {}
+JOIN_DATES_PATH = "Identity_Management/Data/canonical_join_dates.md"
+if os.path.exists(JOIN_DATES_PATH):
+    with open(JOIN_DATES_PATH, "r", encoding="utf-8") as f:
+        for line in f:
+            if "|" in line and "Canonical Name" not in line and "---" not in line:
+                parts = [p.strip() for p in line.split("|")]
+                if len(parts) >= 4:
+                    name, _, day, _ = parts[1:5]
+                    # Map "Pre-launch" to "D1"
+                    CANONICAL_JOIN_DATES[get_canonical_name(name)] = "D1" if day.lower() == "pre-launch" else day.upper()
+
 def build_person(name, day_order, form_per_day, manual_bonuses, wa_interactions):
     """
-    Build a full person dict for a single participant.
+    Build a full person dict for a single participant, enforcing join dates.
     """
     mb = manual_bonuses.get(name, {})
+    
+    # Official join day
+    official_join_day = CANONICAL_JOIN_DATES.get(name, "D1")
 
     # Pre-programme points
     pledge_pts, referral_pts = calc_pre_programme(name, manual_bonuses)
@@ -983,42 +999,62 @@ def build_person(name, day_order, form_per_day, manual_bonuses, wa_interactions)
     # Build per-day results in discovered programme order
     days_computed = []
     
-    # Track streaks here
-    form_streak = 0
-    work_streak = 0
-    
     cumulative = pre_total
     days_out   = {}
     
-    for day in day_order:
-        form_rec = form_per_day.get(name, {}).get(day, None)
-        
-        # Calculate points for this day (active or empty)
-        result = calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions, None)
+    # Sort and filter days based on join date
+    sorted_days = sort_days(day_order)
+    
+    # Calculate all daily results first
+    for day in sorted_days:
+        # Enforce join date: if day < official_join_day, result is effectively empty
+        if day_sort_key(day) < day_sort_key(official_join_day):
+            result = {
+                "delta": 0, "submitted": False, "workDone": False,
+                "check_in_pts": 0, "early_bonus": 0, "image_count": 0,
+                "work_post_pts": 0, "creativity_score": 0, "wa_pts": 0,
+                "wa_detail": [], "special_pts": 0, "special_reason": "",
+                "milestone_pts": 0, "perfect_pts": 0, "phase_completion_pts": 0,
+                "warnings": [], "streakDays": 0, "workStreakDays": 0,
+            }
+        else:
+            form_rec = form_per_day.get(name, {}).get(day, None)
+            result = calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions, None)
+            
         days_computed.append((day, result))
 
-    # Second pass to add phase completion points
+    # Second pass: calculate streaks and cumulative points
+    form_streak = 0
+    work_streak = 0
+    
     for day, result in days_computed:
-        if day in WEEK_MILESTONE_DAYS:
-            week_tag = WEEK_MILESTONE_DAYS[day]
-            work_done_count = sum(1 for d, r in days_computed if d in WEEK_DAYS.get(week_tag, []) and r["workDone"])
-            if work_done_count >= 5:
-                result["phase_completion_pts"] = 20
-                result["delta"] += 20
-        # Apply streak logic per day
-        if result["submitted"]:
-            form_streak += 1
-        elif not FREEZE_STREAKS_ON_MISS:
-            form_streak = 0
-        if result["workDone"]:
-            work_streak += 1
-        elif not FREEZE_STREAKS_ON_MISS:
-            work_streak = 0
+        # Apply streak logic
+        if day_sort_key(day) < day_sort_key(official_join_day):
+            result["streakDays"] = 0
+            result["workStreakDays"] = 0
+        else:
+            if result["submitted"]:
+                form_streak += 1
+            elif not FREEZE_STREAKS_ON_MISS:
+                form_streak = 0
+                
+            if result["workDone"]:
+                work_streak += 1
+            elif not FREEZE_STREAKS_ON_MISS:
+                work_streak = 0
+                
+            result["streakDays"]     = form_streak
+            result["workStreakDays"] = work_streak
             
-        result["streakDays"]     = form_streak
-        result["workStreakDays"] = work_streak
-        
-        cumulative += result["delta"]
+            # Phase completion
+            if day in WEEK_MILESTONE_DAYS:
+                week_tag = WEEK_MILESTONE_DAYS[day]
+                work_done_count = sum(1 for d, r in days_computed if d in WEEK_DAYS.get(week_tag, []) and r["workDone"])
+                if work_done_count >= 5:
+                    result["phase_completion_pts"] = 20
+                    result["delta"] += 20
+            
+            cumulative += result["delta"]
         
         days_out[day] = {
             "pts":            cumulative,
@@ -1028,7 +1064,6 @@ def build_person(name, day_order, form_per_day, manual_bonuses, wa_interactions)
             "workStreakDays": result["workStreakDays"],
         }
 
-    joined_day = next(iter(days_out), "D1")
     all_time   = cumulative
     tier       = get_tier(all_time)
 
@@ -1042,14 +1077,14 @@ def build_person(name, day_order, form_per_day, manual_bonuses, wa_interactions)
     return {
         "name":          name,
         "role":          role_for(name),
-        "joinedDay":     joined_day,
+        "joinedDay":     official_join_day,
         "allTimeTotal":  all_time,
         "tier":          tier,
         "warnings":      all_warnings,
         "days":          days_out,
         "breakdown":     breakdown,
         "roast":         roast,
-        "_days_detail":  days_computed,   # for master_data.md only
+        "_days_detail":  days_computed,
         "_pre_total":    pre_total,
     }
 
