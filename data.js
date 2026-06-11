@@ -1,8 +1,7 @@
 /**
  * SKY GRAPHICS FIGMA EDITION 1 — LEADERBOARD DATA
+ * Generated: 2026-06-11
  */
-
-
 
 export const DAY_LABELS = {
   "D1": "Day 1 — Monday, June 1, 2026",
@@ -28,7 +27,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 287,
+    "allTimeTotal": 292,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -86,6 +85,13 @@ export const PEOPLE = [
         "streakDays": 6,
         "workDone": true,
         "workStreakDays": 8
+      },
+      "D9": {
+        "pts": 292,
+        "submitted": true,
+        "streakDays": 7,
+        "workDone": true,
+        "workStreakDays": 9
       }
     },
     "breakdown": [
@@ -262,7 +268,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 220,
+    "allTimeTotal": 245,
     "tier": "SILVER",
     "days": {
       "D1": {
@@ -320,6 +326,13 @@ export const PEOPLE = [
         "streakDays": 3,
         "workDone": true,
         "workStreakDays": 8
+      },
+      "D9": {
+        "pts": 245,
+        "submitted": true,
+        "streakDays": 4,
+        "workDone": true,
+        "workStreakDays": 9
       }
     },
     "breakdown": [
@@ -527,6 +540,13 @@ export const PEOPLE = [
         "streakDays": 3,
         "workDone": true,
         "workStreakDays": 7
+      },
+      "D9": {
+        "pts": 210,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 7
       }
     },
     "breakdown": [
@@ -712,6 +732,13 @@ export const PEOPLE = [
         "workStreakDays": 6
       },
       "D8": {
+        "pts": 205,
+        "submitted": false,
+        "streakDays": 6,
+        "workDone": false,
+        "workStreakDays": 6
+      },
+      "D9": {
         "pts": 205,
         "submitted": false,
         "streakDays": 6,
@@ -917,6 +944,13 @@ export const PEOPLE = [
         "streakDays": 3,
         "workDone": true,
         "workStreakDays": 4
+      },
+      "D9": {
+        "pts": 137,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 4
       }
     },
     "breakdown": [
@@ -1085,6 +1119,13 @@ export const PEOPLE = [
         "workStreakDays": 3
       },
       "D8": {
+        "pts": 129,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 3
+      },
+      "D9": {
         "pts": 129,
         "submitted": false,
         "streakDays": 3,
@@ -1259,6 +1300,13 @@ export const PEOPLE = [
         "streakDays": 4,
         "workDone": true,
         "workStreakDays": 5
+      },
+      "D9": {
+        "pts": 115,
+        "submitted": false,
+        "streakDays": 4,
+        "workDone": false,
+        "workStreakDays": 5
       }
     },
     "breakdown": [
@@ -1363,7 +1411,7 @@ export const PEOPLE = [
     "name": "Amaazee Ivanna Therese Fundoh",
     "role": "Participant",
     "joinedDay": "D6",
-    "allTimeTotal": 110,
+    "allTimeTotal": 130,
     "tier": "BRONZE",
     "days": {
       "D1": {
@@ -1421,6 +1469,13 @@ export const PEOPLE = [
         "streakDays": 3,
         "workDone": true,
         "workStreakDays": 3
+      },
+      "D9": {
+        "pts": 130,
+        "submitted": true,
+        "streakDays": 4,
+        "workDone": true,
+        "workStreakDays": 4
       }
     },
     "breakdown": [
@@ -1588,6 +1643,13 @@ export const PEOPLE = [
         "workStreakDays": 1
       },
       "D8": {
+        "pts": 99,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D9": {
         "pts": 99,
         "submitted": false,
         "streakDays": 1,
@@ -1775,6 +1837,13 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D9": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -1900,6 +1969,13 @@ export const PEOPLE = [
         "streakDays": 1,
         "workDone": false,
         "workStreakDays": 1
+      },
+      "D9": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
       }
     },
     "breakdown": [
@@ -2017,6 +2093,13 @@ export const PEOPLE = [
         "workStreakDays": 1
       },
       "D8": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D9": {
         "pts": 22,
         "submitted": false,
         "streakDays": 1,
@@ -2158,6 +2241,13 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D9": {
+        "pts": 15,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -2289,6 +2379,13 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D8": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D9": {
         "pts": 13,
         "submitted": false,
         "streakDays": 0,
@@ -2430,6 +2527,13 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D9": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -2552,6 +2656,13 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D8": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D9": {
         "pts": 10,
         "submitted": false,
         "streakDays": 0,
@@ -2684,6 +2795,13 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D9": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -2811,6 +2929,13 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D9": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -2925,6 +3050,13 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D8": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D9": {
         "pts": 8,
         "submitted": false,
         "streakDays": 0,
@@ -3048,6 +3180,13 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D9": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3166,6 +3305,13 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D9": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3279,6 +3425,13 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D8": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D9": {
         "pts": 7,
         "submitted": false,
         "streakDays": 0,
@@ -3411,6 +3564,13 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D9": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3510,6 +3670,13 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D8": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D9": {
         "pts": 5,
         "submitted": false,
         "streakDays": 0,
