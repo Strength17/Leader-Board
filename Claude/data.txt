@@ -1,0 +1,96 @@
+# Repository Structure and Data Integrity Documentation
+
+This document outlines the core components of the 10-day design program leaderboard pipeline.
+
+## 1. Repository Structure
+
+```text
+├── data.js                     # Frontend data structure for leaderboard
+├── find_emoji_messages (1).py  # Utility for parsing emoji logs
+├── form_parser.py              # Script to process form submission data
+├── index.html                  # Main application UI
+├── leaderboard_sync.py         # Primary pipeline sync script
+├── MASTER DATA.md              # Unified source of truth for total points
+├── README.md                   # Project overview
+├── reply.md                    # This documentation file
+├── script.js                   # Frontend logic (UI updates, warnings)
+├── style.css                   # Frontend styles
+├── wa_parser.py                # WhatsApp log parser
+├── WORKFLOW.md                 # Pipeline documentation
+├── Archive/                    # Obsolete scripts and historical data
+├── Assets/                     # Images and branding
+├── Data/                       # Raw logs, audits, and parsed reports
+│   ├── WhatsApp Chat with Sky Graphics — Figma Edition 1.txt  # FOUNDATIONAL SOURCE
+│   ├── Form Data.txt                                          # FOUNDATIONAL SOURCE
+│   └── ...
+└── Identity_Management/        # Name resolution infrastructure
+    ├── ...
+```
+
+## 2. Foundational Raw Data Sources (Primary Inputs)
+
+These are the **master root sources** for all data in the pipeline. Any data not originating here must be explicitly reconciled.
+
+- **`Data/WhatsApp Chat with Sky Graphics — Figma Edition 1.txt`**: The raw, primary log of all WhatsApp interactions. This is the main ingestion point for participant activity, engagement metrics, and daily check-ins.
+- **`Data/Form Data.txt`**: The raw export of all participant form submissions. This serves as the primary source for structured feedback, milestone verification, and formal participant data.
+
+**Importance:** As the absolute origin points, these files hold the raw, unfiltered truth. If these files are missing entries or are corrupted, the downstream processes (`wa_parser.py`, `form_parser.py`, `leaderboard_sync.py`) will generate incorrect data for the entire leaderboard.
+
+## 3. Component Roles
+
+- **Core Pipeline**: Ingests the **Foundational Raw Data Sources**, cleans, parses, and maps them.
+- **Frontend**: Displays the final aggregated data to users.
+- **Identity Management**: Ensures raw input data is correctly mapped to the `unique_full_names.md` registry.
+
+## 4. Critical Data Files (The Source of Truth)
+
+Beyond the raw inputs, these processed files maintain the project's integrity:
+
+### Identity Management Data (`Identity_Management/Data/`)
+- **`unique_full_names.md`**: The master registry. All participants MUST be listed here.
+- **`resolved_names.md`**: The mapping layer that bridges raw name variations from the foundational sources to canonical registry names.
+
+### Operational Data (`Data/`)
+- **`Manual_Reconciliation_Points.md`**: Vital file for human-in-the-loop corrections; overrides automated logic when logs from foundational sources are ambiguous.
+- **`Full_Leaderboard_Data.md`**: The finalized point data aggregated from all sources.
+
+## 5. Why Data Integrity is Paramount
+The leaderboard is a derivative system dependent entirely on the accuracy of the foundational input logs. If a name or data point in the primary sources is not correctly ingested or mapped, points are lost or misattributed. Adherence to the registry in `unique_full_names.md` is mandatory for the pipeline to function, and the manual reconciliation process is our critical fail-safe.
+
+---
+
+## 6. `data.js` Structure and Update Limitations
+
+### Current Structure:
+`data.js` currently exports JavaScript constants (`PEOPLE`, `WARNINGS`, `DAY_LABELS`, `TIER_EMOJI`, `RULES`). The `PEOPLE` array, in particular, is a deeply nested JavaScript object with granular details such as `days` (daily points, streaks, work status) and `breakdown` (detailed point sources). It also contains inline comments and specific string formatting (`\u00d7` for 'x').
+
+### Update Limitations:
+My current `replace` tool has stringent requirements:
+- **Exact String Matching:** The `old_string` parameter must *precisely* match the content in the file, including all whitespace, newlines, and specific JavaScript formatting.
+- **JavaScript vs. JSON:** `data.js` is a JavaScript file, not a pure JSON file. This means it uses unquoted keys for objects, allows trailing commas (sometimes), and includes Unicode escape sequences (`\u00d7`) that are hard to predict and reproduce consistently via string manipulation for an LLM.
+
+Due to these factors, I am **unable to safely and reliably update complex, multi-line JavaScript structures like the `PEOPLE` array** using direct string `replace`. Any minor mismatch results in a failed operation, and attempting to manually reconstruct such a precise `new_string` is highly error-prone and risks corrupting the file.
+
+### Recommendations for Easier Updates:
+
+To facilitate robust autonomous updates, consider the following structural changes for `data.js`:
+
+1.  **Strict JSON for Core Data:**
+    *   **Separate `PEOPLE` and `WARNINGS` into pure JSON files (e.g., `people.json`, `warnings.json`)** or encapsulate them as strict JSON strings within `data.js`. This allows for programmatic parsing, modification, and re-serialization without worrying about JavaScript-specific formatting quirks.
+    *   If `data.js` must remain a JavaScript file, consider exporting the `PEOPLE` and `WARNINGS` arrays from separate `.js` files that contain *only* the array data, formatted as valid JSON (but still exported as JS). This would make them easier to parse and rewrite.
+
+2.  **Simplified `PEOPLE` Array:**
+    *   **Keep `roast` and individual `warnings` nested within each person's object:** This is a logical and maintainable structure.
+    *   **Simplify the `days` and `breakdown` objects:** If possible, consider if these highly granular details can be computed or retrieved from other sources dynamically, rather than being stored and updated directly within `data.js` as static data. If they must be static, ensure their structure is consistent and easily parsable/re-generatable.
+
+3.  **Dedicated Update Tool/Script:**
+    *   For future complex updates, a dedicated script (e.g., a Python or Node.js script) that can parse JavaScript/JSON, modify the data programmatically, and then re-serialize it with consistent formatting would be ideal. This would circumvent the limitations of string-based `replace` operations.
+
+By simplifying the target structure or providing tools to handle complex JavaScript parsing and serialization, autonomous agents like myself could perform updates much more reliably.
+
+
+
+
+
+
+
