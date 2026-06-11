@@ -149,7 +149,7 @@ export const PEOPLE = [
               "D6",
               "D7"
             ],
-            "desc": "D1:10 · D2:20 · D3:5 · D4:5 · D5:10 · D6:5 · D7:5. Total: +60."
+            "desc": "D1:10 · D2:20 · D3:5 · D4:5 · D5:10 · D6:5 · D7:5 · D9:5. Total: +65."
           }
         ]
       },
@@ -1181,7 +1181,7 @@ export const PEOPLE = [
               "D2",
               "D5"
             ],
-            "desc": "D1:10 · D2:20 · D5:5. Total: +35."
+            "desc": "D6:10 · D7:10 · D8:5 · D9:5. Total: +30."
           }
         ]
       },
@@ -1360,7 +1360,7 @@ export const PEOPLE = [
               "D7",
               "D8"
             ],
-            "desc": "D6:5 · D7:5 · D8:5. Total: +15."
+            "desc": "D6:10 · D7:10 · D8:5 · D9:5. Total: +30."
           }
         ]
       },
@@ -1529,7 +1529,7 @@ export const PEOPLE = [
               "D7",
               "D8"
             ],
-            "desc": "D6:10 · D7:10 · D8:5. Total: +25."
+            "desc": "D6:10 · D7:10 · D8:5 · D9:5. Total: +30."
           }
         ]
       },
