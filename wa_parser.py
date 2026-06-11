@@ -124,12 +124,33 @@ NAME_MAP = {
     "Ranjoy-Bryan":                      "Ranjoy-Bryan",
     "Touossoc Ange":                     "Touossoc Ange",
     "Tsopmo Precious":                   "Tsopmo Precious",
-    "Strength Awa":                        "ADMIN",
-    "You":                                 "ADMIN",
-}
+    "Christine": "Christine Choundong",
+    "Daniel": "Oluwasegun Daniel Osawore",
+    "Emmanuel": "Emmanuel Karol Tchouani",
+    "Faith": "Faith Emmanuella Busari",
+    "Meghiou Nganka Los Esther": "Meghiou Nganka Lo",
+    "Strength Awa": "ADMIN",
+    "You": "ADMIN",
+    }
 
-# Canonical name list for fuzzy matching against NAME_MAP values
-CANONICAL_NAMES = sorted(set(NAME_MAP.values()) - {"ADMIN"})
+
+# Load canonical names from Global_names.md and resolved_names.md
+CANONICAL_NAMES = []
+if os.path.exists("Identity_Management/Data/Global_names.md"):
+    with open("Identity_Management/Data/Global_names.md", "r", encoding="utf-8") as f:
+        CANONICAL_NAMES = [line.strip() for line in f if line.strip() and not line.startswith('#')]
+
+# Load resolved manual mappings
+RESOLVED_NAMES = {}
+if os.path.exists("Identity_Management/Data/resolved_names.md"):
+    with open("Identity_Management/Data/resolved_names.md", "r", encoding="utf-8") as f:
+        for line in f:
+            if ":" in line:
+                raw, canonical = line.split(":", 1)
+                key = raw.strip().lower()
+                RESOLVED_NAMES[key] = canonical.strip()
+                print(f"DEBUG: Loaded mapping '{key}' -> '{canonical.strip()}'")
+print(f"DEBUG: RESOLVED_NAMES fully loaded: {len(RESOLVED_NAMES)} entries. Sample: {list(RESOLVED_NAMES.keys())[:10]}")
 
 # ============================================================================
 # REGEX CONSTANTS
@@ -260,8 +281,11 @@ INTERACTION_CAP = 3
 # ============================================================================
 
 def clean_wa_artifacts(text: str) -> str:
-    """Remove invisible Unicode characters WhatsApp embeds."""
-    return WA_ARTIFACT_RE.sub("", text).strip()
+    """Remove invisible Unicode characters WhatsApp embeds and non-ASCII chars."""
+    text = WA_ARTIFACT_RE.sub("", text)
+    # Strip non-ASCII characters that cause duplicate entries
+    text = re.sub(r'[^\x00-\x7F]+', '', text)
+    return text.strip()
 
 def is_phone(raw: str) -> bool:
     return bool(PHONE_RE.match(raw.strip()))
@@ -321,30 +345,52 @@ def fuzzy_match_canonical(candidate: str, threshold: int = 80) -> str | None:
 def normalize_name(raw: str, runtime_map: dict) -> tuple[str, bool]:
     """
     Returns (canonical_name, is_unknown_flag).
+    
+    Stage 1: Exact match in NAME_MAP.
+    Stage 2: Case-insensitive substring match against Data/Global_names.md (CANONICAL_NAMES).
+    Stage 3: Log unresolved to Data/unresolved_names.md and flag as unknown.
     """
     raw = clean_wa_artifacts(raw).strip()
+    print(f"DEBUG: normalizing raw: '{raw}'")
     
-    # 1. Exact match in NAME_MAP
-    if raw in NAME_MAP:
-        return NAME_MAP[raw], False
+    # Stage 1: Exact match in NAME_MAP or RESOLVED_NAMES
+    raw_lower = raw.lower()
+    
+    # Check NAME_MAP (keys are mixed case, but we need to match)
+    # Convert NAME_MAP keys to lower for robust lookup
+    name_map_lower = {k.lower(): v for k, v in NAME_MAP.items()}
+    if raw_lower in name_map_lower:
+        return name_map_lower[raw_lower], False
+    
+    # Check resolved names (keys are already lower)
+    if raw_lower in RESOLVED_NAMES:
+        return RESOLVED_NAMES[raw_lower], False
         
-    # 2. Check if this raw value (e.g. phone) has been resolved to a name
-    if raw in runtime_map:
-        return runtime_map[raw], False
+    print(f"DEBUG: No match in RESOLVED_NAMES or NAME_MAP for '{raw_lower}'. Keys: {list(RESOLVED_NAMES.keys())[:10]}")
         
-    # 3. Fuzzy match against canonical names
-    match = fuzzy_match_canonical(raw, threshold=80)
-    if match:
-        return match, False
+    # Stage 2: Substring match against Global_names.md
+    raw_lower = raw.lower()
+    for canonical in CANONICAL_NAMES:
+        canonical_lower = canonical.lower()
+        if canonical_lower in raw_lower or raw_lower in canonical_lower:
+            return canonical, False
+            
+    # Stage 3: No match
+    # Log unresolved and return raw. Ensure we only log unique unresolved names.
+    os.makedirs("Data", exist_ok=True)
+    unresolved_path = "Data/unresolved_names.md"
+    
+    # Read existing to check for duplicates
+    existing_unresolved = set()
+    if os.path.exists(unresolved_path):
+        with open(unresolved_path, "r", encoding="utf-8") as f:
+            existing_unresolved = {line.strip().replace("NEEDS MAPPING: ", "") for line in f}
+            
+    if raw not in existing_unresolved:
+        with open(unresolved_path, "a", encoding="utf-8") as f:
+            f.write(f"NEEDS MAPPING: {raw}\n")
         
-    # 4. If it's a phone number, check if we found a name for it in runtime_map
-    if is_phone(raw):
-        # Even if not in runtime_map yet, it might be resolved later.
-        # But we must check if we already have it.
-        # Actually the way the parser works, is_unknown=True implies it's a number.
-        return raw, True
-        
-    return raw, False
+    return raw, True
 
 def detect_interactions(content: str) -> list[tuple[str, int, str]]:
     """

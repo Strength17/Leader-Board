@@ -1,5 +1,5 @@
 # SKY GRAPHICS — FORM DATA REPORT
-Generated: 2026-06-10 20:28:43
+Generated: 2026-06-11 03:00:04
 
 > ⚠️ DRAFT FOR ADMIN REVIEW. Disqualifications, recovery-form
 > flags, and duplicate submissions below are FLAGGED, not
@@ -71,10 +71,10 @@ _None detected._
 
 | Name | Points Today | Total Points | Bonus (Manual) |
 |------|---------------|--------------|-----------------|
-| Malialia Celine Bride | — | 80 | 80 |
-| Mbishitehnyi Ryan | — | 25 | 25 |
-| Abongnwi Chrioni-Opal Forba' | — | 25 | 25 |
-| Mbiydzenyuy Patience Dzekem | — | 25 | 25 |
+| Malialia Celine Bride | 80 | 1 | 🥉 BRONZE |
+| Mbishitehnyi Ryan | 25 | 1 | ⬜ UNRANKED |
+| Abongnwi Chrioni-Opal Forba' | 25 | — | ⬜ UNRANKED |
+| Mbiydzenyuy Patience Dzekem | 25 | — | ⬜ UNRANKED |
 
 ---
 
@@ -88,6 +88,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: I watched part of it
 - Images uploaded: 5
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 18:53)
 - Submitted: ✅ Valid (same day)
@@ -95,6 +97,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 5
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---
 
@@ -106,6 +110,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 2
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 - ⚠️ Warning: New joiner recovery form (D1 written on D6) -- counted as D6 pending admin decision.
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 11:38)
@@ -114,6 +120,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---
 
@@ -125,6 +133,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---
 
@@ -136,6 +146,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D2 (Day 2 — June 2, 2026 — 6/2/2026 16:14)
 - Submitted: ✅ Valid (same day)
@@ -143,7 +155,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: No, not yet
 - Images uploaded: 1
-- Bonus points (manual, from form): 25
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D3 (Day 3 — June 3, 2026 — 6/3/2026 18:57)
 - Submitted: ✅ Valid (same day)
@@ -151,6 +164,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: No, not yet
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D5 (Day 5 — June 5, 2026 — 6/5/2026 18:42)
 - Submitted: ❌ DISQUALIFIED
@@ -158,6 +173,8 @@ _None detected._
 - Check-in pts: +0
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 - ⚠️ Warning: Check-in points stripped for D5 due to late submission (wrote D4).
 
 #### D6 (Day 6 — June 8, 2026 — 6/8/2026 15:34)
@@ -166,6 +183,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 2
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 15:03)
 - Submitted: ✅ Valid (same day)
@@ -173,6 +192,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: No, not yet
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---
 
@@ -184,6 +205,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 - ⚠️ Warning: New joiner recovery form (D1 written on D6) -- counted as D6 pending admin decision.
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 17:33)
@@ -192,6 +215,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---
 
@@ -203,6 +228,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D2 (Day 2 — June 2, 2026 — 6/2/2026 19:51)
 - Submitted: ✅ Valid (same day)
@@ -210,7 +237,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
-- Bonus points (manual, from form): 35
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D3 (Day 3 — June 3, 2026 — 6/3/2026 19:50)
 - Submitted: ✅ Valid (same day)
@@ -218,6 +246,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: I watched part of it
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D4 (Day 4 — June 4, 2026 — 6/4/2026 16:16)
 - Submitted: ✅ Valid (same day)
@@ -225,6 +255,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D5 (Day 5 — June 5, 2026 — 6/5/2026 19:00)
 - Submitted: ✅ Valid (same day)
@@ -232,6 +264,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 18:58)
 - Submitted: ✅ Valid (same day)
@@ -239,6 +273,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---
 
@@ -250,6 +286,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 2
+- Facebook interactions: 0
+- Bonus points (manual, from form): 🥉 BRONZE
 
 #### D2 (Day 2 — June 2, 2026 — 6/2/2026 19:02)
 - Submitted: ✅ Valid (same day)
@@ -257,7 +295,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
-- Bonus points (manual, from form): 70
+- Facebook interactions: 0
+- Bonus points (manual, from form): 🥉 BRONZE
 
 #### D5 (Day 5 — June 5, 2026 — 6/5/2026 17:53)
 - Submitted: ✅ Valid (same day)
@@ -265,6 +304,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): 🥉 BRONZE
 
 ---
 
@@ -276,6 +317,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---
 
@@ -287,6 +330,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 5
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D4 (Day 4 — June 4, 2026 — 6/4/2026 18:25)
 - Submitted: ✅ Valid (same day)
@@ -294,6 +339,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 2
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D7 (Day 7 — June 9, 2026 — 6/9/2026 18:16)
 - Submitted: ✅ Valid (same day)
@@ -301,6 +348,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---
 
@@ -320,6 +369,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D2 (Day 2 — June 2, 2026 — 6/2/2026 15:57)
 - Submitted: ✅ Valid (same day)
@@ -327,7 +378,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 2
-- Bonus points (manual, from form): 5
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 #### D6 (Day 6 — June 8, 2026 — 6/8/2026 14:05)
 - Submitted: ❌ DISQUALIFIED
@@ -335,6 +387,8 @@ _None detected._
 - Check-in pts: +0
 - Watched video: Yes, I watched it fully
 - Images uploaded: 2
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 - ⚠️ Warning: Check-in points stripped for D6 due to late submission (wrote D2).
 
 ---
@@ -347,7 +401,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
-- Bonus points (manual, from form): 70
+- Facebook interactions: 0
+- Bonus points (manual, from form): 🥉 BRONZE
 
 #### D3 (Day 3 — June 3, 2026 — 6/3/2026 19:12)
 - Submitted: ✅ Valid (same day)
@@ -355,6 +410,8 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): 🥉 BRONZE
 
 ---
 
@@ -366,5 +423,7 @@ _None detected._
 - Check-in pts: +10
 - Watched video: Yes, I watched it fully
 - Images uploaded: 1
+- Facebook interactions: 0
+- Bonus points (manual, from form): ⬜ UNRANKED
 
 ---

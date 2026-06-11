@@ -1,5 +1,5 @@
 # SKY GRAPHICS — WHATSAPP ANALYSIS REPORT  v2.0
-Generated: 2026-06-10 20:28:43
+Generated: 2026-06-11 03:00:03
 
 > ⚠️ DRAFT FOR ADMIN REVIEW. Creativity scores, candidate actions,
 > and referrals are flagged — not final. Review each section before
@@ -12,24 +12,25 @@ Generated: 2026-06-10 20:28:43
 | Name | Role | Total Draft WA Pts | Pledged | Referrals Given |
 |------|------|---------------------|---------|-----------------|
 | +237 6 73 41 60 87 | Participant | +5 | — | 0 |
+| Abongnwi Chrioni-Opal Forba' | Participant | +35 | ✅ | 1 |
 | Amaazee Ivanna Therese Fundoh | Participant | +15 | — | 0 |
-| Asonganyi Adel Quin | Participant | +12 | ✅ | 0 |
-| Bih Cherish💖🥰 Anne | Participant | +7 | ✅ | 0 |
-| Chrioni-opal ❤ | Participant | +35 | ✅ | 0 |
-| Christine Choundong | Ambassador | +21 | — | 1 |
-| Emmanuel Karol Tchouani | Participant | +10 | — | 0 |
-| Faith Emmanuella Busari | Participant | +19 | ✅ | 0 |
+| Asonganyi Adel Quin | Participant | +7 | ✅ | 0 |
+| Bih Cherish Anne | Participant | +7 | ✅ | 0 |
+| Christine Choundong | Ambassador | +33 | — | 1 |
+| Emmanuel Karol Tchouani | Participant | +10 | — | 1 |
+| Faith Emmanuella Busari | Participant | +19 | ✅ | 1 |
 | Favour Hanatu Bako | Participant | +8 | — | 0 |
 | Fonyuy Berinyuy Tarkighan | Participant | +9 | ✅ | 0 |
 | Frank Emmanuel | Ambassador | +35 | — | 1 |
 | Irinyemi Adedayo Juliet | Ambassador | +5 | — | 0 |
-| Mbiydzenyuy Patience Dzekem | Ambassador | +32 | — | 0 |
+| Mbiydzenyuy Patience Dzekem | Ambassador | +34 | — | 0 |
 | Moh Blessing Kebul | Participant | +19 | ✅ | 0 |
 | Ngum-nchung Blessing Kah Geh | Participant | +5 | — | 0 |
 | Nzameyo Mba | Participant | +8 | — | 0 |
-| Oluwasegun Daniel Osawore | Ambassador | +12 | — | 1 |
+| Oluwasegun Daniel Osawore | Ambassador | +17 | — | 3 |
 | Suilabayu Olga Simolen | Participant | +14 | ✅ | 0 |
-| Tchouala Ange | Participant | +17 | ✅ | 0 |
+| Tchouala Ange | Participant | +5 | — | 0 |
+| Touossoc Ange | Participant | +7 | ✅ | 0 |
 
 ### 🔕 No Points Detected (< 5 draft pts)
 
@@ -37,19 +38,21 @@ Generated: 2026-06-10 20:28:43
 |------|------|------|
 | +234 803 804 8067 | Participant | No pledge / Day-X post / interactions detected |
 | +237 6 51 06 70 08 | Participant | No pledge / Day-X post / interactions detected |
+| +237 6 58 54 51 24 | Participant | No pledge / Day-X post / interactions detected |
+| +237 6 71 80 45 90 | Participant | No pledge / Day-X post / interactions detected |
 | +237 6 77 40 83 27 | Participant | No pledge / Day-X post / interactions detected |
 | +237 6 77 96 13 61 | Participant | No pledge / Day-X post / interactions detected |
 | +237 6 82 42 26 22 | Participant | No pledge / Day-X post / interactions detected |
 | +237 6 88 20 94 28 | Participant | No pledge / Day-X post / interactions detected |
+| +237 6 89 99 13 80 | Participant | No pledge / Day-X post / interactions detected |
 | +237 6 94 59 08 65 | Participant | No pledge / Day-X post / interactions detected |
-| Binda Joel CODe BiNdEr👾 | Participant | No pledge / Day-X post / interactions detected |
+| Binda Joel | Participant | No pledge / Day-X post / interactions detected |
 | Chunga Daina | Participant | No pledge / Day-X post / interactions detected |
 | Dorothy Joyce Priscille | Participant | No pledge / Day-X post / interactions detected |
-| Ekanje Esther Vicky 👑 | Participant | No pledge / Day-X post / interactions detected |
+| Ekanje Hadassah | Participant | No pledge / Day-X post / interactions detected |
 | Malialia Celine Bride | Ambassador | No pledge / Day-X post / interactions detected |
-| Meghiou Nganka Lo | Participant | No pledge / Day-X post / interactions detected |
+| Meghiou Nganka Los Esther | Participant | No pledge / Day-X post / interactions detected |
 | Percy Visiy | Participant | No pledge / Day-X post / interactions detected |
-| Ranjoy-Bryan | Participant | No pledge / Day-X post / interactions detected |
 | Tsopmo Precious | Participant | No pledge / Day-X post / interactions detected |
 
 ---
@@ -66,13 +69,13 @@ Generated: 2026-06-10 20:28:43
 
 | Name | Day | Media Count | Assign Score (+5/+10/+15/+20) |
 |------|-----|-------------|-------------------------------|
-| Asonganyi Adel Quin | D1 | 1 | _____ |
 | Christine Choundong | D1 | 1 | _____ |
 | Emmanuel Karol Tchouani | D1 | 1 | _____ |
 | Faith Emmanuella Busari | D1 | 2 | _____ |
 | Mbiydzenyuy Patience Dzekem | D1 | 2 | _____ |
 | Oluwasegun Daniel Osawore | D1 | 1 | _____ |
-| Ranjoy-Bryan | D1 | 1 | _____ |
+| +237 6 58 54 51 24 | D1 | 1 | _____ |
+| +237 6 71 80 45 90 | D1 | 1 | _____ |
 | Christine Choundong | D2 | 1 | _____ |
 | Emmanuel Karol Tchouani | D2 | 1 | _____ |
 | Faith Emmanuella Busari | D2 | 1 | _____ |
@@ -81,21 +84,21 @@ Generated: 2026-06-10 20:28:43
 | Christine Choundong | D3 | 2 | _____ |
 | Emmanuel Karol Tchouani | D3 | 1 | _____ |
 | Oluwasegun Daniel Osawore | D3 | 1 | _____ |
-| Chrioni-opal ❤ | D4 | 4 | _____ |
+| Abongnwi Chrioni-Opal Forba' | D4 | 4 | _____ |
 | Christine Choundong | D4 | 1 | _____ |
-| Chrioni-opal ❤ | D5 | 1 | _____ |
+| Abongnwi Chrioni-Opal Forba' | D5 | 1 | _____ |
 | Christine Choundong | D5 | 1 | _____ |
 | Oluwasegun Daniel Osawore | D5 | 1 | _____ |
+| Abongnwi Chrioni-Opal Forba' | D6 | 1 | _____ |
 | Amaazee Ivanna Therese Fundoh | D6 | 2 | _____ |
-| Chrioni-opal ❤ | D6 | 1 | _____ |
 | Christine Choundong | D6 | 1 | _____ |
 | Frank Emmanuel | D6 | 2 | _____ |
 | Irinyemi Adedayo Juliet | D6 | 1 | _____ |
 | Mbiydzenyuy Patience Dzekem | D6 | 4 | _____ |
 | Oluwasegun Daniel Osawore | D6 | 1 | _____ |
 | Dorothy Joyce Priscille | D6 | 1 | _____ |
+| Abongnwi Chrioni-Opal Forba' | D7 | 2 | _____ |
 | Amaazee Ivanna Therese Fundoh | D7 | 1 | _____ |
-| Chrioni-opal ❤ | D7 | 2 | _____ |
 | Christine Choundong | D7 | 1 | _____ |
 | Emmanuel Karol Tchouani | D7 | 1 | _____ |
 | Irinyemi Adedayo Juliet | D7 | 1 | _____ |
@@ -119,13 +122,60 @@ Generated: 2026-06-10 20:28:43
 
 ---
 
+### Abongnwi Chrioni-Opal Forba' — Participant
+#### D1 (Day 1 — June 1, 2026)
+- **Pledge**: +5 pts
+- **Interactions (counted):**
+  - posted_encouragement: +2 pts (matched: `~love this (77.77777777777779%)`)
+  - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
+  - asked_genuine_question: +3 pts (matched: `~i'm confused about (72.22222222222221%)`)
+- **Sample messages**: I, Abongnwi Chrioni-Opal Forba' commit to Sky  Graphics Edition 1. I will show up  daily, post my progress honestly,  an
+- **Day subtotal**: +15 draft WA pts
+
+#### D2 (Day 2 — June 2, 2026)
+- **Sample messages**: I was really happy   I honestly didnt expect my name to make the list since I had trouble submitting and sent it a few m
+- **Day subtotal**: +0 draft WA pts
+
+#### D4 (Day 4 — June 4, 2026)
+- **Media**: 4 item(s) — PENDING admin creativity score
+- **Interactions (counted):**
+  - posted_encouragement: +2 pts (matched: `keep it up`)
+- **Sample messages**: <Media omitted>
+- **Day subtotal**: +2 draft WA pts
+
+#### D5 (Day 5 — June 5, 2026)
+- **Media**: 1 item(s) — PENDING admin creativity score
+- **Interactions (counted):**
+  - shared_tip_or_resource: +3 pts (matched: `~http (75.0%)`)
+  - posted_encouragement: +2 pts (matched: `~great job (77.77777777777779%)`)
+  - helped_a_member: +5 pts (matched: `~you can try (81.81818181818181%)`)
+  - shared_tip_or_resource: +3 pts (matched: `~learn figma (72.72727272727273%)`)
+  - posted_encouragement: +2 pts (matched: `~fire (75.0%)`)
+  - welcome_new_member: +3 pts (matched: `welcome`): "Welcome @~Temmy   from Ibadan! Sky Graphics got you"
+- **Sample messages**: Oh okay Sir Yeah it's cool
+- **Day subtotal**: +18 draft WA pts
+
+#### D6 (Day 6 — June 8, 2026)
+- **Media**: 1 item(s) — PENDING admin creativity score
+- **Sample messages**: <Media omitted>
+- **Day subtotal**: +0 draft WA pts
+
+#### D7 (Day 7 — June 9, 2026)
+- **Media**: 2 item(s) — PENDING admin creativity score
+- **Sample messages**: <Media omitted>
+- **Day subtotal**: +0 draft WA pts
+
+**RUNNING TOTAL for Abongnwi Chrioni-Opal Forba'**: +35 draft WA pts
+
+---
+
 ### Amaazee Ivanna Therese Fundoh — Participant
 #### D6 (Day 6 — June 8, 2026)
 - **Media**: 2 item(s) — PENDING admin creativity score
 - **Interactions (counted):**
   - shared_tip_or_resource: +3 pts (matched: `~tip: (75.0%)`)
   - posted_encouragement: +2 pts (matched: `~looking good (75.0%)`)
-- **Sample messages**: Hey please am done✅
+- **Sample messages**: Hey please am done
 - **Day subtotal**: +5 draft WA pts
 
 #### D7 (Day 7 — June 9, 2026)
@@ -144,18 +194,16 @@ Generated: 2026-06-10 20:28:43
 ### Asonganyi Adel Quin — Participant
 #### D1 (Day 1 — June 1, 2026)
 - **Pledge**: +5 pts
-- **Media**: 1 item(s) — PENDING admin creativity score
 - **Interactions (counted):**
   - posted_encouragement: +2 pts (matched: `~love this (77.77777777777779%)`)
-  - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
 - **Sample messages**: I, Asonganyi Adel Quin, commit to Sky Graphics Edition. I will show up daily, post my progress honestly, and complete th
-- **Day subtotal**: +12 draft WA pts
+- **Day subtotal**: +7 draft WA pts
 
-**RUNNING TOTAL for Asonganyi Adel Quin**: +12 draft WA pts
+**RUNNING TOTAL for Asonganyi Adel Quin**: +7 draft WA pts
 
 ---
 
-### Bih Cherish💖🥰 Anne — Participant
+### Bih Cherish Anne — Participant
 #### D1 (Day 1 — June 1, 2026)
 - **Pledge**: +5 pts
 - **Interactions (counted):**
@@ -163,54 +211,7 @@ Generated: 2026-06-10 20:28:43
 - **Sample messages**: I Bih Cherish-Anne commit to Sky Graphics Edition 1. I will show up daily,post my progress honestly and complete this co
 - **Day subtotal**: +7 draft WA pts
 
-**RUNNING TOTAL for Bih Cherish💖🥰 Anne**: +7 draft WA pts
-
----
-
-### Chrioni-opal ❤ — Participant
-#### D1 (Day 1 — June 1, 2026)
-- **Pledge**: +5 pts
-- **Interactions (counted):**
-  - posted_encouragement: +2 pts (matched: `~love this (77.77777777777779%)`)
-  - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
-  - asked_genuine_question: +3 pts (matched: `~i'm confused about (72.22222222222221%)`)
-- **Sample messages**: I, Abongnwi Chrioni-Opal Forba' commit to Sky  Graphics Edition 1. I will show up  daily, post my progress honestly,  an
-- **Day subtotal**: +15 draft WA pts
-
-#### D2 (Day 2 — June 2, 2026)
-- **Sample messages**: I was really happy 😊  I honestly didn’t expect my name to make the list since I had trouble submitting and sent it a few
-- **Day subtotal**: +0 draft WA pts
-
-#### D4 (Day 4 — June 4, 2026)
-- **Media**: 4 item(s) — PENDING admin creativity score
-- **Interactions (counted):**
-  - posted_encouragement: +2 pts (matched: `keep it up`)
-- **Sample messages**: <Media omitted>
-- **Day subtotal**: +2 draft WA pts
-
-#### D5 (Day 5 — June 5, 2026)
-- **Media**: 1 item(s) — PENDING admin creativity score
-- **Interactions (counted):**
-  - shared_tip_or_resource: +3 pts (matched: `~http (75.0%)`)
-  - posted_encouragement: +2 pts (matched: `~great job (77.77777777777779%)`)
-  - helped_a_member: +5 pts (matched: `~you can try (81.81818181818181%)`)
-  - shared_tip_or_resource: +3 pts (matched: `~learn figma (72.72727272727273%)`)
-  - posted_encouragement: +2 pts (matched: `~fire (75.0%)`)
-  - welcome_new_member: +3 pts (matched: `welcome`): "Welcome @~Temmy 😎  from Ibadan! Sky Graphics got you"
-- **Sample messages**: Oh okay Sir Yeah it's cool😎
-- **Day subtotal**: +18 draft WA pts
-
-#### D6 (Day 6 — June 8, 2026)
-- **Media**: 1 item(s) — PENDING admin creativity score
-- **Sample messages**: <Media omitted>
-- **Day subtotal**: +0 draft WA pts
-
-#### D7 (Day 7 — June 9, 2026)
-- **Media**: 2 item(s) — PENDING admin creativity score
-- **Sample messages**: <Media omitted>
-- **Day subtotal**: +0 draft WA pts
-
-**RUNNING TOTAL for Chrioni-opal ❤**: +35 draft WA pts
+**RUNNING TOTAL for Bih Cherish Anne**: +7 draft WA pts
 
 ---
 
@@ -220,13 +221,15 @@ Generated: 2026-06-10 20:28:43
 - **Interactions (counted):**
   - shared_tip_or_resource: +3 pts (matched: `learn figma`)
   - posted_encouragement: +2 pts (matched: `~stunning (75.0%)`)
-- **Sample messages**: 👋 Hi Sky Graphics! 📛 NAME: Christine Choundong 📍 FROM: Yaoundé, Cameroon 🎓 STUDYING/DOING: High school student with a pa
-- **Day subtotal**: +5 draft WA pts
+  - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
+  - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
+- **Sample messages**: Hi Sky Graphics!  NAME: Christine Choundong  FROM: Yaound, Cameroon  STUDYING/DOING: High school student with a passion 
+- **Day subtotal**: +15 draft WA pts
 
 #### D2 (Day 2 — June 2, 2026)
 - **Media**: 1 item(s) — PENDING admin creativity score
 - **Interactions (counted):**
-  - asked_genuine_question: +3 pts (matched: `~can you clarify (73.6842105263158%)`)
+  - asked_genuine_question: +3 pts (matched: `~can you clarify (75.0%)`)
 - **Sample messages**: This message was deleted
 - **Day subtotal**: +3 draft WA pts
 
@@ -237,7 +240,7 @@ Generated: 2026-06-10 20:28:43
   - posted_encouragement: +2 pts (matched: `~fire (75.0%)`)
   - posted_encouragement: +2 pts (matched: `~good effort (81.81818181818181%)`)
   - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
-- **Sample messages**: Good morning sir. No sleep 😭🌚
+- **Sample messages**: Good morning sir. No sleep
 - **Day subtotal**: +11 draft WA pts
 
 #### D4 (Day 4 — June 4, 2026)
@@ -259,10 +262,12 @@ Generated: 2026-06-10 20:28:43
 
 #### D7 (Day 7 — June 9, 2026)
 - **Media**: 1 item(s) — PENDING admin creativity score
-- **Sample messages**: 🌞 Good morning, everyone! 🤭✨ Hope you all had a restful night and are ready for a productive day ahead. 🚀 🎯 Today's task
-- **Day subtotal**: +0 draft WA pts
+- **Interactions (counted):**
+  - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
+- **Sample messages**: Good morning, everyone!  Hope you all had a restful night and are ready for a productive day ahead.   Today's task will 
+- **Day subtotal**: +2 draft WA pts
 
-**RUNNING TOTAL for Christine Choundong**: +21 draft WA pts
+**RUNNING TOTAL for Christine Choundong**: +33 draft WA pts
 
 ---
 
@@ -293,8 +298,8 @@ Generated: 2026-06-10 20:28:43
 
 #### D5 (Day 5 — June 5, 2026)
 - **Interactions (counted):**
-  - welcome_new_member: +3 pts (matched: `welcome`): "Welcome @~Temmy 😎"
-- **Sample messages**: Welcome @~Temmy 😎
+  - welcome_new_member: +3 pts (matched: `welcome`): "Welcome @~Temmy"
+- **Sample messages**: Welcome @~Temmy
 - **Day subtotal**: +3 draft WA pts
 
 #### D7 (Day 7 — June 9, 2026)
@@ -312,8 +317,8 @@ Generated: 2026-06-10 20:28:43
 - **Interactions (counted):**
   - asked_genuine_question: +3 pts (matched: `~how do i (75.0%)`)
   - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
-- **Referral Activity**: Identified as referred by **Seun Seun**
-- **Sample messages**: Good morning, My name is Faith Emmanuella Busari  I was invited by @Seun ꧁♛Seun♛꧂  I joined because I want to learn how 
+- **Referral Activity**: Identified as referred by **Oluwasegun Daniel Osawore**
+- **Sample messages**: Good morning, My name is Faith Emmanuella Busari  I was invited by @Seun Seun  I joined because I want to learn how to d
 - **Day subtotal**: +5 draft WA pts
 
 #### D2 (Day 2 — June 2, 2026)
@@ -328,7 +333,7 @@ Generated: 2026-06-10 20:28:43
 #### D3 (Day 3 — June 3, 2026)
 - **Interactions (counted):**
   - posted_encouragement: +2 pts (matched: `~fire (75.0%)`)
-- **Sample messages**: I slept fine sir 😂
+- **Sample messages**: I slept fine sir
 - **Day subtotal**: +2 draft WA pts
 
 **RUNNING TOTAL for Faith Emmanuella Busari**: +19 draft WA pts
@@ -341,8 +346,7 @@ Generated: 2026-06-10 20:28:43
   - asked_genuine_question: +3 pts (matched: `~how do i (75.0%)`)
   - shared_tip_or_resource: +3 pts (matched: `~learn figma (73.6842105263158%)`)
   - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
-- **Referral Activity**: Identified as referred by **~FEB 🤍✨**
-- **Sample messages**: Good morning, my name is Favour Hanatu Bako I was invited by @~FEB 🤍✨ I joined because I want to learn how to design a f
+- **Sample messages**: Good morning, my name is Favour Hanatu Bako I was invited by @~FEB  I joined because I want to learn how to design a fri
 - **Day subtotal**: +8 draft WA pts
 
 **RUNNING TOTAL for Favour Hanatu Bako**: +8 draft WA pts
@@ -354,7 +358,7 @@ Generated: 2026-06-10 20:28:43
 - **Interactions (counted):**
   - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
 - **Referral Activity**: Identified as referred by **237 682 47 74 21**
-- **Sample messages**: Good morning Everyone  Hi Sky graphics 👋 My name is Fonyuy Berinyuy Tarkighan, I live in Bafoussam, Cameroon and I'm a s
+- **Sample messages**: Good morning Everyone  Hi Sky graphics  My name is Fonyuy Berinyuy Tarkighan, I live in Bafoussam, Cameroon and I'm a st
 - **Day subtotal**: +2 draft WA pts
 
 #### D3 (Day 3 — June 3, 2026)
@@ -370,14 +374,14 @@ Generated: 2026-06-10 20:28:43
 
 ### Frank Emmanuel — Ambassador
 #### D3 (Day 3 — June 3, 2026)
-- **Sample messages**: I agree with them 🥲🙌🏽
+- **Sample messages**: I agree with them
 - **Day subtotal**: +0 draft WA pts
 
 #### D4 (Day 4 — June 4, 2026)
 - **Interactions (counted):**
-  - shared_tip_or_resource: +3 pts (matched: `learn figma`): "👋 Hi Sky Graphics! 📛 NAME: Numfor Frank... 📍 FROM: Yaoundé, Cameroon 🎓 STUDYING/DOING: High schools student with a passion for programming and designing  💡 WHY I JOINED: I joined to learn Figma from s"
+  - shared_tip_or_resource: +3 pts (matched: `learn figma`): "Hi Sky Graphics!  NAME: Numfor Frank...  FROM: Yaound, Cameroon  STUDYING/DOING: High schools student with a passion for programming and designing   WHY I JOINED: I joined to learn Figma from scratch "
   - posted_encouragement: +2 pts (matched: `~stunning (75.0%)`)
-- **Sample messages**: 👋 Hi Sky Graphics! 📛 NAME: Numfor Frank... 📍 FROM: Yaoundé, Cameroon 🎓 STUDYING/DOING: High schools student with a passi
+- **Sample messages**: Hi Sky Graphics!  NAME: Numfor Frank...  FROM: Yaound, Cameroon  STUDYING/DOING: High schools student with a passion for
 - **Day subtotal**: +5 draft WA pts
 
 #### D6 (Day 6 — June 8, 2026)
@@ -405,7 +409,7 @@ Generated: 2026-06-10 20:28:43
 - **Interactions (counted):**
   - shared_tip_or_resource: +3 pts (matched: `~i found this (75.0%)`)
   - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
-- **Referral Activity**: Identified as referred by **Seun Seun**
+- **Referral Activity**: Identified as referred by **Oluwasegun Daniel Osawore**
 - **Sample messages**: Good morning Sky Graphics. I am Irinyemi Adedayo Juliet from Nigeria and I'm a student . I joined this group because I w
 - **Day subtotal**: +5 draft WA pts
 
@@ -431,19 +435,21 @@ Generated: 2026-06-10 20:28:43
 
 #### D2 (Day 2 — June 2, 2026)
 - **Media**: 1 item(s) — PENDING admin creativity score
+- **Interactions (counted):**
+  - posted_encouragement: +2 pts (matched: `~stunning (76.92307692307692%)`)
 - **Sample messages**: <Media omitted>
-- **Day subtotal**: +0 draft WA pts
+- **Day subtotal**: +2 draft WA pts
 
 #### D3 (Day 3 — June 3, 2026)
 - **Interactions (counted):**
   - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
-- **Sample messages**: Good morning Sir I slept fine last night 🤣
+- **Sample messages**: Good morning Sir I slept fine last night
 - **Day subtotal**: +2 draft WA pts
 
 #### D4 (Day 4 — June 4, 2026)
 - **Interactions (counted):**
   - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
-- **Sample messages**: Good morning Sir I don't know how my night was because I was asleep 🥲
+- **Sample messages**: Good morning Sir I don't know how my night was because I was asleep
 - **Day subtotal**: +2 draft WA pts
 
 #### D6 (Day 6 — June 8, 2026)
@@ -465,7 +471,7 @@ Generated: 2026-06-10 20:28:43
 - **Sample messages**: <Media omitted>
 - **Day subtotal**: +28 draft WA pts
 
-**RUNNING TOTAL for Mbiydzenyuy Patience Dzekem**: +32 draft WA pts
+**RUNNING TOTAL for Mbiydzenyuy Patience Dzekem**: +34 draft WA pts
 
 ---
 
@@ -474,7 +480,7 @@ Generated: 2026-06-10 20:28:43
 - **Pledge**: +5 pts
 - **Interactions (counted):**
   - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
-  - shared_tip_or_resource: +3 pts (matched: `learn figma`): "👋 Hi Sky Graphics  📛 NAME: Moh Blessing Kebul  📍 FROM: Cameroon, North West Region  🎓 STUDYING/DOING: student 💡 WHY I JOINED: I want to learn Figma so that i can be able to design flyers, create prese"
+  - shared_tip_or_resource: +3 pts (matched: `learn figma`): "Hi Sky Graphics   NAME: Moh Blessing Kebul   FROM: Cameroon, North West Region   STUDYING/DOING: student  WHY I JOINED: I want to learn Figma so that i can be able to design flyers, create presentatio"
   - posted_encouragement: +2 pts (matched: `~stunning (75.0%)`)
   - posted_encouragement: +2 pts (matched: `~love this (77.77777777777779%)`)
   - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
@@ -524,21 +530,23 @@ Generated: 2026-06-10 20:28:43
 - **Media**: 1 item(s) — PENDING admin creativity score
 - **Interactions (counted):**
   - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
-- **Sample messages**: 📌 THE PLEDGE WALL — SKY GRAPHICS EDITION 1 This is the list of every person who has committed to Sky Graphics Edition 1.
+- **Sample messages**: THE PLEDGE WALL  SKY GRAPHICS EDITION 1 This is the list of every person who has committed to Sky Graphics Edition 1. He
 - **Day subtotal**: +5 draft WA pts
 
 #### D3 (Day 3 — June 3, 2026)
 - **Media**: 1 item(s) — PENDING admin creativity score
 - **Interactions (counted):**
   - posted_encouragement: +2 pts (matched: `~good effort (73.6842105263158%)`)
-- **Sample messages**: Good morning sir  Just woke up 😂
+- **Sample messages**: Good morning sir  Just woke up
 - **Day subtotal**: +2 draft WA pts
 
 #### D4 (Day 4 — June 4, 2026)
 - **Interactions (counted):**
+  - posted_encouragement: +2 pts (matched: `~killing it (75.0%)`)
   - posted_encouragement: +2 pts (matched: `~fire (75.0%)`)
-- **Sample messages**: Very good considering I'm topping it🌚✨
-- **Day subtotal**: +2 draft WA pts
+  - asked_genuine_question: +3 pts (matched: `~can someone help (75.0%)`)
+- **Sample messages**: Very good considering I'm topping it
+- **Day subtotal**: +7 draft WA pts
 
 #### D5 (Day 5 — June 5, 2026)
 - **Media**: 1 item(s) — PENDING admin creativity score
@@ -555,7 +563,7 @@ Generated: 2026-06-10 20:28:43
 - **Sample messages**: <Media omitted>
 - **Day subtotal**: +0 draft WA pts
 
-**RUNNING TOTAL for Oluwasegun Daniel Osawore**: +12 draft WA pts
+**RUNNING TOTAL for Oluwasegun Daniel Osawore**: +17 draft WA pts
 
 ---
 
@@ -579,16 +587,25 @@ Generated: 2026-06-10 20:28:43
 
 ### Tchouala Ange — Participant
 #### D1 (Day 1 — June 1, 2026)
-- **Pledge**: +5 pts
 - **Interactions (counted):**
   - shared_tip_or_resource: +3 pts (matched: `~learn figma (72.72727272727273%)`)
   - posted_encouragement: +2 pts (matched: `~fire (75.0%)`)
-  - posted_encouragement: +2 pts (matched: `~love this (77.77777777777779%)`)
-  - helped_a_member: +5 pts (matched: `~here's what you do (88.88888888888889%)`)
 - **Sample messages**: Hi sky graphics  I am Tchouala Ange  I live in Bamenda I am a student  I joined figma to learn from scratch and develop 
-- **Day subtotal**: +17 draft WA pts
+- **Day subtotal**: +5 draft WA pts
 
-**RUNNING TOTAL for Tchouala Ange**: +17 draft WA pts
+**RUNNING TOTAL for Tchouala Ange**: +5 draft WA pts
+
+---
+
+### Touossoc Ange — Participant
+#### D1 (Day 1 — June 1, 2026)
+- **Pledge**: +5 pts
+- **Interactions (counted):**
+  - posted_encouragement: +2 pts (matched: `~love this (77.77777777777779%)`)
+- **Sample messages**: I Touossoc Ange commit to Sky Graphics Edition 1. I will show up daily,post my progress honestly and complete this cours
+- **Day subtotal**: +7 draft WA pts
+
+**RUNNING TOTAL for Touossoc Ange**: +7 draft WA pts
 
 ---
 
@@ -601,7 +618,7 @@ Generated: 2026-06-10 20:28:43
 - **Interactions (counted):**
   - posted_encouragement: +2 pts (matched: `~stunning (75.0%)`)
 - **Referral Activity**: Identified as referred by **Oluwasegun Daniel Osawore**
-- **Sample messages**: 👋 Hi Sky Graphics! 📛 NAME: [Temiloluwa Oladejo] 📍 FROM: [Ibadan, Nigeria] 🎓 STUDYING/DOING: [cyber security student, and
+- **Sample messages**: Hi Sky Graphics!  NAME: [Temiloluwa Oladejo]  FROM: [Ibadan, Nigeria]  STUDYING/DOING: [cyber security student, and focu
 - **Day subtotal**: +2 draft WA pts
 
 **RUNNING TOTAL for +234 803 804 8067**: +2 draft WA pts
@@ -620,17 +637,37 @@ Generated: 2026-06-10 20:28:43
 
 ---
 
+### +237 6 58 54 51 24 — Participant
+#### D1 (Day 1 — June 1, 2026)
+- **Media**: 1 item(s) — PENDING admin creativity score
+- **Sample messages**: <Media omitted>
+- **Day subtotal**: +0 draft WA pts
+
+**RUNNING TOTAL for +237 6 58 54 51 24**: +0 draft WA pts
+
+---
+
+### +237 6 71 80 45 90 — Participant
+#### D1 (Day 1 — June 1, 2026)
+- **Media**: 1 item(s) — PENDING admin creativity score
+- **Sample messages**: <Media omitted>
+- **Day subtotal**: +0 draft WA pts
+
+**RUNNING TOTAL for +237 6 71 80 45 90**: +0 draft WA pts
+
+---
+
 ### +237 6 77 40 83 27 — Participant
 #### D1 (Day 1 — June 1, 2026)
-- **Sample messages**: 𝙷𝚒 𝚜𝚔𝚢 𝚐𝚛𝚊𝚙𝚑𝚒𝚌𝚜.  𝙸'𝚖 𝚃𝚎𝚔𝚞𝚖𝚋𝚘 𝙵𝚊𝚒𝚝𝚑 , 𝚊 𝙲𝚊𝚖𝚎𝚛𝚘𝚘𝚗𝚒𝚊𝚗 𝚊𝚗𝚍 𝚊 𝚜𝚝𝚞𝚍𝚎𝚗𝚝. 𝙸 𝚓𝚘𝚒𝚗𝚎𝚍 𝚝𝚑𝚒𝚜 𝚐𝚛𝚘𝚞𝚙 𝚋𝚎𝚌𝚊𝚞𝚜𝚎 𝚒 𝚑𝚊𝚟𝚎 𝚊𝚗 𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝 𝚒𝚗 𝚐𝚛𝚊
+- **Sample messages**: .  '   ,     .            . '         . '          .      .
 - **Day subtotal**: +0 draft WA pts
 
 #### D3 (Day 3 — June 3, 2026)
-- **Sample messages**: 𝚂𝚘𝚖𝚎 𝚘𝚏 𝚞𝚜 𝚊𝚛𝚎 𝚒𝚗 𝚝𝚑𝚎 𝚖𝚒𝚍𝚍𝚕𝚎 𝚘𝚏 𝚎𝚡𝚊𝚖𝚜 𝚊𝚗𝚍 𝚌𝚊𝚗𝚗𝚘𝚝 𝚏𝚘𝚌𝚞𝚜 𝚘𝚗 𝚝𝚠𝚘 𝚝𝚑𝚒𝚗𝚐𝚜 𝚊𝚝 𝚝𝚑𝚎 𝚜𝚊𝚖𝚎 𝚝𝚒𝚖𝚎 🙏🥲
+- **Sample messages**: 
 - **Day subtotal**: +0 draft WA pts
 
 #### D4 (Day 4 — June 4, 2026)
-- **Sample messages**: 𝙶𝚘𝚘𝚍 𝚖𝚘𝚛𝚗𝚒𝚗𝚐. 𝚆𝚑𝚊𝚝 𝚒𝚏 𝚢𝚘𝚞 𝚍𝚘𝚗'𝚝 𝚑𝚊𝚟𝚎 𝚊 𝚕𝚊𝚙𝚝𝚘𝚙 𝚝𝚘 𝚌𝚊𝚛𝚛𝚢 𝚘𝚞𝚝 𝚊𝚕𝚕 𝚝𝚑𝚒𝚜 𝙵𝚒𝚐𝚖𝚊 𝚘𝚙𝚎𝚛𝚊𝚝𝚒𝚘𝚗𝚜 😣
+- **Sample messages**: .    '
 - **Day subtotal**: +0 draft WA pts
 
 **RUNNING TOTAL for +237 6 77 40 83 27**: +0 draft WA pts
@@ -663,11 +700,20 @@ Generated: 2026-06-10 20:28:43
 #### D1 (Day 1 — June 1, 2026)
 - **Interactions (counted):**
   - shared_tip_or_resource: +3 pts (matched: `~i found this (75.0%)`)
-- **Referral Activity**: Identified as referred by **Faith**
+- **Referral Activity**: Identified as referred by **Faith Emmanuella Busari**
 - **Sample messages**: Hello everyone, I'm Melissa. I joined this group to sharpen my graphic design skills, learn from others, and grow creati
 - **Day subtotal**: +3 draft WA pts
 
 **RUNNING TOTAL for +237 6 88 20 94 28**: +3 draft WA pts
+
+---
+
+### +237 6 89 99 13 80 — Participant
+#### D1 (Day 1 — June 1, 2026)
+- **Sample messages**: Ok thanks
+- **Day subtotal**: +0 draft WA pts
+
+**RUNNING TOTAL for +237 6 89 99 13 80**: +0 draft WA pts
 
 ---
 
@@ -683,20 +729,20 @@ Generated: 2026-06-10 20:28:43
 
 ---
 
-### Binda Joel CODe BiNdEr👾 — Participant
+### Binda Joel — Participant
 #### D1 (Day 1 — June 1, 2026)
 - **Sample messages**: *Hi sky graphics my name is Binda Joel a software engineering student. Based at Yaounde.* *I joined to improve my design
 - **Day subtotal**: +0 draft WA pts
 
-**RUNNING TOTAL for Binda Joel CODe BiNdEr👾**: +0 draft WA pts
+**RUNNING TOTAL for Binda Joel**: +0 draft WA pts
 
 ---
 
 ### Chunga Daina — Participant
 #### D1 (Day 1 — June 1, 2026)
 - **Interactions (counted):**
-  - shared_tip_or_resource: +3 pts (matched: `learn figma`): "Hi Sky Graphics ,  My name is Chunga Daina l live in Buea l am a  level 300 student in UB specifically from the faculty of engineering and technology doing computer engineering.I’m here to learn Figma"
-- **Referral Activity**: Identified as referred by **Emmanuel Tchouani T²ek**
+  - shared_tip_or_resource: +3 pts (matched: `learn figma`): "Hi Sky Graphics ,  My name is Chunga Daina l live in Buea l am a  level 300 student in UB specifically from the faculty of engineering and technology doing computer engineering.Im here to learn Figma "
+- **Referral Activity**: Identified as referred by **Emmanuel Karol Tchouani**
 - **Sample messages**: Hi Sky Graphics ,  My name is Chunga Daina l live in Buea l am a  level 300 student in UB specifically from the faculty 
 - **Day subtotal**: +3 draft WA pts
 
@@ -721,12 +767,12 @@ Generated: 2026-06-10 20:28:43
 
 ---
 
-### Ekanje Esther Vicky 👑 — Participant
+### Ekanje Hadassah — Participant
 #### D1 (Day 1 — June 1, 2026)
 - **Sample messages**: This message was deleted
 - **Day subtotal**: +0 draft WA pts
 
-**RUNNING TOTAL for Ekanje Esther Vicky 👑**: +0 draft WA pts
+**RUNNING TOTAL for Ekanje Hadassah**: +0 draft WA pts
 
 ---
 
@@ -741,37 +787,27 @@ Generated: 2026-06-10 20:28:43
 
 ---
 
-### Meghiou Nganka Lo — Participant
+### Meghiou Nganka Los Esther — Participant
 #### D1 (Day 1 — June 1, 2026)
 - **Interactions (counted):**
   - shared_tip_or_resource: +3 pts (matched: `~figma plugin (75.0%)`)
-- **Referral Activity**: Identified as referred by **Opal This Message Was Edited**
-- **Sample messages**: Hi Sky Graphics! 👋 My name is Meghiou Nganka Loïs Esther. I’m from Bafoussam and I’m a student.  I joined because I kept
+- **Referral Activity**: Identified as referred by **Abongnwi Chrioni-Opal Forba'**
+- **Sample messages**: Hi Sky Graphics!  My name is Meghiou Nganka Los Esther. Im from Bafoussam and Im a student.  I joined because I kept see
 - **Day subtotal**: +3 draft WA pts
 
-**RUNNING TOTAL for Meghiou Nganka Lo**: +3 draft WA pts
+**RUNNING TOTAL for Meghiou Nganka Los Esther**: +3 draft WA pts
 
 ---
 
 ### Percy Visiy — Participant
 #### D1 (Day 1 — June 1, 2026)
 - **Interactions (counted):**
-  - shared_tip_or_resource: +3 pts (matched: `learn figma`): "*Hi Sky Graphics! I’m Percy Visiy, a high school science student + tech guy from Yaoundé. I’m here to learn Figma from scratch and build a clean tech dashboard for my portfolio by July 12.* Invited by"
+  - shared_tip_or_resource: +3 pts (matched: `learn figma`): "*Hi Sky Graphics! Im Percy Visiy, a high school science student + tech guy from Yaound. Im here to learn Figma from scratch and build a clean tech dashboard for my portfolio by July 12.* Invited by Ch"
 - **Referral Activity**: Identified as referred by **Christine Choundong**
-- **Sample messages**: *Hi Sky Graphics! I’m Percy Visiy, a high school science student + tech guy from Yaoundé. I’m here to learn Figma from s
+- **Sample messages**: *Hi Sky Graphics! Im Percy Visiy, a high school science student + tech guy from Yaound. Im here to learn Figma from scra
 - **Day subtotal**: +3 draft WA pts
 
 **RUNNING TOTAL for Percy Visiy**: +3 draft WA pts
-
----
-
-### Ranjoy-Bryan — Participant
-#### D1 (Day 1 — June 1, 2026)
-- **Media**: 1 item(s) — PENDING admin creativity score
-- **Sample messages**: <Media omitted>
-- **Day subtotal**: +0 draft WA pts
-
-**RUNNING TOTAL for Ranjoy-Bryan**: +0 draft WA pts
 
 ---
 
@@ -795,11 +831,14 @@ _None detected._
 |--------------|
 | +234 803 804 8067 |
 | +237 6 51 06 70 08 |
+| +237 6 58 54 51 24 |
+| +237 6 71 80 45 90 |
 | +237 6 73 41 60 87 |
 | +237 6 77 40 83 27 |
 | +237 6 77 96 13 61 |
 | +237 6 82 42 26 22 |
 | +237 6 88 20 94 28 |
+| +237 6 89 99 13 80 |
 | +237 6 94 59 08 65 |
 
 > Add these to NAME_MAP once you identify who they are.
@@ -811,15 +850,15 @@ _None detected._
 | +234 902 260 1865 | Favour Hanatu Bako |
 | +237 6 51 05 61 16 | Tsopmo Precious |
 | +237 6 53 28 66 74 | Kemni Samuel Bemsimbom |
-| +237 6 58 54 51 24 | Asonganyi Adel Quin |
+| +237 6 58 54 51 24 | Christine Choundong |
 | +237 6 71 22 06 99 | Chunga Daina |
 | +237 6 71 80 45 90 | Ranjoy-Bryan |
 | +237 6 77 21 46 30 | Fonyuy Berinyuy Tarkighan |
 | +237 6 77 96 13 61 | Christine Choundong |
-| +237 6 78 26 08 83 | Tchouala Ange |
+| +237 6 78 26 08 83 | Christine Choundong |
 | +237 6 78 33 05 04 | Ngum-nchung Blessing Kah Geh |
 | +237 6 80 20 86 20 | Chi Yoland Sah |
-| +237 6 89 99 13 80 | Meghiou Nganka Lo |
+| +237 6 89 99 13 80 | Meghiou Nganka Los Esther |
 
 > If any of these look wrong, add a correction to NAME_MAP.
 
@@ -828,15 +867,13 @@ _None detected._
 | Referrer | Referrals Detected |
 |----------|--------------------|
 | Malialia Celine Bride | 3 |
-| Seun Seun | 2 |
+| Oluwasegun Daniel Osawore | 3 |
 | Mbishitehnyi Ryan | 1 |
-| ~FEB 🤍✨ | 1 |
-| Faith | 1 |
+| Faith Emmanuella Busari | 1 |
 | Christine Choundong | 1 |
-| Emmanuel Tchouani T²ek | 1 |
+| Emmanuel Karol Tchouani | 1 |
 | 237 682 47 74 21 | 1 |
-| Opal This Message Was Edited | 1 |
-| Oluwasegun Daniel Osawore | 1 |
+| Abongnwi Chrioni-Opal Forba' | 1 |
 | Frank Emmanuel | 1 |
 
 > Confirm these in the chat before awarding referral pts in

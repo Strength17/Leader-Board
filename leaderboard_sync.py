@@ -71,6 +71,10 @@ _CANONICAL_DAY_LABELS = {
 # The last day of each week (used for milestone / perfect-week awards)
 # Key = day label (e.g. "D5"), value = week tag (e.g. "W1")
 WEEK_MILESTONE_DAYS = {"D5": "W1", "D10": "W2"}
+WEEK_DAYS = {
+    "W1": ["D1", "D2", "D3", "D4", "D5"],
+    "W2": ["D6", "D7", "D8", "D9", "D10"]
+}
 
 TIER_THRESHOLDS = [
     (350, "PLATINUM"),
@@ -88,6 +92,7 @@ AMBASSADORS = {
     "Frank Emmanuel",
     "Malialia Celine Bride",
     "Irinyemi Adedayo Juliet",
+    "Percy Visiy",
 }
 
 FREEZE_STREAKS_ON_MISS = True   # admin override: freeze, not reset
@@ -138,9 +143,10 @@ def sort_days(day_iterable):
     return sorted(day_iterable, key=day_sort_key)
 
 def get_tier(pts):
-    for threshold, tier in TIER_THRESHOLDS:
-        if pts >= threshold:
-            return tier
+    if pts >= 350: return "PLATINUM"
+    if pts >= 250: return "GOLD"
+    if pts >= 150: return "SILVER"
+    if pts >= 50: return "BRONZE"
     return "UNRANKED"
 
 def role_for(name):
@@ -414,12 +420,14 @@ def parse_form_report(filepath):
     checkin_re = re.compile(r'- Check-in pts:\s*\+(\d+)')
     images_re  = re.compile(r'- Images uploaded:\s*(\d+)')
     warn_re    = re.compile(r'- ⚠️ Warning:\s*(.+)')
+    fb_inter_re = re.compile(r'- Facebook interactions:\s*(\d+)')
 
     current_person = None
     current_day    = None
 
     for line in text.splitlines():
-        line = line.rstrip()
+        line = line.strip()
+        if not line: continue
 
         m = person_re.match(line)
         if m:
@@ -435,6 +443,7 @@ def parse_form_report(filepath):
                 "check_in_pts": 0,
                 "early_bonus":  0,
                 "image_count":  0,
+                "fb_interactions": 0,
                 "warnings":     [],
             }
             if current_person not in joined_days:
@@ -458,6 +467,10 @@ def parse_form_report(filepath):
             m = images_re.search(line)
             if m:
                 rec["image_count"] = int(m.group(1))
+                continue
+            m = fb_inter_re.search(line)
+            if m:
+                rec["fb_interactions"] = int(m.group(1))
                 continue
             m = warn_re.search(line)
             if m:
@@ -533,20 +546,48 @@ def parse_wa_report(filepath):
 # We need to ensure we map names consistently.
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from wa_parser import NAME_MAP, CANONICAL_NAMES
+from wa_parser import NAME_MAP, CANONICAL_NAMES, RESOLVED_NAMES
+
+# Load canonical names from Global_names.md and resolved_names.md
+CANONICAL_NAMES = []
+CANONICAL_PATH = "Identity_Management/Data/unique_full_names.md"
+if os.path.exists(CANONICAL_PATH):
+    with open(CANONICAL_PATH, "r", encoding="utf-8") as f:
+        CANONICAL_NAMES = [line.strip() for line in f if line.strip() and not line.startswith('#')]
 
 def get_canonical_name(name):
-    """Fuzzy match or map name to canonical."""
+    """
+    Force name to canonical using the authoritative list.
+    If it's not a direct match, fuzzy match against canonical names.
+    If still no match, log to unresolved.
+    """
     name = name.strip()
-    if name in NAME_MAP:
-        return NAME_MAP[name]
-    # Check if it's already canonical
+    
+    # 1. Exact match in CANONICAL_NAMES
     if name in CANONICAL_NAMES:
         return name
-    # Fuzzy match
+        
+    # 2. Fuzzy match against CANONICAL_NAMES
     from rapidfuzz import process as rprocess, fuzz as rfuzz
     match = rprocess.extractOne(name, CANONICAL_NAMES, scorer=rfuzz.token_sort_ratio, score_cutoff=85)
-    return match[0] if match else name
+    if match:
+        return match[0]
+        
+    # 3. If not found, log to unresolved
+    os.makedirs("Identity_Management/Data", exist_ok=True)
+    unresolved_path = "Identity_Management/Data/unresolved_names.md"
+    
+    # Check if already logged to avoid duplicates
+    existing = []
+    if os.path.exists(unresolved_path):
+        with open(unresolved_path, "r", encoding="utf-8") as f:
+            existing = f.readlines()
+            
+    if not any(name in line for line in existing):
+        with open(unresolved_path, "a", encoding="utf-8") as f:
+            f.write(f"NEEDS MAPPING: {name}\n")
+            
+    return name
 
 def get_all_names_from_legacy():
     """Extract all names from the existing production data.js."""
@@ -565,7 +606,7 @@ def discover_days_and_people(form_per_day, wa_interactions, manual_bonuses, pled
         all_names:  set of participant name strings
     """
     all_days  = set()
-    all_names = get_all_names_from_legacy()
+    all_names = set()
 
     for name, days in form_per_day.items():
         all_names.add(name)
@@ -594,7 +635,7 @@ def discover_days_and_people(form_per_day, wa_interactions, manual_bonuses, pled
 # POINTS CALCULATION
 # ===========================================================================
 
-def calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions):
+def calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions, days_results):
     """
     Compute all point components for one person on one day.
 
@@ -611,16 +652,18 @@ def calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions):
         early_bonus  = form_rec.get("early_bonus",  0)
         submitted    = form_rec.get("submitted",     False)
         image_count  = form_rec.get("image_count",  0)
+        fb_interactions = form_rec.get("fb_interactions", 0)
         warnings     = form_rec.get("warnings",     [])
     else:
         check_in_pts = 0
         early_bonus  = 0
         submitted    = False
         image_count  = 0
+        fb_interactions = 0
         warnings     = []
 
-    # Work Post bonus: +5 flat if image_count > 0 (form only)
-    work_post_pts = 5 if image_count > 0 else 0
+    # Work Post bonus: +5 per image submitted (form only)
+    work_post_pts = image_count * 5
 
     # --- Creativity score (from manual report) ---
     creativity_score = mb.get("creativity", {}).get(day, 0)
@@ -648,8 +691,15 @@ def calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions):
 
     # --- Milestone (+20) — only on the day the week closes ---
     milestone_pts = 0
-    if day in WEEK_MILESTONE_DAYS:
+    phase_completion_pts = 0
+    if day in WEEK_MILESTONE_DAYS and days_results:
         week_tag = WEEK_MILESTONE_DAYS[day]
+        
+        # Let's count how many days of workDone this person has for this week.
+        work_done_count = sum(1 for d, r in days_results if d in WEEK_DAYS.get(week_tag, []) and r["workDone"])
+        if work_done_count >= 5:
+            phase_completion_pts = 20
+
         if week_tag in mb.get("milestone_weeks", []):
             milestone_pts = 20
 
@@ -662,7 +712,7 @@ def calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions):
 
     delta = (check_in_pts + early_bonus + work_post_pts
              + creativity_score + wa_pts + special_pts
-             + milestone_pts + perfect_pts)
+             + milestone_pts + perfect_pts + phase_completion_pts)
 
     return {
         "delta":            delta,
@@ -679,6 +729,7 @@ def calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions):
         "special_reason":   special_rec.get("reason", ""),
         "milestone_pts":    milestone_pts,
         "perfect_pts":      perfect_pts,
+        "phase_completion_pts": phase_completion_pts,
         "warnings":         warnings,
     }
 
@@ -837,6 +888,14 @@ def build_breakdown(name, days_results, manual_bonuses, pledge_pts, referral_pts
                 "dayHits": [d],
                 "desc":    "5/5 valid same-day forms. +15.",
             })
+        if r.get("phase_completion_pts", 0) > 0:
+            bonus_items.append({
+                "label":   f"Phase Completion ({WEEK_MILESTONE_DAYS.get(d, d)})",
+                "pts":     r["phase_completion_pts"],
+                "earned":  True,
+                "dayHits": [d],
+                "desc":    "5/5 days work completed. +20.",
+            })
         if r["special_pts"] > 0:
             bonus_items.append({
                 "label":   f"Special Bonus ({d})",
@@ -935,8 +994,17 @@ def build_person(name, day_order, form_per_day, manual_bonuses, wa_interactions)
         form_rec = form_per_day.get(name, {}).get(day, None)
         
         # Calculate points for this day (active or empty)
-        result = calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions)
-        
+        result = calc_day_points(name, day, form_rec, manual_bonuses, wa_interactions, None)
+        days_computed.append((day, result))
+
+    # Second pass to add phase completion points
+    for day, result in days_computed:
+        if day in WEEK_MILESTONE_DAYS:
+            week_tag = WEEK_MILESTONE_DAYS[day]
+            work_done_count = sum(1 for d, r in days_computed if d in WEEK_DAYS.get(week_tag, []) and r["workDone"])
+            if work_done_count >= 5:
+                result["phase_completion_pts"] = 20
+                result["delta"] += 20
         # Apply streak logic per day
         if result["submitted"]:
             form_streak += 1
@@ -950,7 +1018,6 @@ def build_person(name, day_order, form_per_day, manual_bonuses, wa_interactions)
         result["streakDays"]     = form_streak
         result["workStreakDays"] = work_streak
         
-        days_computed.append((day, result))
         cumulative += result["delta"]
         
         days_out[day] = {
@@ -1052,6 +1119,8 @@ def write_master_data(all_people, day_order, filepath):
                 lines.append(f"- Milestone: +{result['milestone_pts']}")
             if result["perfect_pts"]:
                 lines.append(f"- Perfect week: +{result['perfect_pts']}")
+            if result.get("phase_completion_pts", 0):
+                lines.append(f"- Phase completion: +{result['phase_completion_pts']}")
             lines.append(f"- Streaks: form={result['streakDays']}  work={result['workStreakDays']}")
             lines.append("")
 
@@ -1107,7 +1176,14 @@ def write_data_js(all_people, day_order, day_labels, filepath):
 
     # PEOPLE
     lines.append("export const PEOPLE = [")
+    phone_re = re.compile(r'^\+?[\d\s\-]{7,}$')
+    unmapped_log = []
+    
     for p in all_people:
+        if phone_re.match(p['name'].strip()):
+            unmapped_log.append(p['name'])
+            continue
+            
         lines.append("  {")
         lines.append(f"    name: {json.dumps(p['name'])},")
         lines.append(f"    role: {json.dumps(p['role'])},")
@@ -1162,7 +1238,14 @@ def write_data_js(all_people, day_order, day_labels, filepath):
         lines.append("  },")
 
     lines.append("];")
-    lines.append("")
+    
+    # Log phone numbers found
+    if unmapped_log:
+        os.makedirs("Data", exist_ok=True)
+        with open("Data/inactive_and_unmapped.md", "a", encoding="utf-8") as f:
+            for name in unmapped_log:
+                f.write(f"- {name} (Phone number found in data)\n")
+    print(f"Filtered out {len(unmapped_log)} phone numbers from data.js.")
 
     # RULES
     lines.append("export const RULES = [")
@@ -1257,6 +1340,18 @@ def main():
 
     print(f"\nNEXT STEP: review {MASTER_OUT} for accuracy,")
     print(f"then push data.js to your GitHub repository.")
+
+    if os.path.exists("Identity_Management/Data/unresolved_names.md"):
+        phone_re = re.compile(r'^\+?[\d\s\-]{7,}$')
+        with open("Identity_Management/Data/unresolved_names.md", "r", encoding="utf-8") as f:
+            lines = [line.strip().replace("NEEDS MAPPING: ", "") for line in f if line.strip()]
+            real_unresolved = [l for l in lines if not phone_re.match(l)]
+            
+            if real_unresolved:
+                print("\nWARNING: Identity_Management/Data/unresolved_names.md contains unmapped names!")
+                for name in real_unresolved:
+                    print(f" - {name}")
+                print("Please add these names to resolved_names.md for future runs.")
 
 
 if __name__ == "__main__":

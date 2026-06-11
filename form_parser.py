@@ -123,13 +123,14 @@ COL_NAME = 1
 COL_DAY_NUMBER = 2
 COL_WATCHED_VIDEO = 3
 COL_BUILD = 4
-COL_FEEDBACK = 5
-COL_POINTS_TODAY = 6
-COL_TOTAL_POINTS = 7
-COL_STREAK = 8
-COL_BONUS_MANUAL = 9
-COL_RANK = 10
-COL_EXTRA = 11
+COL_FB_INTERACTIONS = 5
+COL_FEEDBACK = 6
+COL_POINTS_TODAY = 7
+COL_TOTAL_POINTS = 8
+COL_STREAK = 9
+COL_BONUS_MANUAL = 10
+COL_RANK = 11
+COL_EXTRA = 12
 
 DAY_NUMBER_RE = re.compile(r'(\d{1,2})')
 URL_RE = re.compile(r'https?://\S+')
@@ -240,6 +241,7 @@ def parse_form(filepath):
                 "day_written": parse_day_number(safe_get(row, COL_DAY_NUMBER)),
                 "watched_video": safe_get(row, COL_WATCHED_VIDEO),
                 "build_text": safe_get(row, COL_BUILD),
+                "fb_interactions": safe_get(row, COL_FB_INTERACTIONS),
                 "feedback": safe_get(row, COL_FEEDBACK),
                 "bonus_manual": safe_get(row, COL_BONUS_MANUAL),
             })
@@ -357,6 +359,7 @@ def analyze_rows(timed_rows):
             "check_in_pts": check_in_pts,
             "early_bonus": early_bonus,
             "image_count": image_count,
+            "fb_interactions": int(row["fb_interactions"]) if row["fb_interactions"].isdigit() else 0,
             "watched_video": row["watched_video"],
             "build_text": row["build_text"],
             "bonus_manual": row["bonus_manual"],
@@ -570,6 +573,7 @@ def build_report(day_data, disqualified, recovery_flags, duplicates,
             lines.append(f"- Check-in pts: +{rec['check_in_pts']}")
             lines.append(f"- Watched video: {rec['watched_video'] or '(blank)'}")
             lines.append(f"- Images uploaded: {rec['image_count']}")
+            lines.append(f"- Facebook interactions: {rec['fb_interactions']}")
             if rec["bonus_manual"]:
                 lines.append(f"- Bonus points (manual, from form): {rec['bonus_manual']}")
             for w in rec["warnings"]:

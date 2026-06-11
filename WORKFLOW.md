@@ -11,7 +11,8 @@ For each iteration (1 to 10):
     *   Run `form_parser.py` -> Updates `Data/form_report.md`.
     *   Run `leaderboard_sync.py` -> Reads all reports + `Data/Manual_Reconciliation_Points.md`.
         *   Produces `Data/master_data.md` (audit trail).
-        *   Produces `data2.js` (UI output).
+        *   Produces `data.js` (UI output).
+    *   Run `generate_audit.py` -> Updates `Data/WA_Interaction_Audit.md`.
 3.  **Validate:**
     *   Compare `Data/master_data.md` (Audit) against `data2.js` (UI Data).
     *   Compare `Data/master_data.md` against `MASTER DATA.md` (Ground Truth).

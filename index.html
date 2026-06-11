@@ -59,8 +59,9 @@ body.essence-golden::before{
 }
 .wrap{position:relative;z-index:1;}
 .essence-golden .title{
-  background:linear-gradient(135deg,#fff 0%,#FFE088 35%,#F59E0B 70%,#D97706 100%) !important;
-  -webkit-background-clip:text;background-clip:text;
+  background-image:linear-gradient(135deg,#fff 0%,#FFE088 35%,#F59E0B 70%,#D97706 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;color:transparent !important;
 }
 
 /* ── LAYOUT ── */
@@ -519,14 +520,7 @@ body.essence-golden::before{
   </div>
 
   <div class="nav-card">
-    <div class="week-row" id="week-row">
-      <div class="week-pill" data-week="1" onclick="window.setWeek(1)">Week 1 <span class="week-badge">Done</span></div>
-      <div class="week-pill active" data-week="2" onclick="window.setWeek(2)">Week 2 <span class="week-badge live">Live</span></div>
-      <div class="week-pill locked">Week 3 🔒</div>
-      <div class="week-pill locked">Week 4 🔒</div>
-      <div class="week-pill locked">Week 5 🔒</div>
-      <div class="week-pill locked">Week 6 🔒</div>
-    </div>
+    <div class="week-row" id="week-row"></div>
     <div class="day-tray" id="day-selector"></div>
   </div>
 
@@ -618,10 +612,13 @@ import { PEOPLE, DAY_LABELS, TIER_EMOJI, RULES } from './data.js';
 /* ─────────────────────────────────────────────────
    STATE
 ───────────────────────────────────────────────── */
-let currentWeek = 2;
-let currentDay  = 'D6';
+let currentWeek = 1;
+let currentDay  = 'D1';
 let currentTab  = 'participants';
 let currentPTab = 'breakdown';
+
+const TOTAL_WEEKS = 6;       /* number of week pills shown in nav */
+const DAYS_PER_WEEK = 5;      /* days per week */
 
 /* ─────────────────────────────────────────────────
    HELPERS
@@ -631,26 +628,105 @@ function ptsColor(r){ return r===1?'var(--amber)':r===2?'#CBD5E1':r===3?'#CD7F32
 function rowClass(r){ return r===1?'rank-1':r===2?'rank-2':r===3?'rank-3':''; }
 function safeName(n){ return n.replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
 
-/* Which days belong to which week */
-const WEEK_DAYS = {
-  1: ['D1','D2','D3','D4','D5'],
-  2: ['D6','D7','D8','D9','D10']
-};
-/* Days that are actually live (have data) */
-const LIVE_DAYS = new Set(['D1','D2','D3','D4','D5','D6']);
+/* ─────────────────────────────────────────────────
+   DYNAMIC DAY/WEEK UNLOCKING
+   Derived entirely from PEOPLE[].days + DAY_LABELS —
+   no hardcoded "current day" needed.
+───────────────────────────────────────────────── */
+
+/* Canonical ordering of day keys (D1, D2, D3 ...) */
+function getCanonicalDayOrder(){
+  let order = [];
+  if (typeof DAY_LABELS !== 'undefined' && DAY_LABELS) {
+    order = Object.keys(DAY_LABELS);
+  }
+  /* Make sure we have enough slots for every week pill in the UI */
+  const need = TOTAL_WEEKS * DAYS_PER_WEEK;
+  for (let i = 1; i <= need; i++) {
+    const key = 'D' + i;
+    if (!order.includes(key)) order.push(key);
+  }
+  order.sort((a,b) => parseInt(a.slice(1),10) - parseInt(b.slice(1),10));
+  return order;
+}
+
+/* Scan PEOPLE for every day key that actually has data */
+function computeLiveDays(){
+  const set = new Set();
+  (PEOPLE || []).forEach(p => {
+    if (p.days) Object.keys(p.days).forEach(d => set.add(d));
+  });
+  return set;
+}
+
+/* Highest day number found across all people */
+function getLatestDayNum(liveSet){
+  let max = 0;
+  liveSet.forEach(d => {
+    const n = parseInt(d.slice(1),10);
+    if (!isNaN(n) && n > max) max = n;
+  });
+  return max;
+}
+
+/* Build the week -> [day keys] map for all week pills */
+function buildWeekDays(order){
+  const weeks = {};
+  for (let w = 1; w <= TOTAL_WEEKS; w++) {
+    const start = (w-1) * DAYS_PER_WEEK;
+    weeks[w] = order.slice(start, start + DAYS_PER_WEEK);
+  }
+  return weeks;
+}
+
+const CANONICAL_DAY_ORDER = getCanonicalDayOrder();
+const WEEK_DAYS  = buildWeekDays(CANONICAL_DAY_ORDER);
+const LIVE_DAYS  = computeLiveDays();
+const LATEST_DAY_NUM = getLatestDayNum(LIVE_DAYS);
 
 /* ─────────────────────────────────────────────────
-   WEEK SELECTOR
+   WEEK SELECTOR (rendered dynamically)
+───────────────────────────────────────────────── */
+function renderWeekSelector(){
+  const row = document.getElementById('week-row');
+  if (!row) return;
+  let html = '';
+  for (let w = 1; w <= TOTAL_WEEKS; w++) {
+    const days     = WEEK_DAYS[w];
+    const firstNum = parseInt(days[0].slice(1),10);
+    const lastNum  = parseInt(days[days.length-1].slice(1),10);
+
+    let status; /* 'done' | 'live' | 'locked' */
+    if (LATEST_DAY_NUM >= lastNum)       status = 'done';
+    else if (LATEST_DAY_NUM >= firstNum) status = 'live';
+    else                                  status = 'locked';
+
+    if (status === 'locked') {
+      html += `<div class="week-pill locked">Week ${w} 🔒</div>`;
+    } else {
+      const isActive = w === currentWeek;
+      const badge = status === 'live'
+        ? '<span class="week-badge live">Live</span>'
+        : '<span class="week-badge">Done</span>';
+      html += `<div class="week-pill${isActive?' active':''}" data-week="${w}" onclick="window.setWeek(${w})">Week ${w} ${badge}</div>`;
+    }
+  }
+  row.innerHTML = html;
+}
+
+/* ─────────────────────────────────────────────────
+   WEEK SELECTION
 ───────────────────────────────────────────────── */
 window.setWeek = function(week) {
-  if (week > 2) return;
+  const days = WEEK_DAYS[week];
+  if (!days) return;
+  const firstNum = parseInt(days[0].slice(1),10);
+  if (LATEST_DAY_NUM < firstNum) return; /* week is locked */
+
   currentWeek = week;
-  document.querySelectorAll('.week-pill').forEach((p,i) => {
-    p.classList.toggle('active', i+1 === week);
-  });
+  renderWeekSelector();
   renderDaySelector();
   /* default to the latest live day in this week */
-  const days = WEEK_DAYS[week];
   const liveDays = days.filter(d => LIVE_DAYS.has(d));
   const defaultDay = liveDays.length ? liveDays[liveDays.length-1] : days[0];
   window.setDay(defaultDay);
@@ -970,10 +1046,27 @@ window.triggerCelebration = function(duration) {
 };
 
 /* ─────────────────────────────────────────────────
-   INIT — Week 2, D6, 15s celebration
+   INIT — auto-selects the latest unlocked week/day
 ───────────────────────────────────────────────── */
 function initApp() {
-  window.setWeek(2);
+  let initWeek = 1, initDay = CANONICAL_DAY_ORDER[0];
+
+  if (LATEST_DAY_NUM > 0) {
+    for (let w = 1; w <= TOTAL_WEEKS; w++) {
+      const days     = WEEK_DAYS[w];
+      const firstNum = parseInt(days[0].slice(1),10);
+      const lastNum  = parseInt(days[days.length-1].slice(1),10);
+      if (LATEST_DAY_NUM >= firstNum) {
+        initWeek = w;
+        initDay  = LATEST_DAY_NUM <= lastNum ? ('D'+LATEST_DAY_NUM) : days[days.length-1];
+      }
+    }
+  }
+
+  currentWeek = initWeek;
+  renderWeekSelector();
+  renderDaySelector();
+  window.setDay(initDay);
 }
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded', initApp);
