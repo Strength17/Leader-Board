@@ -1,4 +1,29 @@
 
+/**
+ * SKY GRAPHICS FIGMA EDITION 1 — LEADERBOARD DATA
+ * Generated: 2026-06-11
+ */
+
+
+export const DAY_LABELS = {
+  "D1": "Day 1 — Monday, June 1, 2026",
+  "D2": "Day 2 — Tuesday, June 2, 2026",
+  "D3": "Day 3 — Wednesday, June 3, 2026",
+  "D4": "Day 4 — Thursday, June 4, 2026",
+  "D5": "Day 5 — Friday, June 5, 2026",
+  "D6": "Day 6 — Monday, June 8, 2026",
+  "D7": "Day 7 — Tuesday, June 9, 2026",
+  "D8": "Day 8 — Wednesday, June 10, 2026"
+};
+
+export const TIER_EMOJI = {
+  "PLATINUM": "🏆",
+  "GOLD": "🥇🥇",
+  "SILVER": "🥈🥈",
+  "BRONZE": "🥉🥉",
+  "UNRANKED": "⬜⬜"
+};
+
 export const PEOPLE = [
   {
     "name": "Christine Choundong",
@@ -3555,5 +3580,40 @@ export const WARNINGS = [
     "person": "Amaazee Ivanna Therese Fundoh",
     "title": "Submission Issue — D6",
     "details": "On June 8th, 2026 (Day 6), you submitted a form claiming it was for Day 1. Because you joined the programme on Day 6 and the Day 1 deadline had long passed, this submission has been recorded as your Day 6 check-in. No retroactive points for Day 1 can be awarded. Going forward, submit your form on the same day as the task to ensure your points are counted correctly."
+  }
+];
+
+export const RULES = [
+  {
+    "title": "The Check-in Rule",
+    "content": "Only the Google Form determines a check-in point (+10) and early bonus (+5 before 3PM). WhatsApp posts alone do not count as check-ins."
+  },
+  {
+    "title": "Same-Day Requirement",
+    "content": "Forms must be submitted on the actual calendar date of the task. Late submissions for past days are disqualified and earn +0 check-in points."
+  },
+  {
+    "title": "Weekly Milestone (+20)",
+    "content": "Awarded on Friday for submitting Figma work in the WhatsApp group during that week. A form submission is not required for the milestone."
+  },
+  {
+    "title": "Perfect Week (+15)",
+    "content": "Awarded on Friday for submitting 5 out of 5 valid same-day check-in forms (Monday to Friday). All 5 must be on the correct day."
+  },
+  {
+    "title": "Creativity Bonus",
+    "content": "Admin-assigned per day: Standard (+5), Good (+10), Impressive (+15), Extraordinary (+20). Only one score per person per day."
+  },
+  {
+    "title": "Public Interaction",
+    "content": "First to post in group (+5), helping a member (+5), asking a genuine question (+3), welcoming a new member (+3), sharing a tip (+3), encouragement with reactions (+2)."
+  },
+  {
+    "title": "Referral Bonus",
+    "content": "Each new member who joins the programme and pledges earns the referring person +25 points, applied once when the pledge is confirmed."
+  },
+  {
+    "title": "Work Post Bonus (+5)",
+    "content": "Awarded once per day when the check-in form shows at least one image uploaded. WhatsApp media alone does not trigger this bonus."
   }
 ];
