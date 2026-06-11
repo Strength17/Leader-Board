@@ -1,0 +1,3535 @@
+[
+  {
+    "name": "Christine Choundong",
+    "role": "Ambassador",
+    "joinedDay": "D1",
+    "allTimeTotal": 287,
+    "tier": "GOLD",
+    "days": {
+      "D1": {
+        "pts": 90,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D2": {
+        "pts": 136,
+        "submitted": true,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 2
+      },
+      "D3": {
+        "pts": 168,
+        "submitted": true,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 3
+      },
+      "D4": {
+        "pts": 178,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 4
+      },
+      "D5": {
+        "pts": 223,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 5
+      },
+      "D6": {
+        "pts": 250,
+        "submitted": true,
+        "streakDays": 4,
+        "workDone": true,
+        "workStreakDays": 6
+      },
+      "D7": {
+        "pts": 272,
+        "submitted": true,
+        "streakDays": 5,
+        "workDone": true,
+        "workStreakDays": 7
+      },
+      "D8": {
+        "pts": 287,
+        "submitted": true,
+        "streakDays": 6,
+        "workDone": true,
+        "workStreakDays": 8
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          },
+          {
+            "label": "Referral \u00d7 2",
+            "pts": 50,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You brought 2 new members in. +50 pts."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3",
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "desc": "6 valid forms submitted. +60 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ],
+            "desc": "D1:10 \u00b7 D2:20 \u00b7 D3:5 \u00b7 D4:5 \u00b7 D5:10 \u00b7 D6:5 \u00b7 D7:5. Total: +60."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3",
+              "D5",
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "desc": "Image uploaded on D1, D2, D3, D5, D6, D7, D8. +40 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Asked a genuine question",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D2"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "First to post check-in in group",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D2",
+              "D3",
+              "D4"
+            ],
+            "desc": "+15 total."
+          },
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D3"
+            ],
+            "desc": "+10 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D3",
+              "D6",
+              "D7"
+            ],
+            "desc": "+8 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "Welcomed a new member",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D2"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      },
+      {
+        "section": "BONUSES",
+        "items": [
+          {
+            "label": "Phase Completion (W1)",
+            "pts": 20,
+            "earned": true,
+            "dayHits": [
+              "D5"
+            ],
+            "desc": "5/5 days work completed. +20."
+          },
+          {
+            "label": "Special Bonus (D5)",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D5"
+            ],
+            "desc": "FB interaction bonus confirmed. +10."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You are the undisputed pacesetter of this cohort, yet your administrative discipline nearly derailed a Gold-tier performance. While your technical contributions and \"spirit of the group\" leadership on WhatsApp are elite, the D4 late submission and D5 total form blackout were unforced errors that shouldn't happen to an Ambassador. You\u2019ve proven you can do the work and lead the room; now prove you can respect the clock. Your 287 points are impressive, but they could have been untouchable.</p>"
+  },
+  {
+    "name": "Abongnwi Chrioni-Opal Forba'",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 220,
+    "tier": "SILVER",
+    "days": {
+      "D1": {
+        "pts": 45,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D2": {
+        "pts": 55,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": true,
+        "workStreakDays": 2
+      },
+      "D3": {
+        "pts": 65,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": true,
+        "workStreakDays": 3
+      },
+      "D4": {
+        "pts": 72,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": true,
+        "workStreakDays": 4
+      },
+      "D5": {
+        "pts": 145,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 5
+      },
+      "D6": {
+        "pts": 150,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 6
+      },
+      "D7": {
+        "pts": 190,
+        "submitted": true,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 7
+      },
+      "D8": {
+        "pts": 220,
+        "submitted": true,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 8
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          },
+          {
+            "label": "Referral \u00d7 1",
+            "pts": 25,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You brought 1 new member in. +25 pts."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D5",
+              "D7",
+              "D8"
+            ],
+            "desc": "3 valid forms submitted. +30 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "desc": "D1:5 \u00b7 D2:10 \u00b7 D3:10 \u00b7 D4:5 \u00b7 D5:5 \u00b7 D6:5 \u00b7 D7:5 \u00b7 D8:5. Total: +50."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D5",
+              "D7",
+              "D8"
+            ],
+            "desc": "Image uploaded on D5, D7, D8. +65 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Asked a genuine question",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D5"
+            ],
+            "desc": "+10 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D4",
+              "D5"
+            ],
+            "desc": "+6 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D5"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "Welcomed a new member",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D5"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      },
+      {
+        "section": "BONUSES",
+        "items": [
+          {
+            "label": "Phase Completion (W1)",
+            "pts": 20,
+            "earned": true,
+            "dayHits": [
+              "D5"
+            ],
+            "desc": "5/5 days work completed. +20."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Your energy is infectious, but your workflow is chaotic and unsustainable. Posting work on five separate days while neglecting the forms for four of them (D2, D3, D4, D6) is a baffling waste of effort. You are clearly putting in the hours and helping others on WhatsApp, but you're sabotaging your own standing through pure disorganization. You have the raw talent to be at the top, but you're currently your own biggest obstacle.</p>"
+  },
+  {
+    "name": "Oluwasegun Daniel Osawore",
+    "role": "Ambassador",
+    "joinedDay": "D1",
+    "allTimeTotal": 210,
+    "tier": "SILVER",
+    "days": {
+      "D1": {
+        "pts": 98,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D2": {
+        "pts": 133,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 2
+      },
+      "D3": {
+        "pts": 160,
+        "submitted": true,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 3
+      },
+      "D4": {
+        "pts": 165,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": false,
+        "workStreakDays": 3
+      },
+      "D5": {
+        "pts": 185,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 4
+      },
+      "D6": {
+        "pts": 190,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 5
+      },
+      "D7": {
+        "pts": 195,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 6
+      },
+      "D8": {
+        "pts": 210,
+        "submitted": true,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 7
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          },
+          {
+            "label": "Referral \u00d7 3",
+            "pts": 75,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You brought 3 new members in. +75 pts."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D2",
+              "D3",
+              "D8"
+            ],
+            "desc": "3 valid forms submitted. +30 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3",
+              "D5",
+              "D6",
+              "D7"
+            ],
+            "desc": "D1:10 \u00b7 D2:15 \u00b7 D3:10 \u00b7 D5:15 \u00b7 D6:5 \u00b7 D7:5. Total: +60."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D2",
+              "D3",
+              "D8"
+            ],
+            "desc": "Image uploaded on D2, D3, D8. +15 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Asked a genuine question",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D4"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "First to post check-in in group",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D5"
+            ],
+            "desc": "+10 total."
+          },
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D2"
+            ],
+            "desc": "+5 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D3",
+              "D4"
+            ],
+            "desc": "+4 total."
+          },
+          {
+            "label": "Welcomed a new member",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Oluwasegun, you are the classic \"star developer\" who refuses to use the ticketing system. Posting high-quality work in the group proves you have the skill, but failing to submit forms for D1, D4, D5, D6, and D7 is professional negligence. You are essentially doing the work for free while your peers climb the rankings. With 3 referrals and a \"first to post\" reputation, you have the engine of a Gold medalist but the paperwork of a dropout.</p>"
+  },
+  {
+    "name": "Emmanuel Karol Tchouani",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 205,
+    "tier": "SILVER",
+    "days": {
+      "D1": {
+        "pts": 60,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D2": {
+        "pts": 85,
+        "submitted": true,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 2
+      },
+      "D3": {
+        "pts": 105,
+        "submitted": true,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 3
+      },
+      "D4": {
+        "pts": 127,
+        "submitted": true,
+        "streakDays": 4,
+        "workDone": true,
+        "workStreakDays": 4
+      },
+      "D5": {
+        "pts": 185,
+        "submitted": true,
+        "streakDays": 5,
+        "workDone": true,
+        "workStreakDays": 5
+      },
+      "D6": {
+        "pts": 185,
+        "submitted": false,
+        "streakDays": 5,
+        "workDone": false,
+        "workStreakDays": 5
+      },
+      "D7": {
+        "pts": 205,
+        "submitted": true,
+        "streakDays": 6,
+        "workDone": true,
+        "workStreakDays": 6
+      },
+      "D8": {
+        "pts": 205,
+        "submitted": false,
+        "streakDays": 6,
+        "workDone": false,
+        "workStreakDays": 6
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          },
+          {
+            "label": "Referral \u00d7 1",
+            "pts": 25,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You brought 1 new member in. +25 pts."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D7"
+            ],
+            "desc": "6 valid forms submitted. +60 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D7"
+            ],
+            "desc": "D1:10 \u00b7 D2:10 \u00b7 D3:5 \u00b7 D4:5 \u00b7 D5:5 \u00b7 D7:5. Total: +40."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D7"
+            ],
+            "desc": "Image uploaded on D1, D2, D3, D4, D5, D7. +30 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D4"
+            ],
+            "desc": "+4 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "Welcomed a new member",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D5"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      },
+      {
+        "section": "BONUSES",
+        "items": [
+          {
+            "label": "Perfect Week (W1)",
+            "pts": 15,
+            "earned": true,
+            "dayHits": [
+              "D5"
+            ],
+            "desc": "5/5 valid same-day forms. +15."
+          },
+          {
+            "label": "Phase Completion (W1)",
+            "pts": 20,
+            "earned": true,
+            "dayHits": [
+              "D5"
+            ],
+            "desc": "5/5 days work completed. +20."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Your Week 1 was a masterclass in consistency\u2014a perfect streak that signaled a serious contender. However, the recent disappearance on D6 and D8 suggests a lack of stamina as we hit the home stretch. You\u2019re holding a Silver spot, but you\u2019re coasting on past glory rather than building new momentum. Silence in WhatsApp is fine if the forms are coming in, but when the forms stop, your silence just looks like a quiet exit.</p>"
+  },
+  {
+    "name": "Mbiydzenyuy Patience Dzekem",
+    "role": "Ambassador",
+    "joinedDay": "D1",
+    "allTimeTotal": 137,
+    "tier": "BRONZE",
+    "days": {
+      "D1": {
+        "pts": 30,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D2": {
+        "pts": 67,
+        "submitted": true,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 2
+      },
+      "D3": {
+        "pts": 69,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": false,
+        "workStreakDays": 2
+      },
+      "D4": {
+        "pts": 71,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": false,
+        "workStreakDays": 2
+      },
+      "D5": {
+        "pts": 71,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": false,
+        "workStreakDays": 2
+      },
+      "D6": {
+        "pts": 97,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 3
+      },
+      "D7": {
+        "pts": 97,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": false,
+        "workStreakDays": 3
+      },
+      "D8": {
+        "pts": 137,
+        "submitted": true,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 4
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D8"
+            ],
+            "desc": "3 valid forms submitted. +30 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D6",
+              "D8"
+            ],
+            "desc": "D1:10 \u00b7 D2:15 \u00b7 D6:5 \u00b7 D8:5. Total: +35."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D6",
+              "D8"
+            ],
+            "desc": "Image uploaded on D1, D2, D6, D8. +50 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Asked a genuine question",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D6"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D6"
+            ],
+            "desc": "+5 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D2",
+              "D3",
+              "D4"
+            ],
+            "desc": "+6 total."
+          },
+          {
+            "label": "Welcomed a new member",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D6"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>As an Ambassador, you should be the standard-bearer for the rules, yet you\u2019ve stumbled on the most basic technical requirements. A DQ on D6 for a late D2 form, combined with missing the Facebook interaction requirements, shows a lack of attention to detail. Your willingness to welcome new members is appreciated, but \"soft skills\" don't compensate for a failure to follow the technical roadmap. You need to tighten up your execution immediately.</p>"
+  },
+  {
+    "name": "Faith Emmanuella Busari",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 129,
+    "tier": "BRONZE",
+    "days": {
+      "D1": {
+        "pts": 65,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D2": {
+        "pts": 107,
+        "submitted": true,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 2
+      },
+      "D3": {
+        "pts": 109,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": false,
+        "workStreakDays": 2
+      },
+      "D4": {
+        "pts": 109,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": false,
+        "workStreakDays": 2
+      },
+      "D5": {
+        "pts": 129,
+        "submitted": true,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 3
+      },
+      "D6": {
+        "pts": 129,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 3
+      },
+      "D7": {
+        "pts": 129,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 3
+      },
+      "D8": {
+        "pts": 129,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 3
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          },
+          {
+            "label": "Referral \u00d7 1",
+            "pts": 25,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You brought 1 new member in. +25 pts."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D5"
+            ],
+            "desc": "3 valid forms submitted. +30 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D5"
+            ],
+            "desc": "D1:10 \u00b7 D2:20 \u00b7 D5:5. Total: +35."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D5"
+            ],
+            "desc": "Image uploaded on D1, D2, D5. +20 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Asked a genuine question",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D2"
+            ],
+            "desc": "+5 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D2",
+              "D3"
+            ],
+            "desc": "+6 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You started this marathon with a sprint but are now dragging your feet across the finish line. Valid forms on D1, D2, and D5 showed promise, but missing five out of eight days is a \"fail\" by any professional metric. Your WhatsApp engagement is the only thing keeping you relevant in this program. If you want to be a designer, you have to show up every day, not just when the inspiration strikes.</p>"
+  },
+  {
+    "name": "Irinyemi Adedayo Juliet",
+    "role": "Ambassador",
+    "joinedDay": "D1",
+    "allTimeTotal": 115,
+    "tier": "BRONZE",
+    "days": {
+      "D1": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 50,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D3": {
+        "pts": 50,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D4": {
+        "pts": 70,
+        "submitted": true,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 2
+      },
+      "D5": {
+        "pts": 70,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": false,
+        "workStreakDays": 2
+      },
+      "D6": {
+        "pts": 75,
+        "submitted": false,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 3
+      },
+      "D7": {
+        "pts": 95,
+        "submitted": true,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 4
+      },
+      "D8": {
+        "pts": 115,
+        "submitted": true,
+        "streakDays": 4,
+        "workDone": true,
+        "workStreakDays": 5
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D2",
+              "D4",
+              "D7",
+              "D8"
+            ],
+            "desc": "4 valid forms submitted. +40 total."
+          },
+          {
+            "label": "Early submission bonus",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D2"
+            ],
+            "desc": "Submitted before 3PM on D2. +5 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "desc": "D6:5 \u00b7 D7:5 \u00b7 D8:5. Total: +15."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D2",
+              "D4",
+              "D7",
+              "D8"
+            ],
+            "desc": "Image uploaded on D2, D4, D7, D8. +45 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+2 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You are the definition of \"intermittently excellent.\" When you show up (D2, D4, D7, D8), you are solid and your presence on WhatsApp is valuable. However, missing half the program (D1, D3, D5, D6) as an Ambassador sends a poor message to the participants you\u2019re supposed to be leading. Reliability is the most important ability in this industry; currently, we can only count on you every other day.</p>"
+  },
+  {
+    "name": "Amaazee Ivanna Therese Fundoh",
+    "role": "Participant",
+    "joinedDay": "D6",
+    "allTimeTotal": 110,
+    "tier": "BRONZE",
+    "days": {
+      "D1": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 45,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D7": {
+        "pts": 85,
+        "submitted": true,
+        "streakDays": 2,
+        "workDone": true,
+        "workStreakDays": 2
+      },
+      "D8": {
+        "pts": 110,
+        "submitted": true,
+        "streakDays": 3,
+        "workDone": true,
+        "workStreakDays": 3
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "desc": "3 valid forms submitted. +30 total."
+          },
+          {
+            "label": "Early submission bonus",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D6",
+              "D7"
+            ],
+            "desc": "Submitted before 3PM on D6, D7. +10 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "desc": "D6:10 \u00b7 D7:10 \u00b7 D8:5. Total: +25."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D6",
+              "D7",
+              "D8"
+            ],
+            "desc": "Image uploaded on D6, D7, D8. +25 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D7"
+            ],
+            "desc": "+5 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D6",
+              "D7"
+            ],
+            "desc": "+4 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D6",
+              "D7"
+            ],
+            "desc": "+6 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Joining on Day 6 is a massive disadvantage, but you\u2019ve handled it with more professional grace than many who started on Day 1. Your momentum is excellent, and your D6-D8 streak is a testament to your focus. While your attempt to retroactively claim D1 points was denied, your current standing of 110 points in just three days is a wake-up call to the \"Day 1 Ghosters\" who have less than half your score.</p>"
+  },
+  {
+    "name": "Frank Emmanuel",
+    "role": "Ambassador",
+    "joinedDay": "D1",
+    "allTimeTotal": 99,
+    "tier": "BRONZE",
+    "days": {
+      "D1": {
+        "pts": 58,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 58,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 58,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 63,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 63,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 99,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D7": {
+        "pts": 99,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D8": {
+        "pts": 99,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          },
+          {
+            "label": "Referral \u00d7 2",
+            "pts": 50,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You brought 2 new members in. +50 pts."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D6"
+            ],
+            "desc": "1 valid form submitted. +10 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D6"
+            ],
+            "desc": "D6:5. Total: +5."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D6"
+            ],
+            "desc": "Image uploaded on D6. +5 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Asked a genuine question",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D6"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D6"
+            ],
+            "desc": "+5 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D4",
+              "D6"
+            ],
+            "desc": "+4 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D4",
+              "D6"
+            ],
+            "desc": "+6 total."
+          },
+          {
+            "label": "Welcomed a new member",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D6"
+            ],
+            "desc": "+6 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You hit the ground running on Day 6 with a strong start, but that energy seemed to vanish by Day 7 and 8. As an Ambassador, even a late-joining one, you cannot afford to \"ghost\" after just one day of participation. Your referral count and WhatsApp activity show you have the reach, but your lack of form submissions shows a lack of follow-through. Don't be the guy who opens the door but never walks through it.</p>"
+  },
+  {
+    "name": "Malialia Celine Bride",
+    "role": "Ambassador",
+    "joinedDay": "D1",
+    "allTimeTotal": 82,
+    "tier": "BRONZE",
+    "days": {
+      "D1": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          },
+          {
+            "label": "Referral \u00d7 3",
+            "pts": 75,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You brought 3 new members in. +75 pts."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+2 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You are currently an Ambassador in name only. Having 82 points solely from referrals while submitting zero forms in eight days makes you a recruiter, not a participant in a Figma program. You are missing the entire technical core of this journey. If you don't start submitting work soon, your title as an Ambassador will be a hollow one.</p>"
+  },
+  {
+    "name": "Ranjoy-Bryan",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 30,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 30,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D2": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D3": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D4": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D5": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D6": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D7": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D8": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "1 valid form submitted. +10 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "D1:10. Total: +10."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "Image uploaded on D1. +5 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You showed up for the orientation, said the right things, and then vanished. One valid form and an intro do not make a designer. You\u2019ve ghosted for 70% of this program, and at this point, you\u2019re just a name on a list. It's time to decide if you're in the program or just watching from the sidelines.</p>"
+  },
+  {
+    "name": "Asonganyi Adel Quin",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 22,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 22,
+        "submitted": true,
+        "streakDays": 1,
+        "workDone": true,
+        "workStreakDays": 1
+      },
+      "D2": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D3": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D4": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D5": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D6": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D7": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D8": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "1 valid form submitted. +10 total."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "D1:10. Total: +10."
+          }
+        ]
+      },
+      {
+        "section": "WORK POST",
+        "items": [
+          {
+            "label": "Work post (image uploaded)",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "Image uploaded on D1. +5 total."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+2 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You encouraged others on Day 1, which was great, but then you failed to follow your own advice. You\u2019ve been absent for the vast majority of the 10 days, leaving your initial \"valid form\" to gather dust. Participation isn't a one-day event; it's a daily commitment you've failed to keep.</p>"
+  },
+  {
+    "name": "Moh Blessing Kebul",
+    "role": "Participant",
+    "joinedDay": "D2",
+    "allTimeTotal": 15,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 15,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 15,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 15,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 15,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 15,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 15,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D3"
+            ],
+            "desc": "+5 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D3"
+            ],
+            "desc": "+2 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D3"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You are the most helpful \"ghost\" in the group. You\u2019re very active on WhatsApp, sharing tips and helping others, but you haven't submitted a single form since joining on Day 2. You\u2019re like a coach who refuses to play the game. You're getting the social experience, but you're missing the technical growth and the credit you deserve.</p>"
+  },
+  {
+    "name": "Favour Hanatu Bako",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 13,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Asked a genuine question",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+2 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Your presence on WhatsApp is noted\u2014asking questions and sharing tips is good\u2014but without forms, your points are stagnant. You\u2019re stuck at 13 points because you're talking about the work instead of documenting it. Turn that curiosity into submissions.</p>"
+  },
+  {
+    "name": "Suilabayu Olga Simolen",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 12,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Helped another member",
+            "pts": 5,
+            "earned": true,
+            "dayHits": [
+              "D2"
+            ],
+            "desc": "+5 total."
+          },
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D2"
+            ],
+            "desc": "+2 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Helping members on WhatsApp is a noble trait, but it won't earn you a spot on the leaderboard. With zero forms submitted, your 12 points reflect a \"helpful spectator\" rather than a participant. We need to see your work, not just your comments.</p>"
+  },
+  {
+    "name": "Ngum-nchung Blessing Kah Geh",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 10,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+2 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Sharing tips and encouragement is the easy part. The hard part is the daily grind of Figma work and form submission, which you have entirely avoided. You\u2019re currently a cheerleader in a room full of athletes.</p>"
+  },
+  {
+    "name": "Tchouala Ange",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 10,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+2 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You\u2019ve been active in the WA group, which is a start, but 10 points and zero forms after eight days is a failing grade. You\u2019re coasting on the bare minimum of social interaction.</p>"
+  },
+  {
+    "name": "Fonyuy Berinyuy Tarkighan",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 9,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1",
+              "D3"
+            ],
+            "desc": "+4 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Encouragement on WhatsApp is \"filler\" when it isn't backed up by work. You have zero forms and 9 points. In a 10-day program, you can't afford to spend 8 days just \"encouraging.\"</p>"
+  },
+  {
+    "name": "Chunga Daina",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 8,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You shared one tip during the intro and then seemingly retired. One tip in eight days is not participation; it\u2019s a cameo appearance.</p>"
+  },
+  {
+    "name": "Percy Visiy",
+    "role": "Ambassador",
+    "joinedDay": "D1",
+    "allTimeTotal": 8,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>As an Ambassador, having 8 points and zero forms is frankly embarrassing. You provided one tip during the intro and have contributed nothing since. You are occupying a leadership role while providing zero leadership through action.</p>"
+  },
+  {
+    "name": "Bih Cherish Anne",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 7,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+2 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>\"Encouragement only\" is not a strategy for success. You have 7 points and zero work to show for it. This is a design program, not a social club.</p>"
+  },
+  {
+    "name": "Touossoc Ange",
+    "role": "Participant",
+    "joinedDay": "D1",
+    "allTimeTotal": 7,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      },
+      {
+        "section": "WHATSAPP ENGAGEMENT",
+        "items": [
+          {
+            "label": "Posted encouragement that got reactions",
+            "pts": 2,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+2 total."
+          },
+          {
+            "label": "Shared a useful tip or resource",
+            "pts": 3,
+            "earned": true,
+            "dayHits": [
+              "D1"
+            ],
+            "desc": "+3 total."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Like your peers at the bottom of the list, you are a \"social-only\" member. Seven points and zero forms suggest you are not taking the technical requirements of this program seriously.</p>"
+  },
+  {
+    "name": "Dorothy Joyce Priscille",
+    "role": "Participant",
+    "joinedDay": "D8",
+    "allTimeTotal": 5,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>Joining on Day 6 was a hurdle, and while you\u2019ve been active, your D6 submission error was a costly technical mistake. Denying retroactive points for D1 was a hard lesson in reading the rules. However, your consistency on D6 and D7 shows you have the right mindset\u2014just ensure your \"admin\" matches your effort.</p>"
+  },
+  {
+    "name": "Nzameyo Mba",
+    "role": "Participant",
+    "joinedDay": "D8",
+    "allTimeTotal": 5,
+    "tier": "UNRANKED",
+    "days": {
+      "D1": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D2": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D3": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D4": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D5": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D6": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D7": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D8": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      }
+    },
+    "breakdown": [
+      {
+        "section": "PRE-PROGRAMME",
+        "items": [
+          {
+            "label": "Pledge",
+            "pts": 5,
+            "earned": true,
+            "dayHits": null,
+            "desc": "You committed to the programme. +5 for your pledge."
+          }
+        ]
+      },
+      {
+        "section": "DAILY CHECK-INS",
+        "items": [
+          {
+            "label": "Form submission",
+            "pts": 10,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No valid form submissions yet."
+          }
+        ]
+      },
+      {
+        "section": "FIGMA WORK",
+        "items": [
+          {
+            "label": "Creativity scores",
+            "pts": null,
+            "earned": false,
+            "dayHits": null,
+            "desc": "No creativity scores awarded yet."
+          }
+        ]
+      }
+    ],
+    "roast": "<p>You\u2019ve just arrived, but you\u2019ve already made more of an impact in the WhatsApp intro than some who have been here since Day 1. It\u2019s too late for a top-tier finish, but it\u2019s the perfect time to show us how fast you can learn.</p>"
+  }
+]
