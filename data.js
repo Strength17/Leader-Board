@@ -11,7 +11,9 @@ export const DAY_LABELS = {
   "D5": "Day 5 — Friday, June 5, 2026",
   "D6": "Day 6 — Monday, June 8, 2026",
   "D7": "Day 7 — Tuesday, June 9, 2026",
-  "D8": "Day 8 — Wednesday, June 10, 2026"
+  "D8": "Day 8 — Wednesday, June 10, 2026",
+  "D9": "Day 9 — Thursday, June 11, 2026",
+  "D10": "Day 10 — Friday, June 12, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -27,7 +29,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 292,
+    "allTimeTotal": 317,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -92,6 +94,13 @@ export const PEOPLE = [
         "streakDays": 7,
         "workDone": true,
         "workStreakDays": 9
+      },
+      "D10": {
+        "pts": 317,
+        "submitted": true,
+        "streakDays": 8,
+        "workDone": true,
+        "workStreakDays": 10
       }
     },
     "breakdown": [
@@ -127,9 +136,11 @@ export const PEOPLE = [
               "D3",
               "D6",
               "D7",
-              "D8"
+              "D8",
+              "D9",
+              "D10"
             ],
-            "desc": "6 valid forms submitted. +60 total."
+            "desc": "8 valid forms submitted. +80 total."
           }
         ]
       },
@@ -147,9 +158,11 @@ export const PEOPLE = [
               "D4",
               "D5",
               "D6",
-              "D7"
+              "D7",
+              "D9",
+              "D10"
             ],
-            "desc": "D1:10 · D2:20 · D3:5 · D4:5 · D5:10 · D6:5 · D7:5 · D9:5. Total: +65."
+            "desc": "D1:10 · D2:20 · D3:5 · D4:5 · D5:10 · D6:5 · D7:5 · D9:5 · D10:10. Total: +75."
           }
         ]
       },
@@ -167,9 +180,11 @@ export const PEOPLE = [
               "D5",
               "D6",
               "D7",
-              "D8"
+              "D8",
+              "D9",
+              "D10"
             ],
-            "desc": "Image uploaded on D1, D2, D3, D5, D6, D7, D8. +40 total."
+            "desc": "Image uploaded on D1, D2, D3, D5, D6, D7, D8, D9, D10. +50 total."
           }
         ]
       },
@@ -262,14 +277,20 @@ export const PEOPLE = [
         ]
       }
     ],
+    "warnings": [
+      {
+        "title": "Incomplete Daily Requirements (D10)",
+        "details": "You are losing points by not submitting the required 5 images (only 1 submitted today). Your dashboard requirement specified 5 different images. Please refer to the Point Map PDF to understand how to fulfill this next time and avoid further point deductions for submitting redundant images."
+      }
+    ],
     "roast": "<p>You are the undisputed pacesetter of this cohort, yet your administrative discipline nearly derailed a Gold-tier performance. While your technical contributions and \"spirit of the group\" leadership on WhatsApp are elite, the D4 late submission and D5 total form blackout were unforced errors that shouldn't happen to an Ambassador. You’ve proven you can do the work and lead the room; now prove you can respect the clock. Your 287 points are impressive, but they could have been untouchable.</p>"
   },
   {
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 260,
-    "tier": "SILVER",
+    "allTimeTotal": 250,
+    "tier": "GOLD",
     "days": {
       "D1": {
         "pts": 45,
@@ -328,7 +349,14 @@ export const PEOPLE = [
         "workStreakDays": 8
       },
       "D9": {
-        "pts": 260,
+        "pts": 220,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 8
+      },
+      "D10": {
+        "pts": 250,
         "submitted": true,
         "streakDays": 4,
         "workDone": true,
@@ -366,7 +394,7 @@ export const PEOPLE = [
               "D5",
               "D7",
               "D8",
-              "D9"
+              "D10"
             ],
             "desc": "4 valid forms submitted. +40 total."
           }
@@ -388,9 +416,9 @@ export const PEOPLE = [
               "D6",
               "D7",
               "D8",
-              "D9"
+              "D10"
             ],
-            "desc": "D1:5 · D2:10 · D3:10 · D4:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5. Total: +55."
+            "desc": "D1:5 · D2:10 · D3:10 · D4:5 · D5:5 · D6:5 · D7:5 · D8:5 · D10:10. Total: +60."
           }
         ]
       },
@@ -404,9 +432,10 @@ export const PEOPLE = [
             "dayHits": [
               "D5",
               "D7",
-              "D8"
+              "D8",
+              "D10"
             ],
-            "desc": "Image uploaded on D5, D7, D8. +65 total."
+            "desc": "Image uploaded on D5, D7, D8, D10. +80 total."
           }
         ]
       },
