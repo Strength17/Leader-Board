@@ -184,7 +184,7 @@ export const PEOPLE = [
               "D9",
               "D10"
             ],
-            "desc": "Image uploaded on D1, D2, D3, D5, D6, D7, D8, D9, D10. +50 total."
+            "desc": "D1:5 · D2:5 · D3:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5 · D10:5. Total: +45."
           }
         ]
       },
@@ -435,7 +435,7 @@ export const PEOPLE = [
               "D8",
               "D10"
             ],
-            "desc": "Image uploaded on D5, D7, D8, D10. +80 total."
+            "desc": "D5:5 · D7:5 · D8:5 · D10:5. Total: +20."
           }
         ]
       },
@@ -505,6 +505,12 @@ export const PEOPLE = [
             "desc": "5/5 days work completed. +20."
           }
         ]
+      }
+    ],
+    "warnings": [
+      {
+        "title": "Incomplete Daily Requirements (D10)",
+        "details": "You were assigned 10 points for your images today (5 points × 2) because only 2 unique images were uploaded. To earn the full 25 points daily, you must upload 5 distinct, unique images. Redundant images of the same screen do not qualify for the full bonus."
       }
     ],
     "roast": "<p>Your energy is infectious, but your workflow is chaotic and unsustainable. Posting work on five separate days while neglecting the forms for four of them (D2, D3, D4, D6) is a baffling waste of effort. You are clearly putting in the hours and helping others on WhatsApp, but you're sabotaging your own standing through pure disorganization. You have the raw talent to be at the top, but you're currently your own biggest obstacle.</p>"
@@ -647,7 +653,7 @@ export const PEOPLE = [
               "D3",
               "D8"
             ],
-            "desc": "Image uploaded on D2, D3, D8. +15 total."
+            "desc": "D2:5 · D3:5 · D8:5. Total: +15."
           }
         ]
       },
@@ -850,7 +856,7 @@ export const PEOPLE = [
               "D5",
               "D7"
             ],
-            "desc": "Image uploaded on D1, D2, D3, D4, D5, D7. +30 total."
+            "desc": "D1:5 · D2:5 · D3:5 · D4:5 · D5:5 · D7:5. Total: +30."
           }
         ]
       },
@@ -1043,7 +1049,7 @@ export const PEOPLE = [
               "D6",
               "D8"
             ],
-            "desc": "Image uploaded on D1, D2, D6, D8. +50 total."
+            "desc": "D1:5 · D2:5 · D6:5 · D8:5. Total: +20."
           }
         ]
       },
@@ -1228,7 +1234,7 @@ export const PEOPLE = [
               "D2",
               "D5"
             ],
-            "desc": "Image uploaded on D1, D2, D5. +20 total."
+            "desc": "D1:5 · D2:5 · D5:5. Total: +15."
           }
         ]
       },
@@ -1408,7 +1414,7 @@ export const PEOPLE = [
               "D7",
               "D8"
             ],
-            "desc": "Image uploaded on D2, D4, D7, D8. +45 total."
+            "desc": "D2:5 · D4:5 · D7:5 · D8:5. Total: +20."
           }
         ]
       },
@@ -1576,7 +1582,7 @@ export const PEOPLE = [
               "D7",
               "D8"
             ],
-            "desc": "Image uploaded on D6, D7, D8. +25 total."
+            "desc": "D6:5 · D7:5 · D8:5. Total: +15."
           }
         ]
       },
@@ -1746,7 +1752,7 @@ export const PEOPLE = [
             "dayHits": [
               "D6"
             ],
-            "desc": "Image uploaded on D6. +5 total."
+            "desc": "D6:5. Total: +5."
           }
         ]
       },
@@ -2060,7 +2066,7 @@ export const PEOPLE = [
             "dayHits": [
               "D1"
             ],
-            "desc": "Image uploaded on D1. +5 total."
+            "desc": "D1:5. Total: +5."
           }
         ]
       }
@@ -2189,7 +2195,7 @@ export const PEOPLE = [
             "dayHits": [
               "D1"
             ],
-            "desc": "Image uploaded on D1. +5 total."
+            "desc": "D1:5. Total: +5."
           }
         ]
       },

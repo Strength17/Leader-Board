@@ -120,9 +120,6 @@ window.setWeek = function(week) {
 function renderDaySelector() {
   const tray = document.getElementById('day-selector');
   if (!tray) return;
-  tray.classList.remove('day-tray');
-  void tray.offsetWidth;
-  tray.classList.add('day-tray');
   const days = WEEK_DAYS[currentWeek];
   let html = '';
   days.forEach((dKey, idx) => {
@@ -205,7 +202,7 @@ function renderBoard() {
       const workStreak = p.dayData.workStreakDays || 0;
       const workDone   = p.dayData.workDone       || false;
       const subNote    = p.dayData.submitted ? `📋 ${formStreak}-day form · ✏️ ${workStreak}-day work` : workDone ? `✏️ Work done · form not submitted` : `+${p.delta} pts today`;
-      html += `<div class="row ${rc}" style="animation-delay:${i*0.05}s" onclick="window.openPanel('${safeName(p.name)}')">
+      html += `<div class="row ${rc}" onclick="window.openPanel('${safeName(p.name)}')">
         <div class="rank-num" style="color:${ptsColor(rank)}">${rank}</div>
         <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">${subNote}</div></div>
         <div><div class="pts" style="color:${ptsColor(rank)}">${p.pts}</div><div class="pts-label">points</div></div>
@@ -218,7 +215,7 @@ function renderBoard() {
     if (inactive.length > 0) {
       html += `<div class="not-active-label">Not Active This Day — ${inactive.length} member${inactive.length!==1?'s':''}</div>`;
       inactive.forEach((p,i) => {
-        html += `<div class="row dns" style="animation-delay:${(active.length+i)*0.04}s" onclick="window.openPanel('${safeName(p.name)}')">
+        html += `<div class="row dns" onclick="window.openPanel('${safeName(p.name)}')">
           <div class="rank-num" style="color:var(--muted)">—</div>
           <div class="name-col"><div class="name">${p.name}</div><div class="name-sub">Total: ${p.pts} pts · no activity today</div></div>
           <div><div class="pts" style="color:var(--muted)">${p.pts}</div><div class="pts-label">total</div></div>
@@ -317,7 +314,48 @@ window.switchPTab = function(tab) {
 };
 
 /* Celebration & Init */
-window.triggerCelebration = function(duration) { /* ... */ };
+window.triggerCelebration = function(duration) {
+  const container = document.getElementById('celebration-container');
+  if (!container) return;
+  container.innerHTML = '';
+
+  const colors = ['#F59E0B', '#10B981', '#6366F1', '#EC4899', '#3B82F6', '#FFD700'];
+  const totalDuration = duration || 5000;
+
+  /* Confetti rain */
+  const pieceCount = 150;
+  for (let i = 0; i < pieceCount; i++) {
+    const bit = document.createElement('div');
+    bit.className = 'confetti';
+    const size = Math.random() * 8 + 6;
+    bit.style.width = size + 'px';
+    bit.style.height = (size * (Math.random() * 0.6 + 0.6)) + 'px';
+    bit.style.background = colors[Math.floor(Math.random() * colors.length)];
+    bit.style.left = Math.random() * 100 + '%';
+    bit.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    const fallDuration = Math.random() * 2.5 + 2.5; /* 2.5s - 5s */
+    const fallDelay = Math.random() * 0.6;          /* 0 - 0.6s */
+    bit.style.animationDuration = fallDuration + 's';
+    bit.style.animationDelay = fallDelay + 's';
+    container.appendChild(bit);
+  }
+
+  /* Pop-out celebratory text */
+  const messages = ['🎉 WEEK DONE! 🎉', 'AMAZING WORK!', 'KEEP GOING! 🔥', '🏆 LEGENDARY 🏆'];
+  messages.forEach((msg, i) => {
+    const pop = document.createElement('div');
+    pop.className = 'pop-msg';
+    pop.textContent = msg;
+    pop.style.left = (15 + Math.random() * 50) + '%';
+    pop.style.top = (20 + Math.random() * 40) + '%';
+    pop.style.color = colors[i % colors.length];
+    pop.style.animationDelay = (i * 0.3) + 's';
+    container.appendChild(pop);
+  });
+
+  setTimeout(() => { container.innerHTML = ''; }, totalDuration);
+};
+
 function initApp() {
   let initWeek = 1, initDay = CANONICAL_DAY_ORDER[0];
   if (LATEST_DAY_NUM > 0) {

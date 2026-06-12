@@ -24,13 +24,6 @@ body::before{
     radial-gradient(ellipse 70% 60% at 85% 85%,rgba(16,185,129,.14) 0%,transparent 50%),
     radial-gradient(ellipse 50% 45% at 50% 50%,rgba(245,158,11,.08) 0%,transparent 60%),
     radial-gradient(ellipse 60% 40% at 80% 10%,rgba(56,189,248,.12) 0%,transparent 50%);
-  animation:auroraDrift 18s ease-in-out infinite alternate;will-change:transform;
-}
-@keyframes auroraDrift{
-  0%{transform:translate(0,0) scale(1);}
-  33%{transform:translate(-12px,8px) scale(1.02);}
-  66%{transform:translate(8px,-6px) scale(.98);}
-  100%{transform:translate(-4px,12px) scale(1.01);}
 }
 body::after{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
@@ -38,9 +31,7 @@ body::after{
     linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
     linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
   background-size:48px 48px;
-  animation:gridShift 25s linear infinite;will-change:transform;
 }
-@keyframes gridShift{from{transform:translate(0,0);}to{transform:translate(48px,48px);}}
 
 /* ── GOLDEN ESSENCE (Day 5/10/15…) ── */
 body.essence-golden::before{
@@ -67,11 +58,6 @@ body.essence-golden::before{
   color:var(--amber);background:rgba(245,158,11,.08);
   border:1px solid rgba(245,158,11,.3);padding:6px 18px;border-radius:24px;
   margin-bottom:18px;box-shadow:0 0 20px rgba(245,158,11,.1);
-  animation:tagPulse 3s ease-in-out infinite;
-}
-@keyframes tagPulse{
-  0%,100%{box-shadow:0 0 20px rgba(245,158,11,.1);}
-  50%{box-shadow:0 0 35px rgba(245,158,11,.22);}
 }
 .title{
   font-family:'Bebas Neue',sans-serif;
@@ -131,12 +117,7 @@ body.essence-golden::before{
 
 .day-tray{
   padding:12px 14px 14px;display:flex;gap:7px;flex-wrap:wrap;
-  animation:trayReveal .28s cubic-bezier(.4,0,.2,1) both;
   background:rgba(255,255,255,.015);
-}
-@keyframes trayReveal{
-  from{opacity:0;transform:translateY(-6px);}
-  to{opacity:1;transform:translateY(0);}
 }
 .day-pill{
   position:relative;padding:9px 18px;border-radius:10px;cursor:pointer;
@@ -224,7 +205,6 @@ body.essence-golden::before{
   border-radius:14px;margin-bottom:8px;
   background:var(--card);border:1px solid var(--gb);
   transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;
-  animation:rowReveal .5s cubic-bezier(.4,0,.2,1) both;
   cursor:pointer;backdrop-filter:blur(10px);
   position:relative;overflow:hidden;will-change:transform;
 }
@@ -246,10 +226,6 @@ body.essence-golden::before{
 .row.rank-2{border-color:rgba(148,163,184,.45);background:linear-gradient(135deg,rgba(148,163,184,.09),var(--card));}
 .row.rank-3{border-color:rgba(205,127,50,.4);background:linear-gradient(135deg,rgba(205,127,50,.09),var(--card));}
 .row.dns{opacity:.42;}
-@keyframes rowReveal{
-  from{opacity:0;transform:translateY(16px);filter:blur(4px);}
-  to{opacity:1;transform:translateY(0);filter:blur(0);}
-}
 .rank-num{font-family:'Bebas Neue',sans-serif;font-size:24px;text-align:center;color:var(--muted);line-height:1;}
 .rank-1 .rank-num{color:var(--amber);text-shadow:0 0 16px rgba(245,158,11,.5);}
 .rank-2 .rank-num{color:#CBD5E1;}
@@ -511,11 +487,6 @@ body.essence-golden::before{
   box-shadow:0 10px 28px rgba(79,70,229,.5);
   display:flex;align-items:center;justify-content:center;
   transition:all .35s cubic-bezier(.175,.885,.32,1.275);
-  animation:fabBreath 3s ease-in-out infinite;
-}
-@keyframes fabBreath{
-  0%,100%{box-shadow:0 10px 28px rgba(79,70,229,.5);}
-  50%{box-shadow:0 14px 36px rgba(79,70,229,.6);}
 }
 .celebrate-btn:hover{transform:scale(1.12) rotate(15deg);}
 .celebrate-btn:active{transform:scale(.92);}
