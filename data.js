@@ -289,7 +289,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 250,
+    "allTimeTotal": 255,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -356,7 +356,7 @@ export const PEOPLE = [
         "workStreakDays": 8
       },
       "D10": {
-        "pts": 250,
+        "pts": 255,
         "submitted": true,
         "streakDays": 4,
         "workDone": true,
