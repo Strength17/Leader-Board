@@ -13,7 +13,8 @@ export const DAY_LABELS = {
   "D7": "Day 7 — Tuesday, June 9, 2026",
   "D8": "Day 8 — Wednesday, June 10, 2026",
   "D9": "Day 9 — Thursday, June 11, 2026",
-  "D10": "Day 10 — Friday, June 12, 2026"
+  "D10": "Day 10 — Friday, June 12, 2026",
+  "D11": "Day 11 — Monday, June 15, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -29,7 +30,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 317,
+    "allTimeTotal": 365,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -101,9 +102,56 @@ export const PEOPLE = [
         "streakDays": 8,
         "workDone": true,
         "workStreakDays": 10
+      },
+      "D11": {
+        "pts": 365,
+        "submitted": true,
+        "streakDays": 9,
+        "workDone": true,
+        "workStreakDays": 11
       }
     },
     "breakdown": [
+      {
+        "section": "WA SESSIONS (TIPS & GAMES)",
+        "items": [
+          {
+            "label": "WA Session Quiz",
+            "pts": 20,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: WA Session Quiz"
+          },
+          {
+            "label": "Creativity Bonus",
+            "pts": 5,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: Creativity Bonus"
+          },
+          {
+            "label": "1st to post check-in",
+            "pts": 3,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: 1st to post check-in"
+          },
+          {
+            "label": "Early Submission",
+            "pts": 15,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: Early Submission"
+          },
+          {
+            "label": "Shared image from PDF",
+            "pts": 5,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: Shared image from PDF"
+          }
+        ]
+      },
       {
         "section": "PRE-PROGRAMME",
         "items": [
@@ -289,7 +337,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 255,
+    "allTimeTotal": 302,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -349,21 +397,68 @@ export const PEOPLE = [
         "workStreakDays": 8
       },
       "D9": {
-        "pts": 220,
+        "pts": 225,
         "submitted": false,
         "streakDays": 3,
-        "workDone": false,
-        "workStreakDays": 8
+        "workDone": true,
+        "workStreakDays": 9
       },
       "D10": {
-        "pts": 255,
+        "pts": 260,
         "submitted": true,
         "streakDays": 4,
         "workDone": true,
-        "workStreakDays": 9
+        "workStreakDays": 10
+      },
+      "D11": {
+        "pts": 302,
+        "submitted": true,
+        "streakDays": 5,
+        "workDone": true,
+        "workStreakDays": 11
       }
     },
     "breakdown": [
+      {
+        "section": "WA SESSIONS (TIPS & GAMES)",
+        "items": [
+          {
+            "label": "WA Session Quiz",
+            "pts": 19,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: WA Session Quiz"
+          },
+          {
+            "label": "Creativity Bonus",
+            "pts": 5,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: Creativity Bonus"
+          },
+          {
+            "label": "Participation",
+            "pts": 3,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: Participation"
+          },
+          {
+            "label": "Regular Submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: Regular Submission"
+          },
+          {
+            "label": "Shared 5 images showing work",
+            "pts": 5,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: Shared 5 images showing work"
+          }
+        ]
+      },
       {
         "section": "PRE-PROGRAMME",
         "items": [
@@ -416,9 +511,10 @@ export const PEOPLE = [
               "D6",
               "D7",
               "D8",
+              "D9",
               "D10"
             ],
-            "desc": "D1:5 · D2:10 · D3:10 · D4:5 · D5:5 · D6:5 · D7:5 · D8:5 · D10:10. Total: +60."
+            "desc": "D1:5 · D2:10 · D3:10 · D4:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5 · D10:10. Total: +65."
           }
         ]
       },
@@ -1448,7 +1544,7 @@ export const PEOPLE = [
     "name": "Amaazee Ivanna Therese Fundoh",
     "role": "Participant",
     "joinedDay": "D6",
-    "allTimeTotal": 130,
+    "allTimeTotal": 150,
     "tier": "BRONZE",
     "days": {
       "D1": {
@@ -1513,9 +1609,35 @@ export const PEOPLE = [
         "streakDays": 4,
         "workDone": true,
         "workStreakDays": 4
+      },
+      "D11": {
+        "pts": 150,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 4
       }
     },
     "breakdown": [
+      {
+        "section": "WA SESSIONS (TIPS & GAMES)",
+        "items": [
+          {
+            "label": "WA Session Quiz",
+            "pts": 17,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: WA Session Quiz"
+          },
+          {
+            "label": "Participation",
+            "pts": 3,
+            "earned": true,
+            "dayHits": ["D11"],
+            "desc": "Day 11 bonus: Participation"
+          }
+        ]
+      },
       {
         "section": "PRE-PROGRAMME",
         "items": [

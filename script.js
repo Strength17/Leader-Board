@@ -38,6 +38,9 @@ function getCanonicalDayOrder(){
 
 function computeLiveDays(){
   const set = new Set();
+  if (typeof DAY_LABELS !== 'undefined' && DAY_LABELS) {
+    Object.keys(DAY_LABELS).forEach(d => set.add(d));
+  }
   (PEOPLE || []).forEach(p => {
     if (p.days) Object.keys(p.days).forEach(d => set.add(d));
   });

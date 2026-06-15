@@ -6,30 +6,29 @@ Use this file to record daily points and activities. This format ensures I can a
 
 | Name | Form (✅/❌) | Work (✅/❌) | Creativity (Pts) | Early (✅/❌) | Other Bonuses / Notes |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| Christine Choundong | | | | | |
-| Abongnwi Chrioni-Opal Forba' | | | | | |
-| Oluwasegun Daniel Osawore | | | | | |
-| Emmanuel Karol Tchouani | | | | | |
-| Mbiydzenyuy Patience Dzekem | | | | | |
-| Faith Emmanuella Busari | | | | | |
-| Irinyemi Adedayo Juliet | | | | | |
-| Amaazee Ivanna Therese Fundoh | | | | | |
-| Frank Emmanuel | | | | | |
-| Malialia Celine Bride | | | | | |
-| Ranjoy-Bryan | | | | | |
-| Asonganyi Adel Quin | | | | | |
-| Moh Blessing Kebul | | | | | |
-| Favour Hanatu Bako | | | | | |
-| Suilabayu Olga Simolen | | | | | |
-| Ngum-nchung Blessing Kah Geh | | | | | |
-| Tchouala Ange | | | | | |
-| Fonyuy Berinyuy Tarkighan | | | | | |
-| Chunga Daina | | | | | |
-| Percy Visiy | | | | | |
-| Bih Cherish Anne | | | | | |
-| Touossoc Ange | | | | | |
-| Dorothy Joyce Priscille | | | | | |
-| Nzameyo Mba | | | | | |
+| Christine Choundong | ✅ | ✅ | 5 | ✅ | Quiz:+20, 1st post:+3, Shared img:+5 |
+| Abongnwi Chrioni-Opal Forba' | ✅ | ✅ | 5 | ❌ | Quiz:+19, Participation:+3, Shared 5 imgs:+5 |
+| Amaazee Ivanna Therese Fundoh | ❌ | ❌ | 0 | ❌ | Quiz:+17, Participation:+3 |
+| Oluwasegun Daniel Osawore | ❌ | ❌ | 0 | ❌ | |
+| Emmanuel Karol Tchouani | ❌ | ❌ | 0 | ❌ | |
+| Mbiydzenyuy Patience Dzekem | ❌ | ❌ | 0 | ❌ | |
+| Faith Emmanuella Busari | ❌ | ❌ | 0 | ❌ | |
+| Frank Emmanuel | ❌ | ❌ | 0 | ❌ | |
+| Malialia Celine Bride | ❌ | ❌ | 0 | ❌ | |
+| Ranjoy-Bryan | ❌ | ❌ | 0 | ❌ | |
+| Asonganyi Adel Quin | ❌ | ❌ | 0 | ❌ | |
+| Moh Blessing Kebul | ❌ | ❌ | 0 | ❌ | |
+| Favour Hanatu Bako | ❌ | ❌ | 0 | ❌ | |
+| Suilabayu Olga Simolen | ❌ | ❌ | 0 | ❌ | |
+| Ngum-nchung Blessing Kah Geh | ❌ | ❌ | 0 | ❌ | |
+| Tchouala Ange | ❌ | ❌ | 0 | ❌ | |
+| Fonyuy Berinyuy Tarkighan | ❌ | ❌ | 0 | ❌ | |
+| Chunga Daina | ❌ | ❌ | 0 | ❌ | |
+| Percy Visiy | ❌ | ❌ | 0 | ❌ | |
+| Bih Cherish Anne | ❌ | ❌ | 0 | ❌ | |
+| Touossoc Ange | ❌ | ❌ | 0 | ❌ | |
+| Dorothy Joyce Priscille | ❌ | ❌ | 0 | ❌ | |
+| Nzameyo Mba | ❌ | ❌ | 0 | ❌ | |
 
 ---
 
