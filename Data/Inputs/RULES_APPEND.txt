@@ -1,9 +1,0 @@
-export const RULES = [
-  { title: "The Check-in Rule", content: "Only the Google Form determines a check-in point (+10) and early bonus (+5). WhatsApp posts do not count for check-ins." },
-  { title: "Same-Day Requirement", content: "Forms must be submitted on the actual day of the task. Late submissions for past days are disqualified." },
-  { title: "Weekly Milestone (+20)", content: "Awarded for submitting your Figma work in the WhatsApp group. Does NOT require a form submission." },
-  { title: "Perfect Week (+15)", content: "Awarded on Friday for successfully submitting 5 out of 5 valid same-day forms (Mon–Fri)." },
-  { title: "Creativity Bonus", content: "Admin-assigned: Standard (+5), Good (+10), Impressive (+15), Extraordinary (+20)." },
-  { title: "Public Interaction", content: "Helping others (+5), Welcoming new members (+3), or sharing a useful tip (+3) earns you points." },
-  { title: "Work Streak", content: "Total days you've shared Figma work in WhatsApp. Capped at current program day count." }
-];
