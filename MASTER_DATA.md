@@ -30,6 +30,34 @@ Use this file to record daily points and activities. This format ensures I can a
 | Dorothy Joyce Priscille | ❌ | ❌ | 0 | ❌ | |
 | Nzameyo Mba | ❌ | ❌ | 0 | ❌ | |
 
+## Day 12 — Tuesday, June 16, 2026
+
+| Name | Form (✅/❌) | Work (✅/❌) | Creativity (Pts) | Early (✅/❌) | Other Bonuses / Notes |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| Christine Choundong | ✅ | ✅ | 5 | ✅ | Quiz:+17, Participation:+3, 1st to post:+3, Regular Sub:+10, Shared img:+5 |
+| Abongnwi Chrioni-Opal Forba' | ✅ | ✅ | 5 | ❌ | Quiz:+11, Participation:+3 |
+| Muhammed | ❌ | ❌ | 0 | ❌ | Participation:+3, Quiz:+1 |
+| Amaazee Ivanna Therese Fundoh | ❌ | ❌ | 0 | ❌ | |
+| Oluwasegun Daniel Osawore | ❌ | ❌ | 0 | ❌ | |
+| Emmanuel Karol Tchouani | ❌ | ❌ | 0 | ❌ | |
+| Mbiydzenyuy Patience Dzekem | ❌ | ❌ | 0 | ❌ | |
+| Faith Emmanuella Busari | ❌ | ❌ | 0 | ❌ | |
+| Frank Emmanuel | ❌ | ❌ | 0 | ❌ | |
+| Malialia Celine Bride | ❌ | ❌ | 0 | ❌ | |
+| Ranjoy-Bryan | ❌ | ❌ | 0 | ❌ | |
+| Moh Blessing Kebul | ❌ | ❌ | 0 | ❌ | |
+| Favour Hanatu Bako | ❌ | ❌ | 0 | ❌ | |
+| Suilabayu Olga Simolen | ❌ | ❌ | 0 | ❌ | |
+| Ngum-nchung Blessing Kah Geh | ❌ | ❌ | 0 | ❌ | |
+| Tchouala Ange | ❌ | ❌ | 0 | ❌ | |
+| Fonyuy Berinyuy Tarkighan | ❌ | ❌ | 0 | ❌ | |
+| Chunga Daina | ❌ | ❌ | 0 | ❌ | |
+| Percy Visiy | ❌ | ❌ | 0 | ❌ | |
+| Bih Cherish Anne | ❌ | ❌ | 0 | ❌ | |
+| Touossoc Ange | ❌ | ❌ | 0 | ❌ | |
+| Dorothy Joyce Priscille | ❌ | ❌ | 0 | ❌ | |
+| Nzameyo Mba | ❌ | ❌ | 0 | ❌ | |
+
 ---
 
 ### Instructions for Updates:

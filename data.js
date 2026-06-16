@@ -14,7 +14,8 @@ export const DAY_LABELS = {
   "D8": "Day 8 — Wednesday, June 10, 2026",
   "D9": "Day 9 — Thursday, June 11, 2026",
   "D10": "Day 10 — Friday, June 12, 2026",
-  "D11": "Day 11 — Monday, June 15, 2026"
+  "D11": "Day 11 — Monday, June 15, 2026",
+  "D12": "Day 12 — Tuesday, June 16, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -30,7 +31,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 365,
+    "allTimeTotal": 408,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -109,6 +110,13 @@ export const PEOPLE = [
         "streakDays": 9,
         "workDone": true,
         "workStreakDays": 11
+      },
+      "D12": {
+        "pts": 408,
+        "submitted": true,
+        "streakDays": 10,
+        "workDone": true,
+        "workStreakDays": 12
       }
     },
     "breakdown": [
@@ -117,17 +125,45 @@ export const PEOPLE = [
         "items": [
           {
             "label": "WA Session Quiz",
-            "pts": 20,
+            "pts": 37,
             "earned": true,
-            "dayHits": ["D11"],
-            "desc": "Day 11 bonus: WA Session Quiz"
+            "dayHits": ["D11", "D12"],
+            "desc": "D11:20 · D12:17. Total: +37."
           },
           {
             "label": "Creativity Bonus",
+            "pts": 10,
+            "earned": true,
+            "dayHits": ["D11", "D12"],
+            "desc": "D11:5 · D12:5. Total: +10."
+          },
+          {
+            "label": "Participation",
+            "pts": 3,
+            "earned": true,
+            "dayHits": ["D12"],
+            "desc": "Day 12 bonus: Participation"
+          },
+          {
+            "label": "1st to post",
+            "pts": 3,
+            "earned": true,
+            "dayHits": ["D12"],
+            "desc": "Day 12 bonus: 1st to post"
+          },
+          {
+            "label": "Regular Submission",
+            "pts": 10,
+            "earned": true,
+            "dayHits": ["D12"],
+            "desc": "Day 12 bonus: Regular Submission"
+          },
+          {
+            "label": "Shared image",
             "pts": 5,
             "earned": true,
-            "dayHits": ["D11"],
-            "desc": "Day 11 bonus: Creativity Bonus"
+            "dayHits": ["D12"],
+            "desc": "Day 12 bonus: Shared image"
           },
           {
             "label": "1st to post check-in",
@@ -186,9 +222,10 @@ export const PEOPLE = [
               "D7",
               "D8",
               "D9",
-              "D10"
+              "D10",
+              "D12"
             ],
-            "desc": "8 valid forms submitted. +80 total."
+            "desc": "9 valid forms submitted. +90 total."
           }
         ]
       },
@@ -208,9 +245,10 @@ export const PEOPLE = [
               "D6",
               "D7",
               "D9",
-              "D10"
+              "D10",
+              "D12"
             ],
-            "desc": "D1:10 · D2:20 · D3:5 · D4:5 · D5:10 · D6:5 · D7:5 · D9:5 · D10:10. Total: +75."
+            "desc": "D1:10 · D2:20 · D3:5 · D4:5 · D5:10 · D6:5 · D7:5 · D9:5 · D10:10 · D12:5. Total: +80."
           }
         ]
       },
@@ -230,9 +268,10 @@ export const PEOPLE = [
               "D7",
               "D8",
               "D9",
-              "D10"
+              "D10",
+              "D12"
             ],
-            "desc": "D1:5 · D2:5 · D3:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5 · D10:5. Total: +45."
+            "desc": "D1:5 · D2:5 · D3:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5 · D10:5 · D12:5. Total: +50."
           }
         ]
       },
@@ -327,17 +366,17 @@ export const PEOPLE = [
     ],
     "warnings": [
       {
-        "title": "Incomplete Daily Requirements (D10)",
-        "details": "You are losing points by not submitting the required 5 images (only 1 submitted today). Your dashboard requirement specified 5 different images. Please refer to the Point Map PDF to understand how to fulfill this next time and avoid further point deductions for submitting redundant images."
+        "title": "Technical Discipline (Resolved)",
+        "details": "Since the D10 image submission error, your attention to detail has been perfect. You've recovered your momentum and remain the standard-bearer for the cohort. Keep this level of precision through the final days."
       }
     ],
-    "roast": "<p>You are the undisputed pacesetter of this cohort, yet your administrative discipline nearly derailed a Gold-tier performance. While your technical contributions and \"spirit of the group\" leadership on WhatsApp are elite, the D4 late submission and D5 total form blackout were unforced errors that shouldn't happen to an Ambassador. You’ve proven you can do the work and lead the room; now prove you can respect the clock. Your 287 points are impressive, but they could have been untouchable.</p>"
+    "roast": "<p>You are the undisputed pacesetter, currently sitting on a mountain of 408 points. Even with the D4/D5 stumbles, your recovery has been elite. You’ve proven you can lead the room and respect the clock. At this point, you aren't just competing against the others; you're competing against your own high standards. Don't let the finish line make you complacent.</p>"
   },
   {
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 302,
+    "allTimeTotal": 321,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -416,6 +455,13 @@ export const PEOPLE = [
         "streakDays": 5,
         "workDone": true,
         "workStreakDays": 11
+      },
+      "D12": {
+        "pts": 321,
+        "submitted": true,
+        "streakDays": 6,
+        "workDone": true,
+        "workStreakDays": 12
       }
     },
     "breakdown": [
@@ -424,24 +470,24 @@ export const PEOPLE = [
         "items": [
           {
             "label": "WA Session Quiz",
-            "pts": 19,
+            "pts": 30,
             "earned": true,
-            "dayHits": ["D11"],
-            "desc": "Day 11 bonus: WA Session Quiz"
+            "dayHits": ["D11", "D12"],
+            "desc": "D11:19 · D12:11. Total: +30."
           },
           {
             "label": "Creativity Bonus",
-            "pts": 5,
+            "pts": 10,
             "earned": true,
-            "dayHits": ["D11"],
-            "desc": "Day 11 bonus: Creativity Bonus"
+            "dayHits": ["D11", "D12"],
+            "desc": "D11:5 · D12:5. Total: +10."
           },
           {
             "label": "Participation",
-            "pts": 3,
+            "pts": 6,
             "earned": true,
-            "dayHits": ["D11"],
-            "desc": "Day 11 bonus: Participation"
+            "dayHits": ["D11", "D12"],
+            "desc": "D11:3 · D12:3. Total: +6."
           },
           {
             "label": "Regular Submission",
@@ -489,9 +535,10 @@ export const PEOPLE = [
               "D5",
               "D7",
               "D8",
-              "D10"
+              "D10",
+              "D12"
             ],
-            "desc": "4 valid forms submitted. +40 total."
+            "desc": "5 valid forms submitted. +50 total."
           }
         ]
       },
@@ -512,9 +559,10 @@ export const PEOPLE = [
               "D7",
               "D8",
               "D9",
-              "D10"
+              "D10",
+              "D12"
             ],
-            "desc": "D1:5 · D2:10 · D3:10 · D4:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5 · D10:10. Total: +65."
+            "desc": "D1:5 · D2:10 · D3:10 · D4:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5 · D10:10 · D12:5. Total: +70."
           }
         ]
       },
@@ -529,9 +577,10 @@ export const PEOPLE = [
               "D5",
               "D7",
               "D8",
-              "D10"
+              "D10",
+              "D12"
             ],
-            "desc": "D5:5 · D7:5 · D8:5 · D10:5. Total: +20."
+            "desc": "D5:5 · D7:5 · D8:5 · D10:5 · D12:5. Total: +25."
           }
         ]
       },
@@ -605,11 +654,11 @@ export const PEOPLE = [
     ],
     "warnings": [
       {
-        "title": "Incomplete Daily Requirements (D10)",
-        "details": "You were assigned 10 points for your images today (5 points × 2) because only 2 unique images were uploaded. To earn the full 25 points daily, you must upload 5 distinct, unique images. Redundant images of the same screen do not qualify for the full bonus."
+        "title": "Administrative Discipline",
+        "details": "You've missed the check-in form for 6 out of 12 days. While your work is Gold-tier, your status as a participant is at risk if you continue to bypass the primary tracking system. Talent without discipline is a wasted opportunity."
       }
     ],
-    "roast": "<p>Your energy is infectious, but your workflow is chaotic and unsustainable. Posting work on five separate days while neglecting the forms for four of them (D2, D3, D4, D6) is a baffling waste of effort. You are clearly putting in the hours and helping others on WhatsApp, but you're sabotaging your own standing through pure disorganization. You have the raw talent to be at the top, but you're currently your own biggest obstacle.</p>"
+    "roast": "<p>You have the raw talent to be at the very top, and your 321 points prove it. However, your 50% form submission rate is a professional embarrassment. You’re like a star athlete who skips practice but expects to start every game. Your energy on WhatsApp is elite, but your 'paperwork' is Bronze-tier. If you want to stay in Gold, you need to start respecting the forms as much as you respect the design board.</p>"
   },
   {
     "name": "Oluwasegun Daniel Osawore",
@@ -806,7 +855,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>Oluwasegun, you are the classic \"star developer\" who refuses to use the ticketing system. Posting high-quality work in the group proves you have the skill, but failing to submit forms for D1, D4, D5, D6, and D7 is professional negligence. You are essentially doing the work for free while your peers climb the rankings. With 3 referrals and a \"first to post\" reputation, you have the engine of a Gold medalist but the paperwork of a dropout.</p>"
+    "roast": "<p>Oluwasegun, you are the ghost of the Google Form. Posting high-quality work in the group proves you have the skill, but failing to submit forms for the majority of the days is professional negligence. You are essentially doing the work for free while your peers climb the rankings. You have the engine of a Gold medalist but the paperwork of a dropout.</p>",
+    "warnings": [
+      {
+        "title": "Final Warning: Disqualification Risk",
+        "details": "You have missed 5+ forms. You are currently disqualified from Gold/Platinum contention regardless of work quality. Return to check-ins immediately to remain in Silver."
+      }
+    ]
   },
   {
     "name": "Emmanuel Karol Tchouani",
@@ -1013,7 +1068,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>Your Week 1 was a masterclass in consistency—a perfect streak that signaled a serious contender. However, the recent disappearance on D6 and D8 suggests a lack of stamina as we hit the home stretch. You’re holding a Silver spot, but you’re coasting on past glory rather than building new momentum. Silence in WhatsApp is fine if the forms are coming in, but when the forms stop, your silence just looks like a quiet exit.</p>"
+    "roast": "<p>You were the Week 1 wonder who forgot there was a Week 2. Your perfect streak in the first five days was elite, but your recent disappearance is baffling. You’re holding a Silver spot on life support. Return to the board before you become a memory.</p>",
+    "warnings": [
+      {
+        "title": "Inactivity Warning",
+        "details": "Missing 3 of the last 4 days. Return to check-ins immediately to retain Silver standing and avoid further ranking drops."
+      }
+    ]
   },
   {
     "name": "Mbiydzenyuy Patience Dzekem",
@@ -1193,7 +1254,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>As an Ambassador, you should be the standard-bearer for the rules, yet you’ve stumbled on the most basic technical requirements. A DQ on D6 for a late D2 form, combined with missing the Facebook interaction requirements, shows a lack of attention to detail. Your willingness to welcome new members is appreciated, but \"soft skills\" don't compensate for a failure to follow the technical roadmap. You need to tighten up your execution immediately.</p>"
+    "roast": "<p>You are the Ambassador who greets everyone but avoids the Figma board. Leadership requires technical action, not just social pleasantries. Your output is currently below the average for active participants. It's time to lead by example, not just by words.</p>",
+    "warnings": [
+      {
+        "title": "Ambassador Performance Review",
+        "details": "Your technical output (forms/work) is inconsistent. As an Ambassador, your ranking should be in the top tier. Immediate improvement in check-in frequency is required."
+      }
+    ]
   },
   {
     "name": "Faith Emmanuella Busari",
@@ -1369,7 +1436,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>You started this marathon with a sprint but are now dragging your feet across the finish line. Valid forms on D1, D2, and D5 showed promise, but missing five out of eight days is a \"fail\" by any professional metric. Your WhatsApp engagement is the only thing keeping you relevant in this program. If you want to be a designer, you have to show up every day, not just when the inspiration strikes.</p>"
+    "roast": "<p>You sprinted at the start and have been crawling ever since. Three valid forms in twelve days is a participation failure. You’re currently coasting on the points of your early-program enthusiasm. Don't let your ranking hit zero before the program ends.</p>",
+    "warnings": [
+      {
+        "title": "Inactivity Warning",
+        "details": "6 missed days. You are one day away from falling into the Unranked tier. Return to active status immediately."
+      }
+    ]
   },
   {
     "name": "Irinyemi Adedayo Juliet",
@@ -1538,7 +1611,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>You are the definition of \"intermittently excellent.\" When you show up (D2, D4, D7, D8), you are solid and your presence on WhatsApp is valuable. However, missing half the program (D1, D3, D5, D6) as an Ambassador sends a poor message to the participants you’re supposed to be leading. Reliability is the most important ability in this industry; currently, we can only count on you every other day.</p>"
+    "roast": "<p>You are the definition of \"intermittently excellent.\" Your presence on WhatsApp is valuable, but missing half the program as an Ambassador sends a poor message. Reliability is the most important ability in this industry; currently, we can only count on you every other day.</p>",
+    "warnings": [
+      {
+        "title": "Consistency Warning",
+        "details": "Your 'every other day' participation is holding you back from Silver. As an Ambassador, your inconsistency is a missed opportunity to lead by example. Return to daily check-ins immediately."
+      }
+    ]
   },
   {
     "name": "Amaazee Ivanna Therese Fundoh",
@@ -1743,7 +1822,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>Joining on Day 6 is a massive disadvantage, but you’ve handled it with more professional grace than many who started on Day 1. Your momentum is excellent, and your D6-D8 streak is a testament to your focus. While your attempt to retroactively claim D1 points was denied, your current standing of 110 points in just three days is a wake-up call to the \"Day 1 Ghosters\" who have less than half your score.</p>"
+    "roast": "<p>The Day 6 latecomer who is currently outperforming half the original cohort. Your focus is sharp, but the Day 11 blackout was an unforced error. Don't let the momentum you've built go to waste in these final days.</p>",
+    "warnings": [
+      {
+        "title": "D11 Momentum Warning",
+        "details": "You missed the check-in after a perfect 4-day streak. Your standing is solid, but consistency is key to securing a top Bronze or even Silver finish."
+      }
+    ]
   },
   {
     "name": "Frank Emmanuel",
@@ -1932,7 +2017,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>You hit the ground running on Day 6 with a strong start, but that energy seemed to vanish by Day 7 and 8. As an Ambassador, even a late-joining one, you cannot afford to \"ghost\" after just one day of participation. Your referral count and WhatsApp activity show you have the reach, but your lack of form submissions shows a lack of follow-through. Don't be the guy who opens the door but never walks through it.</p>"
+    "roast": "<p>You hit the ground running for exactly one day. As an Ambassador, this level of absenteeism is unacceptable. You have the social reach, but you lack the follow-through. Don't be the person who opens the door for others but never walks through it themselves.</p>",
+    "warnings": [
+      {
+        "title": "Ghosting Warning",
+        "details": "3 consecutive days without a form. As an Ambassador, your lack of participation is being noted. Leadership requires presence and technical commitment."
+      }
+    ]
   },
   {
     "name": "Malialia Celine Bride",
@@ -2064,7 +2155,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>You are currently an Ambassador in name only. Having 82 points solely from referrals while submitting zero forms in eight days makes you a recruiter, not a participant in a Figma program. You are missing the entire technical core of this journey. If you don't start submitting work soon, your title as an Ambassador will be a hollow one.</p>"
+    "roast": "<p>You are currently an Ambassador in name only. Having 82 points solely from referrals while submitting zero forms in twelve days makes you a recruiter, not a participant in a Figma program. You are missing the entire technical core of this journey. If you don't start submitting work soon, your title as an Ambassador will remain a hollow one.</p>"
   },
   {
     "name": "Ranjoy-Bryan",
@@ -2193,7 +2284,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>You showed up for the orientation, said the right things, and then vanished. One valid form and an intro do not make a designer. You’ve ghosted for 70% of this program, and at this point, you’re just a name on a list. It's time to decide if you're in the program or just watching from the sidelines.</p>"
+    "roast": "<p>You showed up for the orientation, said the right things, and then vanished. One valid form and an intro do not make a designer. You’ve ghosted for the majority of this program, and at this point, you’re just a name on a list. It's time to decide if you're in the program or just watching from the sidelines.</p>"
   },
   {
     "name": "Asonganyi Adel Quin",
@@ -2336,13 +2427,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>You encouraged others on Day 1, which was great, but then you failed to follow your own advice. You’ve been absent for the vast majority of the 10 days, leaving your initial \"valid form\" to gather dust. Participation isn't a one-day event; it's a daily commitment you've failed to keep.</p>"
+    "roast": "<p>You encouraged others on Day 1, which was great, but then you failed to follow your own advice. You’ve been absent for the vast majority of the program, leaving your initial \"valid form\" to gather dust. Participation isn't a one-day event; it's a daily commitment you've failed to keep.</p>"
   },
   {
-    "name": "Moh Blessing Kebul",
+    "name": "Muhammed",
     "role": "Participant",
     "joinedDay": "D2",
-    "allTimeTotal": 15,
+    "allTimeTotal": 19,
     "tier": "UNRANKED",
     "days": {
       "D1": {
@@ -2407,9 +2498,35 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D12": {
+        "pts": 19,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
+      {
+        "section": "WA SESSIONS (TIPS & GAMES)",
+        "items": [
+          {
+            "label": "WA Session Quiz",
+            "pts": 1,
+            "earned": true,
+            "dayHits": ["D12"],
+            "desc": "Day 12 bonus: WA Session Quiz"
+          },
+          {
+            "label": "Participation",
+            "pts": 3,
+            "earned": true,
+            "dayHits": ["D12"],
+            "desc": "Day 12 bonus: Participation"
+          }
+        ]
+      },
       {
         "section": "PRE-PROGRAMME",
         "items": [
@@ -2479,7 +2596,13 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>You are the most helpful \"ghost\" in the group. You’re very active on WhatsApp, sharing tips and helping others, but you haven't submitted a single form since joining on Day 2. You’re like a coach who refuses to play the game. You're getting the social experience, but you're missing the technical growth and the credit you deserve.</p>"
+    "roast": "<p>Finally, some signs of life! You participated today after being prompted, earning points for participation and the quiz. It's a start, but remember that the leaderboard is built on Figma work and form submissions, not just reactions. Let's see if you can maintain this momentum and start filling out those forms.</p>",
+    "warnings": [
+      {
+        "title": "Form Submission Blackout",
+        "details": "0 forms submitted. Your WhatsApp interactions are the best in the group, but they don't count towards technical progress. Submit your first form today to officially join the leaderboard race!"
+      }
+    ]
   },
   {
     "name": "Favour Hanatu Bako",
@@ -3770,7 +3893,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>Joining on Day 6 was a hurdle, and while you’ve been active, your D6 submission error was a costly technical mistake. Denying retroactive points for D1 was a hard lesson in reading the rules. However, your consistency on D6 and D7 shows you have the right mindset—just ensure your \"admin\" matches your effort.</p>"
+    "roast": "<p>Joining on Day 8 means you missed the first 70% of the program, making it nearly impossible to climb the rankings. You're currently at the bottom of the list with just 5 points. Unless you plan on pulling off a miracle with zero forms so far, your stay here might just be as a silent observer.</p>"
   },
   {
     "name": "Nzameyo Mba",
@@ -3881,7 +4004,7 @@ export const PEOPLE = [
         ]
       }
     ],
-    "roast": "<p>You’ve just arrived, but you’ve already made more of an impact in the WhatsApp intro than some who have been here since Day 1. It’s too late for a top-tier finish, but it’s the perfect time to show us how fast you can learn.</p>"
+    "roast": "<p>You’ve just arrived on Day 8, which is like showing up to a movie during the end credits. You have the bare minimum 5 points. If you want to leave an impression, you need to start submitting work immediately, otherwise you're just a name on the credits roll.</p>"
   }
 ];
 
