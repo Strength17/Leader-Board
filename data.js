@@ -17,7 +17,8 @@ export const DAY_LABELS = {
   "D11": "Day 11 — Monday, June 15, 2026",
   "D12": "Day 12 — Tuesday, June 16, 2026",
   "D13": "Day 13 — Wednesday, June 17, 2026",
-  "D14": "Day 14 — Thursday, June 18, 2026"
+  "D14": "Day 14 — Thursday, June 18, 2026",
+  "D15": "Day 15 — Friday, June 19, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -133,6 +134,13 @@ export const PEOPLE = [
         "streakDays": 12,
         "workDone": true,
         "workStreakDays": 14
+      },
+      "D15": {
+        "pts": 462,
+        "submitted": true,
+        "streakDays": 13,
+        "workDone": true,
+        "workStreakDays": 15
       }
     },
     "breakdown": [
@@ -148,10 +156,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 20,
+            "pts": 25,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D14"],
-            "desc": "D11:5 · D12:5 · D13:5 · D14:5. Total: +20."
+            "dayHits": ["D11", "D12", "D13", "D14", "D15"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5. Total: +25."
           },
           {
             "label": "Participation",
@@ -162,10 +170,10 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 9,
+            "pts": 12,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14"],
-            "desc": "D12:3 · D13:3 · D14:3. Total: +9."
+            "dayHits": ["D12", "D13", "D14", "D15"],
+            "desc": "D12:3 · D13:3 · D14:3 · D15:3. Total: +12."
           },
           {
             "label": "Regular Submission",
