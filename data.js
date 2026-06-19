@@ -16,7 +16,8 @@ export const DAY_LABELS = {
   "D10": "Day 10 — Friday, June 12, 2026",
   "D11": "Day 11 — Monday, June 15, 2026",
   "D12": "Day 12 — Tuesday, June 16, 2026",
-  "D13": "Day 13 — Wednesday, June 17, 2026"
+  "D13": "Day 13 — Wednesday, June 17, 2026",
+  "D14": "Day 14 — Thursday, June 18, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -32,7 +33,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 431,
+    "allTimeTotal": 454,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -125,6 +126,13 @@ export const PEOPLE = [
         "streakDays": 11,
         "workDone": true,
         "workStreakDays": 13
+      },
+      "D14": {
+        "pts": 454,
+        "submitted": true,
+        "streakDays": 12,
+        "workDone": true,
+        "workStreakDays": 14
       }
     },
     "breakdown": [
@@ -140,10 +148,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 15,
+            "pts": 20,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13"],
-            "desc": "D11:5 · D12:5 · D13:5. Total: +15."
+            "dayHits": ["D11", "D12", "D13", "D14"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5. Total: +20."
           },
           {
             "label": "Participation",
@@ -154,24 +162,24 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 6,
+            "pts": 9,
             "earned": true,
-            "dayHits": ["D12", "D13"],
-            "desc": "D12:3 · D13:3. Total: +6."
+            "dayHits": ["D12", "D13", "D14"],
+            "desc": "D12:3 · D13:3 · D14:3. Total: +9."
           },
           {
             "label": "Regular Submission",
-            "pts": 20,
+            "pts": 30,
             "earned": true,
-            "dayHits": ["D12", "D13"],
-            "desc": "D12:10 · D13:10. Total: +20."
+            "dayHits": ["D12", "D13", "D14"],
+            "desc": "D12:10 · D13:10 · D14:10. Total: +30."
           },
           {
             "label": "Shared image",
-            "pts": 10,
+            "pts": 15,
             "earned": true,
-            "dayHits": ["D12", "D13"],
-            "desc": "D12:5 · D13:5. Total: +10."
+            "dayHits": ["D12", "D13", "D14"],
+            "desc": "D12:5 · D13:5 · D14:5. Total: +15."
           },
           {
             "label": "1st to post check-in",
@@ -232,9 +240,10 @@ export const PEOPLE = [
               "D9",
               "D10",
               "D12",
-              "D13"
+              "D13",
+              "D14"
             ],
-            "desc": "10 valid forms submitted. +100 total."
+            "desc": "11 valid forms submitted. +110 total."
           }
         ]
       },
@@ -280,9 +289,10 @@ export const PEOPLE = [
               "D9",
               "D10",
               "D12",
-              "D13"
+              "D13",
+              "D14"
             ],
-            "desc": "D1:5 · D2:5 · D3:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5 · D10:5 · D12:5 · D13:5. Total: +55."
+            "desc": "D1:5 · D2:5 · D3:5 · D5:5 · D6:5 · D7:5 · D8:5 · D9:5 · D10:5 · D12:5 · D13:5 · D14:5. Total: +60."
           }
         ]
       },
