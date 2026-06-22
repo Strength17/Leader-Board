@@ -18,7 +18,8 @@ export const DAY_LABELS = {
   "D12": "Day 12 — Tuesday, June 16, 2026",
   "D13": "Day 13 — Wednesday, June 17, 2026",
   "D14": "Day 14 — Thursday, June 18, 2026",
-  "D15": "Day 15 — Friday, June 19, 2026"
+  "D15": "Day 15 — Friday, June 19, 2026",
+  "D16": "Day 16 — Monday, June 22, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -34,7 +35,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 454,
+    "allTimeTotal": 485,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -141,6 +142,13 @@ export const PEOPLE = [
         "streakDays": 13,
         "workDone": true,
         "workStreakDays": 15
+      },
+      "D16": {
+        "pts": 485,
+        "submitted": true,
+        "streakDays": 14,
+        "workDone": true,
+        "workStreakDays": 16
       }
     },
     "breakdown": [
@@ -156,10 +164,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 25,
+            "pts": 30,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D14", "D15"],
-            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5. Total: +25."
+            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5. Total: +30."
           },
           {
             "label": "Participation",
@@ -170,24 +178,24 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 12,
+            "pts": 15,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D15"],
-            "desc": "D12:3 · D13:3 · D14:3 · D15:3. Total: +12."
+            "dayHits": ["D12", "D13", "D14", "D15", "D16"],
+            "desc": "D12:3 · D13:3 · D14:3 · D15:3 · D16:3. Total: +15."
           },
           {
             "label": "Regular Submission",
-            "pts": 30,
+            "pts": 40,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14"],
-            "desc": "D12:10 · D13:10 · D14:10. Total: +30."
+            "dayHits": ["D12", "D13", "D14", "D16"],
+            "desc": "D12:10 · D13:10 · D14:10 · D16:10. Total: +40."
           },
           {
             "label": "Shared image",
-            "pts": 15,
+            "pts": 20,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14"],
-            "desc": "D12:5 · D13:5 · D14:5. Total: +15."
+            "dayHits": ["D12", "D13", "D14", "D16"],
+            "desc": "D12:5 · D13:5 · D14:5 · D16:5. Total: +20."
           },
           {
             "label": "1st to post check-in",
@@ -405,7 +413,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 346,
+    "allTimeTotal": 351,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -498,6 +506,13 @@ export const PEOPLE = [
         "streakDays": 7,
         "workDone": true,
         "workStreakDays": 13
+      },
+      "D16": {
+        "pts": 351,
+        "submitted": false,
+        "streakDays": 7,
+        "workDone": true,
+        "workStreakDays": 14
       }
     },
     "breakdown": [
@@ -513,10 +528,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 20,
+            "pts": 25,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13"],
-            "desc": "D11:5 · D12:5 · D13:10. Total: +20."
+            "dayHits": ["D11", "D12", "D13", "D16"],
+            "desc": "D11:5 · D12:5 · D13:10 · D16:5. Total: +25."
           },
           {
             "label": "Participation",
