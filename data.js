@@ -20,7 +20,8 @@ export const DAY_LABELS = {
   "D14": "Day 14 — Thursday, June 18, 2026",
   "D15": "Day 15 — Friday, June 19, 2026",
   "D16": "Day 16 — Monday, June 22, 2026",
-  "D17": "Day 17 — Tuesday, June 23, 2026"
+  "D17": "Day 17 — Tuesday, June 23, 2026",
+  "D18": "Day 18 — Wednesday, June 24, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -36,7 +37,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 490,
+    "allTimeTotal": 495,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -157,6 +158,13 @@ export const PEOPLE = [
         "streakDays": 15,
         "workDone": true,
         "workStreakDays": 17
+      },
+      "D18": {
+        "pts": 495,
+        "submitted": true,
+        "streakDays": 16,
+        "workDone": true,
+        "workStreakDays": 18
       }
     },
     "breakdown": [
@@ -172,10 +180,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 35,
+            "pts": 40,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17"],
-            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5. Total: +35."
+            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5. Total: +40."
           },
           {
             "label": "Participation",
@@ -421,7 +429,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 374,
+    "allTimeTotal": 389,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -528,6 +536,13 @@ export const PEOPLE = [
         "streakDays": 7,
         "workDone": true,
         "workStreakDays": 15
+      },
+      "D18": {
+        "pts": 389,
+        "submitted": false,
+        "streakDays": 7,
+        "workDone": true,
+        "workStreakDays": 16
       }
     },
     "breakdown": [
@@ -543,10 +558,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 30,
+            "pts": 35,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D16", "D17"],
-            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5. Total: +30."
+            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18"],
+            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5. Total: +35."
           },
           {
             "label": "Participation",
@@ -557,24 +572,24 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 3,
+            "pts": 6,
             "earned": true,
-            "dayHits": ["D17"],
-            "desc": "Day 17 bonus: 1st to post"
+            "dayHits": ["D17", "D18"],
+            "desc": "D17:3 · D18:3. Total: +6."
           },
           {
             "label": "Regular Submission",
-            "pts": 30,
+            "pts": 40,
             "earned": true,
-            "dayHits": ["D11", "D13", "D17"],
-            "desc": "D11:10 · D13:10 · D17:10. Total: +30."
+            "dayHits": ["D11", "D13", "D17", "D18"],
+            "desc": "D11:10 · D13:10 · D17:10 · D18:10. Total: +40."
           },
           {
             "label": "Shared work images",
-            "pts": 15,
+            "pts": 20,
             "earned": true,
-            "dayHits": ["D11", "D13", "D17"],
-            "desc": "D11:5 (5 imgs) · D13:5 (4 imgs) · D17:5 (5 imgs). Total: +15."
+            "dayHits": ["D11", "D13", "D17", "D18"],
+            "desc": "D11:5 (5 imgs) · D13:5 (4 imgs) · D17:5 (5 imgs) · D18:5 (2 imgs). Total: +20."
           }
         ]
       },
