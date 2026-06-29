@@ -21,7 +21,9 @@ export const DAY_LABELS = {
   "D15": "Day 15 — Friday, June 19, 2026",
   "D16": "Day 16 — Monday, June 22, 2026",
   "D17": "Day 17 — Tuesday, June 23, 2026",
-  "D18": "Day 18 — Wednesday, June 24, 2026"
+  "D18": "Day 18 — Wednesday, June 24, 2026",
+  "D19": "Day 19 — Thursday, June 25, 2026",
+  "D20": "Day 20 — Friday, June 26, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -37,7 +39,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 495,
+    "allTimeTotal": 523,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -165,6 +167,20 @@ export const PEOPLE = [
         "streakDays": 16,
         "workDone": true,
         "workStreakDays": 18
+      },
+      "D19": {
+        "pts": 500,
+        "submitted": true,
+        "streakDays": 17,
+        "workDone": true,
+        "workStreakDays": 19
+      },
+      "D20": {
+        "pts": 523,
+        "submitted": true,
+        "streakDays": 18,
+        "workDone": true,
+        "workStreakDays": 20
       }
     },
     "breakdown": [
@@ -180,10 +196,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 40,
+            "pts": 50,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18"],
-            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5. Total: +40."
+            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5. Total: +50."
           },
           {
             "label": "Participation",
@@ -194,24 +210,24 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 15,
+            "pts": 18,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D15", "D16"],
-            "desc": "D12:3 · D13:3 · D14:3 · D15:3 · D16:3. Total: +15."
+            "dayHits": ["D12", "D13", "D14", "D15", "D16", "D20"],
+            "desc": "D12:3 · D13:3 · D14:3 · D15:3 · D16:3 · D20:3. Total: +18."
           },
           {
             "label": "Regular Submission",
-            "pts": 40,
+            "pts": 50,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D16"],
-            "desc": "D12:10 · D13:10 · D14:10 · D16:10. Total: +40."
+            "dayHits": ["D12", "D13", "D14", "D16", "D20"],
+            "desc": "D12:10 · D13:10 · D14:10 · D16:10 · D20:10. Total: +50."
           },
           {
             "label": "Shared image",
-            "pts": 20,
+            "pts": 25,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D16"],
-            "desc": "D12:5 · D13:5 · D14:5 · D16:5. Total: +20."
+            "dayHits": ["D12", "D13", "D14", "D16", "D20"],
+            "desc": "D12:5 · D13:5 · D14:5 · D16:5 · D20:5. Total: +25."
           },
           {
             "label": "1st to post check-in",
@@ -273,9 +289,10 @@ export const PEOPLE = [
               "D10",
               "D12",
               "D13",
-              "D14"
+              "D14",
+              "D20"
             ],
-            "desc": "11 valid forms submitted. +110 total."
+            "desc": "12 valid forms submitted. +120 total."
           }
         ]
       },
@@ -429,7 +446,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 389,
+    "allTimeTotal": 424,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -532,17 +549,31 @@ export const PEOPLE = [
       },
       "D17": {
         "pts": 374,
-        "submitted": false,
-        "streakDays": 7,
+        "submitted": true,
+        "streakDays": 8,
         "workDone": true,
         "workStreakDays": 15
       },
       "D18": {
         "pts": 389,
-        "submitted": false,
-        "streakDays": 7,
+        "submitted": true,
+        "streakDays": 9,
         "workDone": true,
         "workStreakDays": 16
+      },
+      "D19": {
+        "pts": 404,
+        "submitted": true,
+        "streakDays": 10,
+        "workDone": true,
+        "workStreakDays": 17
+      },
+      "D20": {
+        "pts": 424,
+        "submitted": true,
+        "streakDays": 11,
+        "workDone": true,
+        "workStreakDays": 18
       }
     },
     "breakdown": [
@@ -558,10 +589,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 35,
+            "pts": 45,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18"],
-            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5. Total: +35."
+            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18", "D19", "D20"],
+            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5. Total: +45."
           },
           {
             "label": "Participation",
@@ -572,24 +603,24 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 6,
+            "pts": 9,
             "earned": true,
-            "dayHits": ["D17", "D18"],
-            "desc": "D17:3 · D18:3. Total: +6."
+            "dayHits": ["D17", "D18", "D19"],
+            "desc": "D17:3 · D18:3 · D19:3. Total: +9."
           },
           {
             "label": "Regular Submission",
-            "pts": 40,
+            "pts": 60,
             "earned": true,
-            "dayHits": ["D11", "D13", "D17", "D18"],
-            "desc": "D11:10 · D13:10 · D17:10 · D18:10. Total: +40."
+            "dayHits": ["D11", "D13", "D17", "D18", "D19", "D20"],
+            "desc": "D11:10 · D13:10 · D17:10 · D18:10 · D19:10 · D20:10. Total: +60."
           },
           {
             "label": "Shared work images",
-            "pts": 20,
+            "pts": 30,
             "earned": true,
-            "dayHits": ["D11", "D13", "D17", "D18"],
-            "desc": "D11:5 (5 imgs) · D13:5 (4 imgs) · D17:5 (5 imgs) · D18:5 (2 imgs). Total: +20."
+            "dayHits": ["D11", "D13", "D17", "D18", "D19", "D20"],
+            "desc": "D11:5 (5 imgs) · D13:5 (4 imgs) · D17:5 (5 imgs) · D18:5 (2 imgs) · D19:5 (5 imgs) · D20:5 (5 imgs). Total: +30."
           }
         ]
       },
@@ -625,9 +656,13 @@ export const PEOPLE = [
               "D8",
               "D10",
               "D12",
-              "D13"
+              "D13",
+              "D17",
+              "D18",
+              "D19",
+              "D20"
             ],
-            "desc": "6 valid forms submitted. +60 total."
+            "desc": "10 valid forms submitted. +100 total."
           }
         ]
       },
