@@ -39,148 +39,155 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 523,
+    "allTimeTotal": 614,
     "tier": "GOLD",
     "days": {
       "D1": {
-        "pts": 90,
+        "pts": 140,
         "submitted": true,
         "streakDays": 1,
         "workDone": true,
         "workStreakDays": 1
       },
       "D2": {
-        "pts": 136,
+        "pts": 186,
         "submitted": true,
         "streakDays": 2,
         "workDone": true,
         "workStreakDays": 2
       },
       "D3": {
-        "pts": 168,
+        "pts": 218,
         "submitted": true,
         "streakDays": 3,
         "workDone": true,
         "workStreakDays": 3
       },
       "D4": {
-        "pts": 178,
+        "pts": 228,
         "submitted": false,
         "streakDays": 3,
         "workDone": true,
         "workStreakDays": 4
       },
       "D5": {
-        "pts": 223,
+        "pts": 273,
         "submitted": false,
         "streakDays": 3,
         "workDone": true,
         "workStreakDays": 5
       },
       "D6": {
-        "pts": 250,
+        "pts": 300,
         "submitted": true,
         "streakDays": 4,
         "workDone": true,
         "workStreakDays": 6
       },
       "D7": {
-        "pts": 272,
+        "pts": 322,
         "submitted": true,
         "streakDays": 5,
         "workDone": true,
         "workStreakDays": 7
       },
       "D8": {
-        "pts": 287,
+        "pts": 337,
         "submitted": true,
         "streakDays": 6,
         "workDone": true,
         "workStreakDays": 8
       },
       "D9": {
-        "pts": 292,
+        "pts": 342,
         "submitted": true,
         "streakDays": 7,
         "workDone": true,
         "workStreakDays": 9
       },
       "D10": {
-        "pts": 317,
+        "pts": 367,
         "submitted": true,
         "streakDays": 8,
         "workDone": true,
         "workStreakDays": 10
       },
       "D11": {
-        "pts": 365,
+        "pts": 422,
         "submitted": true,
         "streakDays": 9,
         "workDone": true,
         "workStreakDays": 11
       },
       "D12": {
-        "pts": 408,
+        "pts": 469,
         "submitted": true,
         "streakDays": 10,
         "workDone": true,
         "workStreakDays": 12
       },
       "D13": {
-        "pts": 431,
+        "pts": 494,
         "submitted": true,
         "streakDays": 11,
         "workDone": true,
         "workStreakDays": 13
       },
       "D14": {
-        "pts": 454,
+        "pts": 519,
         "submitted": true,
         "streakDays": 12,
         "workDone": true,
         "workStreakDays": 14
       },
       "D15": {
-        "pts": 462,
+        "pts": 529,
         "submitted": true,
         "streakDays": 13,
         "workDone": true,
         "workStreakDays": 15
       },
       "D16": {
-        "pts": 485,
+        "pts": 554,
         "submitted": true,
         "streakDays": 14,
         "workDone": true,
         "workStreakDays": 16
       },
       "D17": {
-        "pts": 490,
+        "pts": 559,
         "submitted": true,
         "streakDays": 15,
         "workDone": true,
         "workStreakDays": 17
       },
       "D18": {
-        "pts": 495,
+        "pts": 564,
         "submitted": true,
         "streakDays": 16,
         "workDone": true,
         "workStreakDays": 18
       },
       "D19": {
-        "pts": 500,
+        "pts": 569,
         "submitted": true,
         "streakDays": 17,
         "workDone": true,
         "workStreakDays": 19
       },
       "D20": {
-        "pts": 523,
+        "pts": 594,
         "submitted": true,
         "streakDays": 18,
         "workDone": true,
         "workStreakDays": 20
+      },
+      "D21": {
+        "pts": 614,
+        "submitted": true,
+        "streakDays": 19,
+        "workDone": true,
+        "workStreakDays": 21
       }
     },
     "breakdown": [
@@ -189,17 +196,17 @@ export const PEOPLE = [
         "items": [
           {
             "label": "WA Session Quiz",
-            "pts": 37,
+            "pts": 44,
             "earned": true,
             "dayHits": ["D11", "D12"],
-            "desc": "D11:20 · D12:17. Total: +37."
+            "desc": "D11:25 · D12:19. Total: +44."
           },
           {
             "label": "Creativity Bonus",
-            "pts": 50,
+            "pts": 55,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20"],
-            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5. Total: +50."
+            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20", "D21"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5. Total: +55."
           },
           {
             "label": "Participation",
@@ -210,28 +217,28 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 18,
+            "pts": 30,
             "earned": true,
             "dayHits": ["D12", "D13", "D14", "D15", "D16", "D20"],
-            "desc": "D12:3 · D13:3 · D14:3 · D15:3 · D16:3 · D20:3. Total: +18."
+            "desc": "D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D20:5. Total: +30."
           },
           {
             "label": "Regular Submission",
-            "pts": 50,
+            "pts": 60,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D16", "D20"],
-            "desc": "D12:10 · D13:10 · D14:10 · D16:10 · D20:10. Total: +50."
+            "dayHits": ["D12", "D13", "D14", "D16", "D20", "D21"],
+            "desc": "D12:10 · D13:10 · D14:10 · D16:10 · D20:10 · D21:10. Total: +60."
           },
           {
             "label": "Shared image",
-            "pts": 25,
+            "pts": 30,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D16", "D20"],
-            "desc": "D12:5 · D13:5 · D14:5 · D16:5 · D20:5. Total: +25."
+            "dayHits": ["D12", "D13", "D14", "D16", "D20", "D21"],
+            "desc": "D12:5 · D13:5 · D14:5 · D16:5 · D20:5 · D21:5. Total: +30."
           },
           {
             "label": "1st to post check-in",
-            "pts": 3,
+            "pts": 5,
             "earned": true,
             "dayHits": ["D11"],
             "desc": "Day 11 bonus: 1st to post check-in"
@@ -263,11 +270,11 @@ export const PEOPLE = [
             "desc": "You committed to the programme. +5 for your pledge."
           },
           {
-            "label": "Referral × 2",
-            "pts": 50,
+            "label": "Referral × 4",
+            "pts": 100,
             "earned": true,
             "dayHits": null,
-            "desc": "You brought 2 new members in. +50 pts."
+            "desc": "You brought 4 new members in. +100 pts."
           }
         ]
       },
@@ -290,9 +297,10 @@ export const PEOPLE = [
               "D12",
               "D13",
               "D14",
-              "D20"
+              "D20",
+              "D21"
             ],
-            "desc": "12 valid forms submitted. +120 total."
+            "desc": "13 valid forms submitted. +130 total."
           }
         ]
       },
@@ -437,16 +445,16 @@ export const PEOPLE = [
     "warnings": [
       {
         "title": "Technical Discipline (Resolved)",
-        "details": "Since the D10 image submission error, your attention to detail has been perfect. You've recovered your momentum and remain the standard-bearer for the cohort. Keep this level of precision through the final days."
+        "details": "Since the D10 image submission error, your attention to detail has been flawless. You've held that standard through Day 21, with no further lapses. There are no open warnings on your record — keep this discipline through the final stretch."
       }
     ],
-    "roast": "<p>You are the undisputed pacesetter, currently sitting on a mountain of 408 points. Even with the D4/D5 stumbles, your recovery has been elite. You’ve proven you can lead the room and respect the clock. At this point, you aren't just competing against the others; you're competing against your own high standards. Don't let the finish line make you complacent.</p>"
+    "roast": "<p>614 points and counting — you're still the cohort's pacesetter, and the gap behind you keeps growing. The D4/D5 stumbles are a distant memory; what's left is a long, clean run of regular submissions, shared work, and zero administrative drama. The only thing standing between you and a perfect finish is you. Don't let the comfort of leading make you sloppy on the last few days — finish the way you started.</p>"
   },
   {
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 424,
+    "allTimeTotal": 444,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -574,6 +582,13 @@ export const PEOPLE = [
         "streakDays": 11,
         "workDone": true,
         "workStreakDays": 18
+      },
+      "D21": {
+        "pts": 444,
+        "submitted": true,
+        "streakDays": 12,
+        "workDone": true,
+        "workStreakDays": 19
       }
     },
     "breakdown": [
@@ -589,10 +604,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 45,
+            "pts": 50,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18", "D19", "D20"],
-            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5. Total: +45."
+            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18", "D19", "D20", "D21"],
+            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5. Total: +50."
           },
           {
             "label": "Participation",
@@ -603,17 +618,17 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 9,
+            "pts": 19,
             "earned": true,
-            "dayHits": ["D17", "D18", "D19"],
-            "desc": "D17:3 · D18:3 · D19:3. Total: +9."
+            "dayHits": ["D17", "D18", "D19", "D21"],
+            "desc": "D17:3 · D18:3 · D19:3 · D21:10. Total: +19."
           },
           {
             "label": "Regular Submission",
-            "pts": 60,
+            "pts": 65,
             "earned": true,
-            "dayHits": ["D11", "D13", "D17", "D18", "D19", "D20"],
-            "desc": "D11:10 · D13:10 · D17:10 · D18:10 · D19:10 · D20:10. Total: +60."
+            "dayHits": ["D11", "D13", "D17", "D18", "D19", "D20", "D21"],
+            "desc": "D11:10 · D13:10 · D17:10 · D18:10 · D19:10 · D20:10 · D21:5. Total: +65."
           },
           {
             "label": "Shared work images",
@@ -660,9 +675,10 @@ export const PEOPLE = [
               "D17",
               "D18",
               "D19",
-              "D20"
+              "D20",
+              "D21"
             ],
-            "desc": "10 valid forms submitted. +100 total."
+            "desc": "11 valid forms submitted. +110 total."
           }
         ]
       },
@@ -780,11 +796,11 @@ export const PEOPLE = [
     ],
     "warnings": [
       {
-        "title": "Administrative Discipline",
-        "details": "You've missed the check-in form for 6 out of 12 days. While your work is Gold-tier, your status as a participant is at risk if you continue to bypass the primary tracking system. Talent without discipline is a wasted opportunity."
+        "title": "Administrative Discipline (Improving)",
+        "details": "Your early form-submission gaps (6 missed across Days 1-16) are real, but you've submitted every form from D17 through D21 without a single miss. Keep this streak alive and the warning resolves itself."
       }
     ],
-    "roast": "<p>You have the raw talent to be at the very top, and your 321 points prove it. However, your 50% form submission rate is a professional embarrassment. You’re like a star athlete who skips practice but expects to start every game. Your energy on WhatsApp is elite, but your 'paperwork' is Bronze-tier. If you want to stay in Gold, you need to start respecting the forms as much as you respect the design board.</p>"
+    "roast": "<p>444 points and a five-day submission streak running from D17 to D21 — this is the version of you that should've shown up from Day 1. Your design instincts have never been the issue; it's always been the paperwork. Five clean days in a row proves you can do both at once. Stretch that streak to the finish line and Gold becomes a formality, not a flex.</p>"
   },
   {
     "name": "Oluwasegun Daniel Osawore",
