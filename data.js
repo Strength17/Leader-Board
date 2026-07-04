@@ -23,7 +23,12 @@ export const DAY_LABELS = {
   "D17": "Day 17 — Tuesday, June 23, 2026",
   "D18": "Day 18 — Wednesday, June 24, 2026",
   "D19": "Day 19 — Thursday, June 25, 2026",
-  "D20": "Day 20 — Friday, June 26, 2026"
+  "D20": "Day 20 — Friday, June 26, 2026",
+  "D21": "Day 21 — Monday, June 29, 2026",
+  "D22": "Day 22 — Tuesday, June 30, 2026",
+  "D23": "Day 23 — Wednesday, July 1, 2026",
+  "D24": "Day 24 — Thursday, July 2, 2026",
+  "D25": "Day 25 — Friday, July 3, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -39,7 +44,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 614,
+    "allTimeTotal": 644,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -188,6 +193,34 @@ export const PEOPLE = [
         "streakDays": 19,
         "workDone": true,
         "workStreakDays": 21
+      },
+      "D22": {
+        "pts": 624,
+        "submitted": true,
+        "streakDays": 20,
+        "workDone": true,
+        "workStreakDays": 22
+      },
+      "D23": {
+        "pts": 634,
+        "submitted": true,
+        "streakDays": 21,
+        "workDone": true,
+        "workStreakDays": 23
+      },
+      "D24": {
+        "pts": 644,
+        "submitted": true,
+        "streakDays": 22,
+        "workDone": true,
+        "workStreakDays": 24
+      },
+      "D25": {
+        "pts": 644,
+        "submitted": false,
+        "streakDays": 22,
+        "workDone": false,
+        "workStreakDays": 24
       }
     },
     "breakdown": [
@@ -203,10 +236,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 55,
+            "pts": 70,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20", "D21"],
-            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5. Total: +55."
+            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20", "D21", "D22", "D23", "D24"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5 · D22:5 · D23:5 · D24:5. Total: +70."
           },
           {
             "label": "Participation",
@@ -217,10 +250,10 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 30,
+            "pts": 45,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D15", "D16", "D20"],
-            "desc": "D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D20:5. Total: +30."
+            "dayHits": ["D12", "D13", "D14", "D15", "D16", "D20", "D22", "D23", "D24"],
+            "desc": "D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D20:5 · D22:5 · D23:5 · D24:5. Total: +45."
           },
           {
             "label": "Regular Submission",
@@ -454,7 +487,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 444,
+    "allTimeTotal": 464,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -589,6 +622,34 @@ export const PEOPLE = [
         "streakDays": 12,
         "workDone": true,
         "workStreakDays": 19
+      },
+      "D22": {
+        "pts": 449,
+        "submitted": true,
+        "streakDays": 13,
+        "workDone": true,
+        "workStreakDays": 20
+      },
+      "D23": {
+        "pts": 454,
+        "submitted": true,
+        "streakDays": 14,
+        "workDone": true,
+        "workStreakDays": 21
+      },
+      "D24": {
+        "pts": 454,
+        "submitted": false,
+        "streakDays": 14,
+        "workDone": false,
+        "workStreakDays": 21
+      },
+      "D25": {
+        "pts": 464,
+        "submitted": true,
+        "streakDays": 15,
+        "workDone": true,
+        "workStreakDays": 22
       }
     },
     "breakdown": [
@@ -604,10 +665,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 50,
+            "pts": 65,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18", "D19", "D20", "D21"],
-            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5. Total: +50."
+            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18", "D19", "D20", "D21", "D22", "D23", "D25"],
+            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5 · D22:5 · D23:5 · D25:5. Total: +65."
           },
           {
             "label": "Participation",
@@ -618,10 +679,10 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 19,
+            "pts": 24,
             "earned": true,
-            "dayHits": ["D17", "D18", "D19", "D21"],
-            "desc": "D17:3 · D18:3 · D19:3 · D21:10. Total: +19."
+            "dayHits": ["D17", "D18", "D19", "D21", "D25"],
+            "desc": "D17:3 · D18:3 · D19:3 · D21:10 · D25:5. Total: +24."
           },
           {
             "label": "Regular Submission",
