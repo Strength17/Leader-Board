@@ -481,7 +481,7 @@ export const PEOPLE = [
         "details": "Since the D10 image submission error, your attention to detail has been flawless. You've held that standard through Day 21, with no further lapses. There are no open warnings on your record — keep this discipline through the final stretch."
       }
     ],
-    "roast": "<p>614 points and counting — you're still the cohort's pacesetter, and the gap behind you keeps growing. The D4/D5 stumbles are a distant memory; what's left is a long, clean run of regular submissions, shared work, and zero administrative drama. The only thing standing between you and a perfect finish is you. Don't let the comfort of leading make you sloppy on the last few days — finish the way you started.</p>"
+    "roast": "<p>644 points. 25 days. Zero rest days that were actually planned. Christine, at this point you are not a participant — you are a leaderboard feature. The gap between you and second place is so wide that Chrioni would need a jetpack and a prayer to close it. The scary part? You missed Days 4 and 5 at the start and still lapped everyone. If you had submitted those two forms, the rest of the cohort would have needed therapy. Finish strong. Or don't — you've already won the psychological war.</p>"
   },
   {
     "name": "Abongnwi Chrioni-Opal Forba'",
@@ -861,7 +861,7 @@ export const PEOPLE = [
         "details": "Your early form-submission gaps (6 missed across Days 1-16) are real, but you've submitted every form from D17 through D21 without a single miss. Keep this streak alive and the warning resolves itself."
       }
     ],
-    "roast": "<p>444 points and a five-day submission streak running from D17 to D21 — this is the version of you that should've shown up from Day 1. Your design instincts have never been the issue; it's always been the paperwork. Five clean days in a row proves you can do both at once. Stretch that streak to the finish line and Gold becomes a formality, not a flex.</p>"
+    "roast": "<p>464 points. Gold tier. A submission streak that only woke up around Day 17 like it had been napping through an alarm. Chrioni, you have the talent of someone who should be in first place and the form-submission history of someone who treats Google Forms like a optional side quest. Days 1 through 16 were a masterclass in doing the work and then ghosting the paperwork. You then decided to become a completely different person from D17 onwards — consistent, sharp, first to post. The question nobody can answer is: where was THIS version of you in Week 1? Second place and closing, but Christine has 180 points on you and a resting face that says she is not worried. Prove her wrong.</p>"
   },
   {
     "name": "Oluwasegun Daniel Osawore",
