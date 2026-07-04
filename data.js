@@ -475,13 +475,8 @@ export const PEOPLE = [
         ]
       }
     ],
-    "warnings": [
-      {
-        "title": "Technical Discipline (Resolved)",
-        "details": "Since the D10 image submission error, your attention to detail has been flawless. You've held that standard through Day 21, with no further lapses. There are no open warnings on your record — keep this discipline through the final stretch."
-      }
-    ],
-    "roast": "<p>644 points. 25 days. Zero rest days that were actually planned. Christine, at this point you are not a participant — you are a leaderboard feature. The gap between you and second place is so wide that Chrioni would need a jetpack and a prayer to close it. The scary part? You missed Days 4 and 5 at the start and still lapped everyone. If you had submitted those two forms, the rest of the cohort would have needed therapy. Finish strong. Or don't — you've already won the psychological war.</p>"
+    "warnings": [],
+    "roast": "<p>Twenty-five days in and you are still the leaderboard's most boring story — boring because the ending was never in doubt. You missed two days at the very start and still lapped everyone so hard they can see your back from second place. The gap between you and the rest of the cohort is not a lead, it is a different timezone. The scary part is you do not even look tired. Finish the way you started, or better yet, just keep doing whatever this is.</p>"
   },
   {
     "name": "Abongnwi Chrioni-Opal Forba'",
@@ -855,13 +850,8 @@ export const PEOPLE = [
         ]
       }
     ],
-    "warnings": [
-      {
-        "title": "Administrative Discipline (Improving)",
-        "details": "Your early form-submission gaps (6 missed across Days 1-16) are real, but you've submitted every form from D17 through D21 without a single miss. Keep this streak alive and the warning resolves itself."
-      }
-    ],
-    "roast": "<p>464 points. Gold tier. A submission streak that only woke up around Day 17 like it had been napping through an alarm. Chrioni, you have the talent of someone who should be in first place and the form-submission history of someone who treats Google Forms like a optional side quest. Days 1 through 16 were a masterclass in doing the work and then ghosting the paperwork. You then decided to become a completely different person from D17 onwards — consistent, sharp, first to post. The question nobody can answer is: where was THIS version of you in Week 1? Second place and closing, but Christine has 180 points on you and a resting face that says she is not worried. Prove her wrong.</p>"
+    "warnings": [],
+    "roast": "<p>Gold tier. Respectable. But let us be honest about how you got here — you spent the first half of this programme treating Google Forms like a mythical creature you had only heard about in stories. The work was there. The forms were not. Then somewhere around Week 3 a completely different person showed up — consistent, sharp, first to post, actually submitting things on the day they were due. Nobody knows what happened to the original Chrioni or where this version was hiding. You are closing the gap at the top, but Christine has been there so long she has started receiving mail. Pick up the pace or this glow-up story ends at second place.</p>"
   },
   {
     "name": "Oluwasegun Daniel Osawore",
