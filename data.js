@@ -29,11 +29,7 @@ export const DAY_LABELS = {
   "D23": "Day 23 — Wednesday, July 1, 2026",
   "D24": "Day 24 — Thursday, July 2, 2026",
   "D25": "Day 25 — Friday, July 3, 2026",
-  "D26": "Day 26 — Monday, July 6, 2026",
-  "D27": "Day 27 — Tuesday, July 7, 2026",
-  "D28": "Day 28 — Wednesday, July 8, 2026",
-  "D29": "Day 29 — Thursday, July 9, 2026",
-  "D30": "Day 30 — Friday, July 10, 2026"
+  "D26": "Day 26 — Monday, July 6, 2026"
 };
 
 export const TIER_EMOJI = {
