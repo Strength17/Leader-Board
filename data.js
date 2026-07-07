@@ -28,7 +28,12 @@ export const DAY_LABELS = {
   "D22": "Day 22 — Tuesday, June 30, 2026",
   "D23": "Day 23 — Wednesday, July 1, 2026",
   "D24": "Day 24 — Thursday, July 2, 2026",
-  "D25": "Day 25 — Friday, July 3, 2026"
+  "D25": "Day 25 — Friday, July 3, 2026",
+  "D26": "Day 26 — Monday, July 6, 2026",
+  "D27": "Day 27 — Tuesday, July 7, 2026",
+  "D28": "Day 28 — Wednesday, July 8, 2026",
+  "D29": "Day 29 — Thursday, July 9, 2026",
+  "D30": "Day 30 — Friday, July 10, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -44,7 +49,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 644,
+    "allTimeTotal": 654,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -221,6 +226,13 @@ export const PEOPLE = [
         "streakDays": 22,
         "workDone": false,
         "workStreakDays": 24
+      },
+      "D26": {
+        "pts": 654,
+        "submitted": true,
+        "streakDays": 23,
+        "workDone": true,
+        "workStreakDays": 25
       }
     },
     "breakdown": [
@@ -236,10 +248,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 70,
+            "pts": 75,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20", "D21", "D22", "D23", "D24"],
-            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5 · D22:5 · D23:5 · D24:5. Total: +70."
+            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20", "D21", "D22", "D23", "D24", "D26"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5 · D22:5 · D23:5 · D24:5 · D26:5. Total: +75."
           },
           {
             "label": "Participation",
@@ -250,10 +262,10 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 45,
+            "pts": 50,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D15", "D16", "D20", "D22", "D23", "D24"],
-            "desc": "D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D20:5 · D22:5 · D23:5 · D24:5. Total: +45."
+            "dayHits": ["D12", "D13", "D14", "D15", "D16", "D20", "D22", "D23", "D24", "D26"],
+            "desc": "D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D20:5 · D22:5 · D23:5 · D24:5 · D26:5. Total: +50."
           },
           {
             "label": "Regular Submission",
@@ -476,7 +488,7 @@ export const PEOPLE = [
       }
     ],
     "warnings": [],
-    "roast": "<p>Twenty-five days in and you are still the leaderboard's most boring story — boring because the ending was never in doubt. You missed two days at the very start and still lapped everyone so hard they can see your back from second place. The gap between you and the rest of the cohort is not a lead, it is a different timezone. The scary part is you do not even look tired. Finish the way you started, or better yet, just keep doing whatever this is.</p>"
+    "roast": "<p>Twenty-six days in and you are still the leaderboard's most boring story — boring because the ending was never in doubt. You missed a couple of days early on and still lapped everyone so hard they can see your back from second place. Day 26 rolls around and there you are again — first to post, creativity bonus collected like it's rent. The gap between you and the rest of the cohort is not a lead, it is a different timezone. The scary part is you do not even look tired. Finish the way you started, or better yet, just keep doing whatever this is.</p>"
   },
   {
     "name": "Abongnwi Chrioni-Opal Forba'",
@@ -851,7 +863,7 @@ export const PEOPLE = [
       }
     ],
     "warnings": [],
-    "roast": "<p>Gold tier. Respectable. But let us be honest about how you got here — you spent the first half of this programme treating Google Forms like a mythical creature you had only heard about in stories. The work was there. The forms were not. Then somewhere around Week 3 a completely different person showed up — consistent, sharp, first to post, actually submitting things on the day they were due. Nobody knows what happened to the original Chrioni or where this version was hiding. You are closing the gap at the top, but Christine has been there so long she has started receiving mail. Pick up the pace or this glow-up story ends at second place.</p>"
+    "roast": "<p>Gold tier. Respectable. But let us be honest about how you got here — you spent the first half of this programme treating Google Forms like a mythical creature you had only heard about in stories. The work was there. The forms were not. Then somewhere around Week 3 a completely different person showed up — consistent, sharp, first to post, actually submitting things on the day they were due, a 15-day streak and counting. Nobody knows what happened to the original Chrioni or where this version was hiding. Here's the uncomfortable part: you have been flawless for weeks and the gap at the top has not moved an inch, because Christine posts the same day you do. You are not closing in on first place, you are just making sure nobody takes second from you. Pick up the pace or this glow-up story stays exactly where it is.</p>"
   },
   {
     "name": "Oluwasegun Daniel Osawore",
