@@ -29,7 +29,9 @@ export const DAY_LABELS = {
   "D23": "Day 23 — Wednesday, July 1, 2026",
   "D24": "Day 24 — Thursday, July 2, 2026",
   "D25": "Day 25 — Friday, July 3, 2026",
-  "D26": "Day 26 — Monday, July 6, 2026"
+  "D26": "Day 26 — Monday, July 6, 2026",
+  "D27": "Day 27 — Tuesday, July 7, 2026",
+  "D28": "Day 28 — Wednesday, July 8, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -45,7 +47,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 654,
+    "allTimeTotal": 669,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -229,6 +231,20 @@ export const PEOPLE = [
         "streakDays": 23,
         "workDone": true,
         "workStreakDays": 25
+      },
+      "D27": {
+        "pts": 654,
+        "submitted": false,
+        "streakDays": 23,
+        "workDone": false,
+        "workStreakDays": 25
+      },
+      "D28": {
+        "pts": 669,
+        "submitted": true,
+        "streakDays": 24,
+        "workDone": true,
+        "workStreakDays": 26
       }
     },
     "breakdown": [
@@ -244,10 +260,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 75,
+            "pts": 85,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20", "D21", "D22", "D23", "D24", "D26"],
-            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5 · D22:5 · D23:5 · D24:5 · D26:5. Total: +75."
+            "dayHits": ["D11", "D12", "D13", "D14", "D15", "D16", "D17", "D18", "D19", "D20", "D21", "D22", "D23", "D24", "D26", "D28"],
+            "desc": "D11:5 · D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5 · D22:5 · D23:5 · D24:5 · D26:5 · D28:10. Total: +85."
           },
           {
             "label": "Participation",
@@ -258,10 +274,10 @@ export const PEOPLE = [
           },
           {
             "label": "1st to post",
-            "pts": 50,
+            "pts": 55,
             "earned": true,
-            "dayHits": ["D12", "D13", "D14", "D15", "D16", "D20", "D22", "D23", "D24", "D26"],
-            "desc": "D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D20:5 · D22:5 · D23:5 · D24:5 · D26:5. Total: +50."
+            "dayHits": ["D12", "D13", "D14", "D15", "D16", "D20", "D22", "D23", "D24", "D26", "D28"],
+            "desc": "D12:5 · D13:5 · D14:5 · D15:5 · D16:5 · D20:5 · D22:5 · D23:5 · D24:5 · D26:5 · D28:5. Total: +55."
           },
           {
             "label": "Regular Submission",
@@ -490,7 +506,7 @@ export const PEOPLE = [
     "name": "Abongnwi Chrioni-Opal Forba'",
     "role": "Participant",
     "joinedDay": "D1",
-    "allTimeTotal": 464,
+    "allTimeTotal": 479,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -653,6 +669,27 @@ export const PEOPLE = [
         "streakDays": 15,
         "workDone": true,
         "workStreakDays": 22
+      },
+      "D26": {
+        "pts": 464,
+        "submitted": false,
+        "streakDays": 15,
+        "workDone": false,
+        "workStreakDays": 22
+      },
+      "D27": {
+        "pts": 464,
+        "submitted": false,
+        "streakDays": 15,
+        "workDone": false,
+        "workStreakDays": 22
+      },
+      "D28": {
+        "pts": 479,
+        "submitted": true,
+        "streakDays": 16,
+        "workDone": true,
+        "workStreakDays": 23
       }
     },
     "breakdown": [
@@ -668,10 +705,10 @@ export const PEOPLE = [
           },
           {
             "label": "Creativity Bonus",
-            "pts": 65,
+            "pts": 80,
             "earned": true,
-            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18", "D19", "D20", "D21", "D22", "D23", "D25"],
-            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5 · D22:5 · D23:5 · D25:5. Total: +65."
+            "dayHits": ["D11", "D12", "D13", "D16", "D17", "D18", "D19", "D20", "D21", "D22", "D23", "D25", "D28"],
+            "desc": "D11:5 · D12:5 · D13:10 · D16:5 · D17:5 · D18:5 · D19:5 · D20:5 · D21:5 · D22:5 · D23:5 · D25:5 · D28:15. Total: +80."
           },
           {
             "label": "Participation",
