@@ -3,112 +3,480 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sky Graphics Figma Edition 1 — Leaderboard</title>
+<title>Sky Graphics Figma Edition 1 — Final Results</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css">
-<!-- Social Media Preview -->
-<meta property="og:title" content="Sky Graphics Figma Edition 1 — Leaderboard">
-<meta property="og:description" content="6-Week Figma Design Challenge · Daily Check-In & Rankings">
+<meta property="og:title" content="Sky Graphics Figma Edition 1 — Final Results">
+<meta property="og:description" content="The graduation announcement drops Sunday, July 19 at 8:00 PM">
 <meta property="og:image" content="Assets/image.png">
-<meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="Assets/logo.png">
+<style>
+:root{
+  --navy:#0D1830;--indigo:#1B2F6E;--violet:#4F46E5;--violet-light:#818CF8;
+  --amber:#F59E0B;--gold:#D97706;--mint:#10B981;
+  --coral:#EF4444;--sky:#38BDF8;--white:#FFFFFF;--off:#F1F5F9;
+  --muted:#94A3B8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  background:var(--navy);font-family:'DM Sans',sans-serif;
+  color:var(--white);min-height:100vh;overflow-x:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+
+/* ── background atmosphere ── */
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 90% 70% at 15% 5%,rgba(79,70,229,.22) 0%,transparent 55%),
+    radial-gradient(ellipse 70% 60% at 85% 85%,rgba(16,185,129,.14) 0%,transparent 50%),
+    radial-gradient(ellipse 50% 45% at 50% 50%,rgba(245,158,11,.08) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 10%,rgba(56,189,248,.12) 0%,transparent 50%);
+}
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+
+/* ── floating orbs ── */
+.orb{
+  position:fixed;border-radius:50%;pointer-events:none;z-index:0;
+  filter:blur(60px);opacity:0;animation:orbFloat 8s ease-in-out infinite;
+}
+.orb1{width:300px;height:300px;background:rgba(79,70,229,.18);top:10%;left:5%;animation-delay:0s;}
+.orb2{width:200px;height:200px;background:rgba(16,185,129,.14);bottom:15%;right:8%;animation-delay:2.5s;}
+.orb3{width:250px;height:250px;background:rgba(245,158,11,.10);top:55%;left:60%;animation-delay:5s;}
+@keyframes orbFloat{
+  0%{opacity:0;transform:translateY(0) scale(1);}
+  30%{opacity:1;}
+  70%{opacity:.8;}
+  100%{opacity:0;transform:translateY(-30px) scale(1.05);}
+}
+
+/* ── floating design particles ── */
+canvas#particles{position:fixed;inset:0;z-index:0;pointer-events:none;}
+
+/* ── main wrap ── */
+.wrap{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;
+  padding:40px 20px 60px;max-width:720px;width:100%;text-align:center;
+}
+
+/* ── edition tag ── */
+.edition-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;
+  color:var(--amber);background:rgba(245,158,11,.08);
+  border:1px solid rgba(245,158,11,.3);padding:6px 18px;border-radius:24px;
+  margin-bottom:28px;box-shadow:0 0 20px rgba(245,158,11,.1);
+}
+
+/* ── eyebrow ── */
+.eyebrow{
+  font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:16px;
+}
+
+/* ── title ── */
+.title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(44px,11vw,88px);line-height:.92;letter-spacing:3px;
+  background:linear-gradient(135deg,#fff 0%,#C7D2FE 30%,#38BDF8 60%,#10B981 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:20px;
+}
+
+/* ── announcement line ── */
+.announce{
+  font-size:14px;color:var(--muted);letter-spacing:1px;
+  line-height:1.8;margin-bottom:44px;max-width:480px;
+}
+.announce strong{color:var(--white);}
+
+/* ── countdown grid ── */
+.countdown{
+  display:flex;gap:16px;margin-bottom:52px;
+  flex-wrap:wrap;justify-content:center;
+}
+.unit{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  min-width:110px;
+}
+.unit-box{
+  position:relative;
+  background:rgba(19,31,58,0.88);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;padding:22px 20px 18px;
+  width:110px;
+  box-shadow:0 8px 32px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter:blur(16px);
+  overflow:hidden;
+}
+.unit-box::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,transparent 50%);
+  pointer-events:none;
+}
+.unit-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(48px,9vw,72px);line-height:1;
+  color:var(--white);
+  transition:transform .15s cubic-bezier(.175,.885,.32,1.275),opacity .15s;
+  display:block;
+}
+.unit-num.flip{
+  animation:numFlip .25s cubic-bezier(.175,.885,.32,1.275);
+}
+@keyframes numFlip{
+  0%{transform:translateY(-8px) scaleY(.85);opacity:.6;}
+  100%{transform:translateY(0) scaleY(1);opacity:1;}
+}
+.unit-label{
+  font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* accent colours per unit */
+.unit:nth-child(1) .unit-num{color:var(--violet-light);}
+.unit:nth-child(2) .unit-num{color:var(--sky);}
+.unit:nth-child(3) .unit-num{color:var(--mint);}
+.unit:nth-child(4) .unit-num{color:var(--amber);}
+.unit:nth-child(1) .unit-box{border-color:rgba(129,140,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.35),0 0 24px rgba(79,70,229,.12),inset 0 1px 0 rgba(255,255,255,.06);}
+.unit:nth-child(2) .unit-box{border-color:rgba(56,189,248,.2);box-shadow:0 8px 32px rgba(0,0,0,.35),0 0 24px rgba(56,189,248,.12),inset 0 1px 0 rgba(255,255,255,.06);}
+.unit:nth-child(3) .unit-box{border-color:rgba(16,185,129,.2);box-shadow:0 8px 32px rgba(0,0,0,.35),0 0 24px rgba(16,185,129,.12),inset 0 1px 0 rgba(255,255,255,.06);}
+.unit:nth-child(4) .unit-box{border-color:rgba(245,158,11,.2);box-shadow:0 8px 32px rgba(0,0,0,.35),0 0 24px rgba(245,158,11,.12),inset 0 1px 0 rgba(255,255,255,.06);}
+
+/* separator dots */
+.sep{
+  font-family:'Bebas Neue',sans-serif;font-size:48px;
+  color:rgba(255,255,255,.18);line-height:1;
+  align-self:center;margin-top:-10px;
+}
+
+/* ── divider ── */
+.divider{
+  width:100%;max-width:480px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);
+  margin-bottom:36px;
+}
+
+/* ── hint text ── */
+.hint{
+  font-size:12px;color:rgba(148,163,184,.5);
+  letter-spacing:1px;margin-bottom:36px;
+}
+
+/* ── view leaderboard button ── */
+.lb-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 32px;border-radius:50px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.12);
+  color:var(--muted);font-size:13px;font-weight:700;letter-spacing:.5px;
+  text-decoration:none;
+  transition:all .25s cubic-bezier(.4,0,.2,1);
+  backdrop-filter:blur(12px);
+}
+.lb-btn:hover{
+  background:rgba(79,70,229,.15);
+  border-color:rgba(79,70,229,.4);
+  color:var(--white);
+  box-shadow:0 4px 24px rgba(79,70,229,.25);
+  transform:translateY(-2px);
+}
+.lb-btn svg{opacity:.5;transition:opacity .2s;}
+.lb-btn:hover svg{opacity:1;}
+
+/* ── CELEBRATION STATE ── */
+.wrap.celebrating .title{
+  background:linear-gradient(135deg,#FFD700 0%,#F59E0B 35%,#10B981 70%,#38BDF8 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:titlePulse 2s ease-in-out infinite;
+}
+@keyframes titlePulse{
+  0%,100%{filter:brightness(1);}
+  50%{filter:brightness(1.3);}
+}
+
+.celebrate-panel{
+  display:none;
+  background:rgba(19,31,58,0.92);
+  border:1px solid rgba(245,158,11,.3);
+  border-radius:24px;padding:36px;
+  margin-bottom:40px;max-width:520px;width:100%;
+  box-shadow:0 0 60px rgba(245,158,11,.15);
+  animation:panelIn .6s cubic-bezier(.175,.885,.32,1.275);
+}
+.celebrate-panel.show{display:block;}
+@keyframes panelIn{
+  from{transform:scale(.85) translateY(20px);opacity:0;}
+  to{transform:scale(1) translateY(0);opacity:1;}
+}
+.grad-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:13px;letter-spacing:4px;color:var(--amber);
+  text-transform:uppercase;margin-bottom:20px;
+}
+.grad-names{
+  display:flex;flex-direction:column;gap:14px;margin-bottom:24px;
+}
+.grad-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(28px,6vw,44px);
+  background:linear-gradient(135deg,#FFD700,#F59E0B,#10B981);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  line-height:1;
+}
+.grad-sub{font-size:12px;color:var(--muted);line-height:1.8;}
+
+/* celebration confetti container */
+.confetti-wrap{position:fixed;inset:0;z-index:150;pointer-events:none;overflow:hidden;}
+.confetti{
+  position:absolute;width:8px;height:8px;top:-20px;border-radius:2px;
+  animation:confettiFall linear forwards;will-change:transform,opacity;
+}
+@keyframes confettiFall{
+  0%{transform:translateY(0) rotate(0deg);opacity:1;}
+  80%{opacity:1;}
+  100%{transform:translateY(110vh) rotate(720deg);opacity:0;}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:520px){
+  .countdown{gap:8px;}
+  .unit{min-width:72px;}
+  .unit-box{width:72px;padding:16px 10px 12px;}
+  .unit-num{font-size:40px;}
+  .sep{font-size:32px;}
+  .unit-label{font-size:9px;letter-spacing:2px;}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
+}
+</style>
 </head>
 <body>
-<div class="wrap">
-  <div class="header">
-    <div class="edition-tag">Sky Graphics · Edition 1</div>
-    <div class="title">LEADERBOARD</div>
-    <div class="subtitle">Figma Design Challenge · 6 Weeks · Daily Check-In</div>
-    <div class="day-badge" id="current-day-badge">📅 Day 6 — June 8, 2026</div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+<canvas id="particles"></canvas>
+
+<div class="confetti-wrap" id="confetti-wrap"></div>
+
+<div class="wrap" id="wrap">
+  <div class="edition-tag">Sky Graphics · Edition 1</div>
+
+  <div class="eyebrow">28 Days · Figma Design Challenge · Final Results</div>
+
+  <div class="title" id="main-title">THE RESULTS<br>DROP IN</div>
+
+  <div class="announce" id="announce-text">
+    The programme is complete. Two designers went the distance.<br>
+    <strong>Sunday, July 19 · 8:00 PM</strong> — the board goes live.
   </div>
 
-  <div class="nav-card">
-    <div class="week-row" id="week-row"></div>
-    <div class="day-tray" id="day-selector"></div>
-  </div>
-
-  <div class="tabs">
-    <button class="tab active participants" data-tab="participants" onclick="window.switchTab('participants')">🎓 Participants</button>
-    <button class="tab ambassadors" data-tab="ambassadors" onclick="window.switchTab('ambassadors')">⭐ Ambassadors</button>
-  </div>
-
-  <div class="board active" id="board-participants">
-    <div class="board-label p">Participant Rankings</div>
-    <div id="rows-participants"></div>
-    <div class="legend">
-      <div class="legend-title">Tier Thresholds</div>
-      <div class="legend-grid">
-        <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
-        <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
-        <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
-        <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
-      </div>
-      <div class="legend-title" style="margin-top:14px;">Streak Columns</div>
-      <div class="legend-grid">
-        <div class="legend-item"><span style="color:var(--mint);font-weight:700;">📋 Form</span> — consecutive check-in form submissions</div>
-        <div class="legend-item"><span style="color:var(--violet-light);font-weight:700;">✏️ Work</span> — consecutive days with Figma work scored</div>
-      </div>
+  <!-- celebration panel (hidden until countdown ends) -->
+  <div class="celebrate-panel" id="celebrate-panel">
+    <div class="grad-title">🎓 Sky Graphics Figma Edition 1 — Graduates</div>
+    <div class="grad-names">
+      <div class="grad-name">Christine Choundong</div>
+      <div class="grad-name">Abongnwi Chrioni-Opal Forba</div>
+    </div>
+    <div class="grad-sub">
+      28 days. Every task. Every check-in. Every pixel.<br>
+      You are now Sky Graphics designers. Carry this forward.
     </div>
   </div>
 
-  <div class="board" id="board-ambassadors">
-    <div class="amb-note">⭐ Ambassadors compete on their own board. Rankings are separate from participants.</div>
-    <div class="board-label a">Ambassador Rankings</div>
-    <div id="rows-ambassadors"></div>
-    <div class="legend">
-      <div class="legend-title">Tier Thresholds</div>
-      <div class="legend-grid">
-        <div class="legend-item"><span class="tier BRONZE">🥉 BRONZE</span> 50 pts</div>
-        <div class="legend-item"><span class="tier SILVER">🥈 SILVER</span> 150 pts</div>
-        <div class="legend-item"><span class="tier GOLD">🥇 GOLD</span> 250 pts</div>
-        <div class="legend-item"><span class="tier PLATINUM">🏆 PLATINUM</span> 350 pts</div>
-      </div>
-      <div class="legend-title" style="margin-top:14px;">Streak Columns</div>
-      <div class="legend-grid">
-        <div class="legend-item"><span style="color:var(--mint);font-weight:700;">📋 Form</span> — consecutive check-in form submissions</div>
-        <div class="legend-item"><span style="color:var(--violet-light);font-weight:700;">✏️ Work</span> — consecutive days with Figma work scored</div>
-      </div>
+  <div class="countdown" id="countdown">
+    <div class="unit">
+      <div class="unit-box"><span class="unit-num" id="cd-days">00</span></div>
+      <div class="unit-label">Days</div>
+    </div>
+    <div class="sep">:</div>
+    <div class="unit">
+      <div class="unit-box"><span class="unit-num" id="cd-hours">00</span></div>
+      <div class="unit-label">Hours</div>
+    </div>
+    <div class="sep">:</div>
+    <div class="unit">
+      <div class="unit-box"><span class="unit-num" id="cd-mins">00</span></div>
+      <div class="unit-label">Minutes</div>
+    </div>
+    <div class="sep">:</div>
+    <div class="unit">
+      <div class="unit-box"><span class="unit-num" id="cd-secs">00</span></div>
+      <div class="unit-label">Seconds</div>
     </div>
   </div>
 
-  <div class="footer">
-    <strong>Sky Graphics Figma Edition 1</strong> · Updated Daily<br>
-    Check-in form: <strong>forms.gle/as9Nus325XqgsQpH6</strong><br><br>
-    <span style="color:rgba(148,163,184,.45);font-size:11px">Points calculated automatically. Bonus points awarded by admin for outstanding contributions.</span>
-  </div>
+  <div class="divider"></div>
+  <div class="hint">Check your progress while you wait</div>
+
+  <a href="leaderboard.html" class="lb-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+    </svg>
+    View Leaderboard
+  </a>
 </div>
 
-<!-- PROFILE OVERLAY -->
-<div class="overlay" id="overlay" onclick="window.handleOverlayClick(event)">
-  <div class="overlay-bg"></div>
-  <div class="panel" id="panel">
-    <div class="panel-header">
-      <button class="panel-back" onclick="window.closePanel()">← Back</button>
-      <div class="panel-name" id="panel-name"></div>
-      <div class="panel-meta">
-        <span class="role-badge" id="panel-role"></span>
-        <span class="panel-pts" id="panel-pts"></span>
-        <span class="tier" id="panel-tier"></span>
-      </div>
-    </div>
-    <div class="ptabs">
-      <button class="ptab active" data-ptab="breakdown" onclick="window.switchPTab('breakdown')">📊 Breakdown</button>
-      <button class="ptab" data-ptab="roast" onclick="window.switchPTab('roast')">🔥 Roast</button>
-      <button class="ptab" data-ptab="warnings" onclick="window.switchPTab('warnings')">⚠️ Warnings</button>
-      <button class="ptab" data-ptab="rules" onclick="window.switchPTab('rules')">⚖️ Rules</button>
-    </div>
-    <div class="pcontent">
-      <div class="pboard active" id="pboard-breakdown"></div>
-      <div class="pboard" id="pboard-roast"></div>
-      <div class="pboard" id="pboard-warnings"></div>
-      <div class="pboard" id="pboard-rules"></div>
-    </div>
-  </div>
-</div>
+<script>
+// ── TARGET: Sunday July 19 2026 20:00:00 local time ──
+const TARGET = new Date('2026-07-19T20:00:00').getTime();
 
-<div id="celebration-container" class="celebration-container"></div>
-<button class="celebrate-btn" onclick="window.triggerCelebration(8000)" title="Celebrate!">🎉</button>
+const els = {
+  days:  document.getElementById('cd-days'),
+  hours: document.getElementById('cd-hours'),
+  mins:  document.getElementById('cd-mins'),
+  secs:  document.getElementById('cd-secs'),
+};
 
-<script type="module" src="script.js"></script>
+let prev = {days:'',hours:'',mins:'',secs:''};
+
+function pad(n){ return String(n).padStart(2,'0'); }
+
+function flip(el, val){
+  if(el.textContent === val) return;
+  el.textContent = val;
+  el.classList.remove('flip');
+  void el.offsetWidth;
+  el.classList.add('flip');
+}
+
+function tick(){
+  const now  = Date.now();
+  const diff = TARGET - now;
+
+  if(diff <= 0){
+    clearInterval(timer);
+    reveal();
+    return;
+  }
+
+  const d  = Math.floor(diff / 86400000);
+  const h  = Math.floor((diff % 86400000) / 3600000);
+  const m  = Math.floor((diff % 3600000)  / 60000);
+  const s  = Math.floor((diff % 60000)    / 1000);
+
+  flip(els.days,  pad(d));
+  flip(els.hours, pad(h));
+  flip(els.mins,  pad(m));
+  flip(els.secs,  pad(s));
+}
+
+const timer = setInterval(tick, 1000);
+tick();
+
+// ── REVEAL on countdown zero ──
+function reveal(){
+  document.getElementById('cd-days').textContent  = '00';
+  document.getElementById('cd-hours').textContent = '00';
+  document.getElementById('cd-mins').textContent  = '00';
+  document.getElementById('cd-secs').textContent  = '00';
+
+  document.getElementById('main-title').textContent = 'AND THE\nGRADUATES ARE';
+  document.getElementById('announce-text').style.display = 'none';
+  document.getElementById('celebrate-panel').classList.add('show');
+  document.getElementById('wrap').classList.add('celebrating');
+
+  launchConfetti();
+}
+
+// ── CONFETTI ──
+function launchConfetti(){
+  const wrap = document.getElementById('confetti-wrap');
+  const colors = ['#F59E0B','#10B981','#4F46E5','#38BDF8','#EF4444','#fff','#D97706','#818CF8'];
+
+  function burst(){
+    for(let i=0;i<14;i++){
+      const el = document.createElement('div');
+      el.className = 'confetti';
+      el.style.cssText = `
+        left:${Math.random()*100}%;
+        background:${colors[Math.floor(Math.random()*colors.length)]};
+        width:${6+Math.random()*8}px;
+        height:${6+Math.random()*8}px;
+        border-radius:${Math.random()>.5?'50%':'2px'};
+        animation-duration:${2.5+Math.random()*2}s;
+        animation-delay:${Math.random()*.8}s;
+      `;
+      wrap.appendChild(el);
+      el.addEventListener('animationend',()=>el.remove());
+    }
+  }
+
+  burst();
+  const repeat = setInterval(burst, 900);
+  setTimeout(()=>clearInterval(repeat), 10000);
+}
+
+// ── PARTICLES (floating design tools) ──
+(function(){
+  const canvas = document.getElementById('particles');
+  const ctx    = canvas.getContext('2d');
+  const SYMBOLS = ['▲','◆','●','✦','⬟','✶','⬡'];
+  let W, H, pts = [];
+
+  function resize(){
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function spawn(){
+    return {
+      x: Math.random()*W,
+      y: Math.random()*H,
+      sym: SYMBOLS[Math.floor(Math.random()*SYMBOLS.length)],
+      size: 8 + Math.random()*10,
+      alpha: 0,
+      maxAlpha: .06 + Math.random()*.08,
+      vx: (Math.random()-.5)*.25,
+      vy: -.2 - Math.random()*.3,
+      life: 0,
+      maxLife: 180 + Math.random()*120,
+      color: ['#4F46E5','#10B981','#F59E0B','#38BDF8'][Math.floor(Math.random()*4)],
+    };
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  for(let i=0;i<22;i++){
+    const p = spawn();
+    p.life = Math.floor(Math.random()*p.maxLife);
+    pts.push(p);
+  }
+
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach((p,i)=>{
+      p.life++;
+      const half = p.maxLife/2;
+      p.alpha = p.life < half
+        ? (p.life/half)*p.maxAlpha
+        : ((p.maxLife-p.life)/half)*p.maxAlpha;
+      p.x += p.vx;
+      p.y += p.vy;
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, p.alpha);
+      ctx.fillStyle = p.color;
+      ctx.font = `${p.size}px sans-serif`;
+      ctx.fillText(p.sym, p.x, p.y);
+      ctx.restore();
+      if(p.life >= p.maxLife) pts[i] = spawn();
+    });
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
+</script>
 </body>
 </html>
