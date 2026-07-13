@@ -31,7 +31,9 @@ export const DAY_LABELS = {
   "D25": "Day 25 — Friday, July 3, 2026",
   "D26": "Day 26 — Monday, July 6, 2026",
   "D27": "Day 27 — Tuesday, July 7, 2026",
-  "D28": "Day 28 — Wednesday, July 8, 2026"
+  "D28": "Day 28 — Wednesday, July 8, 2026",
+  "D29": "Day 29 — Thursday, July 9, 2026",
+  "D30": "Day 30 — Friday, July 10, 2026"
 };
 
 export const TIER_EMOJI = {
@@ -244,6 +246,20 @@ export const PEOPLE = [
         "submitted": true,
         "streakDays": 24,
         "workDone": true,
+        "workStreakDays": 26
+      },
+      "D29": {
+        "pts": 669,
+        "submitted": false,
+        "streakDays": 24,
+        "workDone": false,
+        "workStreakDays": 26
+      },
+      "D30": {
+        "pts": 669,
+        "submitted": false,
+        "streakDays": 24,
+        "workDone": false,
         "workStreakDays": 26
       }
     },
@@ -690,6 +706,20 @@ export const PEOPLE = [
         "streakDays": 16,
         "workDone": true,
         "workStreakDays": 23
+      },
+      "D29": {
+        "pts": 479,
+        "submitted": false,
+        "streakDays": 16,
+        "workDone": false,
+        "workStreakDays": 23
+      },
+      "D30": {
+        "pts": 479,
+        "submitted": false,
+        "streakDays": 16,
+        "workDone": false,
+        "workStreakDays": 23
       }
     },
     "breakdown": [
@@ -967,6 +997,20 @@ export const PEOPLE = [
         "streakDays": 3,
         "workDone": false,
         "workStreakDays": 7
+      },
+      "D29": {
+        "pts": 210,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 7
+      },
+      "D30": {
+        "pts": 210,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 7
       }
     },
     "breakdown": [
@@ -1165,6 +1209,20 @@ export const PEOPLE = [
         "workStreakDays": 6
       },
       "D9": {
+        "pts": 205,
+        "submitted": false,
+        "streakDays": 6,
+        "workDone": false,
+        "workStreakDays": 6
+      },
+      "D29": {
+        "pts": 205,
+        "submitted": false,
+        "streakDays": 6,
+        "workDone": false,
+        "workStreakDays": 6
+      },
+      "D30": {
         "pts": 205,
         "submitted": false,
         "streakDays": 6,
@@ -1383,6 +1441,20 @@ export const PEOPLE = [
         "streakDays": 3,
         "workDone": false,
         "workStreakDays": 4
+      },
+      "D29": {
+        "pts": 137,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 4
+      },
+      "D30": {
+        "pts": 137,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 4
       }
     },
     "breakdown": [
@@ -1564,6 +1636,20 @@ export const PEOPLE = [
         "workStreakDays": 3
       },
       "D9": {
+        "pts": 129,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 3
+      },
+      "D29": {
+        "pts": 129,
+        "submitted": false,
+        "streakDays": 3,
+        "workDone": false,
+        "workStreakDays": 3
+      },
+      "D30": {
         "pts": 129,
         "submitted": false,
         "streakDays": 3,
@@ -1751,6 +1837,20 @@ export const PEOPLE = [
         "streakDays": 4,
         "workDone": false,
         "workStreakDays": 5
+      },
+      "D29": {
+        "pts": 115,
+        "submitted": false,
+        "streakDays": 4,
+        "workDone": false,
+        "workStreakDays": 5
+      },
+      "D30": {
+        "pts": 115,
+        "submitted": false,
+        "streakDays": 4,
+        "workDone": false,
+        "workStreakDays": 5
       }
     },
     "breakdown": [
@@ -1928,6 +2028,20 @@ export const PEOPLE = [
         "workStreakDays": 4
       },
       "D11": {
+        "pts": 150,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 4
+      },
+      "D29": {
+        "pts": 150,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 4
+      },
+      "D30": {
         "pts": 150,
         "submitted": false,
         "streakDays": 0,
@@ -2137,6 +2251,20 @@ export const PEOPLE = [
         "streakDays": 1,
         "workDone": false,
         "workStreakDays": 1
+      },
+      "D29": {
+        "pts": 99,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D30": {
+        "pts": 99,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
       }
     },
     "breakdown": [
@@ -2332,6 +2460,20 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
+        "pts": 82,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -2464,6 +2606,20 @@ export const PEOPLE = [
         "streakDays": 1,
         "workDone": false,
         "workStreakDays": 1
+      },
+      "D29": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D30": {
+        "pts": 30,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
       }
     },
     "breakdown": [
@@ -2588,6 +2744,20 @@ export const PEOPLE = [
         "workStreakDays": 1
       },
       "D9": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D29": {
+        "pts": 22,
+        "submitted": false,
+        "streakDays": 1,
+        "workDone": false,
+        "workStreakDays": 1
+      },
+      "D30": {
         "pts": 22,
         "submitted": false,
         "streakDays": 1,
@@ -2738,6 +2908,20 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D12": {
+        "pts": 19,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 19,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
         "pts": 19,
         "submitted": false,
         "streakDays": 0,
@@ -2911,6 +3095,20 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
+        "pts": 13,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3054,6 +3252,20 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
+        "pts": 12,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3183,6 +3395,20 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D9": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
         "pts": 10,
         "submitted": false,
         "streakDays": 0,
@@ -3322,6 +3548,20 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
+        "pts": 10,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3456,6 +3696,20 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
+        "pts": 9,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3577,6 +3831,20 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D9": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
         "pts": 8,
         "submitted": false,
         "streakDays": 0,
@@ -3707,6 +3975,20 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
+        "pts": 8,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3832,6 +4114,20 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -3952,6 +4248,20 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D9": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 7,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
         "pts": 7,
         "submitted": false,
         "streakDays": 0,
@@ -4091,6 +4401,20 @@ export const PEOPLE = [
         "streakDays": 0,
         "workDone": false,
         "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
       }
     },
     "breakdown": [
@@ -4197,6 +4521,20 @@ export const PEOPLE = [
         "workStreakDays": 0
       },
       "D9": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D29": {
+        "pts": 5,
+        "submitted": false,
+        "streakDays": 0,
+        "workDone": false,
+        "workStreakDays": 0
+      },
+      "D30": {
         "pts": 5,
         "submitted": false,
         "streakDays": 0,
