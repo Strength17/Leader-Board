@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sky Graphics Figma Edition 1 — Certificate Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+<meta property="og:title" content="Sky Graphics Figma Edition 1 — Certificate Portal">
+<meta property="og:description" content="Enter your unique key to view and download your certificate.">
+<link rel="icon" type="image/png" href="Assets/logo.png">
+<style>
+:root{
+  --navy:#0D1830;--indigo:#1B2F6E;--violet:#4F46E5;--violet-light:#818CF8;
+  --amber:#F59E0B;--gold:#D97706;--mint:#10B981;--mint-dk:#059669;
+  --coral:#EF4444;--sky:#38BDF8;--white:#FFFFFF;--off:#F1F5F9;--muted:#94A3B8;
+  --card:rgba(19,31,58,0.88);--line:rgba(255,255,255,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  background:var(--navy);font-family:'DM Sans',sans-serif;color:var(--white);
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:32px 18px;overflow-x:hidden;position:relative;
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 90% 70% at 15% 5%,rgba(79,70,229,.22) 0%,transparent 55%),
+    radial-gradient(ellipse 70% 60% at 85% 85%,rgba(16,185,129,.14) 0%,transparent 50%),
+    radial-gradient(ellipse 50% 45% at 50% 50%,rgba(245,158,11,.08) 0%,transparent 60%);
+}
+.wrap{position:relative;z-index:1;max-width:560px;width:100%;text-align:center;}
+.back-link{
+  display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;color:rgba(148,163,184,.55);
+  text-decoration:none;margin-bottom:26px;transition:color .2s;
+}
+.back-link:hover{color:rgba(148,163,184,.9);}
+.edition-tag{
+  display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;
+  letter-spacing:3.5px;text-transform:uppercase;color:var(--amber);
+  background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);
+  padding:6px 18px;border-radius:24px;margin-bottom:22px;
+}
+.title{
+  font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,9vw,60px);
+  line-height:.95;letter-spacing:2px;margin-bottom:14px;
+  background:linear-gradient(135deg,#fff 0%,#C7D2FE 30%,#38BDF8 60%,#10B981 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.subtitle{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:34px;}
+
+/* ── KEY ENTRY CARD ── */
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:20px;
+  padding:32px 26px;backdrop-filter:blur(16px);
+  box-shadow:0 8px 32px rgba(0,0,0,.35);
+}
+.card-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.key-input{
+  width:100%;padding:16px 18px;border-radius:12px;border:1px solid var(--line);
+  background:rgba(255,255,255,.04);color:var(--white);font-size:16px;font-weight:700;
+  letter-spacing:2px;text-align:center;text-transform:uppercase;font-family:'DM Sans',sans-serif;
+  margin-bottom:16px;transition:border-color .2s,box-shadow .2s;
+}
+.key-input::placeholder{color:rgba(148,163,184,.4);letter-spacing:1px;font-weight:500;text-transform:none;}
+.key-input:focus{outline:none;border-color:var(--violet-light);box-shadow:0 0 0 3px rgba(79,70,229,.25);}
+.key-input.error{border-color:var(--coral);animation:shake .35s;}
+@keyframes shake{
+  0%,100%{transform:translateX(0);} 20%{transform:translateX(-8px);}
+  40%{transform:translateX(8px);} 60%{transform:translateX(-6px);} 80%{transform:translateX(6px);}
+}
+.submit-btn{
+  width:100%;padding:15px;border:none;border-radius:12px;cursor:pointer;
+  background:linear-gradient(135deg,var(--violet),var(--indigo));color:var(--white);
+  font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  transition:transform .2s,box-shadow .2s;
+}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,70,229,.35);}
+.error-msg{
+  display:none;margin-top:14px;font-size:13px;color:var(--coral);
+  background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);
+  border-radius:10px;padding:10px 14px;
+}
+.error-msg.show{display:block;}
+.hint{font-size:11px;color:rgba(148,163,184,.45);margin-top:20px;line-height:1.7;}
+
+/* ── RESULT VIEW ── */
+.result{display:none;}
+.result.show{display:block;}
+.card.hide{display:none;}
+.result-name{
+  font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,6vw,40px);
+  background:linear-gradient(135deg,#FFD700,#F59E0B,#10B981);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:6px;line-height:1;
+}
+.result-sub{font-size:12px;color:var(--muted);margin-bottom:22px;letter-spacing:.5px;}
+.cert-frame{
+  border-radius:14px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 12px 40px rgba(0,0,0,.45);margin-bottom:22px;background:#fff;
+}
+.cert-frame img{display:block;width:100%;height:auto;}
+.result-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.dl-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:50px;
+  background:linear-gradient(135deg,var(--mint),var(--mint-dk));color:var(--white);
+  font-size:13px;font-weight:700;letter-spacing:.5px;text-decoration:none;
+  transition:transform .2s,box-shadow .2s;border:none;cursor:pointer;
+}
+.dl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,185,129,.35);}
+.reset-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:50px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);
+  font-size:13px;font-weight:700;letter-spacing:.5px;text-decoration:none;cursor:pointer;
+  transition:all .2s;
+}
+.reset-btn:hover{background:rgba(255,255,255,.08);color:var(--white);}
+
+/* ── ADMIN / TEST MODE ── */
+.admin-banner{
+  display:none;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.35);
+  border-radius:14px;padding:16px 18px;margin-bottom:24px;text-align:left;
+}
+.admin-banner.show{display:block;}
+.admin-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+.admin-row{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:10px 12px;background:rgba(255,255,255,.03);border-radius:10px;margin-bottom:8px;
+}
+.admin-row:last-child{margin-bottom:0;}
+.admin-name{font-size:13px;font-weight:700;color:var(--white);}
+.admin-key{font-size:11px;color:var(--muted);font-family:monospace;letter-spacing:1px;}
+.admin-preview-btn{
+  padding:7px 14px;border-radius:8px;border:1px solid rgba(245,158,11,.4);
+  background:rgba(245,158,11,.1);color:var(--amber);font-size:11px;font-weight:700;
+  cursor:pointer;letter-spacing:.5px;
+}
+.admin-preview-btn:hover{background:rgba(245,158,11,.2);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="index.html" class="back-link">← Back</a>
+  <div class="edition-tag">Sky Graphics · Edition 1</div>
+  <div class="title">CERTIFICATE<br>PORTAL</div>
+  <div class="subtitle" id="subtitle">Enter your unique key to view and download your official<br>Sky Graphics Figma Edition 1 certificate.</div>
+
+  <div class="admin-banner" id="admin-banner">
+    <div class="admin-title">🔧 Admin / Test Mode</div>
+    <div id="admin-list"></div>
+  </div>
+
+  <div class="card" id="entry-card">
+    <div class="card-label">Your Certificate Key</div>
+    <input type="text" class="key-input" id="key-input" placeholder="e.g. SKY-XXX-2026-XXXX" autocomplete="off" spellcheck="false"/>
+    <button class="submit-btn" id="submit-btn">Unlock Certificate</button>
+    <div class="error-msg" id="error-msg">Key not recognized. Double-check for typos, or contact the admin.</div>
+  </div>
+
+  <div class="hint">Your key was sent to you directly. It's unique to you — please don't share it.</div>
+
+  <div class="result" id="result">
+    <div class="result-name" id="result-name"></div>
+    <div class="result-sub" id="result-sub"></div>
+    <div class="cert-frame"><img id="result-img" src="" alt="Certificate"/></div>
+    <div class="result-actions">
+      <a class="dl-btn" id="download-btn" href="#" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Certificate
+      </a>
+      <button class="reset-btn" id="reset-btn">← Try Another Key</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ─────────────────────────────────────────────────
+   CERTIFICATE RECORDS
+   Each key is unique per graduate. To add more people
+   later, add another entry here with a new key.
+───────────────────────────────────────────────── */
+const CERTIFICATES = {
+  "SKY-CHR-2026-X7Q9": {
+    name: "Christine Choundong",
+    certNo: "SG-FE1-2026-0001",
+    file: "Assets/certificate-christine.png",
+    downloadName: "Sky-Graphics-Christine-Choundong-Certificate.png"
+  },
+  "SKY-OPL-2026-M4T2": {
+    name: "Abongnwi Chrioni-Opal Forba",
+    certNo: "SG-FE1-2026-0002",
+    file: "Assets/certificate-opal.png",
+    downloadName: "Sky-Graphics-Opal-Forba-Certificate.png"
+  }
+};
+
+/* Admin/test key — append ?admin=THIS_KEY to the URL to enter test mode.
+   Lets the admin preview every certificate without needing individual keys. */
+const ADMIN_KEY = "SKY-ADMIN-2026";
+
+const els = {
+  input: document.getElementById('key-input'),
+  submit: document.getElementById('submit-btn'),
+  error: document.getElementById('error-msg'),
+  card: document.getElementById('entry-card'),
+  result: document.getElementById('result'),
+  resultName: document.getElementById('result-name'),
+  resultSub: document.getElementById('result-sub'),
+  resultImg: document.getElementById('result-img'),
+  downloadBtn: document.getElementById('download-btn'),
+  resetBtn: document.getElementById('reset-btn'),
+  hint: document.querySelector('.hint'),
+  adminBanner: document.getElementById('admin-banner'),
+  adminList: document.getElementById('admin-list'),
+};
+
+function normalize(k){ return (k || '').trim().toUpperCase().replace(/\s+/g,''); }
+
+function showCertificate(record){
+  els.card.classList.add('hide');
+  els.hint.style.display = 'none';
+  els.resultName.textContent = record.name;
+  els.resultSub.textContent = 'Certificate No. ' + record.certNo;
+  els.resultImg.src = record.file;
+  els.downloadBtn.href = record.file;
+  els.downloadBtn.download = record.downloadName;
+  els.result.classList.add('show');
+  els.result.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function tryUnlock(){
+  const raw = normalize(els.input.value);
+  const record = CERTIFICATES[raw];
+  if(record){
+    els.error.classList.remove('show');
+    showCertificate(record);
+  } else {
+    els.input.classList.remove('error');
+    void els.input.offsetWidth;
+    els.input.classList.add('error');
+    els.error.classList.add('show');
+  }
+}
+
+els.submit.addEventListener('click', tryUnlock);
+els.input.addEventListener('keydown', e => { if(e.key === 'Enter') tryUnlock(); });
+els.input.addEventListener('input', () => { els.input.classList.remove('error'); els.error.classList.remove('show'); });
+
+els.resetBtn.addEventListener('click', () => {
+  els.result.classList.remove('show');
+  els.card.classList.remove('hide');
+  els.hint.style.display = '';
+  els.input.value = '';
+  els.input.focus();
+});
+
+/* ── Deep link: certificates.html?key=SKY-CHR-2026-X7Q9 auto-unlocks ── */
+const params = new URLSearchParams(window.location.search);
+const deepKey = params.get('key');
+if(deepKey){
+  const record = CERTIFICATES[normalize(deepKey)];
+  if(record) showCertificate(record);
+}
+
+/* ── Admin / test mode ── */
+const adminParam = params.get('admin');
+if(adminParam && normalize(adminParam) === normalize(ADMIN_KEY)){
+  els.adminBanner.classList.add('show');
+  let html = '';
+  Object.entries(CERTIFICATES).forEach(([key, record]) => {
+    html += `<div class="admin-row">
+      <div><div class="admin-name">${record.name}</div><div class="admin-key">${key}</div></div>
+      <button class="admin-preview-btn" onclick='window.__preview(${JSON.stringify(key)})'>Preview</button>
+    </div>`;
+  });
+  els.adminList.innerHTML = html;
+  window.__preview = function(key){ showCertificate(CERTIFICATES[key]); };
+}
+</script>
+</body>
+</html>
