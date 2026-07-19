@@ -49,7 +49,7 @@ export const PEOPLE = [
     "name": "Christine Choundong",
     "role": "Ambassador",
     "joinedDay": "D1",
-    "allTimeTotal": 669,
+    "allTimeTotal": 679,
     "tier": "GOLD",
     "days": {
       "D1": {
@@ -249,14 +249,14 @@ export const PEOPLE = [
         "workStreakDays": 26
       },
       "D29": {
-        "pts": 669,
+        "pts": 674,
         "submitted": false,
         "streakDays": 24,
         "workDone": false,
         "workStreakDays": 26
       },
       "D30": {
-        "pts": 669,
+        "pts": 679,
         "submitted": false,
         "streakDays": 24,
         "workDone": false,
@@ -264,6 +264,25 @@ export const PEOPLE = [
       }
     },
     "breakdown": [
+      {
+        "section": "ADMIN ADJUSTMENT",
+        "items": [
+          {
+            "label": "Bonus",
+            "pts": 5,
+            "earned": true,
+            "dayHits": ["D29"],
+            "desc": "Day 29 bonus: +5."
+          },
+          {
+            "label": "Bonus",
+            "pts": 5,
+            "earned": true,
+            "dayHits": ["D30"],
+            "desc": "Day 30 bonus: +5."
+          }
+        ]
+      },
       {
         "section": "WA SESSIONS (TIPS & GAMES)",
         "items": [
